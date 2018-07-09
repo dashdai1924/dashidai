@@ -1,0 +1,10 @@
+buildings = {
+	PRC_building_genjudischool = {
+		show_on_map = 6
+		base_cost = -1
+		max_level = 1
+		shares_slots = yes
+		value = 5
+		research_time_factor = -0.01
+	}
+}

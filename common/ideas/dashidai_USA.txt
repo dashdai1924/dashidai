@@ -1,0 +1,268 @@
+ideas = {
+	country = {
+		#全国劳工关系委员会
+		gcjdglja = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.05
+			}
+		}
+		#工程进度管理局
+		gcjdglj = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = FRA_motorized_focus
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.05
+				research_time_factor = -0.05
+				local_resources_factor = 0.05
+			}
+		}
+		#满天命
+		sky_life = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				stability_weekly = 0.002
+				stability_factor = 0.50
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.50
+				conscription_factor = 0.10
+				training_time_army_factor = -0.10
+				supply_consumption_factor = -0.05
+				army_org_Factor = 0.10
+			}
+		}
+		#第三重
+		bagreatest_depressioniiiii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = FRA_factory_strikes
+			modifier = {
+				production_speed_buildings_factor = -0.25
+				local_resources_factor = -0.10
+			}
+		}
+		bagreatest_depressioniiii = {
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			picture = generic_spy_coup
+			modifier = {
+				research_time_factor = 0.25
+				industrial_capacity_factory = -0.35
+			}
+		}
+		bagreatest_depressioniii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				conscription_factor = -0.25
+				training_time_army_factor = 0.25
+			}
+		}
+		bagreatest_depressionii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				supply_consumption_factor = 0.05
+				army_org_Factor = -0.10
+			}
+		}
+		bagreatest_depressioni = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_cost = 0.8
+			}
+		}
+		bagreatest_depression = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_goods_red_bonus
+			modifier = {
+				stability_factor = -0.25
+				consumer_goods_factor = 0.35
+			}
+		}
+		#第二重
+		agreatest_depressioniiiii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = FRA_factory_strikes
+			modifier = {
+				production_speed_buildings_factor = -0.50
+				local_resources_factor = -0.25
+			}
+		}
+		agreatest_depressioniiii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_spy_coup
+			modifier = {
+				research_time_factor = 0.50
+				industrial_capacity_factory = -0.70
+			}
+		}
+		agreatest_depressioniii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				conscription_factor = -0.5
+				training_time_army_factor = 0.5
+			}
+		}
+		agreatest_depressionii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				supply_consumption_factor = 0.10
+				army_org_Factor = -0.25
+			}
+		}
+		agreatest_depressioni = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_cost = 0.9
+			}
+		}
+		agreatest_depression = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_goods_red_bonus
+			modifier = {
+				stability_factor = -0.50
+				consumer_goods_factor = 0.70
+			}
+		}
+		#第一重
+		greatest_depressioniiiii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = FRA_factory_strikes
+			modifier = {
+				production_speed_buildings_factor = -0.90
+				local_resources_factor = -0.50
+			}
+		}
+		greatest_depressioniiii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_spy_coup
+			modifier = {
+				research_time_factor = 0.70
+				industrial_capacity_factory = -0.90
+			}
+		}
+		greatest_depressioniii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				conscription_factor = -1
+				training_time_army_factor = 1
+			}
+		}
+		greatest_depressionii = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = {
+				supply_consumption_factor = 0.50
+				army_org_Factor = -0.50
+			}
+		}
+		greatest_depressioni = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				political_power_cost = 1
+			}
+		}
+		greatest_depression = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_goods_red_bonus
+			modifier = {
+				stability_factor = -0.90
+				consumer_goods_factor = 1
+			}
+		}
+		#AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	}
+}

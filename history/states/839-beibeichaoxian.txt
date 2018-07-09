@@ -1,0 +1,18 @@
+state={
+	id=839
+	name="STATE_839"
+	provinces={
+		6963 11775 11828 11896 
+	}
+	history={
+		owner = JAP
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = KOR
+
+	}
+	manpower=677420
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+}

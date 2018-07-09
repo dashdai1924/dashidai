@@ -1,0 +1,14 @@
+units = {
+	division = {
+		name = "苏联远征军"
+		location = 4156
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "苏联远征军"
+		location = 4156
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+	}
+}

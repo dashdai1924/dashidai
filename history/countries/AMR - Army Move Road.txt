@@ -1,0 +1,45 @@
+﻿set_research_slots = 1
+set_technology = {
+	infantry_weapons = 1
+}
+add_ideas = {
+	only_is_an_army
+}
+set_politics = {
+	parties = {
+		dictatorship = { 
+			popularity = 100
+		}
+	}
+	ruling_party = dictatorship
+	last_election = "1927.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_stability = 1
+set_war_support = 1
+create_country_leader = {
+	name = "蒋大肥"
+	desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+	picture = "JiangDafei.dds"
+	expire = "9999.1.1"
+	ideology = military
+	traits = {
+		Fu2You2Sheng1Wu4
+	}
+}
+create_field_marshal = {
+	name = "蒋大肥"
+	portrait_path = "gfx/leaders/AMR/JiangDafei.dds"
+	traits = {
+		politically_connected
+		career_officer
+		expert_delegator
+		expert_improviser
+		defensive_doctrine
+		unyielding_defender
+		old_guard
+		inflexible_strategist
+	}
+	skill = 5
+}

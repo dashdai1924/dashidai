@@ -1,0 +1,42 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_Common_GUI"
+		texturefile = "dashidaipicture/gui/common_gui.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_Button_State"
+		texturefile = "dashidaipicture/gui/common_button_state.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_Development_Icon"
+		texturefile = "dashidaipicture/gui/common_development.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_Close_Button"
+		texturefile = "dashidaipicture/gui/common_close_button.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_To_Up"
+		texturefile = "dashidaipicture/gui/common_to_up.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_To_Down"
+		texturefile = "dashidaipicture/gui/common_to_down.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_To_Big"
+		texturefile = "dashidaipicture/gui/common_to_big.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_To_Small"
+		texturefile = "dashidaipicture/gui/common_to_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_GUI_Small"
+		texturefile = "dashidaipicture/gui/common_gui_small.dds"
+	}
+	SpriteType = {
+		name = "GFX_Common_Money_Icon"
+		texturefile = "dashidaipicture/gui/common_money.dds"
+	}
+}

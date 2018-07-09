@@ -1,0 +1,442 @@
+ideas = {
+	country = {
+		#二五
+		two_five_planeng_end{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				local_resources_factor = 0.32
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.1
+				supply_consumption_factor = -0.05
+				army_morale_factor = 0.05
+				research_time_factor = -0.01
+			}
+		}
+		#优化三钢
+		better_three_iron_ii{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+		#农业集体化2
+		nong_ye_ji_ti_huaii{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				supply_consumption_factor = -0.05
+				army_morale_factor = 0.05
+			}
+		}
+		#集体农庄2
+		ji_ti_nong_zhuangii{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.02
+				local_resources_factor = 0.02
+			}
+		}
+		#斯达汉诺夫运动
+		chao_ji_da_cai_kuang{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+		#更多的技术人才
+		geng_duo_jishu_ren_cai{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				research_time_factor = -0.01
+			}
+		}
+		#整合民族精神-一五
+		min_zu_jing_shen_big{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				consumer_goods_factor = -0.01
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		#五年计划2
+		five_years_plan_idii{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		#苏联武装力量
+		su_lian_wu_zhuang_li_liang{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription_factor = 0.1
+				army_morale_factor = 0.1
+				army_org_Factor = 0.1
+				army_infantry_defence_factor = 0.1
+				army_infantry_attack_factor = 0.1
+				army_speed_factor = 0.1
+				supply_consumption_factor = -0.05
+				navy_max_range_factor = 0.10
+				air_ace_generation_chance_factor = 0.1
+				amphibious_invasion = 0.15
+			}
+		}
+		#王牌飞行员
+		wang_pa_fei_xing_yuan{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				air_ace_generation_chance_factor = 0.1
+			}
+		}
+		#登陆部队
+		deng_lu_bu_dui{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				amphibious_invasion = 0.15
+			}
+		}
+		#钢铁洪流
+		gang_tie_hong_liu{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+				army_org_Factor = 0.05
+				army_infantry_defence_factor = 0.05
+				army_infantry_attack_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		#第聂伯河水电站
+		di_nie_bo_he_shui_dian_zhan{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				consumer_goods_factor = -0.01
+			}
+		}
+		#增强的集体农庄
+		super_ji_ti_nong_zhuang{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.03
+				industrial_capacity_factory = 0.03
+				consumer_goods_factor = -0.015
+				local_resources_factor = 0.02
+			}
+		}
+		#五年计划
+		five_years_plan_id{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = -0.20
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = 0.50
+				political_power_factor = 1
+			}
+		}
+		#农业集体化
+		nong_ye_ji_ti_hua{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.025
+				industrial_capacity_factory = 0.025
+				supply_consumption_factor = -0.025
+				army_morale_factor = 0.025
+			}
+		}
+		#集体农庄
+		ji_ti_nong_zhuang{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.025
+				industrial_capacity_factory = 0.025
+				consumer_goods_factor = -0.01
+				local_resources_factor = 0.01
+			}
+		}
+		#囚犯劳工
+		qiu_fan_lao_gong{
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		#列宁
+		liedning = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_weekly = 0.0025
+				conscription_factor = 0.005
+				army_morale_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		#胜利的革命者
+		nkvd0 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				subversive_activites_upkeep = -0.5
+			}
+		}
+		#巩固权利
+		gong_gu_quan_li{
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+			}
+		}
+		#支持斯大林
+		diani_fuiv_sidalin_lviv{
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+				army_morale_factor = 0.08
+			}
+		}
+		#支持托洛茨基
+		diani_fuiv_xiaoiv_lviv{
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = 0.05
+				subversive_activites_upkeep = -0.05
+				army_morale_factor = 0.05
+			}
+		}
+		#权利斗争中
+		power_struggle_ing = {
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = -0.90
+				political_power_factor = -0.25
+				political_power_cost = 0.20
+				political_power_factor = -0.1
+				research_time_factor = 0.15
+				production_speed_buildings_factor = -0.10
+				local_resources_factor = -0.15
+			}
+		}
+	}
+}

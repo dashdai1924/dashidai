@@ -1,0 +1,1546 @@
+focus_tree = {
+	id = WeimarGermany
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GWM
+		}
+	}
+	default = no
+	focus = {
+		id = GWM_modern_public_assistance_programme
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		x = 1
+		y = 0
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_1
+					hidden_effect = {
+							add_political_power = 50
+						}
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_reconstruction_of_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		x = 10
+		y = 0
+			ai_will_do = {
+					factor = 1
+					modifier = {
+							factor = 7
+							has_completed_focus = GWM_rentenmark
+						}
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									has_completed_focus = GWM_begin_execution
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_19
+							hidden_effect = {
+									51 = {
+											add_extra_state_shared_building_slots = 2
+											add_building_construction = {
+													type = industrial_complex
+													level = 2
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_war_indemnit_issue
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_modern_public_assistance_programme
+		}
+		x = 0
+		y = 1
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_2
+					hidden_effect = {
+							ENG = {
+									country_event = {
+											days = 1
+											id = gworld.1
+										}
+									add_opinion_modifier = {
+											target = GWM
+											modifier = protest_action
+										}
+								}
+							FRA = {
+									country_event = {
+											days = 1
+											id = gworld.1
+										}
+									add_opinion_modifier = {
+											target = GWM
+											modifier = protest_action
+										}
+								}
+							USA = {
+									country_event = {
+											days = 1
+											id = gworld.1
+										}
+									add_opinion_modifier = {
+											target = GWM
+											modifier = protest_action
+										}
+								}
+						}
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_dawes_plan
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_war_indemnit_issue
+		}
+		x = 0
+		y = 2
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_3
+					hidden_effect = {
+							country_event = {
+									days = 0
+									id = germany.1003
+								}
+						}
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_begin_execution
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_dawes_plan
+		}
+		x = 0
+		y = 3
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_4
+					hidden_effect = {
+							transfer_state = 51
+							transfer_state = 57
+							51 = {
+									set_demilitarized_zone = yes
+								}
+							country_event = {
+									days = 0
+									id = germany.1004
+								}
+						}
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_rentenmark
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_begin_execution
+		}
+		x = 0
+		y = 4
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_5
+					hidden_effect = {
+							country_event = {
+									days = 70
+									id = germany.1011
+								}
+							country_event = {
+									days = 140
+									id = germany.1012
+								}
+						}
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_golden_twenties
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_modern_public_assistance_programme
+		}
+		x = 2
+		y = 1
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_6
+					hidden_effect = {
+							add_timed_idea = {
+									idea = World_golden_tw_year_time
+									days = 1380
+								}
+						}
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_political_development
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_golden_twenties
+		}
+		x = 2
+		y = 3
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_10
+					hidden_effect = {
+							add_political_power = 150
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_diplomatic_efforts
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_golden_twenties
+		}
+		x = 4
+		y = 3
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_11
+					hidden_effect = {
+							FRA = {
+									dismantle_faction = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_locarno_treaties
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_political_development
+		}
+		prerequisite = {
+			focus = GWM_diplomatic_efforts
+		}
+		x = 2
+		y = 4
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_12
+					hidden_effect = {
+							add_ideas = GWM_Locarno_Treaties
+							FRA = {
+									give_guarantee = POL
+									give_guarantee = CZE
+								}
+							POL = {
+									give_guarantee = FRA
+								}
+							CZE = {
+									give_guarantee = FRA
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_permanent_member_of_the_league_of_nations
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_locarno_treaties
+		}
+		x = 0
+		y = 5
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_15
+					hidden_effect = {
+							add_political_power = -150
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_young_plan
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_locarno_treaties
+		}
+		x = 2
+		y = 5
+			ai_will_do = {
+					factor = 10
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_16
+					hidden_effect = {
+							remove_ideas = GWM_fanersai
+							remove_ideas = GWM_fanersai1a
+							remove_ideas = GWM_fanersai2a
+							remove_ideas = GWM_fanersai3a
+							remove_ideas = GWM_fanersai4a
+							remove_ideas = GWM_fanersai5a
+							remove_ideas = GWM_fanersai6a
+							remove_ideas = GWM_fanersai1b
+							remove_ideas = GWM_fanersai2b
+							remove_ideas = GWM_fanersai3b
+							remove_ideas = GWM_fanersai4b
+							remove_ideas = GWM_fanersai5b
+							remove_ideas = GWM_fanersai6b
+							remove_ideas = GWM_fanersai1c
+							remove_ideas = GWM_fanersai2c
+							remove_ideas = GWM_fanersai3c
+							remove_ideas = GWM_fanersai4c
+							remove_ideas = GWM_fanersai5c
+							remove_ideas = GWM_fanersai6c
+							add_ideas = GWM_fanersai_young
+						}
+				}
+			available = {
+					custom_trigger_tooltip = {
+							tooltip = GWM_focus_av_desc_text_1
+							has_global_flag = 大萧条即将开始
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_strict_fiscal_control
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_golden_twenties
+		}
+		x = 3
+		y = 2
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_7
+					hidden_effect = {
+							add_timed_idea = {
+									idea = GWM_caizhengCountar
+									days = 1380
+								}
+						}
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_french_belgian_arbitration_convention
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_diplomatic_efforts
+		}
+		x = 4
+		y = 4
+			ai_will_do = {
+					factor = 8
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_13
+					hidden_effect = {
+							add_opinion_modifier = {
+									target = FRA
+									modifier = ZC_TD_tomake_between_fra_bel
+								}
+							add_opinion_modifier = {
+									target = BEL
+									modifier = ZC_TD_tomake_between_fra_bel
+								}
+							FRA = {
+									add_opinion_modifier = {
+											target = GWM
+											modifier = ZC_TD_tomake_between_fra_bel
+										}
+								}
+							BEL = {
+									add_opinion_modifier = {
+											target = GWM
+											modifier = ZC_TD_tomake_between_fra_bel
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_poland_czechoslovak_arbitration_convention
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_french_belgian_arbitration_convention
+		}
+		x = 4
+		y = 5
+			ai_will_do = {
+					factor = 8
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_17
+					hidden_effect = {
+							add_opinion_modifier = {
+									target = POL
+									modifier = ZC_TD_tomake_between_pol_cze
+								}
+							add_opinion_modifier = {
+									target = CZE
+									modifier = ZC_TD_tomake_between_pol_cze
+								}
+							POL = {
+									add_opinion_modifier = {
+											target = GWM
+											modifier = ZC_TD_tomake_between_pol_cze
+										}
+								}
+							CZE = {
+									add_opinion_modifier = {
+											target = GWM
+											modifier = ZC_TD_tomake_between_pol_cze
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_reduce_bureaucratic_obstacles
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_golden_twenties
+		}
+		x = 5
+		y = 2
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_8
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_berlin_treaty
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_diplomatic_efforts
+		}
+		x = 6
+		y = 4
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_14
+					hidden_effect = {
+							add_opinion_modifier = {
+									target = SOV
+									modifier = MR_pact
+								}
+							SOV = {
+									add_opinion_modifier = {
+											target = GWM
+											modifier = MR_pact
+										}
+								}
+							add_tech_bonus = {
+									name = infantry_weapons_bonus
+									bonus = 0.2
+									uses = 1
+									category = infantry_weapons
+									category = artillery
+								}
+							SOV = {
+									add_tech_bonus = {
+											name = infantry_weapons_bonus
+											bonus = 0.2
+											uses = 1
+											category = infantry_weapons
+											category = artillery
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_reduce_coal_dependence
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_reconstruction_of_industry
+		}
+		x = 7
+		y = 1
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+										}
+									has_completed_focus = GWM_reconstruction_of_industry
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_20
+						}
+					if = {
+							limit = {
+									has_completed_focus = GWM_begin_execution
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_21
+							hidden_effect = {
+									42 = {
+											add_extra_state_shared_building_slots = 2
+											add_building_construction = {
+													type = industrial_complex
+													level = 2
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_new_objectivity
+		icon = GFX_goal_generic_radar
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_golden_twenties
+		}
+		x = 7
+		y = 2
+			ai_will_do = {
+					factor = 9
+				}
+			completion_reward = {
+					custom_effect_tooltip = GWM_focus_desc_text_9
+					hidden_effect = {
+							add_political_power = 50
+							country_event = {
+									id = germany.1013
+									days = 300
+								}
+						}
+				}
+			bypass = {
+					has_global_flag = 大萧条开始
+				}
+
+	}
+	focus = {
+		id = GWM_reconstruction_of_the_steel_industry_i
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_reconstruction_of_industry
+		}
+		x = 9
+		y = 1
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+							hidden_effect = {
+									add_resource = {
+											type = steel
+											amount = 20
+											state = 66
+										}
+								}
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_expand_ruhr_industry_iii
+											has_completed_focus = GWM_infrastructure_development_iii
+										}
+									has_completed_focus = GWM_reconstruction_of_industry
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_22
+							hidden_effect = {
+									add_resource = {
+											type = steel
+											amount = 20
+											state = 66
+										}
+								}
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+										}
+									or = {
+											has_completed_focus = GWM_expand_ruhr_industry_iii
+											has_completed_focus = GWM_infrastructure_development_iii
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_24
+							hidden_effect = {
+									add_resource = {
+											type = steel
+											amount = 20
+											state = 66
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_completed_focus = GWM_begin_execution
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_23
+							hidden_effect = {
+									add_resource = {
+											type = steel
+											amount = 20
+											state = 66
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_reconstruction_of_the_steel_industry_ii
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_reconstruction_of_the_steel_industry_i
+		}
+		x = 9
+		y = 2
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_33
+							hidden_effect = {
+									add_resource = {
+											type = steel
+											amount = 20
+											state = 42
+										}
+									add_resource = {
+											type = steel
+											amount = 20
+											state = 65
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_reconstruction_of_the_steel_industry_iii
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_reconstruction_of_the_steel_industry_ii
+		}
+		x = 9
+		y = 3
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_34
+							hidden_effect = {
+									add_resource = {
+											type = steel
+											amount = 20
+											state = 60
+										}
+									add_resource = {
+											type = steel
+											amount = 20
+											state = 63
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_expand_ruhr_industry_i
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_reconstruction_of_industry
+		}
+		x = 11
+		y = 1
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_the_steel_industry_iii
+											has_completed_focus = GWM_infrastructure_development_iii
+										}
+									has_completed_focus = GWM_reconstruction_of_industry
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_25
+							hidden_effect = {
+									63 = {
+											add_extra_state_shared_building_slots = 2
+											add_building_construction = {
+													type = industrial_complex
+													level = 2
+													instant_build = yes
+												}
+										}
+								}
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+										}
+									or = {
+											has_completed_focus = GWM_reconstruction_of_the_steel_industry_iii
+											has_completed_focus = GWM_infrastructure_development_iii
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_26
+							hidden_effect = {
+									63 = {
+											add_extra_state_shared_building_slots = 2
+											add_building_construction = {
+													type = industrial_complex
+													level = 2
+													instant_build = yes
+												}
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_completed_focus = GWM_begin_execution
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_27
+							hidden_effect = {
+									57 = {
+											add_extra_state_shared_building_slots = 2
+											add_building_construction = {
+													type = industrial_complex
+													level = 2
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_expand_ruhr_industry_ii
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_expand_ruhr_industry_i
+		}
+		x = 11
+		y = 2
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							if = {
+									limit = {
+											51 = {
+													is_controlled_by = FRA
+												}
+										}
+									custom_effect_tooltip = GWM_focus_desc_text_35
+									hidden_effect = {
+											55 = {
+													add_extra_state_shared_building_slots = 1
+													add_building_construction = {
+															type = industrial_complex
+															level = 1
+															instant_build = yes
+														}
+												}
+											56 = {
+													add_extra_state_shared_building_slots = 1
+													add_building_construction = {
+															type = industrial_complex
+															level = 1
+															instant_build = yes
+														}
+												}
+										}
+								}
+							if = {
+									limit = {
+											51 = {
+													is_controlled_by = GWM
+												}
+										}
+									custom_effect_tooltip = GWM_focus_desc_text_41
+									hidden_effect = {
+											51 = {
+													add_extra_state_shared_building_slots = 1
+													add_building_construction = {
+															type = industrial_complex
+															level = 1
+															instant_build = yes
+														}
+												}
+											55 = {
+													add_extra_state_shared_building_slots = 1
+													add_building_construction = {
+															type = industrial_complex
+															level = 1
+															instant_build = yes
+														}
+												}
+											56 = {
+													add_extra_state_shared_building_slots = 1
+													add_building_construction = {
+															type = industrial_complex
+															level = 1
+															instant_build = yes
+														}
+												}
+											57 = {
+													add_extra_state_shared_building_slots = 1
+													add_building_construction = {
+															type = industrial_complex
+															level = 1
+															instant_build = yes
+														}
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_expand_ruhr_industry_iii
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_expand_ruhr_industry_ii
+		}
+		x = 11
+		y = 3
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_36
+							hidden_effect = {
+									62 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 1
+													instant_build = yes
+												}
+										}
+									64 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 1
+													instant_build = yes
+												}
+										}
+									68 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 2
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_expand_ruhr_industry_iv
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_expand_ruhr_industry_iii
+		}
+		prerequisite = {
+			focus = GWM_reconstruction_of_the_steel_industry_iii
+		}
+		x = 9
+		y = 4
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_37
+							hidden_effect = {
+									52 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 1
+													instant_build = yes
+												}
+										}
+									53 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 1
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_expand_ruhr_industry_v
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_expand_ruhr_industry_iv
+		}
+		x = 9
+		y = 5
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_38
+							hidden_effect = {
+									58 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 1
+													instant_build = yes
+												}
+										}
+									61 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 1
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_industry_research
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_expand_ruhr_industry_v
+		}
+		x = 9
+		y = 6
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_expand_ruhr_industry_v
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_expand_ruhr_industry_v
+										}
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_39
+							hidden_effect = {
+									add_research_slot = 1
+								}
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+										}
+									has_completed_focus = GWM_expand_ruhr_industry_v
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_40
+							hidden_effect = {
+									add_research_slot = 1
+									country_event = {
+											id = germany.1018
+											days = 30
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_infrastructure_development_i
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_reconstruction_of_industry
+		}
+		x = 13
+		y = 1
+			ai_will_do = {
+					factor = 6
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_the_steel_industry_iii
+											has_completed_focus = GWM_expand_ruhr_industry_iii
+										}
+									has_completed_focus = GWM_reconstruction_of_industry
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_28
+							hidden_effect = {
+									56 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									55 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									42 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+								}
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+										}
+									or = {
+											has_completed_focus = GWM_reconstruction_of_the_steel_industry_iii
+											has_completed_focus = GWM_expand_ruhr_industry_iii
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_29
+							hidden_effect = {
+									56 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									55 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									42 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+								}
+						}
+					if = {
+							limit = {
+									has_completed_focus = GWM_begin_execution
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_30
+							hidden_effect = {
+									56 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									55 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									42 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									51 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									57 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_infrastructure_development_ii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_infrastructure_development_i
+		}
+		x = 13
+		y = 2
+			ai_will_do = {
+					factor = 6
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_31
+							hidden_effect = {
+									50 = {
+											add_extra_state_shared_building_slots = 1
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+										}
+									52 = {
+											add_extra_state_shared_building_slots = 1
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+										}
+									53 = {
+											add_extra_state_shared_building_slots = 1
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+										}
+									54 = {
+											add_extra_state_shared_building_slots = 1
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+										}
+									60 = {
+											add_extra_state_shared_building_slots = 1
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+										}
+									64 = {
+											add_extra_state_shared_building_slots = 1
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+										}
+									65 = {
+											add_extra_state_shared_building_slots = 1
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+										}
+									66 = {
+											add_extra_state_shared_building_slots = 1
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_infrastructure_development_iii
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_infrastructure_development_ii
+		}
+		x = 13
+		y = 3
+			ai_will_do = {
+					factor = 6
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_32
+							hidden_effect = {
+									58 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									59 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									61 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									62 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									63 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+									68 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = infrastructure
+													level = 1
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+}

@@ -1,0 +1,191 @@
+scripted_gui = {
+	state_player_context_window = {
+		context_type = player_context
+		window_name = "load_player_context_window"
+		visible = {
+			or = {
+				check_variable = { Load_Buy_And_Sell_Visible = 1 }
+				is_ai = yes
+			}
+		}
+		effects = {
+			load_player_context_close_button_click = {
+				set_variable = { Load_Buy_And_Sell_Visible = 0 }
+			}
+		}
+	}
+	state_about_player_context_button = {
+		context_type = player_context
+		window_name = "menu_about_player_context"
+		effects = {
+			menu_about_player_context_bg_click = {
+				if = {
+					limit = {
+						check_variable = { Load_Buy_And_Sell_Visible < 1 }
+					}
+					set_variable = { Load_Buy_And_Sell_Visible = 1 }
+				}else = {
+					set_variable = { Load_Buy_And_Sell_Visible = 0 }
+				}
+			}
+		}
+	}
+	money_mes_box_text_start_box = {
+		context_type = start_money_mes_box
+		window_name = "money_mes_box"
+	}
+	unhappy_mes_box_text_start_box = {
+		context_type = start_money_mes_box
+		window_name = "unhappy_mes_box"
+	}
+	state_development_text_start_button = {
+		context_type = start_state_development
+		window_name = "menu_about_state_development"
+		effects = {
+			menu_about_state_development_bg_click = {
+				if = {
+					limit = {
+						check_variable = { Load_State_Development_Visible < 1 }
+					}
+					set_variable = { Load_State_Development_Visible = 1 }
+				}else = {
+					set_variable = { Load_State_Development_Visible = 0 }
+				}
+			}
+		}
+	}
+	state_load_state_development_window = {
+		context_type = start_state_development
+		window_name = "load_state_development"
+		visible = {
+			or = {
+				check_variable = { Load_State_Development_Visible = 1 }
+				is_ai = yes
+			}
+		}
+		effects = {
+			load_state_development_close_button_click = {
+				set_variable = { Load_State_Development_Visible = 0 }
+			}
+			load_state_development_to_up_button_click = {
+				set_variable = { Load_State_Development_Visible = 2 }
+			}
+			add_money_tax_to_up_button_bigest_click = {
+				set_temp_variable = { Will_Change_Tax_Rate = Tax_Number_Now }
+				add_to_temp_variable = { Will_Change_Tax_Rate = 10 }
+				if = {
+					limit = {
+						check_variable = { var = Will_Change_Tax_Rate value = Max_Tax compare = less_than_or_equals }
+						check_variable = { var = Will_Change_Tax_Rate value = Min_Tax compare = greater_than_or_equals }
+					}
+					set_variable = { Tax_Number_Now = Will_Change_Tax_Rate }
+					tax_income = yes
+				}
+			}
+			add_money_tax_to_up_button_medidm_click = {
+				set_temp_variable = { Will_Change_Tax_Rate = Tax_Number_Now }
+				add_to_temp_variable = { Will_Change_Tax_Rate = 1 }
+				if = {
+					limit = {
+						check_variable = { var = Will_Change_Tax_Rate value = Max_Tax compare = less_than_or_equals }
+						check_variable = { var = Will_Change_Tax_Rate value = Min_Tax compare = greater_than_or_equals }
+					}
+					set_variable = { Tax_Number_Now = Will_Change_Tax_Rate }
+					tax_income = yes
+				}
+			}
+			add_money_tax_to_up_button_small_click = {
+				set_temp_variable = { Will_Change_Tax_Rate = Tax_Number_Now }
+				add_to_temp_variable = { Will_Change_Tax_Rate = 0.1 }
+				if = {
+					limit = {
+						check_variable = { var = Will_Change_Tax_Rate value = Max_Tax compare = less_than_or_equals }
+						check_variable = { var = Will_Change_Tax_Rate value = Min_Tax compare = greater_than_or_equals }
+					}
+					set_variable = { Tax_Number_Now = Will_Change_Tax_Rate }
+					tax_income = yes
+				}
+			}
+			add_money_tax_to_down_button_bigest_click = {
+				set_temp_variable = { Will_Change_Tax_Rate = Tax_Number_Now }
+				subtract_from_temp_variable = { Will_Change_Tax_Rate = 10 }
+				if = {
+					limit = {
+						check_variable = { var = Will_Change_Tax_Rate value = Max_Tax compare = less_than_or_equals }
+						check_variable = { var = Will_Change_Tax_Rate value = Min_Tax compare = greater_than_or_equals }
+					}
+					set_variable = { Tax_Number_Now = Will_Change_Tax_Rate }
+					tax_income = yes
+				}
+			}
+			add_money_tax_to_down_button_medidm_click = {
+				set_temp_variable = { Will_Change_Tax_Rate = Tax_Number_Now }
+				subtract_from_temp_variable = { Will_Change_Tax_Rate = 1 }
+				if = {
+					limit = {
+						check_variable = { var = Will_Change_Tax_Rate value = Max_Tax compare = less_than_or_equals }
+						check_variable = { var = Will_Change_Tax_Rate value = Min_Tax compare = greater_than_or_equals }
+					}
+					set_variable = { Tax_Number_Now = Will_Change_Tax_Rate }
+					tax_income = yes
+				}
+			}
+			add_money_tax_to_down_button_small_click = {
+				set_temp_variable = { Will_Change_Tax_Rate = Tax_Number_Now }
+				subtract_from_temp_variable = { Will_Change_Tax_Rate = 0.1 }
+				if = {
+					limit = {
+						check_variable = { var = Will_Change_Tax_Rate value = Max_Tax compare = less_than_or_equals }
+						check_variable = { var = Will_Change_Tax_Rate value = Min_Tax compare = greater_than_or_equals }
+					}
+					set_variable = { Tax_Number_Now = Will_Change_Tax_Rate }
+					tax_income = yes
+				}
+			}
+		}
+	}
+	state_load_state_development_window_small = {
+		context_type = start_state_development
+		window_name = "load_state_development_small"
+		visible = {
+			check_variable = { Load_State_Development_Visible = 2 }
+			is_ai = no
+		}
+		effects = {
+			load_state_development_small_close_button_click = {
+				set_variable = { Load_State_Development_Visible = 0 }
+			}
+			load_state_development_small_to_down_button_click = {
+				set_variable = { Load_State_Development_Visible = 1 }
+			}
+		}
+	}
+	country_power_system_box = {
+		context_type = start_country_power_system
+		window_name = "menu_about_country_power_system"
+		effects = {
+			menu_about_country_power_system_bg_click = {
+				if = {
+					limit = {
+						check_variable = { Load_Country_Power_System_Visible < 1 }
+					}
+					set_variable = { Load_Country_Power_System_Visible = 1 }
+				}else = {
+					set_variable = { Load_Country_Power_System_Visible = 0 }
+				}
+			}
+		}
+	}
+	country_power_system_window_box = {
+		context_type = start_country_power_system
+		window_name = "load_country_power_system_window"
+		visible = {
+			check_variable = { Load_Country_Power_System_Visible = 1 }
+		}
+		effects = {
+			load_country_power_system_close_button_click = {
+				set_variable = { Load_Country_Power_System_Visible = 0 }
+			}
+		}
+	}
+}

@@ -1,0 +1,609 @@
+guiTypes = {
+	#GDP增长槽
+	containerWindowType = {
+		name = "money_mes_box"
+		position = { x=976 y=6 }
+		size = { width=128 height=32 }
+		iconType = {
+			name = "menu_about_money_bg"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+		iconType = {
+			name ="menu_about_money_icon"
+			spriteType = "GFX_Common_Money_Icon"
+			position = { x= 6 y = 8 }
+		}
+		instantTextBoxType = {
+			name ="menu_about_money_text"
+			position = { x= 24 y = 6 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_money"
+			format = left
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name ="right_about_money_text"
+			position = { x= 68 y = 20 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_money_dayget"
+			format = center
+			maxWidth = 60
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+	#金钱信息槽
+	containerWindowType = {
+		name = "money_mes_box"
+		position = { x=848 y=6 }
+		size = { width=128 height=32 }
+		iconType = {
+			name = "menu_about_money_bg"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+		iconType = {
+			name ="menu_about_money_icon"
+			spriteType = "GFX_Common_Money_Icon"
+			position = { x= 6 y = 8 }
+		}
+		instantTextBoxType = {
+			name ="menu_about_money_text"
+			position = { x= 24 y = 6 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_money"
+			format = left
+			maxWidth = 100
+			maxHeight = 24
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name ="right_about_money_text"
+			position = { x= 68 y = 20 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_money_dayget"
+			format = center
+			maxWidth = 60
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+	#不满度信息槽
+	containerWindowType = {
+		name = "unhappy_mes_box"
+		position = { x=976 y=6 }
+		size = { width=128 height=32 }
+		iconType = {
+			name = "menu_about_unhappy_bg"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+		iconType = {
+			name ="menu_about_unhappy_icon"
+			spriteType = "GFX_Common_Money_Icon"
+			position = { x= 6 y = 8 }
+		}
+		instantTextBoxType = {
+			name ="menu_about_unhappy_text"
+			position = { x= 24 y = 6 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_unhappy"
+			format = left
+			maxWidth = 136
+			maxHeight = 24
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name ="right_about_unhappy_text"
+			position = { x= 0 y = 24 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_unhappy_dayget"
+			format = center
+			maxWidth = 171
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+	#财政信息按钮
+	containerWindowType = {
+		name = "menu_about_state_development"
+		position = { x=460 y=6 }
+		size = { width=128 height=32 }
+		buttonType = {
+			name = "menu_about_state_development_bg"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+		iconType = {
+			name ="menu_about_state_development_icon"
+			spriteType = "GFX_Common_Development_Icon"
+			position = { x= 6 y = 3 }
+		}
+		instantTextBoxType = {
+			name ="menu_about_state_development_text"
+			position = { x= 32 y = 6 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_state_development"
+			format = center
+			maxWidth = 80
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+	#国家权力系统按钮
+	containerWindowType = {
+		name = "menu_about_country_power_system"
+		position = { x=590 y=6 }
+		size = { width=128 height=32 }
+		buttonType = {
+			name = "menu_about_country_power_system_bg"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+		iconType = {
+			name ="menu_about_country_power_system_icon"
+			spriteType = "GFX_Common_Development_Icon"#待修改
+			position = { x= 6 y = 3 }
+		}
+		instantTextBoxType = {
+			name ="menu_about_country_power_system_text"
+			position = { x= 32 y = 6 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_country_power_system"
+			format = center
+			maxWidth = 80
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+	#交易系统按钮
+	containerWindowType = {
+		name = "menu_about_buy_and_sell_system"
+		position = { x=720 y=6 }
+		size = { width=128 height=32 }
+		buttonType = {
+			name = "menu_about_buy_and_sell_system_bg"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+		iconType = {
+			name ="menu_about_buy_and_sell_system_icon"
+			spriteType = "GFX_Common_Development_Icon"#待修改
+			position = { x= 6 y = 3 }
+		}
+		instantTextBoxType = {
+			name ="menu_about_buy_and_sell_system_text"
+			position = { x= 32 y = 6 }
+			font = "hoi_18mbs"
+			text = "Button_title_menu_about_buy_and_sell_system"
+			format = center
+			maxWidth = 80
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+	#以下为窗口——————————————————————————————
+	
+	
+	
+	
+	#财政窗口
+	containerWindowType = {
+		name = "load_state_development"
+		position = { x=70 y=150 }
+		size = { width=550 height=550 }
+		show_sound = menu_open_window
+		moveable = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_Common_GUI"
+		}
+		instantTextboxType = {
+			name = "load_state_development_title"
+			position = { x = 8 y = 0 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_LSD_title_text"
+			maxWidth = 490
+			maxHeight = 16
+			format = center
+		}
+		buttonType = {
+			name = "load_state_development_close_button"
+			quadTextureSprite = "GFX_Common_Close_Button"
+			position = { x= 526 y = 0 }
+		}
+		buttonType = {
+			name = "load_state_development_to_up_button"
+			quadTextureSprite = "GFX_Common_To_Up"
+			position = { x= 502 y = 0 }
+		}
+		instantTextboxType = {
+			name = "load_state_development_title_2"
+			position = { x = 8 y = 32 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_state_id_type_text"
+			maxWidth = 160
+			maxHeight = 16
+			format = left
+		}
+		buttonType = {
+			name = "add_money_tax_to_up_button_bigest"
+			quadTextureSprite = "GFX_Common_To_Up"#待修改
+			position = { x= 168 y = 36 }
+		}
+		buttonType = {
+			name = "add_money_tax_to_up_button_medidm"
+			quadTextureSprite = "GFX_Common_To_Up"#待修改
+			position = { x= 192 y = 36 }
+		}
+		buttonType = {
+			name = "add_money_tax_to_up_button_small"
+			quadTextureSprite = "GFX_Common_To_Up"#待修改
+			position = { x= 216 y = 36 }
+		}
+		buttonType = {
+			name = "add_money_tax_to_down_button_small"
+			quadTextureSprite = "GFX_Common_To_Down"#待修改
+			position = { x= 240 y = 36 }
+		}
+		buttonType = {
+			name = "add_money_tax_to_down_button_medidm"
+			quadTextureSprite = "GFX_Common_To_Down"#待修改
+			position = { x= 264 y = 36 }
+		}
+		buttonType = {
+			name = "add_money_tax_to_down_button_bigest"
+			quadTextureSprite = "GFX_Common_To_Down"#待修改
+			position = { x= 288 y = 36 }
+		}
+		instantTextboxType = {
+			name = "load_state_development_title_3"
+			position = { x = 8 y = 64 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_state_id_type_text_2"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_state_development_title_4"
+			position = { x = 8 y = 96 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_state_id_type_text_3"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_state_development_title_5"
+			position = { x = 8 y = 128 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_state_id_type_text_4"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_state_development_title_6"
+			position = { x = 8 y = 160 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_state_id_type_text_5"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_state_development_title_7"
+			position = { x = 8 y = 192 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_state_id_type_text_6"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_state_development_title_8"
+			position = { x = 8 y = 224 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_state_id_type_text_7"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_state_development_title_9"
+			position = { x = 8 y = 256 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_state_id_type_text_8"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+	}
+	#缩小后的财政信息窗口
+	containerWindowType = {
+		name = "load_state_development_small"
+		position = { x=70 y=150 }
+		size = { width=550 height=550 }
+		show_sound = menu_open_window
+		moveable = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_Common_GUI_Small"
+		}
+		instantTextboxType = {
+			name = "load_state_development_title"
+			position = { x = 8 y = 0 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_LSD_title_text"
+			maxWidth = 490
+			maxHeight = 16
+			format = center
+		}
+		buttonType = {
+			name = "load_state_development_small_close_button"
+			quadTextureSprite = "GFX_Common_Close_Button"
+			position = { x= 526 y = 0 }
+		}
+		buttonType = {
+			name = "load_state_development_small_to_down_button"
+			quadTextureSprite = "GFX_Common_To_Down"
+			position = { x= 502 y = 0 }
+		}
+	}
+	#国家权力系统窗口
+	containerWindowType = {
+		name = "load_country_power_system_window"
+		position = { x=70 y=150 }
+		size = { width=550 height=550 }
+		show_sound = menu_open_window
+		moveable = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_Common_GUI"
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title"
+			position = { x = 8 y = 0 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_LCPS_title_text"
+			maxWidth = 490
+			maxHeight = 16
+			format = center
+		}
+		buttonType = {
+			name = "load_country_power_system_close_button"
+			quadTextureSprite = "GFX_Common_Close_Button"
+			position = { x= 526 y = 0 }
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title_1"
+			position = { x = 8 y = 32 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "country_power_system_id_type_text_1"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title_2"
+			position = { x = 8 y = 64 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "country_power_system_id_type_text_2"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title_3"
+			position = { x = 8 y = 96 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "country_power_system_id_type_text_3"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title_4"
+			position = { x = 8 y = 128 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "country_power_system_id_type_text_4"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title_5"
+			position = { x = 8 y = 160 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "country_power_system_id_type_text_5"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title_6"
+			position = { x = 8 y = 192 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "country_power_system_id_type_text_6"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title_7"
+			position = { x = 8 y = 224 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "country_power_system_id_type_text_7"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_country_power_system_title_8"
+			position = { x = 8 y = 256 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "country_power_system_id_type_text_8"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+	}
+	#国家交易系统窗口
+	containerWindowType = {
+		name = "load_buy_and_sell_system_window"
+		position = { x=70 y=150 }
+		size = { width=550 height=550 }
+		show_sound = menu_open_window
+		moveable = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_Common_GUI"
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title"
+			position = { x = 8 y = 0 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "dashidai_BASS_title_text"
+			maxWidth = 490
+			maxHeight = 16
+			format = center
+		}
+		buttonType = {
+			name = "load_buy_and_sell_system_close_button"
+			quadTextureSprite = "GFX_Common_Close_Button"
+			position = { x= 526 y = 0 }
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title_1"
+			position = { x = 8 y = 32 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "buy_and_sell_system_id_type_text_0"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title_2"
+			position = { x = 8 y = 64 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "buy_and_sell_system_id_type_text_1"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title_3"
+			position = { x = 8 y = 96 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "buy_and_sell_system_id_type_text_2"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title_4"
+			position = { x = 8 y = 128 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "buy_and_sell_system_id_type_text_3"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title_5"
+			position = { x = 8 y = 160 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "buy_and_sell_system_id_type_text_4"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title_6"
+			position = { x = 8 y = 192 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "buy_and_sell_system_id_type_text_5"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title_7"
+			position = { x = 8 y = 224 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "buy_and_sell_system_id_type_text_6"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+		instantTextboxType = {
+			name = "load_buy_and_sell_system_title_8"
+			position = { x = 8 y = 256 }
+			textureFile = ""
+			font = "hoi_30header"
+			borderSize = {x = 0 y = 0}
+			text = "buy_and_sell_system_id_type_text_7"
+			maxWidth = 530
+			maxHeight = 16
+			format = left
+		}
+	}
+}

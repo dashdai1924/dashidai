@@ -1,0 +1,282 @@
+﻿add_namespace = prcchina
+#陈独秀出走
+country_event = {
+	id = prcchina.1
+	title = prcchina.1.t
+	desc = prcchina.1.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	option = {
+		name = prcchina.1.a
+		set_country_flag = PRC_FLAG_Chen_Duxiu_leave_the_prc
+	}
+}
+#陈独秀出走2
+country_event = {
+	id = prcchina.2
+	title = prcchina.2.t
+	desc = prcchina.2.d
+	picture = GFX_CHI_leader_qiyi
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		date > 1929.11.1
+		not = {
+			has_country_flag = PRC_FLAG_Chen_Duxiu_leave_the_prc
+		}
+	}
+	option = {
+		name = prcchina.2.a
+		set_country_flag = PRC_FLAG_Chen_Duxiu_leave_the_prc
+	}
+}
+#陈独秀的回归
+country_event = {
+	id = prcchina.3
+	title = prcchina.3.t
+	desc = prcchina.3.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	option = {
+		name = prcchina.3.a
+		random_list = {
+			50 = {
+				country_event = { id = prcchina.4 }
+			}
+			50 = {
+				country_event = { id = prcchina.5 }
+			}
+		}
+	}
+}
+#陈独秀拒绝回归
+country_event = {
+	id = prcchina.4
+	title = prcchina.4.t
+	desc = prcchina.4.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	option = {
+		name = prcchina.4.a
+	}
+}
+#陈独秀回归
+country_event = {
+	id = prcchina.5
+	title = prcchina.5.t
+	desc = prcchina.5.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	option = {
+		name = prcchina.5.a
+		clr_country_flag = PRC_FLAG_Chen_Duxiu_leave_the_prc
+	}
+}
+#向忠发遇害
+country_event = {
+	id = prcchina.6
+	title = prcchina.6.t
+	desc = prcchina.6.d
+	picture = GFX_CHI_leader_qiyi
+	fire_only_once = yes
+	trigger = {
+		tag = PRC
+		date > 1931.6.24
+		not = {
+			has_country_flag = PRC_FLAG_Xiang_Zhongfa_dead
+		}
+	}
+	immediate = {
+		set_country_flag = PRC_FLAG_Xiang_Zhongfa_dead
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "各党代表"
+			desc = "POLITICS_EDWARD_HALIFAX_DESC"
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = { PRC_leader_dead_in_here }
+		}
+	}
+	option = {
+		name = prcchina.6.a
+	}
+}
+#毛泽东代理
+country_event = {
+	id = prcchina.7
+	title = prcchina.7.t
+	desc = prcchina.7.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "毛泽东"
+			desc = "POLITICS_EDWARD_HALIFAX_DESC"
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = {  }
+		}
+	}
+	option = {
+		name = prcchina.7.a
+	}
+}
+#王明代理
+country_event = {
+	id = prcchina.8
+	title = prcchina.8.t
+	desc = prcchina.8.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "王明"
+			desc = "POLITICS_EDWARD_HALIFAX_DESC"
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = {  }
+		}
+	}
+	option = {
+		name = prcchina.8.a
+	}
+}
+#博古夺取实权
+country_event = {
+	id = prcchina.9
+	title = prcchina.9.t
+	desc = prcchina.9.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "博古"
+			desc = "POLITICS_EDWARD_HALIFAX_DESC"
+			expire = "1965.1.1"
+			ideology = marxism
+			traits = {  }
+		}
+	}
+	option = {
+		name = prcchina.9.a
+	}
+}
+#内战结束
+news_event = {
+	id = prcchina.10
+	title = prcchina.10.t
+	desc = prcchina.10.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	option = {
+		name = prcchina.10.a
+	}
+}
+#南昌起义
+country_event = {
+	id = prcchina.12
+	title = prcchina.12.t
+	desc = prcchina.12.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		PRC = {
+			transfer_state = 767
+		}
+	}
+	option = {
+		name = prcchina.12.a
+	}
+	option = {
+		name = prcchina.12.b
+		ai_chance = {
+			base = 0
+		}
+		PRC = {
+			change_tag_from = CHI
+		}
+	}
+}
+#长征的毁灭效应 - 1
+country_event = {
+	id = prcchina.13
+	title = prcchina.13.t
+	desc = prcchina.13.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		PRC = {
+			add_ideas = PRC_changzhengdeath_1
+		}
+	}
+	option = {
+		name = prcchina.13.a
+	}
+}
+#长征的毁灭效应 - 2
+country_event = {
+	id = prcchina.14
+	title = prcchina.14.t
+	desc = prcchina.14.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		PRC = {
+			swap_ideas = { remove_idea = PRC_changzhengdeath_1 add_idea = PRC_changzhengdeath_2 }
+		}
+	}
+	option = {
+		name = prcchina.14.a
+	}
+}
+#长征的毁灭效应 - 3
+country_event = {
+	id = prcchina.15
+	title = prcchina.15.t
+	desc = prcchina.15.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		PRC = {
+			swap_ideas = { remove_idea = PRC_changzhengdeath_2 add_idea = PRC_changzhengdeath_3 }
+		}
+	}
+	option = {
+		name = prcchina.15.a
+	}
+}
+#长征的毁灭效应 - 4
+country_event = {
+	id = prcchina.16
+	title = prcchina.16.t
+	desc = prcchina.16.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		PRC = {
+			swap_ideas = { remove_idea = PRC_changzhengdeath_3 add_idea = PRC_changzhengdeath_4 }
+		}
+	}
+	option = {
+		name = prcchina.16.a
+	}
+}
+#长征的毁灭效应 - 5
+country_event = {
+	id = prcchina.17
+	title = prcchina.17.t
+	desc = prcchina.17.d
+	picture = GFX_CHI_leader_qiyi
+	is_triggered_only = yes
+	immediate = {
+		PRC = {
+			swap_ideas = { remove_idea = PRC_changzhengdeath_4 add_idea = PRC_the_long_march_1 }
+		}
+	}
+	option = {
+		name = prcchina.17.a
+	}
+}

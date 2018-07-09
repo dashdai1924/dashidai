@@ -1,0 +1,65 @@
+spriteTypes = {
+	#中共内阁陈独秀
+	SpriteType = {
+		name = "GFX_idea_dashidai_political_advisor_chen_duxiu"
+		texturefile = "dashidaipicture/ideas/dashidai_political_advisor_chen_duxiu.dds"
+	}
+	#维多利亚2内政槽图片 - 焦点
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_focus_1"
+		texturefile = "dashidaipicture/ideas/Beifa_shengchan_1.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_focus_2"
+		texturefile = "dashidaipicture/ideas/Beifa_shengchan_2.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_focus_3"
+		texturefile = "dashidaipicture/ideas/Beifa_shengchan_3.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_focus_4"
+		texturefile = "dashidaipicture/ideas/Beifa_shengchan_4.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_focus_5"
+		texturefile = "dashidaipicture/ideas/Beifa_shengchan_5.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_focus_6"
+		texturefile = "dashidaipicture/ideas/Beifa_shengchan_6.DDS"
+	}
+	#维多利亚2内政槽图片 - 生育
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_make_life_1"
+		texturefile = "dashidaipicture/ideas/Beifa_renkou_1.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_make_life_2"
+		texturefile = "dashidaipicture/ideas/Beifa_renkou_2.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_make_life_3"
+		texturefile = "dashidaipicture/ideas/Beifa_renkou_3.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_make_life_4"
+		texturefile = "dashidaipicture/ideas/Beifa_renkou_4.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_make_life_5"
+		texturefile = "dashidaipicture/ideas/Beifa_renkou_5.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_make_life_6"
+		texturefile = "dashidaipicture/ideas/Beifa_renkou_6.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_make_life_7"
+		texturefile = "dashidaipicture/ideas/Beifa_renkou_7.DDS"
+	}
+	SpriteType = {
+		name = "GFX_idea_dashidai_v2_make_life_8"
+		texturefile = "dashidaipicture/ideas/Beifa_renkou_8.DDS"
+	}
+}

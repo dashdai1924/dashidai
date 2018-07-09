@@ -1,0 +1,99 @@
+@CHI_FANWEIJIAO_COST = 50
+CHI_fanweijiao_prc_borrod_war = {
+	#围剿共产党1
+	frist_weijiao_the_prc = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @CHI_FANWEIJIAO_COST
+		available = {
+			PRC = {
+				controls_state = 772
+				controls_state = 768
+				controls_state = 804
+			}
+			has_war = no
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			add_command_power = -50
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 841
+					state = 803
+					state = 600
+					state = 595
+					on_win = dashidai_weijiao.1
+					on_lose = dashidai_weijiao.2
+					on_cancel = dashidai_weijiao.3
+				}
+				defender = {
+					state = 772
+					state = 804
+					state = 768
+					on_win = dashidai_weijiao.3
+					on_lose = dashidai_weijiao.4
+					on_cancel = dashidai_weijiao.5
+				}
+			}
+		}
+	}
+	#围剿共产党2
+	second_weijiao_the_prc = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @CHI_FANWEIJIAO_COST
+		available = {
+			PRC = {
+				controls_state = 772
+				controls_state = 768
+				controls_state = 804
+				controls_state = 770
+				controls_state = 771
+				controls_state = 600
+			}
+			has_war = no
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			add_command_power = -50
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 841
+					state = 803
+					state = 840
+					state = 803
+					state = 600
+					state = 595
+					state = 746
+					state = 809
+					state = 606
+					state = 747
+					state = 596
+					on_win = dashidai_weijiao.1
+					on_lose = dashidai_weijiao.2
+					on_cancel = dashidai_weijiao.3
+				}
+				defender = {
+					state = 772
+					state = 804
+					state = 768
+					state = 771
+					state = 770
+					state = 600
+					state = 769
+					on_win = dashidai_weijiao.3
+					on_lose = dashidai_weijiao.4
+					on_cancel = dashidai_weijiao.5
+				}
+			}
+		}
+	}
+}

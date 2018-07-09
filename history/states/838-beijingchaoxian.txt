@@ -1,0 +1,18 @@
+state={
+	id=838
+	name="STATE_838"
+	provinces={
+		906 3803 9899 
+	}
+	history={
+		owner = JAP
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = KOR
+
+	}
+	manpower=677420
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,171 @@
+﻿add_namespace = dashidai_weijiao
+#围剿共产党1chi胜利
+country_event = {
+	id = dashidai_weijiao.1
+	title = dashidai_weijiao.1.t
+	desc = dashidai_weijiao.1.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.1.a
+		add_war_support = 0.1
+		set_major = yes
+		add_political_power = 80
+		set_global_flag = CHI_FLAG_weijiao1over
+	}
+}
+#围剿共产党1chi失败
+country_event = {
+	id = dashidai_weijiao.2
+	title = dashidai_weijiao.2.t
+	desc = dashidai_weijiao.2.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.2.a
+		add_war_support = -0.05
+		set_major = no
+		add_political_power = -50
+		set_global_flag = CHI_FLAG_weijiao1over
+	}
+}
+#围剿共产党1chi取消
+country_event = {
+	id = dashidai_weijiao.3
+	title = dashidai_weijiao.3.t
+	desc = dashidai_weijiao.3.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.3.a
+		add_political_power = -10
+		set_global_flag = CHI_FLAG_weijiao1over
+	}
+}
+#围剿共产党1prc胜利
+country_event = {
+	id = dashidai_weijiao.4
+	title = dashidai_weijiao.4.t
+	desc = dashidai_weijiao.4.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.4.a
+		add_war_support = 0.1
+		set_major = yes
+		add_political_power = 80
+		set_global_flag = CHI_FLAG_weijiao1over
+	}
+}
+#围剿共产党1prc失败
+country_event = {
+	id = dashidai_weijiao.5
+	title = dashidai_weijiao.5.t
+	desc = dashidai_weijiao.5.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.5.a
+		add_war_support = -0.05
+		set_major = no
+		add_political_power = -50
+		set_global_flag = CHI_FLAG_weijiao1over
+	}
+}
+#围剿共产党1prc取消
+country_event = {
+	id = dashidai_weijiao.6
+	title = dashidai_weijiao.6.t
+	desc = dashidai_weijiao.6.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.6.a
+		add_political_power = -10
+		set_global_flag = CHI_FLAG_weijiao1over
+	}
+}
+#围剿共产党2chi胜利
+country_event = {
+	id = dashidai_weijiao.7
+	title = dashidai_weijiao.7.t
+	desc = dashidai_weijiao.7.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.7.a
+		set_major = yes
+		add_political_power = 80
+		set_global_flag = CHI_FLAG_weijiao2over
+	}
+}
+#围剿共产党2chi失败
+country_event = {
+	id = dashidai_weijiao.8
+	title = dashidai_weijiao.8.t
+	desc = dashidai_weijiao.8.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.8.a
+		set_major = no
+		add_political_power = -50
+		set_global_flag = CHI_FLAG_weijiao2over
+	}
+}
+#围剿共产党2chi取消
+country_event = {
+	id = dashidai_weijiao.9
+	title = dashidai_weijiao.9.t
+	desc = dashidai_weijiao.9.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.9.a
+		add_political_power = -10
+		set_global_flag = CHI_FLAG_weijiao2over
+	}
+}
+#围剿共产党2prc胜利
+country_event = {
+	id = dashidai_weijiao.10
+	title = dashidai_weijiao.10.t
+	desc = dashidai_weijiao.10.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.10.a
+		set_major = yes
+		add_political_power = 80
+		set_global_flag = CHI_FLAG_weijiao2over
+		transfer_state = 841
+		transfer_state = 595
+	}
+}
+#围剿共产党2prc失败
+country_event = {
+	id = dashidai_weijiao.11
+	title = dashidai_weijiao.11.t
+	desc = dashidai_weijiao.11.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.11.a
+		set_major = no
+		add_political_power = -50
+		set_global_flag = CHI_FLAG_weijiao2over
+	}
+}
+#围剿共产党2prc取消
+country_event = {
+	id = dashidai_weijiao.12
+	title = dashidai_weijiao.12.t
+	desc = dashidai_weijiao.12.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = dashidai_weijiao.12.a
+		add_political_power = -10
+		set_global_flag = CHI_FLAG_weijiao2over
+	}
+}

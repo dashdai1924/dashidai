@@ -1,0 +1,155 @@
+﻿division_template = {
+	name = "Infanterie-Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Gebirgs-Brigade"
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Kavallerie-Brigade"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division= {	
+		name = "Infanterie-Division-1"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division-2"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division-3"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Infanterie-Division-4"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Infanterie-Division-5"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Infanterie-Division-6"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Infanterie-Division-7"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Infanterie-Division-8"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Infanterie-Division-9"
+		location = 692
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Gebirgs-Brigade-1"
+		location = 692
+		division_template = "Gebirgs-Brigade"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Gebirgs-Brigade-2"
+		location = 692
+		division_template = "Gebirgs-Brigade"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Gebirgs-Brigade-3"
+		location = 692
+		division_template = "Gebirgs-Brigade"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gebirgs-Brigade-4"
+		location = 692
+		division_template = "Gebirgs-Brigade"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Gebirgs-Brigade-5"
+		location = 692
+		division_template = "Gebirgs-Brigade"
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "Kavallerie-Brigade-1"
+		location = 692
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Kavallerie-Brigade-2"
+		location = 692
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Kavallerie-Brigade-3"
+		location = 692
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Kavallerie-Brigade-4"
+		location = 692
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.1
+	}
+	division= {	
+		name = "Kavallerie-Brigade-5"
+		location = 692
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.1
+	}
+}

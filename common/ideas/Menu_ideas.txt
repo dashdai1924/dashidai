@@ -1,0 +1,144 @@
+ideas = {
+	country = {
+		special_in_the_lon = {
+			picture = generic_morale_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			research_bonus = {
+				armor = -0.075
+				air_equipment = -0.075
+				naval_equipment = -0.1
+				artillery = -0.05
+				land_doctrine = -0.05
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_factor = -0.05
+				conscription_factor = -0.05
+				trade_opinion_factor = 0.2
+				monthly_population = 0.1
+				justify_war_goal_time = 0.2
+				drift_defence_factor = -0.1
+				max_planning = -0.05
+				research_time_factor = -0.02
+				dig_in_speed_factor = -0.1
+				stability_factor = -0.025
+			}
+		}	
+	}
+	#1
+	#领导人状态信息
+	Leader_Message_Text = {
+		law = yes
+		Menu_Leader_Message_Text_1 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		Menu_Leader_Message_Text_2 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			available = {
+				is_ai = no
+				tag = CHI
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			on_add = {
+				country_event = {
+					days = 0
+					id = random_death.7
+				}
+			}
+		}
+	}
+	About_League_of_Nations = {
+		law = yes
+		About_League_of_Nations_1 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		About_League_of_Nations_2 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			available = {
+				is_ai = no
+				or = {
+				not = {
+					tag = GWM
+				}
+				date > 1929.10.1
+				}
+			}
+			on_add = {
+				country_event = {
+					days = 0
+					id = lon_us.3
+				}
+			}
+		}
+		About_League_of_Nations_3 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			available = {
+				is_ai = no
+			}
+			on_add = {
+				country_event = {
+					days = 0
+					id = lon_us.5
+				}
+			}
+		}
+		About_League_of_Nations_4 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			available = {
+				is_ai = no
+			}
+		}
+		About_League_of_Nations_5 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			available = {
+				is_ai = no
+			}
+		}
+		About_League_of_Nations_6 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			available = {
+				is_ai = no
+			}
+		}
+		About_League_of_Nations_7 = {
+			level = 1
+			picture = FRA_national_mobilization_focus
+			cancel_if_invalid = no
+			available = {
+				is_ai = no
+			}
+			on_add = {
+				news_event = {
+					id = lon_us.2
+				}
+			}
+		}
+	}
+}

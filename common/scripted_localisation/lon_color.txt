@@ -1,0 +1,12 @@
+defined_text = {
+	name = lon_button_text_localisation_defined
+	text = {
+		trigger = {
+			has_global_flag = United_Nations_Build
+		}
+		localization_key = lon_button_text_localisation_1
+	}
+	text = {
+		localization_key = lon_button_text_localisation_0
+	}
+}

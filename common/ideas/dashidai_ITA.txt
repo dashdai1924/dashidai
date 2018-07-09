@@ -1,0 +1,184 @@
+ideas = {
+	country = {
+		#扩展海军基地
+		haijunji_di = {
+				picture = generic_navy_bonus
+				allowed = {
+					always = yes # Added via focus
+				}
+				modifier = {
+					supply_consumption_factor = -0.02
+					local_resources_factor = 0.02
+					production_speed_buildings_factor = 0.02
+				}
+		}
+		#利比亚游击i
+		libi_yai = {
+				picture = generic_morale_bonus
+				allowed = {
+					always = yes # Added via focus
+				}
+				modifier = {
+					conscription_factor = -0.025
+					consumer_goods_factor = 0.005
+					stability_factor = -0.05
+					political_power_factor = -0.05
+				}
+		}
+		#利比亚游击
+		libi_ya = {
+				picture = generic_morale_bonus
+				allowed = {
+					always = yes # Added via focus
+				}
+				modifier = {
+					conscription_factor = -0.05
+					consumer_goods_factor = 0.01
+					stability_factor = -0.10
+					political_power_factor = -0.10
+				}
+		}
+		#随机应变
+		sui_ji_ying_bian = {
+				picture = FRA_motorized_focus
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					drift_defence_factor = -0.75
+					political_power_factor = 0.01
+				}
+		}
+		#例外荣耀
+		taguo_liwai = {
+				picture = air_war_plans_division_focus
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					stability_factor = 0.10
+					stability_weekly = 0.002
+					consumer_goods_factor = -0.01
+					conscription_factor = 0.05
+					supply_consumption_factor = -0.02
+					army_org_Factor = 0.02
+					industrial_capacity_factory = 0.05
+					research_time_factor = -0.05
+					production_speed_buildings_factor = 0.10
+					local_resources_factor = 0.05
+				}
+				rule = {
+					can_create_factions = yes
+				}
+		}
+		#变化抵制政治点
+		bhd_zzzd = {
+				picture = FRA_fortification_focus
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					drift_defence_factor = 0.5
+					political_power_factor = 0.05
+				}
+		}
+		#法西斯内阁
+		faxisi_neige = {
+				picture = generic_pp_unity_bonus
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					drift_defence_factor = -0.5
+					industrial_capacity_factory = 0.10
+				}
+		}
+		#宣扬民主
+		addthe_minzhu = {
+				picture = generic_democratic_drift_bonus
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					stability_weekly = 0.002
+					army_org_Factor = 0.05
+					research_time_factor = -0.05
+				}
+		}
+		#粉碎法西斯
+		endthe_faxisi = {
+				picture = anti_soviet_pact
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					stability_factor = 0.10
+					political_power_factor = 0.10
+				}
+		}
+		#世界大战 战死一千
+		world_war_die_one_qian{
+				picture = generic_victors_of_ww1
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					army_morale_factor = 0.1
+					army_attack_factor = -0.02
+					army_org_Factor = -0.02
+					supply_consumption_factor = 0.02
+					training_time_army_factor = -0.05
+					naval_hit_chance = 0.10
+					navy_submarine_detection_factor = 0.10
+					air_ace_generation_chance_factor = 0.02
+					air_weather_penalty = -0.02
+					air_accidents_factor = -0.02
+					local_resources_factor = 0.05
+					production_speed_buildings_factor = 0.10
+				}
+		}
+		#梵蒂冈
+		fandigang = {
+				picture = generic_spy_coup
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					political_power_factor = 0.05
+				}
+		}
+		#民主主义路线
+		min_zhu_lu_xian = {
+				picture = air_support_focus
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					stability_factor = 0.20
+					production_speed_bunker_factor = -0.10
+				}
+		}
+		#征兵修正
+		zheng_bing_ren_shu = {
+				picture = FRA_scw_intervention_republicans_focus
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					conscription_factor = 0.05
+					stability_factor = 0.10
+				}
+		}	
+		#国家凝聚力
+		zhou_jia_guo_jia_ning_ju_li_i = {
+				picture = FRA_scw_intervention_nationalists_focus
+				allowed = {
+					always = no # Added via focus
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+					stability_factor = 0.10
+				}
+		}
+	}
+}

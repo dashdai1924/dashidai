@@ -1,0 +1,96 @@
+﻿division_template = {
+	name = "大部队"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "部队"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "1.北赣部队"
+		location = 4183
+		division_template = "大部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2.北赣部队"
+		location = 4183
+		division_template = "大部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1.南赣部队"
+		location = 7172
+		division_template = "大部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2.南赣部队"
+		location = 10057
+		division_template = "大部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3.南赣部队"
+		location = 7199
+		division_template = "大部队"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "1.东湘部队"
+		location = 13143
+		division_template = "大部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2.东湘部队"
+		location = 1448
+		division_template = "部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3.东湘部队"
+		location = 1640
+		division_template = "部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4.南赣部队"
+		location = 9942
+		division_template = "部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5.南赣部队"
+		location = 11945
+		division_template = "部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6.南赣部队"
+		location = 4183
+		division_template = "部队"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1.粤地部队"
+		location = 1047
+		division_template = "部队"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2.粤地部队"
+		location = 1047
+		division_template = "部队"
+		start_experience_factor = 0.1
+	}
+}

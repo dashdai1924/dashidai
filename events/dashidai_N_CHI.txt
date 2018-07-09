@@ -1,0 +1,108 @@
+﻿add_namespace = chi
+
+#成立广州国民政府
+news_event = {
+	id = chi.111
+	title = chi.111.t
+	desc = chi.111.d
+	picture = GFX_CHI_leader_beifajun
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = chi.111.a1
+		
+		trigger = {
+				TAG = CHI
+		}
+	}
+	option = {
+		name = chi.111.a3
+		
+		trigger = {
+			OR = {
+				TAG = WHI
+				TAG = WAN
+				TAG = FEN
+			}
+		}
+	}
+	option = {
+		name = chi.111.a2
+
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = WHI
+				TAG = WAN
+				TAG = FEN
+			}
+		}
+	}
+}
+#国共合作的实现
+news_event = {
+	id = chi.112
+	title = chi.112.t
+	desc = chi.112.d
+	picture = GFX_CHI_leader_beifajun
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = chi.112.a
+		
+		trigger = {
+				TAG = CHI
+		}
+	}
+	
+	option = {
+		name = chi.112.b
+
+		trigger = {
+			NOT = {
+				TAG = CHI
+			}
+		}
+	}
+}
+#孙中山的逝世
+news_event = {
+	id = chi.113
+	title = chi.113.t
+	desc = chi.113.d
+	picture = GFX_CHI_leader_beifajun
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = chi.113.a1
+		trigger = {
+				TAG = CHI
+		}
+	}
+	option = {
+		name = chi.113.a2
+		
+		trigger = {
+			OR = {
+				TAG = WHI
+				TAG = WAN
+				TAG = FEN
+			}
+		}
+	}
+	option = {
+		name = chi.113.a3
+
+		trigger = {
+			NOT = {
+				TAG = CHI
+				TAG = WHI
+				TAG = WAN
+				TAG = FEN
+			}
+		}
+	}
+}

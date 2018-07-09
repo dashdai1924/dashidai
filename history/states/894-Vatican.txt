@@ -1,0 +1,21 @@
+state={
+	id=894
+	name="STATE_894"
+	provinces={
+		13206 
+	}
+	manpower=590
+	history = {
+		owner = VAT
+		add_core_of = VAT
+		victory_points = { 13206 50 }
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 1
+			13206 = {
+				bunker = 1
+			}
+		}
+	}
+	state_category = city
+}

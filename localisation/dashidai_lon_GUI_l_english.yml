@@ -1,0 +1,6 @@
+﻿l_english:
+ lon_button_text_localisation:0"[Root.lon_button_text_localisation_defined]"
+ lon_button_text_localisation_0:0"国际联盟"
+ lon_button_text_localisation_1:0"联合国"
+ lon_main_window_title:0"[Root.lon_button_text_localisation_defined]"
+ lon_main_window_text_1:0"[Root.GetNameWithFlag]"

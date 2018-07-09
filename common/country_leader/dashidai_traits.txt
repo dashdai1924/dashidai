@@ -1,0 +1,152 @@
+leader_traits = {
+	#右倾托派
+	Chen_Du_Xiu_Trosky = {
+		random = no
+		political_power_factor = -0.05
+		stability_factor = 0.15
+		war_support_factor = -0.3
+		foreign_subversive_activites = -0.3
+		subversive_activites_upkeep = -0.2
+		send_volunteer_size = 10
+		justify_war_goal_time = -0.2
+		improve_relations_maintain_cost_factor = 0.25
+		non_core_manpower = 0.05
+		ai_focus_aggressive_factor = 0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_shangyejutou = {
+		random = no
+		stability_factor = -0.05
+		trade_laws_cost_factor = -0.1
+		trade_opinion_factor = 0.4
+		consumer_goods_factor = -0.05
+		production_speed_industrial_complex_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_hiddleader_power = {
+		random = no
+		political_power_factor = 0.1
+		opinion_gain_monthly_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_smart_player = {
+		random = no
+		political_power_gain = -0.1
+		decryption_factor = 1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_fanpojiezhuanjia = {
+		random = no
+		political_power_gain = -0.1
+		encryption_factor = 1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_fram_open_man = {
+		random = no
+		consumer_goods_factor = -0.02
+		production_speed_industrial_complex_factor = 0.05
+		production_speed_arms_factory_factor = -0.1
+		stability_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_shengchanzhuanjia = {
+		random = no
+		production_factory_max_efficiency_factor = 0.1
+		production_speed_buildings_factor = 0.1
+		industrial_capacity_factory = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_shengtaibaohuzhe = {
+		random = no
+		local_resources_factor = -0.2
+		stability_factor = 0.1
+		political_power_gain = -0.05
+		political_advisor_cost_factor = -0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_tongzhishushi = {
+		random = no
+		political_power_gain = 0.1
+		stability_factor = 0.2
+		war_support_factor = -0.2
+		consumer_goods_factor = 0.02
+		non_core_manpower = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_jijindeqinluezhe = {
+		random = no
+		stability_weekly = -0.05
+		war_support_factor = 0.2
+		political_power_factor = -0.25
+		justify_war_goal_time = -0.4
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	traits_generic_public_man = {
+		random = no
+		stability_weekly = 0.05
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 2
+				has_stability < 0.4
+			}
+		}
+	}
+	traits_generic_ideas_leader = {
+		random = no
+		war_support_weekly = 0.05
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 2
+				has_war_support < 0.4
+			}
+		}
+	}
+	PRC_Drak_and_Showloed = {
+		random = no
+		political_power_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#领导人死亡
+	PRC_leader_dead_in_here = {
+		random = no
+		stability_factor = -0.2
+		war_support_factor = -0.5
+		political_power_factor = -0.5
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	#浮游生物
+	Fu2You2Sheng1Wu4 = {
+		random = no
+		army_leader_start_level = 5
+		army_speed_factor = -0.4
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,92 @@
+ideas = {
+	political_advisor = {
+		#商业巨头
+		generic_shangyejutou = {
+			picture = generic_democratic_asia
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_shangyejutou }
+		}
+		#隐藏的领导力
+		generic_hiddleader_power = {
+			picture = generic_fascist_asia
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_hiddleader_power }
+		}
+		#聪明的解析员
+		generic_smart_player = {
+			picture = generic_fascist_europe
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_smart_player }
+		}
+		#反破解专家
+		generic_fanpojiezhuanjia = {
+			picture = generic_fascist_south_america
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_fanpojiezhuanjia }
+		}
+		#农业开发者
+		generic_fram_open_man = {
+			picture = generic_democratic_arab
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_fram_open_man }
+		}
+		#生产专家
+		generic_shengchanzhuanjia = {
+			picture = mikhail_kalinin
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_shengchanzhuanjia }
+		}
+		#生态保护者
+		generic_shengtaibaohuzhe = {
+			picture = speer
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_shengtaibaohuzhe }
+		}
+		#统治术士
+		generic_tongzhishushi = {
+			picture = john_beckett
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_tongzhishushi }
+		}
+		#激进的侵略者
+		generic_jijindeqinluezhe = {
+			picture = generic_communist_asia
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_jijindeqinluezhe }
+		}
+		#公众人物
+		generic_public_man = {
+			picture = generic_democratic_africa
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_public_man }
+		}
+		#意见领袖
+		generic_ideas_leader = {
+			picture = generic_communist_africa
+			allowed = {
+				always = yes
+			}
+			traits = { traits_generic_ideas_leader }
+		}
+	}
+}

@@ -1,0 +1,110 @@
+﻿l_english:
+ #                ██████████████████████            ██  ██          ███████████████
+ #               ██                                 ██  ██         ██
+ #              ██     ██                          ██   ██         ██
+ #              ██    ████████████████            ██    ██         ██
+ #              ██    ██            ██            ██    ██        ██
+ #             ██     ████████████████            ███████████     ██
+ #             ██     ██            ██            ██              ████████████████
+ #             ██     ████████████████           ██               ████          ██
+ #             ██            ██                  ██              ██  ██        ██
+ #             ██       ██   ██  ██              █████████████   ██   ██      ██
+ #            ██       ██    ██   ██             ██         ██   ██     ██  ██
+ #            ██      ██  ██ ██    ██            ██         ██   ██       ██
+ #            ██           ████                  ██         ██  ██      ██  ██
+ #            ██            ███                  ██         ██  ██    ██      ██
+ #                 ██           ██            ██████
+ #                ████          ███████     ██      ██
+ #               ██ ██          ██          ██      ██
+ #                  ██          █████       ██      ██
+ #                  ██               ██     ██      ██
+ #                  ██          ██   ██     ██      ██
+ #                ██████   ██    ████         ██████
+ dashidai_PRC_strengthen_the_central_secretariat:0 "加强中央书记处"
+ dashidai_PRC_strengthen_the_central_secretariat_desc:0 "长征之后，我们必须重组我们的政治机构，以确保我们能够和国民党相抗衡。"
+ dashidai_PRC_marxist_orthodoxy:0 "正统的马克思主义"
+ dashidai_PRC_marxist_orthodoxy_desc:0 "实现真正的共产主义的关键在于最大限度地实行马克思的主张。"
+ dashidai_PRC_soviet_leadership:0 "苏联的领导"
+ dashidai_PRC_soviet_leadership_desc:0 "苏联在建设共产主义的经验上是我们的老大哥，我们应当承认这一点，学习苏联的建设经验。"
+ dashidai_PRC_soviet_economic_aid:0 "苏联经济援助"
+ dashidai_PRC_soviet_economic_aid_desc:0 "没有外界的帮助，长征带来的毁灭性影响恐怕要经过几代人才能消退。我们应当向苏联寻求帮助。"
+ dashidai_PRC_internationalism:0 "国际主义"
+ dashidai_PRC_internationalism_desc:0 "全世界的工人和农民必须团结起来挣脱他们身上的锁链。我们将肩并肩地建设更美好的未来。"
+ dashidai_PRC_agrarian_socialism:0 "农业社会主义"
+ dashidai_PRC_agrarian_socialism_desc:0 "中国与世界上其他的工业国不同，期待马克思描绘的共产主义革命是误解了我们国家的现实处境。"
+ dashidai_PRC_rectification_campaign:0 "整风运动"
+ dashidai_PRC_rectification_campaign_desc:0 "我们对于采取斗争的方式存在相当多的误解。我们应该给有错误思想的同志们一个机会认识到自己的错误。"
+ dashidai_PRC_maoism:0 "毛泽东思想"
+ dashidai_PRC_maoism_desc:0 "毛主席花了好几个月的时间系统地论述了他的政治思想，并将其发展为指导我国建设的一套意识形态。"
+ dashidai_PRC_socialism_with_chinese_characteristics:1 "马克思主义中国化"
+ dashidai_PRC_socialism_with_chinese_characteristics_desc:1 "马克思的理论毫无疑问是出色的，但他却是从欧洲的视角展开论述的。中国的特殊性应当在社会主义建设的政策上得到体现。"
+ dashidai_PRC_proclaim_the_peoples_republic:0 "建立新中国"
+ dashidai_PRC_proclaim_the_peoples_republic_desc:0 "随着我们战胜了国民党反动派，我们已经取得了作为中国合法政府的正当性。我们还有许多工作要做，但是未来已经光明了许多。"
+ dashidai_PRC_socialist_market_economy:0 "社会主义市场经济"
+ dashidai_PRC_socialist_market_economy_desc:0 "从马克思的定义来看，通向社会主义和共产主义的道路上一定存在着资本主义。中国从未发展过正常的资本主义市场经济，这让我们建设社会主义的尝试几乎是不可能的。我们需要首先发展资本主义的生产方式，这样才能进一步地发展。"
+ dashidai_PRC_social_democracy:0 "社会民主主义"
+ dashidai_PRC_social_democracy_desc:0 "党的“左”倾错误只会让事情变得更糟而不是更好。国民党尽管有其缺陷，也能够成为我们我们建设更美好的未来的盟友，我们应当在政治领域主动接近他们。"
+ dashidai_PRC_coalition_government:0 "联合政府"
+ dashidai_PRC_coalition_government_desc:0 "尽管国家统一还有很长的路要走，但是和国民党组成联合政府将会减少阻力。"
+ dashidai_PRC_purge_the_radicals:0 "清洗激进分子"
+ dashidai_PRC_purge_the_radicals_desc:0 "我们党内还有一些人坚信阶级斗争理论和反对剥削阶级的存在，他们不得不离开。"
+ dashidai_PRC_strengthen_the_left_wing_of_the_kmt:0 "支持国民党左翼"
+ dashidai_PRC_strengthen_the_left_wing_of_the_kmt_desc:0 "国民党的内部有一些人试图破坏同我们达成协议的努力。我们要尽一切力量保证我们的国民党盟友赢得他们的内斗。"
+ dashidai_PRC_remove_chiang_kai_shek:0 "铲除蒋介石"
+ dashidai_PRC_remove_chiang_kai_shek_desc:0 "尽管我们做了许多努力，但是蒋委员长依旧从心底里认为我们是共产分子。他的恶毒攻击已经成为不可忽视的问题。我们应该干些什么。"
+ dashidai_PRC_national_leadership:0 "国家领导"
+ dashidai_PRC_national_leadership_desc:0 "蒋介石被除掉以后，最后一个反对统一的力量也消失了。我们应当在这个联合政府中采取主动了。"
+ dashidai_PRC_land_redistribution:0 "土地改革"
+ dashidai_PRC_land_redistribution_desc:0 "几个世纪以来，佃农们都被迫向地主缴纳地租。我们会改变这一点。"
+ dashidai_PRC_the_yanan_base_area:0 "延安根据地"
+ dashidai_PRC_the_yanan_base_area_desc:0 "我们革命的基本盘是延安地区，如果我们想要在未来的斗争中占上风，就要加强苏区的建设"
+ dashidai_PRC_prepare_for_war_with_japan:0 "为对日战争做准备"
+ dashidai_PRC_prepare_for_war_with_japan_desc:0 "日本军国主义对我们的国家构成了最严重的威胁。他们希望将中国分割并压榨，这是任何一个中国的政府都无法想象的。同国民党的斗争与之相比简直不值一提。"
+ dashidai_PRC_government_of_national_defense:0 "国防政府"
+ dashidai_PRC_government_of_national_defense_desc:0 "一个四分五裂的国家必然面临失败。我们需要和国民党合作以加强国家的防御。"
+ dashidai_PRC_confrontation_with_the_warlords:0 "与军阀对抗"
+ dashidai_PRC_confrontation_with_the_warlords_desc:0 "在中国，有些人忽视中央政府，拒绝在斗争中站队，他们中的一些人甚至想秘密地多去国家领导权，或者同日本狼狈为奸。他们必须与我们合作。"
+ dashidai_PRC_anti_japanese_expedition:0 "抵抗日本侵略"
+ dashidai_PRC_anti_japanese_expedition_desc:0 "以我们现在的情况公开抵抗日本人与其说是勇敢不如说是愚蠢。我们应该首先派遣小组敌后作战队伍，为敌后抗战打下基础。当时机来临时，我们将发动起义。"
+ dashidai_PRC_revolutionary_military_commission:0 "革命军事委员会"
+ dashidai_PRC_revolutionary_military_commission_desc:0 "对敌人的革命斗争必须通过设立特别的机构来协调。"
+ dashidai_PRC_provoke_japan:0 "挑衅日本"
+ dashidai_PRC_provoke_japan_desc:0 "我们国家的三代人都生活在日本威胁的阴影之下。反对日本的扩张将会让我们成为中国人眼中的英雄。如果日本人不愿意发动战争，我们就让他们不得不发动。"
+ dashidai_PRC_protracted_warfare:0 "持久战"
+ dashidai_PRC_protracted_warfare_desc:0 "我们必须主导我们的战争。中国有大量的人口，经得起持久的战争。正面和敌人直接对抗无疑是自杀行为。"
+ dashidai_PRC_mobile_warfare:0 "运动战"
+ dashidai_PRC_mobile_warfare_desc:0 "我们不能永远躲藏在山林中。我们要主动和敌人进行作战，向世界证明我们不惧怕和他们公开作战"
+ dashidai_PRC_peoples_war:0 "人民战争"
+ dashidai_PRC_peoples_war_desc:0 "其他国家或许认为取胜的关键因素是技术与火力。但是我们知道更重要的。没有什么技术能够战胜愿意坚持到最后一刻的决意为国捐躯的战士。"
+ dashidai_PRC_100_regiments_campaign:0 "百团大战"
+ dashidai_PRC_100_regiments_campaign_desc:0 "我们着重于小型战斗和小规模作战。我们的敌人或许认为我们虚弱不堪，只能起到滋扰的作用。沉迷于虚幻的安全感的他们将马上遭遇到我们大规模的进攻。"
+ dashidai_PRC_central_military_commission:0 "中央军事委员会"
+ dashidai_PRC_central_military_commission_desc:0 "我们的地位逐步巩固，我们可以从革命时期的生存斗争转向争取国家领导权的斗争。"
+ dashidai_PRC_peoples_liberation_army:0 "人民解放军"
+ dashidai_PRC_peoples_liberation_army_desc:0 "中国红军已经实现了自己的伟大目标。在未来，我们将会致力于解放我们的人民，在这一事业中实现无上的光荣。"
+ dashidai_PRC_peoples_volunteer_army:0 "人民志愿军"
+ dashidai_PRC_peoples_volunteer_army_desc:0 "许多国家依旧存在本国工人和农民争取解放的战争。直接干涉这些冲突不总是明智的。有时候打破平衡只需要使出一小点力气。"
+ dashidai_PRC_military_intelligence_department:0 "情报部"
+ dashidai_PRC_military_intelligence_department_desc:0 "我们在人民大众中有许多朋友，为我们提供各种有价值的信息。我们还有更多的敌人。我们需要创建一个机构将二者分开。"
+ dashidai_PRC_central_security_bureau:0 "中央政治保卫局"
+ dashidai_PRC_central_security_bureau_desc:0 "哪怕是在最小的村庄里，我们也不能容许反革命分子横行无忌。我们要在叛徒们造成任何损害之前就把他们揪出来。"
+ dashidai_PRC_focus_on_china:0 "聚焦国内"
+ dashidai_PRC_focus_on_china_desc:0 "我们还在与国民党和军阀作战时，我们不能指望还同时与日本人作战。在我们和日本人作战之前，我们应该马上将国民党与军阀击败。"
+ dashidai_PRC_exploit_the_weak_neighbours:0 "兼并弱邻"
+ dashidai_PRC_exploit_the_weak_neighbours_desc:0 "周边的军阀正因内斗、腐败而疲弱不堪。这正是我们扩张革命根据地的完美时机。"
+ dashidai_PRC_infiltration:0 "敌后作战"
+ dashidai_PRC_infiltration_desc:0 "国民党妄图与我军进行正面作战。我们绝不可随了他们的心意。我军应当化整为零，在敌后发动群众、建立根据地。当时机适宜的时候，各地的敌后组织就一同发动，打他们个措手不及。 "
+ dashidai_PRC_enforce_the_three_rules:0 "三大纪律"
+ dashidai_PRC_enforce_the_three_rules_desc:0 "1: 一切行动听指挥\n 2: 不拿群众一针一线\n 3: 一切缴获要归公\n 只要能遵守这三项简单易懂的纪律，人民群众自然会明白我们是站在他们这一边的。"
+ dashidai_PRC_permit_opium_trade:0 "鸦片外售"
+ dashidai_PRC_permit_opium_trade_desc:0 "哪怕鸦片有着各种的副作用，我们也不能否定鸦片能很大程度上缓解边区政府的财政压力。"
+ dashidai_PRC_ban_the_opium_trade:0 "禁售鸦片"
+ dashidai_PRC_ban_the_opium_trade_desc:0 "鸦片乃是西方列强用来奴役国人的工具。我们不能允许它继续毒害中国人民。"
+ dashidai_PRC_abolish_the_land_rent:1 "废除地租"
+ dashidai_PRC_abolish_the_land_rent_desc:0 "土地私有制荒谬至极————土地属于辛勤耕耘的农民。我们要发动人民群众，让他们自行推动土地改革。我们也可借此得到广大人民群众的支持。"
+ dashidai_PRC_literacy_programs:0 "扫盲教育"
+ dashidai_PRC_literacy_programs_desc:0 "建立现代化社会的第一步，便是要让全体老百姓都真正理解社会上的问题并参与解决这些问题。"
+ dashidai_PRC_china_medical_university:0 "中国医科大学"
+ dashidai_PRC_china_medical_university_desc:0 "卫生与医疗不仅能使革命队伍保持战斗力，还能让人民群众受益。我们要尽快制定并推广新的卫生与医疗规范。"
+ dashidai_PRC_form_the_academy_of_sciences:0 "设立中科院"
+ dashidai_PRC_form_the_academy_of_sciences_desc:0 "我们应当将研究机构和大学院系进行调整，重组为中国科学院以提高我们的管理效率。"

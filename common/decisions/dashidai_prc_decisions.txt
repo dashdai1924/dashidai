@@ -1,0 +1,4138 @@
+@PRC_OPEN_VAR = 30 #通用此决议花费
+@PRC_DAYS_KEEP = 365 #干涉军阀和渗透所需天数
+@PRC_DAYS_KEEP2 = 270 #根据地学校建造及组建根据地天数
+@PRC_AUTO_KILL_PP = -0.1 #渗透日花费点数
+@PRC_AUTO_KILL_PP2 = -0.01 #建筑根据地学校日花费点数
+@PRC_AUTO_KILL_PP3 = -0.05 #组建根据地日花费点数
+@PRC_NEED_DAYU_NU = 0.2 #敌后渗透所需意识形态上限
+@PRC_AI_FACTOR_DAYU_NU = 0.5 #有AI点击倾向所需大于日收入政治点
+@PRC_HUIHE_KILL_POP = -0.05 #一次渗透所扣除支持度
+@PRC_CHANGZHENGROAD_COST = 10 #战略转移一次性扣除点数
+@PRC_THE_INF_SET_LEVEL = 0 #基础设施被渗透后设定等级
+@PRC_FIRST_LOST_BUILD_CRAD_PLACE = -1 #建筑槽被渗透后变化数量
+@PRC_MAKE_BETTER_GENJUDI_OPEN_VAR = 20 #组建根据地花费
+@PRC_THE_INF_SET_LEVEL_BUILD = 1 #组建根据地后基础设施等级变化
+@PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD = 1 #组建根据地后建筑槽数量变化
+@PRC_FOCUS_NEED_DAY = 70 #决议树焦点天数
+@PRC_FOCUS_NEED_PP_DAYS = -1 #决议焦点每日消耗点数
+@PRC_FOCUS_REPDE = 1 #决议树重复数字
+#干涉军阀
+PRC_war_in_junfa = {
+	open_the_WHI = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = WHI
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			WHI = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_YIN = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = YIN
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			YIN = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_YUN = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = YUN
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			YUN = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_GXC = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = GXC
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			GXC = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_FEN = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = FEN
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			FEN = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_XSM = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = XSM
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			XSM = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_SIK = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = SIK
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			SIK = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_CXC = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = CXC
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			CXC = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_SHX = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = SHX
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			SHX = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_WAN = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = WAN
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			WAN = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_WUH = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = WUH
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			WUH = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZA = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZA
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZA = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZB = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZB
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZB = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZC = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZC
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZC = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZD = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZD
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZD = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZE = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZE
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZE = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZF = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZF
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZF = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZG = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZG
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZG = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZH = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZH
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZH = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZI = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZI
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZI = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZJ = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZJ
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZJ = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZK = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZK
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZK = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZL = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZL
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZL = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZM = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZM
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZM = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZN = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZN
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZN = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZO = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZO
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZO = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZP = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZP = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_ZZQ = {
+		icon = infiltrate_state
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = ZZQ
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			ZZQ = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+	open_the_TIB = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		visible = {
+			country_exists = TIB
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > 1
+			}
+		}
+		complete_effect = {
+			TIB = {
+				add_timed_idea = {
+					idea = decisons_communism_in_here
+					days = @PRC_DAYS_KEEP
+				}
+			}
+		}
+	}
+}
+#敌后渗透
+PRC_shentou_in_junfa = {
+	shentou_771 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			771 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 9
+		}
+		complete_effect = {
+			771 = {
+				 CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE 
+			}
+		}
+	}
+	shentou_770 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			770 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 9
+		}
+		complete_effect = {
+			770 = {
+				 CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE 
+			}
+		}
+	}
+	shentou_804 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			804 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			804 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 804 }
+	}
+	shentou_600 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			600 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			600 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 600 }
+	}
+	shentou_768 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			768 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			768 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 768 }
+	}
+	shentou_769 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			769 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			769 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 769 }
+	}
+	shentou_595 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			595 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			595 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 595 }
+	}
+	shentou_820 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			820 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			820 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 820 }
+	}
+	shentou_782 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			782 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			782 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 782 }
+	}
+	shentou_819 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			819 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			819 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 819 }
+	}
+	shentou_596 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			596 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			596 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 596 }
+	}
+	shentou_781 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			781 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			781 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 781 }
+	}
+	shentou_841 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			841 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			841 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 841 }
+	}
+	shentou_818 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			818 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			818 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 818 }
+	}
+	shentou_803 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			803 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			803 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 803 }
+	}
+	shentou_840 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			840 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			840 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 840 }
+	}
+	shentou_602 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			602 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			602 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 602 }
+	}
+	shentou_745 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			745 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			745 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 745 }
+	}
+	shentou_809 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			809 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			809 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 809 }
+	}
+	shentou_620 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			620 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			620 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 620 }
+	}
+	shentou_746 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			746 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			746 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 746 }
+	}
+	shentou_747 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			747 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			747 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 747 }
+	}
+	shentou_606 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			606 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			606 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 606 }
+	}
+	shentou_810 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			810 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			810 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 810 }
+	}
+	shentou_607 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			607 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			607 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 607 }
+	}
+	shentou_762 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			762 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			596 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 596 }
+	}
+	shentou_775 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			775 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			775 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 775 }
+	}
+	shentou_773 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			773 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			773 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 773 }
+	}
+	shentou_598 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			598 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			598 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 598 }
+	}
+	shentou_752 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			752 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			752 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 752 }
+	}
+	shentou_765 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			765 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			765 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 765 }
+	}
+	shentou_622 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			622 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			622 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 622 }
+	}
+	shentou_761 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			761 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			761 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 761 }
+	}
+	shentou_591 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			591 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			591 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 591 }
+	}
+	shentou_593 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			593 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			593 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 593 }
+	}
+	shentou_783 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			783 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			783 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 783 }
+	}
+	shentou_758 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			758 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			758 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 758 }
+	}
+	shentou_757 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			757 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			757 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 757 }
+	}
+	shentou_592 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			592 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			592 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 592 }
+	}
+	shentou_759 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			759 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			759 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = {
+			transfer_state = 759
+		}
+	}
+	shentou_760 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			760 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			760 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 760 }
+	}
+	shentou_855 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			855 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			855 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 855 }
+	}
+	shentou_845 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			845 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			845 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 845 }
+	}
+	shentou_805 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			805 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			805 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 805 }
+	}
+	shentou_599 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			599 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			599 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 599 }
+	}
+	shentou_594 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			594 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			594 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 594 }
+	}
+	shentou_842 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			842 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			842 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 842 }
+	}
+	shentou_764 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			764 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			764 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 764 }
+	}
+	shentou_744 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			744 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			744 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 744 }
+	}
+	shentou_763 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			763 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			763 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 763 }
+	}
+	shentou_796 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			796 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			796 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 796 }
+	}
+	shentou_605 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			605 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			605 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 605 }
+	}
+	shentou_797 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP
+		available = {
+			797 = { CONTROLLER = { communism > @PRC_NEED_DAYU_NU } }
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			797 = { CONTROLLER = { add_popularity = { ideology = communism popularity = @PRC_HUIHE_KILL_POP } } set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL } add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE }
+		}
+		remove_effect = { transfer_state = 797 }
+	}
+}
+#根据地学校
+PRC_genjudischool = {
+	gjdschool_767 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 767
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP2
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 2
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		complete_effect = {
+			add_to_variable	= {
+				var = PRC_NOW_BUILDED_BUILDING
+				value = 1
+			}
+		}
+		remove_effect = {
+			767 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = PRC_building_genjudischool
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+#战略转移
+PRC_changzheng_road = {
+	#南昌到瑞金转移
+	changzheng_767 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		visible = {
+			owns_state = 767
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 600
+				transfer_state = 768
+				transfer_state = 769
+				load_oob = AMR_1
+				declare_war_on = {
+					target = PRC
+					type = annex_everything
+				}
+			}
+			CHI = {
+				give_military_access = AMR
+			}
+			AMR = {
+				give_military_access = CHI
+			}
+		}
+	}
+	#南昌到瑞金转移结束
+	changzheng_control_the_768 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		visible = {
+			owns_state = 767
+		}
+		available = {
+			controls_state = 768
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			transfer_state = 768
+			set_capital = 768
+			CHI = {
+				transfer_state = 600
+				transfer_state = 767
+				transfer_state = 769
+			}
+		}
+	}
+	#瑞金、秋收到井冈山转移
+	changzheng_768 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		visible = {
+			owns_state = 768
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 804
+				transfer_state = 841
+				transfer_state = 593
+				transfer_state = 772
+				transfer_state = 758
+				transfer_state = 592
+				transfer_state = 841
+				transfer_state = 840
+				transfer_state = 803
+				transfer_state = 783
+				load_oob = AMR_2
+				declare_war_on = {
+					target = PRC
+					type = annex_everything
+				}
+			}
+			CHI = {
+				give_military_access = AMR
+			}
+			AMR = {
+				give_military_access = CHI
+			}
+		}
+	}
+	#秋收起义
+	qiushou_revolution = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = 40
+		visible = {
+			owns_state = 768
+		}
+		available = {
+			has_political_power > 150
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			set_cosmetic_tag = PRY
+			transfer_state = 770
+			transfer_state = 771
+			division_template = {
+				name = "工农革命军"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 2 }
+				}
+			}
+			division_template = {
+				name = "工农革命军团"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+				}
+			}
+			load_oob = "PRC_army_qiushou"
+			set_global_flag = PRC_FLAG_qiushouqiyi
+		}
+	}
+	#三湾改编
+	PRC_sanwangaibian_dec = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		visible = {
+			owns_state = 768
+		}
+		available = {
+			has_political_power > 150
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			add_ideas = PRC_idea_threewangaibian
+			set_global_flag = PRC_FLAG_strong_army_control
+		}
+	}
+	#瑞金到井冈山转移结束
+	changzheng_control_the_772 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		visible = {
+			owns_state = 768
+		}
+		available = {
+			controls_state = 772
+			or = {
+			divisions_in_state = {
+				state = 772
+				size > 6
+			}
+			and = {
+				is_ai = yes
+				AMR = {
+					surrender_progress > 0.7
+				}
+			}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			transfer_state = 772
+			set_capital = 772
+			ZZK = {
+				transfer_state = 593
+				transfer_state = 758
+				transfer_state = 592
+				transfer_state = 783
+			}
+			CHI = {
+				transfer_state = 804
+				transfer_state = 841
+				transfer_state = 768
+				transfer_state = 770
+				transfer_state = 771
+				transfer_state = 840
+				transfer_state = 803
+			}
+			set_country_flag = PRC_FLAG_JINGGANGSHANHUISHI
+		}
+	}
+}
+#组建根据地
+PRC_build_new_revolution_genjudi = {
+	build_rgjd_771 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 771
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			771 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_770 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 770
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			770 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_804 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 804
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			804 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_600 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 600
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			600 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_768 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 768
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			768 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_769 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 769
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			769 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_595 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 595
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			595 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_820 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 820
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			820 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_782 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 782
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			782 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_819 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 819
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			819 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_596 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 596
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			596 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_781 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 781
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			781 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_841 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 841
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			841 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_818 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 818
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			818 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_803 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 803
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			803 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_840 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 840
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			840 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_602 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 602
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			602 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_745 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 745
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			745 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_809 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 809
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			809 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_620 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 620
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			620 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_746 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 746
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			746 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_747 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 747
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			747 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_606 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 606
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			606 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_810 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 810
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			810 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_607 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 607
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			607 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_762 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 762
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			762 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_775 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 775
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			775 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_773 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 773
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			773 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_598 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 598
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			598 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_752 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 752
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			752 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_765 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 765
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			765 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_622 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 622
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			622 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_761 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 761
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			761 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_591 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 591
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			591 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_593 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 593
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			593 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_783 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 783
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			783 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_758 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 758
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			758 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_757 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 757
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			757 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_592 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 592
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			592 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_759 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 759
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			759 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_760 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 760
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			760 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_855 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 855
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			855 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_845 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 845
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			845 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_805 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 805
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			805 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_599 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 599
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			599 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_594 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 594
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			594 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_842 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 842
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			842 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_764 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 764
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			764 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_744 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 744
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			744 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_763 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 763
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			763 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_796 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 796
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			796 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_605 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 605
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			605 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+	build_rgjd_797 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		days_re_enable = @PRC_OPEN_VAR
+		war_with_on_remove = CHI
+		cost = @PRC_OPEN_VAR
+		days_remove = @PRC_DAYS_KEEP2
+		visible = {
+			owns_state = 797
+		}
+		modifier = {
+			political_power_gain = @PRC_AUTO_KILL_PP3
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				political_power_daily > @PRC_AI_FACTOR_DAYU_NU
+			}
+		}
+		remove_effect = {
+			797 = {
+				set_building_level = { type = infrastructure level = @PRC_THE_INF_SET_LEVEL_BUILD }
+				add_extra_state_shared_building_slots = @PRC_FIRST_LOST_BUILD_CRAD_PLACE_BUILD
+			}
+		}
+	}
+}
+#政变线
+PRC_zhengbianroad = {
+	#进步
+	the_dec_focus_tree_1_focus_1 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_1
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_2
+			}
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_2
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_1
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_1
+		}
+	}
+	#反动
+	the_dec_focus_tree_1_focus_2 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_1
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_2
+			}
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_1
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_2
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_2
+		}
+	}
+	#集体
+	the_dec_focus_tree_1_focus_3 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_3
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_4
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_1
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_4
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_3
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_3
+		}
+	}
+	#自由
+	the_dec_focus_tree_1_focus_4 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_3
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_4
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_1
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_3
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_4
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_4
+		}
+	}
+	#加权
+	the_dec_focus_tree_1_focus_5 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_5
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_6
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_2
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_6
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_5
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_5
+		}
+	}
+	#中立
+	the_dec_focus_tree_1_focus_6 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_5
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_6
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_2
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_5
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_6
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_6
+		}
+	}
+	#集体路线——————————
+	#斯大林主义
+	the_dec_focus_tree_1_focus_7 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_7
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_8
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_3
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_8
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_7
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_7
+		}
+	}
+	#托洛茨基主义
+	the_dec_focus_tree_1_focus_8 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_7
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_8
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_3
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_7
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_8
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_8
+		}
+	}
+	#公审执政党
+	the_dec_focus_tree_1_focus_9 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_9
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_10
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_7
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_10
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_9
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_9
+		}
+	}
+	#内部施压
+	the_dec_focus_tree_1_focus_10 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_9
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_10
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_7
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_9
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_10
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_10
+		}
+	}
+	#托洛茨基指导
+	the_dec_focus_tree_1_focus_11 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_11
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_12
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_8
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_12
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_11
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_11
+		}
+	}
+	#托洛茨基指挥
+	the_dec_focus_tree_1_focus_12 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_11
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_12
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_8
+		}
+		available = {
+			hidden_trigger = {
+				not = {
+					has_country_flag = DECFT_str_the_dec_focus_tree_1_focus_11
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_12
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_12
+		}
+	}
+	#发起武装革命
+	the_dec_focus_tree_1_focus_13 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_13
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_9
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_13
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_13
+		}
+	}
+	#暗杀政府人员
+	the_dec_focus_tree_1_focus_14 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_14
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_10
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_14
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_14
+		}
+	}
+	#扩大地下组织
+	the_dec_focus_tree_1_focus_15 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_15
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_11
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_15
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_15
+		}
+	}
+	#秘密组建军队
+	the_dec_focus_tree_1_focus_16 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_16
+			}
+			has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_12
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_16
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_16
+		}
+	}
+	#赤化人民
+	the_dec_focus_tree_1_focus_17 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_17
+			}
+			or = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_13
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_14
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_17
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_17
+		}
+	}
+	#发起革命
+	the_dec_focus_tree_1_focus_18 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_18
+			}
+			or = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_15
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_16
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_18
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_18
+		}
+	}
+	#共产制度
+	the_dec_focus_tree_1_focus_19 = { icon = infiltrate_state days_re_enable = @PRC_FOCUS_REPDE cost = @PRC_MAKE_BETTER_GENJUDI_OPEN_VAR days_remove = @PRC_FOCUS_NEED_DAY ai_will_do = { base = 0 } modifier = { political_power_gain = @PRC_FOCUS_NEED_PP_DAYS }
+		visible = {
+			not = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_19
+			}
+			or = {
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_17
+				has_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_18
+			}
+		}
+		complete_effect = {
+			set_country_flag = DECFT_str_the_dec_focus_tree_1_focus_19
+		}
+		remove_effect = {
+			set_country_flag = DECFT_fin_the_dec_focus_tree_1_focus_19
+		}
+	}
+}
+#敌后游击
+PRC_dihouyouji{
+	make_east_north_kill_japan = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = JAP
+		cost = 300
+		days_remove = 60
+		visible = {
+			has_global_flag = event918
+		}
+		remove_effect = {
+			transfer_state = 714
+			transfer_state = 717
+			transfer_state = 753
+			transfer_state = 754
+			transfer_state = 877
+			transfer_state = 878
+			transfer_state = 880
+			transfer_state = 885
+		}
+	}
+}
+#成立国家
+Build_china_confieat = {
+	make_temp_zhengfu_1 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		cost = 20
+		visible = {
+			has_completed_focus = PRC_zhonghuasuweiai
+		}
+		remove_effect = {
+			set_cosmetic_tag = PRD
+		}
+	}
+	make_temp_zhengfu_2 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		cost = 20
+		visible = {
+			has_global_flag = PRC_FLAG_overthelongway
+		}
+		remove_effect = {
+			set_cosmetic_tag = PRE
+		}
+	}
+	make_temp_zhengfu_3 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		cost = 20
+		visible = {
+			has_war_together_with = JAP
+			is_in_faction_with = CHI
+		}
+		remove_effect = {
+			set_cosmetic_tag = PRG
+		}
+	}
+}

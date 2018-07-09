@@ -1,0 +1,34 @@
+bookmarks = {
+	bookmark = {
+		name = "RA_BLITZKRIEG_NAME"
+		desc = "RA_BLITZKRIEG_DESC"
+		date = 1939.8.14.12
+		picture = "GFX_dashidai_select_date_1939"
+		default_country = "GWM"
+		default = yes
+		
+		"GWM"={
+			history = "GWM_RA_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+				WEST_Great_Depression
+				GWM_Locarno_Treaties
+				GWM_lost_work
+			}
+			focuses = {
+				GWM_begin_execution
+				GWM_locarno_treaties
+				GWM_industry_research
+			}
+		}
+		
+		"---"={
+			history = "OTHER_RA_BLITZKRIEG_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

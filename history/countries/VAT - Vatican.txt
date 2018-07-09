@@ -1,0 +1,68 @@
+﻿capital = 894
+oob = "VAT_1924"
+set_research_slots = 1
+add_ideas = {
+	undisturbed_isolation
+	limited_exports
+	disarmed_nation
+	CHI_gaozizhidu_wenti
+	V2S_central_focus_political
+	Beifa_renkou_9
+	Beifa_zuidagongshi_6
+	Beifa_zuidigongzi_6
+	Beifa_anquanguizhang_6
+	Beifa_shiyebuzhu_1
+	Beifa_tonggong_4
+	Beifa_tuixiujin_1
+	Beifa_weishengbaojian_1
+	Beifa_huanjingfa_1
+	Beifa_yishubutie_1
+	Beifa_shoujiaoyuquan_11
+	Beifa_zhengdang_6
+	Beifa_zhengbingzhi_1
+	Beifa_yiminzhengce_3
+	Beifa_gonghui_5
+	Beifa_shaoshuzuqun_4
+	Beifa_xuanjuquan_1
+	Beifa_shangyiyuan_1
+	Beifa_nulizhi_2
+	Beifa_gongzhongjihui_2
+	Beifa_chubanquan_1
+	Beifa_toupiaozhidu_3
+}
+set_convoys = 500
+set_politics = {
+	parties = {
+		neutrality = {
+			popularity = 100
+		}
+		democratic = { 
+			popularity = 0
+			banned = yes
+		}
+		fascism = {
+			popularity = 0
+			banned = yes
+		}
+		communism = {
+			popularity = 0
+			banned = yes
+		}
+		dictatorship = {
+			popularity = 0
+			banned = yes
+		}
+	}
+	ruling_party = neutrality
+	elections_allowed = no
+}
+set_stability = 1
+set_war_support = 0
+create_country_leader = {
+	name = "Pius XI"
+	desc = "POLITICS_PIUS_XI_DESC"
+	picture = "gfx/leaders/VAT/Portrait_Vatican_Pius_XI.dds"
+	expire = "1965.1.1"
+	ideology = moderatism
+	traits = {}
+}

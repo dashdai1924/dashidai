@@ -1,0 +1,57 @@
+﻿add_namespace = france_liboen
+#意大利影响着我们的政治 - gcd
+country_event = {
+	id = france_liboen.1
+	title = france_liboen.1.t
+	desc = france_liboen.1.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = france_liboen.1.a
+			hidden_effect = {
+					set_politics = {
+                        parties = {
+                                democratic = {
+                                        popularity = 40
+                                    }
+                                fascism = {
+                                        popularity = 1
+                                    }
+                                communism = {
+                                        popularity = 59
+                                    }
+                            }
+                    }
+			}
+	}
+}
+#意大利影响着我们的政治 - mzd
+country_event = {
+	id = france_liboen.2
+	title = france_liboen.2.t
+	desc = france_liboen.2.d
+	picture = news_event_017
+
+	is_triggered_only = yes
+
+	option = {
+		name = france_liboen.2.a
+			hidden_effect = {
+					set_politics = {
+                        parties = {
+                                democratic = {
+                                        popularity = 90
+                                    }
+                                fascism = {
+                                        popularity = 1
+                                    }
+                                communism = {
+                                        popularity = 9
+                                    }
+                            }
+                    }
+			}
+	}
+}

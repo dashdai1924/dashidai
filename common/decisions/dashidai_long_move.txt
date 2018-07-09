@@ -1,0 +1,523 @@
+@PRC_CHANGZHENGROAD_COST = 50
+long_move_road = {
+	#长征 - 突破封锁圈
+	changzhen_out_to_the_line = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 758
+				transfer_state = 803
+				transfer_state = 845
+				transfer_state = 805
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				transfer_state = 804
+				transfer_state = 768
+				transfer_state = 769
+				transfer_state = 772
+				transfer_state = 771
+				transfer_state = 600
+				transfer_state = 767
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 突破封锁圈e
+	changzhen_out_to_the_linee = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		available = {
+			controls_state = 805
+		}
+		complete_effect = {
+			transfer_state = 805
+			set_capital = 805
+			ZZK = {
+				transfer_state = 758
+			}
+			GXC = {
+				transfer_state = 845
+			}
+			CHI = {
+				transfer_state = 804
+				transfer_state = 768
+				transfer_state = 769
+				transfer_state = 772
+				transfer_state = 771
+				transfer_state = 600
+				transfer_state = 767
+				transfer_state = 803
+			}
+			set_global_flag = move_1
+		}
+	}
+	#长征 - 赤水之行1
+	run_on_red_river_1 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 805
+			has_global_flag = move_1
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 843
+				transfer_state = 806
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 赤水之行1e
+	run_on_red_river_1e = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 805
+			has_global_flag = move_1
+		}
+		available = {
+			controls_state = 806
+		}
+		complete_effect = {
+			transfer_state = 806
+			set_capital = 806
+			GXC = {
+				transfer_state = 805
+			}
+			CHI = {
+				transfer_state = 843
+			}
+			set_global_flag = move_2
+		}
+	}
+	#长征 - 赤水之行2
+	run_on_red_river_2 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 806
+			has_global_flag = move_2
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 843
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 赤水之行2e
+	run_on_red_river_2e = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 806
+			has_global_flag = move_2
+		}
+		available = {
+			controls_state = 843
+		}
+		complete_effect = {
+			transfer_state = 843
+			set_capital = 843
+			CHI = {
+				transfer_state = 806
+			}
+			set_global_flag = move_3
+		}
+	}
+	#长征 - 赤水之行3
+	run_on_red_river_3 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 843
+			has_global_flag = move_3
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 806
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 赤水之行3e
+	run_on_red_river_3e = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 843
+			has_global_flag = move_3
+		}
+		available = {
+			controls_state = 806
+		}
+		complete_effect = {
+			transfer_state = 806
+			set_capital = 806
+			CHI = {
+				transfer_state = 843
+			}
+			set_global_flag = move_4
+		}
+	}
+	#长征 - 赤水之行4
+	run_on_red_river_4 = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 806
+			has_global_flag = move_4
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 843
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 赤水之行4e
+	run_on_red_river_4e = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 806
+			has_global_flag = move_4
+		}
+		available = {
+			controls_state = 843
+		}
+		complete_effect = {
+			transfer_state = 843
+			set_capital = 843
+			CHI = {
+				transfer_state = 806
+			}
+			set_global_flag = move_5
+		}
+	}
+	#长征 - 云南之旅
+	yunan_tavel_move = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 843
+			has_global_flag = move_5
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 603
+				transfer_state = 325
+				transfer_state = 751
+				transfer_state = 743
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 云南之旅e
+	yunan_tavel_movee = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 843
+			has_global_flag = move_5
+		}
+		available = {
+			controls_state = 743
+		}
+		complete_effect = {
+			transfer_state = 743
+			set_capital = 743
+			YUN = {
+				transfer_state = 325
+			}
+			ZZC = {
+				transfer_state = 751
+			}
+			CHI = {
+				transfer_state = 603
+				transfer_state = 843
+			}
+			set_global_flag = move_6
+		}
+	}
+	#长征 - 一路北上
+	chuanbian_north_move = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 743
+			has_global_flag = move_6
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 799
+				transfer_state = 798
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 一路北上e
+	chuanbian_north_movee = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 743
+			has_global_flag = move_6
+		}
+		available = {
+			controls_state = 798
+		}
+		complete_effect = {
+			transfer_state = 798
+			set_capital = 798
+			YUN = {
+				transfer_state = 743
+			}
+			ZZC = {
+				transfer_state = 799
+			}
+			set_global_flag = move_7
+		}
+	}
+	#长征 - 中川
+	chuanbian_long_move = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 798
+			has_global_flag = move_7
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 605
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 中川e
+	chuanbian_long_movee = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 798
+			has_global_flag = move_7
+		}
+		available = {
+			controls_state = 605
+		}
+		complete_effect = {
+			transfer_state = 605
+			set_capital = 605
+			ZZC = {
+				transfer_state = 798
+			}
+			set_global_flag = move_8
+		}
+	}
+	#长征 - 陇沼行
+	chuanbian2_long_move = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 605
+			has_global_flag = move_8
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 811
+				transfer_state = 816
+				transfer_state = 283
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 陇沼行e
+	chuanbian2_long_movee = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 605
+			has_global_flag = move_8
+		}
+		available = {
+			controls_state = 283
+		}
+		complete_effect = {
+			transfer_state = 283
+			set_capital = 283
+			CXC = {
+				transfer_state = 605
+			}
+			CHI = {
+				transfer_state = 811
+				transfer_state = 816
+			}
+			set_global_flag = move_9
+		}
+	}
+	#长征 - 最终
+	chuanbian3_long_move = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 283
+			has_global_flag = move_9
+		}
+		complete_effect = {
+			AMR = {
+				transfer_state = 817
+				load_oob = "AMR_cz"
+			}
+			PRC = {
+				declare_war_on = { target = AMR type = annex_everything }
+			}
+		}
+	}
+	#长征 - 最终e
+	chuanbian3_long_movee = {
+		icon = infiltrate_state
+		fire_only_once = yes
+		war_with_on_remove = CHI
+		cost = @PRC_CHANGZHENGROAD_COST
+		ai_will_do = {
+			base = 10
+		}
+		visible = {
+			owns_state = 283
+			has_global_flag = move_9
+		}
+		available = {
+			controls_state = 817
+		}
+		complete_effect = {
+			set_global_flag = PRC_FLAG_overthelongway
+			transfer_state = 817
+			set_capital = 761
+			ZZY = {
+				transfer_state = 283
+			}
+			complete_national_focus = PRC_chengnuo_in_famer
+		}
+	}
+}

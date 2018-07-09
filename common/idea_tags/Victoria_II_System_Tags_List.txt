@@ -1,0 +1,46 @@
+idea_categories = {
+	V2S_politics_and_reform_1 = {
+		slot = V2S_central_focus
+		slot = ShengyuZhengCe
+		slot = ChengLiJueYi
+		slot = ZuiDiGongZi
+		slot = ZuiDaGongShi
+		slot = AnQuanGuiZhang
+		
+		cost = 50
+		removal_cost = -1
+	}
+	politics_and_reform_2 = {
+		slot = ShiYeBuZhu
+		slot = TongGong
+		slot = TuiXiuJin
+		slot = WeiShengBaoJian
+		slot = HuanJingFa
+		slot = YiShuBuTie
+		
+		cost = 50
+		removal_cost = -1
+	}
+	politics_and_reform_3 = {
+		slot = ShouJiaoYuQuan
+		slot = ZhengDang
+		slot = ZhengBingZhi
+		slot = YiMinZhengCe
+		slot = GongHui
+		slot = ShaoShuZuQun
+		
+		cost = 50
+		removal_cost = -1
+	}
+	politics_and_reform_4 = {
+		slot = XuanJuQuan
+		slot = ShangYiYuan
+		slot = NuLiZhi
+		slot = GongZhongJiHui
+		slot = ChuBanQuan
+		slot = TouPiaoZhiDu
+		
+		cost = 50
+		removal_cost = -1
+	}
+}

@@ -1,0 +1,117 @@
+﻿save_global_event_target_as = WTT_communist_china
+give_military_access = CHI
+capital = 767
+oob = "PRC_army_nanchang"
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+}
+set_politics = {
+	parties = {
+		democratic = { 
+			popularity = 5
+		}
+		dictatorship = {
+			popularity = 5
+		}
+		fascism = {
+			popularity = 5
+		}
+		communism = {
+			popularity = 80
+		}
+		neutrality = {
+			popularity = 5
+		}
+	}
+	ruling_party = communism
+	last_election = "1927.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_stability = 0.95
+set_war_support = 0.95
+add_ideas = {
+	CHI_danongyeguoziguyilai_wenti
+	PRC_wurenzhichi_idea
+}
+add_opinion_modifier = { target = CHI modifier = hostile_status }
+create_country_leader = {
+	name = "向忠发"
+	desc = "POLITICS_MAO_ZEDONG_DESC"
+	expire = "9999.1.1"
+	ideology = marxism
+	traits = { PRC_Drak_and_Showloed }
+}
+create_field_marshal = {
+	name = "毛泽东"
+	portrait_path = "gfx/leaders/PRC/Portrait_PRC_Mao_Zedong.dds"
+	traits = {
+		trait_cautious
+		politically_connected
+		skirmisher
+		skilled_staffer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 6
+	logistics_skill = 4
+}
+create_field_marshal = {
+	name = "周恩来"
+	portrait_path = "gfx/leaders/PRC/Portrait_PRC_Zhou_EnLai.tga"
+	traits = {
+		politically_connected
+		expert_improviser
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "朱德"
+	portrait_path = "gfx/leaders/PRC/PRC_zhude.dds"
+	traits = {
+		guerilla_fighter
+		infantry_officer
+		trickster
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_field_marshal = {
+	name = "叶挺"
+	portrait_path = "gfx/leaders/PRC/yeting.tga"
+	traits = {
+		infantry_officer
+		career_officer
+		war_hero
+		fortress_buster
+	}
+	skill = 3
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "贺龙"
+	portrait_path = "gfx/leaders/PRC/PRC_helong.dds"
+	traits = {
+		war_hero
+		guerilla_fighter
+		ambusher
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+add_offsite_building = { type = arms_factory level = 1 }

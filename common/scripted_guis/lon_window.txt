@@ -1,0 +1,33 @@
+scripted_gui = {
+	lon_button_oc = {#国际联盟按钮
+		context_type = player_context
+		window_name = "lon_button"
+		effects = {
+			lon_button_bg = {
+				if = {
+					limit = {
+						check_variable = { lon_button_oc_var < 1 }
+					}
+					set_variable = { lon_button_oc_var = 1 }
+				}else = {
+					set_variable = { lon_button_oc_var = 0 }
+				}
+			}
+		}
+	}
+	lon_main_window_scripted = {#国际联盟主窗口脚本
+		context_type = selected_country_context
+		window_name = "lon_main_window"
+		visible = {
+			or = {
+				check_variable = { lon_button_oc_var = 1 }
+				is_ai = yes
+			}
+		}
+		effects = {
+			lon_main_window_close_button_click = {
+				set_variable = { lon_button_oc_var = 0 }
+			}
+		}
+	}
+}

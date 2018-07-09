@@ -1,0 +1,287 @@
+#攻击周围军阀
+fight_with_outside = {
+	#打击国民军
+	FEN_guominjun_ZZQ_s_death = {
+		icon = infiltrate_state
+		war_with_on_remove = ZZQ
+		cost = 140
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			has_global_flag = CO_FLAG_second_whi_war_with_fen
+			country_exists = ZZQ
+			tag = FEN
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			declare_war_on = {
+				target = ZZQ
+				type = annex_everything
+			}
+		}
+	}
+	#建立山东地方军统区
+	FEN_build_shandong_army_con_place = {
+		icon = infiltrate_state
+		cost = 10
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			has_global_flag = CO_FLAG_second_whi_war_with_fen
+			tag = FEN
+			ZZO = { has_capitulated = yes }
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			white_peace = ZZO
+			puppet = ZZO
+		}
+	}
+	#国民军被击溃
+	ZZQ_go_to_the_west = {
+		icon = infiltrate_state
+		cost = 0
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			has_global_flag = CO_FLAG_second_whi_war_with_fen
+			has_war_with = FEN
+			tag = ZZQ
+			ZZQ = {
+				surrender_progress > 0.8
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			transfer_state = 765
+			transfer_state = 621
+			transfer_state = 622
+			transfer_state = 607
+			transfer_state = 762
+			transfer_state = 775
+			transfer_state = 812
+			set_capital = 621
+			load_oob = "ZZQ_1925"
+			FEN = {
+				transfer_state = 755
+				transfer_state = 609
+				transfer_state = 608
+				transfer_state = 614
+			}
+			WHI = {
+				remove_from_faction = ZZQ
+			}
+			white_peace = FEN
+			give_military_access = ZZH
+			give_military_access = ZZI
+			set_global_flag = CO_FLAG_ZZQ_dead
+		}
+	}
+	#青宁瓜分陇
+	XSM_dec_kill_the_ZZB = {
+		icon = infiltrate_state
+		cost = 70
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = XSM
+			has_global_flag = CO_FLAG_second_whi_war_with_fen
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			declare_war_on = {
+				target = ZZB
+				type = annex_everything
+			}
+			ZZA = {
+				country_event = { id = beifa.117 }
+			}
+		}
+	}
+	#晋系割飞地
+	SHX_get_the_XSM_779 = {
+		icon = infiltrate_state
+		cost = 20
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = SHX
+			has_global_flag = CO_FLAG_ZZQ_real_dead_war_start
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			transfer_state = 779
+		}
+	}
+	SHX_get_the_XSM_766 = {
+		icon = infiltrate_state
+		cost = 20
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = SHX
+			has_global_flag = CO_FLAG_ZZQ_dead
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			country_event = { id = beifa.114 }
+		}
+	}
+	#浙西入赣地
+	WAN_attack_the_jiangxi = {
+		icon = infiltrate_state
+		cost = 20
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = WAN
+			date > 1925.1.1
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			WAN = {
+				annex_country = { target = ZZL transfer_troops = yes }
+			}
+		}
+	}
+	#直系宣战湖南
+	WHI_attack_the_hunan = {
+		icon = infiltrate_state
+		cost = 20
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = WHI
+			has_global_flag = CO_FLAG_ZZQ_real_dead_war_end
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			declare_war_on = {
+				target = ZZD
+				type = annex_everything
+			}
+		}
+	}
+	#国民军傀儡化马鸿宾
+	ZZQ_pupput_mahongbin = {
+		icon = infiltrate_state
+		cost = 10
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = ZZQ
+			has_global_flag = CO_FLAG_ZZQ_real_dead_war_end
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			puppet = XSM
+		}
+	}
+	#国民军傀儡化井岳唀
+	ZZQ_pupput_jingyueyou = {
+		icon = infiltrate_state
+		cost = 10
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = ZZQ
+			has_global_flag = CO_FLAG_ZZQ_real_dead_war_end
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			puppet = ZZH
+		}
+	}
+	#国民军南下
+	ZZQ_attack_the_south = {
+		icon = infiltrate_state
+		cost = 20
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = ZZQ
+			has_global_flag = CO_FLAG_ZZQ_real_dead_war_end
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			declare_war_on = {
+				target = ZZV
+				type = annex_everything
+			}
+		}
+	}
+	#国民军支援北伐
+	ZZQ_help_attack_the_south = {
+		icon = infiltrate_state
+		cost = 20
+		fire_only_once = yes
+		visible = {
+			has_start_date < 1926.1.1
+			tag = ZZQ
+			not = { country_exists = ZZV }
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			declare_war_on = {
+				target = WHI
+			}
+			declare_war_on = {
+				target = WAN
+			}
+		}
+	}
+	#成立国民革命军
+	CHI_Build_The_People_Revolution_Army = {
+		icon = infiltrate_state
+		cost = 20
+		fire_only_once = yes
+		visible = {
+			date > 1925.8.18
+			has_start_date < 1925.8.19
+			tag = CHI
+		}
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			create_faction = People_Revolution_Army
+			add_to_faction = CHI
+			GXC = {
+				country_event = { id = beifa.123 }
+			}
+			YIN = {
+				country_event = { id = beifa.124 }
+			}
+			CXC = {
+				country_event = { id = beifa.125 }
+			}
+			YUN = {
+				country_event = { id = beifa.126 }
+			}
+		}
+	}
+}

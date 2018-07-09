@@ -1,0 +1,642 @@
+#初始化经济系统
+initialize_economic_system={
+	if={
+		limit={tag=PRC}
+		#PRC默认配置
+		set_variable={Tax_Number_Now=20} #税率
+		set_variable={Military_Maintenance_Costs=2.5} #军事成本
+		set_variable={Money_Day_Add=0} #金钱日增长
+		set_variable={Money=100} #起始金钱
+		set_variable={Military_Maintenance_Costs=0} #起始陆军维护费
+		set_variable={Inflation_Rate=30} #通货膨胀
+		set_variable={Interventionism=10}
+		set_variable={Person_Control=10}
+		set_variable={Militarism=90}
+		set_variable={GDP=0}
+		#PRC相对汇率
+		set_variable={Current_Relative_Money_Position=0}
+		relative_exchange_rate_calculation=yes
+	}
+	if={
+		limit={not={tag=PRC}}
+		#他国配置
+		set_variable={Tax_Number_Now=20} #税率
+		set_variable={Military_Maintenance_Costs=5} #军事成本
+		set_variable={Money_Day_Add=0} #金钱日增长
+		set_variable={Money=500} #起始金钱
+		set_variable={Military_Maintenance_Costs=0} #起始陆军维护费
+		set_variable={Inflation_Rate=5} #通货膨胀
+		set_variable={Interventionism=20}
+		set_variable={Person_Control=20}
+		set_variable={Militarism=20}
+		set_variable={GDP=0}
+		set_variable={Current_Relative_Money_Position=1}
+		relative_exchange_rate_calculation=yes
+	}
+	#汇率设定
+	set_variable={global.CNY_exchange_rate=1.89}
+	set_variable={global.USD_exchange_rate=1}
+	set_variable={global.GBP_exchange_rate=0.22}
+	set_variable={global.RUB_exchange_rate=0.45}
+	set_variable={global.DEM_exchange_rate=2147483}
+	set_variable={global.FRF_exchange_rate=19.17}
+	set_variable={global.JPY_exchange_rate=2.43}
+	set_variable={global.LIR_exchange_rate=22.72}
+}
+#计算汇率的相对数值筛选和分别
+relative_exchange_rate_calculation={
+	if={
+		limit={check_variable={Current_Relative_Money_Position=0}}
+		set_variable={parameter_1=global.CNY_exchange_rate}
+		relative_exchange_rate_parameter_division=yes
+	}else_if={
+		limit={check_variable={Current_Relative_Money_Position=1}}
+		set_variable={parameter_1=global.USD_exchange_rate}
+		relative_exchange_rate_parameter_division=yes
+	}else_if={
+		limit={check_variable={Current_Relative_Money_Position=2}}
+		set_variable={parameter_1=global.GBP_exchange_rate}
+		relative_exchange_rate_parameter_division=yes
+	}else_if={
+		limit={check_variable={Current_Relative_Money_Position=3}}
+		set_variable={parameter_1=global.RUB_exchange_rate}
+		relative_exchange_rate_parameter_division=yes
+	}else_if={
+		limit={check_variable={Current_Relative_Money_Position=4}}
+		set_variable={parameter_1=global.DEM_exchange_rate}
+		relative_exchange_rate_parameter_division=yes
+	}else_if={
+		limit={check_variable={Current_Relative_Money_Position=5}}
+		set_variable={parameter_1=global.FRF_exchange_rate}
+		relative_exchange_rate_parameter_division=yes
+	}else_if={
+		limit={check_variable={Current_Relative_Money_Position=6}}
+		set_variable={parameter_1=global.JPY_exchange_rate}
+		relative_exchange_rate_parameter_division=yes
+	}else_if={
+		limit={check_variable={Current_Relative_Money_Position=7}}
+		set_variable={parameter_1=global.LIR_exchange_rate}
+		relative_exchange_rate_parameter_division=yes
+	}
+}
+#相对位置的汇率计算
+relative_exchange_rate_parameter_division={
+	set_temp_variable={rate_temp=global.CNY_exchange_rate}
+	divide_temp_variable={rate_temp=parameter_1}
+	set_variable={CNY_exchange_rate=rate_temp}
+	
+	set_temp_variable={rate_temp=global.USD_exchange_rate}
+	divide_temp_variable={rate_temp=parameter_1}
+	set_variable={USD_exchange_rate=rate_temp}
+	
+	set_temp_variable={rate_temp=global.GBP_exchange_rate}
+	divide_temp_variable={rate_temp=parameter_1}
+	set_variable={GBP_exchange_rate=rate_temp}
+	
+	set_temp_variable={rate_temp=global.RUB_exchange_rate}
+	divide_temp_variable={rate_temp=parameter_1}
+	set_variable={RUB_exchange_rate=rate_temp}
+	
+	set_temp_variable={rate_temp=global.DEM_exchange_rate}
+	divide_temp_variable={rate_temp=parameter_1}
+	set_variable={DEM_exchange_rate=rate_temp}
+	
+	set_temp_variable={rate_temp=global.FRF_exchange_rate}
+	divide_temp_variable={rate_temp=parameter_1}
+	set_variable={FRF_exchange_rate=rate_temp}
+	
+	set_temp_variable={rate_temp=global.JPY_exchange_rate}
+	divide_temp_variable={rate_temp=parameter_1}
+	set_variable={JPY_exchange_rate=rate_temp}
+	
+	set_temp_variable={rate_temp=global.LIR_exchange_rate}
+	divide_temp_variable={rate_temp=parameter_1}
+	set_variable={LIR_exchange_rate=rate_temp}
+}
+#通货膨胀增长的军事维护费
+military_maintenance_costs_increase_inflation = {
+	set_temp_variable = { Loss_of_money = Military_Maintenance_Costs }
+	multiply_temp_variable = { Loss_of_money = Inflation_Rate }
+	multiply_temp_variable = { Loss_of_money = 0.01 }
+	add_to_variable = { Military_Maintenance_Costs = Loss_of_money }
+}
+#税收收入
+tax_income = {
+	set_temp_variable = { Stability_correction = Stability_Money_Tax }
+	set_temp_variable = { tax = Tax_Number_Now }
+	multiply_temp_variable = { tax = 0.01 }
+	multiply_temp_variable = { tax = Stability_correction }
+	multiply_temp_variable = { tax = GDP }
+	set_variable = { Money_Day_Add = tax }
+}
+#军事维护费计算
+military_maintenance_costs = {
+	set_variable = { maintenance = 0 }
+	PRC = {
+		if = {
+			limit = {
+				has_army_manpower = { size > 1000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 2000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 3000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 4000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 5000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 6000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 7000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 8000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 9000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 10000 }
+			}
+			add_to_variable = { maintenance = 1 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 20000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 30000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 40000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 50000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 60000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 70000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 80000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 90000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 100000 }
+			}
+			add_to_variable = { maintenance = 10 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 200000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 300000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 400000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 500000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 600000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 700000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 800000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 900000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 1000000 }
+			}
+			add_to_variable = { maintenance = 100 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 2000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 3000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 4000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 5000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 6000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 7000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 8000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 9000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 10000000 }
+			}
+			add_to_variable = { maintenance = 1000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 20000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 30000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 40000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 50000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 60000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 70000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 80000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 90000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 100000000 }
+			}
+			add_to_variable = { maintenance = 10000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 200000000 }
+			}
+			add_to_variable = { maintenance = 100000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 300000000 }
+			}
+			add_to_variable = { maintenance = 100000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 400000000 }
+			}
+			add_to_variable = { maintenance = 100000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 500000000 }
+			}
+			add_to_variable = { maintenance = 100000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 600000000 }
+			}
+			add_to_variable = { maintenance = 100000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 700000000 }
+			}
+			add_to_variable = { maintenance = 100000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 800000000 }
+			}
+			add_to_variable = { maintenance = 100000 }
+		}
+		if = {
+			limit = {
+				has_army_manpower = { size > 900000000 }
+			}
+			add_to_variable = { maintenance = 100000 }
+		}
+	}
+	set_temp_variable = { Correction_1 = Army_Money_Correction }
+	multiply_temp_variable = { Correction_1 = 0.01 }
+	set_temp_variable = { Correction_2 = Military_Maintenance_Costs }
+	multiply_temp_variable = { Correction_2 = 0.01 }
+	set_temp_variable = { Correction_3 = 1 }
+	subtract_from_temp_variable = { Correction_3 = Correction_1 }
+	multiply_temp_variable = { Correction_3 = 2 }
+	multiply_temp_variable = { Correction_2 = Correction_3 }
+	multiply_variable = { maintenance = Correction_2 }
+	set_variable = { Military_Maintenance_Costs = maintenance }
+}
+#设定变化首位
+set_first_change_record = {
+	set_variable = { Origin_Fund = Money }
+}
+#设定变化尾位
+tail_change_record = {
+	set_variable = { Follow-Up_Funds = Money }
+}
+#计算变化
+get_the_money_derivative_point_money = {
+	set_temp_variable = { money_derivative_point_money = Follow-Up_Funds }
+	subtract_from_temp_variable = { money_derivative_point_money = Origin_Fund }
+	set_variable = { Gain_And_Loss = money_derivative_point_money }
+}
+#稳定度变化税收
+get_the_stability_change_tax_rate = {
+	set_temp_variable = { Stability_Tax_Correction = stability }
+	multiply_temp_variable = { Stability_Tax_Correction = 0.15 }
+	add_to_temp_variable = { Stability_Tax_Correction = 0.5 }
+	set_variable = { Stability_Money_Tax = Stability_Tax_Correction }
+}
+#战争支援变化维护
+get_support_for_changes_in_maintenance = {
+	set_temp_variable = { War_Support_Funds_Revision = has_war_support }
+	multiply_temp_variable = { War_Support_Funds_Revision = 0.15 }
+	add_to_temp_variable = { War_Support_Funds_Revision = 0.5 }
+	set_variable = { Army_Money_Correction = War_Support_Funds_Revision }
+}
+#取得军事维护费
+get_the_military_maintenance_costs = {
+	set_temp_variable = { Basic = 1.5 }
+	set_temp_variable = { Fraction = 100 }
+	set_temp_variable = { Cost = 1 }
+	subtract_from_temp_variable = { Fraction = Militarism }
+	multiply_temp_variable = { Basic = Fraction }
+	add_to_temp_variable = { Cost = Basic }
+	multiply_temp_variable = { Cost = 0.1 }
+	set_variable = { Military_Maintenance_Costs = Cost }
+}
+#税率下限上限刷新
+rest_the_tax_up_and_down = {
+	if = {
+		limit = {
+			check_variable = { Interventionism > 20 }
+		}
+		set_variable = { Max_Tax = Interventionism }
+	}else = {
+		set_variable = { Max_Tax = 20 }
+	}
+	set_variable = { Min_tax = Interventionism }
+	multiply_variable = { Min_tax = 0.5 }
+	if = {
+		limit = {
+			check_variable = { Tax_Number_Now < Min_tax }
+		}
+		set_variable = { Tax_Number_Now = Min_tax }
+	}else_if = {
+		limit = {
+			check_variable = { Tax_Number_Now > Max_Tax }
+		}
+		set_variable = { Tax_Number_Now = Max_Tax }
+	}
+}
+#公民控制度
+rest_the_person_control = {
+	set_temp_variable = { Person_Control_Stability = Person_Control }
+	set_temp_variable = { Person_Control_War_Support = Person_Control }
+	set_temp_variable = { Person_Control_Unhappy = Person_Control }
+	multiply_temp_variable = { Person_Control_Stability = 0.1 }
+	multiply_temp_variable = { Person_Control_War_Support = 0.1 }
+	multiply_temp_variable = { Person_Control_Unhappy = 0.15 }
+	set_variable = { Now_Person_Control_Stability = Person_Control_Stability }
+	set_variable = { Now_Person_Control_War_Support = Person_Control_War_Support }
+	set_variable = { Now_Person_Control_Unhappy = Person_Control_Unhappy }
+}
+#不满度日变化
+unhappy_with_daily_changes = {
+	if = {
+		limit = {
+			check_variable = { Now_Unhappy < Now_Person_Control_Unhappy }
+		}
+		add_to_variable = { Now_Unhappy = 0.04 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { Now_Unhappy > Now_Person_Control_Unhappy }
+		}
+		subtract_from_variable = { Now_Unhappy = 0.04 }
+	}
+	else = {
+		set_variable = { Now_Unhappy = Now_Person_Control_Unhappy }
+	}
+}
+#负资金贷款
+debt_loan = {
+	if = {
+		limit = {
+			check_variable = { Money < 0 }
+		}
+		set_temp_variable = { Loan = Money }
+		multiply_temp_variable = { Loan = 1.1 } #贷款绝对值及负利
+		add_to_variable = { Debt = Loan }
+		set_variable = { Money = 0 }
+	}
+}
+#贷款利息计算
+interest_calculation = {
+	set_temp_variable = { Interest = Debt }
+	multiply_temp_variable = { Interest = 0.01 }
+	subtract_from_variable = { Money = Interest }
+}
+#求GDP
+get_GDP = {
+	set_variable = { GDP = 100 }
+	every_owned_state = {
+		limit = {
+			is_controlled_by = PREV
+		}
+		add_to_variable = { PREV.GDP = development }
+	}
+}
+#资源计算
+make_development = {
+	every_state = {
+		set_variable = { development_var = state_population }
+		divide_variable = { development_var = 10000 }
+		divide_variable = { development_var = 1000 }
+		round_variable = development_var
+		set_variable = { development = development_var }
+		add_resource = {
+			type = development
+			amount = development
+		}
+		add_resource = {
+			type = development
+			amount = 10
+		}
+		add_to_variable = { GDP = 10 }
+		clear_variable = development_var
+	}
+	every_state = {
+		limit = {
+			is_coastal = yes
+		}
+		add_resource = {
+			type = development
+			amount = 30
+		}
+		add_to_variable = { development = 30 }
+	}
+	every_state = {
+		limit = {
+			is_in_home_area = yes
+		}
+		add_resource = {
+			type = development
+			amount = 10
+		}
+		add_to_variable = { development = 10 }
+	}
+	every_state = {
+		limit = {
+			is_capital = yes
+		}
+		add_resource = {
+			type = development
+			amount = 30
+		}
+		add_to_variable = { development = 30 }
+	}
+}

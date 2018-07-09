@@ -1,0 +1,4 @@
+fight_with_outside = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+}

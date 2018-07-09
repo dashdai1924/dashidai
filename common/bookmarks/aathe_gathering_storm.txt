@@ -1,0 +1,34 @@
+bookmarks = {
+	bookmark = {
+		name = "RA_GATHERING_STORM_NAME"
+		desc = "RA_GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_dashidai_select_date_1936"
+		default_country = "GWM"
+		default = yes
+		
+		"GWM"={
+			history = "GWM_RA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				WEST_Great_Depression
+				GWM_Locarno_Treaties
+				GWM_lost_work
+			}
+			focuses = {
+				GWM_begin_execution
+				GWM_locarno_treaties
+				GWM_industry_research
+			}
+		}
+		
+		"---"={
+			history = "OTHER_RA_GATHERING_STORM_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

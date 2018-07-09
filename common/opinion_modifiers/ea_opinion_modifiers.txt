@@ -1,0 +1,22 @@
+opinion_modifiers = {
+	#仲裁公约的签订波兰-捷克斯洛伐克
+	ZC_TD_tomake_between_pol_cze = {
+		value = 10
+	}
+	#仲裁公约的签订法国-比利时
+	ZC_TD_tomake_between_fra_bel = {
+		value = 20
+	}
+	#与苏联外交
+	PRC_DEV_SOV_EOM = {
+		value = 20
+	}
+	#奉系外交
+	Relationship_improvement = {
+		value = 20
+	}
+	#被调戏
+	Rigid = {
+		value = -20
+	}
+}

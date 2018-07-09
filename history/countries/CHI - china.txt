@@ -1,0 +1,269 @@
+﻿save_global_event_target_as = WTT_current_china_leader
+capital = 592
+
+oob = "CHI_1924"
+
+set_research_slots = 1
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	early_fighter = 1
+}
+
+add_ideas = {
+	CHI_juexin
+	CHI_danongyeguoziguyilai_wenti
+	CHI_dixiaoxingzheng_wenti
+	CHI_gaozizhidu_wenti
+	CHI_diyiciguogonghezuo
+	Beifa_renkou_9
+	V2S_central_focus_political
+	Beifa_zuidagongshi_6
+	Beifa_zuidigongzi_6
+	Beifa_anquanguizhang_6
+	Beifa_shiyebuzhu_1
+	Beifa_tonggong_4
+	Beifa_tuixiujin_1
+	Beifa_weishengbaojian_1
+	Beifa_huanjingfa_1
+	Beifa_yishubutie_1
+	Beifa_shoujiaoyuquan_11
+	Beifa_zhengdang_6
+	Beifa_zhengbingzhi_1
+	Beifa_yiminzhengce_3
+	Beifa_gonghui_5
+	Beifa_shaoshuzuqun_4
+	Beifa_xuanjuquan_1
+	Beifa_shangyiyuan_1
+	Beifa_nulizhi_2
+	Beifa_gongzhongjihui_2
+	Beifa_chubanquan_2
+	Beifa_toupiaozhidu_3
+}
+
+set_convoys = 500
+
+set_politics = {
+
+	parties = {
+		dictatorship = { 
+			popularity = 60
+		}
+
+		fascism = {
+			popularity = 5
+		}
+
+		democratic = {
+			popularity = 15
+		}
+		
+		communism = {
+			popularity = 20
+		}
+	}
+	
+	ruling_party = dictatorship
+	last_election = "1930.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_stability = 0.50
+
+create_country_leader = {
+	name = "孙中山"
+	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+	picture = "gfx/leaders/CHI/Portrait_China_Sun_Zhongshan.dds"
+	expire = "1965.1.1"
+	ideology = bureaucratic
+	traits = {
+		#
+	}
+}
+		create_corps_commander = {
+			name = "陈诚"
+			portrait_path = "gfx/leaders/CHI/chencheng.dds"
+			traits = {  }
+			skill = 3
+		}
+		create_navy_leader = {
+			name = "桂永清"
+			portrait_path = "gfx/leaders/CHI/guiyongqing.dds"
+			traits = {  }
+			skill = 3
+		}
+		create_corps_commander = {
+			name = "蒋介石"
+			portrait_path = "gfx/leaders/CHI/jiangjieshi.dds"
+			traits = {  }
+			skill = 3
+		}
+		create_corps_commander = {
+			name = "唐生智"
+			portrait_path = "gfx/leaders/CHI/CHI_tangshengzhi.dds"
+			traits = {  }
+			skill = 3
+		}
+		create_corps_commander = {
+			name = "何应钦"
+			portrait_path = "gfx/leaders/CHI/CHI_heyingqin.dds"
+			traits = {  }
+			skill = 3
+		}
+1926.7.9 = {
+	set_research_slots = 2
+	unlock_national_focus = CHI_military_building
+	unlock_national_focus = CHI_dashidai_whampoa_military_academy
+	unlock_national_focus = CHI_basic_military_training
+	unlock_national_focus = CHI_officer_training
+	unlock_national_focus = CHI_kuomintang_communist_party_military_cooperation
+	unlock_national_focus = CHI_senior_military_exercise
+	unlock_national_focus = CHI_the_first_eastward
+	unlock_national_focus = CHI_consolidate_results
+	unlock_national_focus = CHI_military_workshop
+	unlock_national_focus = CHI_guangdong_livelihood_development
+	unlock_national_focus = CHI_ease_inflation
+	set_country_flag = 已经成立广州国民政府
+	set_cosmetic_tag = CHJ
+	set_politics = {
+		parties = {
+			dictatorship = { 
+				popularity = 70
+			}
+			fascism = {
+				popularity = 5
+			}
+			democratic = {
+				popularity = 10
+			}
+			communism = {
+				popularity = 5
+			}
+			neutrality = {
+				popularity = 10
+			}
+		}
+		ruling_party = dictatorship
+		last_election = "1930.11.9"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	kill_country_leader = yes
+	create_country_leader = {
+		name = "汪精卫"
+		desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+		picture = "portrait_chi_wang_jingwei.dds"
+		expire = "1965.1.1"
+		ideology = bureaucratic
+		traits = {
+			
+		}
+	}
+	create_faction = Pepole_Revolution_Amry
+	add_to_faction = CHI
+	add_to_faction = GXC
+}
+1927.7.31 = {
+	oob = "CHI_1927"
+	dismantle_faction = yes
+	unlock_national_focus = CHI_meiguowuqi
+	unlock_national_focus = CHI_meixieshi
+	unlock_national_focus = CHI_northern_expedition_started
+	unlock_national_focus = CHI_communist_issue
+	unlock_national_focus = CHI_persecute_the_communist_party
+	unlock_national_focus = CHI_ninghan_confluence
+	unlock_national_focus = CHI_interior_management
+	unlock_national_focus = CHI_restore_local_control
+	set_country_flag = 已经成立广州国民政府
+	set_country_flag = 已经成立南京国民政府
+	set_cosmetic_tag = CHK
+	set_capital = 613
+	set_politics = {
+		parties = {
+			dictatorship = { 
+				popularity = 70
+			}
+			fascism = {
+				popularity = 5
+			}
+			democratic = {
+				popularity = 10
+			}
+			communism = {
+				popularity = 5
+			}
+			neutrality = {
+				popularity = 10
+			}
+		}
+		ruling_party = dictatorship
+		last_election = "1930.11.9"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	puppet = ZZH
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "胡汉民"
+		desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+		picture = "huhanmin.dds"
+		expire = "1965.1.1"
+		ideology = bureaucratic
+		traits = {
+			
+		}
+	}
+	remove_ideas = {
+		CHI_gaozizhidu_wenti
+		CHI_juexin
+		CHI_diyiciguogonghezuo
+	}
+	puppet = ZZY
+}
+1928.10.10 = {
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "蒋介石"
+		desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+		picture = "Portrait_China_Chiang_Kai_Shek.dds"
+		expire = "1965.1.1"
+		ideology = bureaucratic
+		traits = {
+			
+		}
+	}
+}
+1934.9.30 = {
+	puppet = ZZR
+	unlock_national_focus = CHI_the_second_northern_expedition
+	unlock_national_focus = CHI_cooperation_with_zhang_xueliang
+	unlock_national_focus = CHI_do_not_resist_the_rinciple
+	unlock_national_focus = CHI_beijing_line_of_defense
+	unlock_national_focus = CHI_stability_of_the_people
+	unlock_national_focus = CHI_reorganized_division
+	unlock_national_focus = CHI_northeast_military_science_and_technology
+	unlock_national_focus = CHI_integration_of_northeast_troops
+	unlock_national_focus = CHI_development_of_scientific_research
+	unlock_national_focus = CHI_invest_in_military_construction
+	unlock_national_focus = CHI_reduce_internal_problems
+	unlock_national_focus = CHI_consolidate_power
+	unlock_national_focus = CHI_deal_with_warlords
+	unlock_national_focus = CHI_armistice_to_warlord
+	unlock_national_focus = CHI_war_mobilization
+	unlock_national_focus = CHI_develop_national_industry
+	unlock_national_focus = CHI_strengthen_the_infrastructure
+	unlock_national_focus = CHI_encourage_business_development
+	unlock_national_focus = CHI_develop_family_business
+	unlock_national_focus = CHI_implement_industrial_development_plan
+	unlock_national_focus = CHI_relatively_stable
+	unlock_national_focus = CHI_political_direction
+	unlock_national_focus = CHI_establish_a_blue_agency
+	unlock_national_focus = CHI_strengthen_the_purpose
+	unlock_national_focus = CHI_strengthen_the_central_government
+	unlock_national_focus = CHI_establish_a_military_and_civilian_bureau
+	unlock_national_focus = CHI_reorganization_of_the_central_bureau
+}

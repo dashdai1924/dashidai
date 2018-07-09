@@ -1,0 +1,62 @@
+guiTypes = {
+	#国际联盟按钮
+	containerWindowType = {
+		name = "lon_button"
+		position = { x=1104 y=6 }
+		size = { width=128 height=32 }
+		instantTextBoxType = {
+			name ="lon_button_text"
+			position = { x= 8 y = 6 }
+			font = "hoi_18mbs"
+			text = "lon_button_text_localisation"
+			format = left
+			maxWidth = 116
+			maxHeight = 24
+			fixedsize = yes
+		}
+		buttonType = {
+			name = "lon_button_bg"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+	}
+	#国际联盟窗口
+	containerWindowType = {
+		name = "lon_main_window"
+		position = { x=70 y=150 }
+		size = { width=550 height=550 }
+		show_sound = menu_open_window
+		moveable = yes
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_Common_GUI"
+		}
+		instantTextboxType = {
+			name = "lon_main_window_title"
+			position = { x = 8 y = 0 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "lon_main_window_text_1"
+			maxWidth = 490
+			maxHeight = 16
+			format = center
+		}
+		buttonType = {
+			name = "lon_main_window_close_button"
+			quadTextureSprite = "GFX_Common_Close_Button"
+			position = { x= 526 y = 0 }
+		}
+		instantTextboxType = {
+			name = "lon_main_window_type_1"
+			position = { x = 8 y = 64 }
+			textureFile = ""
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "lon_main_window_text_1"
+			maxWidth = 490
+			maxHeight = 16
+			format = center
+		}
+	}
+}

@@ -1,0 +1,45 @@
+﻿add_namespace = france
+#1924奥运会
+news_event = {
+	id = france.36
+	title = france.36.t
+	desc = france.36.d
+	picture = news_event_070
+
+	major = yes
+
+	trigger = {
+		date > 1924.2.4
+		NOT = { has_global_flag = wolympics_1924 }
+		or = {
+			country_exists = GER
+			country_exists = GWM
+		}
+		country_exists = USA
+		or = {
+			and = {
+				GWM = { has_war = yes }
+				GER = { has_war = yes }
+			}
+			or = {
+				GWM = { has_war = no }
+				GER = { has_war = no }
+			}
+		}
+		FRA = { has_war = no }
+		ENG = { has_war = no }
+		USA = { has_war = no }
+	}
+
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	immediate = {
+		set_global_flag = wolympics_1924
+	}
+	
+	option = {
+		name = france.36.a
+	}
+}

@@ -1,0 +1,969 @@
+﻿add_namespace = germany
+#意大利影响着我们的政治
+country_event = {
+	id = germany.1001
+	title = germany.1001.t
+	desc = germany.1001.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1001.a
+		hidden_effect = {
+			set_politics = {
+				parties = {
+					democratic = {
+						popularity = 40
+					}
+					fascism = {
+						popularity = 59
+					}
+					communism = {
+						popularity = 1
+					}
+				}
+			}
+		}
+	}
+}
+#希特勒的审判
+country_event = {
+	id = germany.1002
+	title = germany.1002.t
+	desc = germany.1002.d
+	picture = news_event_023
+	trigger = {
+		not = {
+			has_country_flag = 希特勒已经被审判
+		}
+		date > 1924.4.1
+	}
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = 希特勒已经被审判
+		}
+	}
+	option = {
+		name = germany.1002.a
+	}
+}
+#制订偿还计划
+country_event = {
+	id = germany.1003
+	title = germany.1003.t
+	desc = germany.1003.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1003.a
+		hidden_effect = {
+			set_country_flag = 道威斯偿还方案一
+		}
+		add_political_power = -100
+	}
+	option = {
+		name = germany.1003.b
+		hidden_effect = {
+			set_country_flag = 道威斯偿还方案二
+		}
+		add_political_power = -200
+	}
+	option = {
+		name = germany.1003.c
+		hidden_effect = {
+			set_country_flag = 道威斯偿还方案三
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = protest_action
+		}
+		add_political_power = -300
+	}
+}
+#法国从鲁尔撤军
+country_event = {
+	id = germany.1004
+	title = germany.1004.t
+	desc = germany.1004.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1004.a
+		hidden_effect = {
+			country_event = { days = 280 id = germany.1005 }
+			country_event = { days = 560 id = germany.1006 }
+			country_event = { days = 840 id = germany.1007 }
+			country_event = { days = 1120 id = germany.1008 }
+			country_event = { days = 1400 id = germany.1009 }
+			country_event = { days = 1680 id = germany.1010 }
+			ENG = {
+				remove_opinion_modifier = {
+					target = GER
+					modifier = protest_action
+				}
+			}
+			FRA = {
+				remove_opinion_modifier = {
+					target = GER
+					modifier = protest_action
+				}
+			}
+			USA = {
+				remove_opinion_modifier = {
+					target = GER
+					modifier = protest_action
+				}
+			}
+		}
+	}
+}
+#GERMAMd1
+country_event = {
+	id = germany.1005
+	title = germany.1005.t
+	desc = germany.1005.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1005.a
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案一
+				has_idea = GWM_fanersai
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai
+				add_idea = GWM_fanersai1a
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案二
+				has_idea = GWM_fanersai
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai
+				add_idea = GWM_fanersai1b
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案三
+				has_idea = GWM_fanersai
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai
+				add_idea = GWM_fanersai1c
+			}
+		}
+	}
+}
+country_event = {
+	id = germany.1006
+	title = germany.1006.t
+	desc = germany.1006.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1006.a
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案一
+				has_idea = GWM_fanersai1a
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai1a
+				add_idea = GWM_fanersai2a
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案二
+				has_idea = GWM_fanersai1b
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai1b
+				add_idea = GWM_fanersai2b
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案三
+				has_idea = GWM_fanersai1c
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai1c
+				add_idea = GWM_fanersai2c
+			}
+		}
+	}
+}
+country_event = {
+	id = germany.1007
+	title = germany.1007.t
+	desc = germany.1007.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1007.a
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案一
+				has_idea = GWM_fanersai2a
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai2a
+				add_idea = GWM_fanersai3a
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案二
+				has_idea = GWM_fanersai2b
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai2b
+				add_idea = GWM_fanersai3b
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案三
+				has_idea = GWM_fanersai2c
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai2c
+				add_idea = GWM_fanersai3c
+			}
+		}
+	}
+}
+country_event = {
+	id = germany.1008
+	title = germany.1008.t
+	desc = germany.1008.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1008.a
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案一
+				has_idea = GWM_fanersai3a
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai3a
+				add_idea = GWM_fanersai4a
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案二
+				has_idea = GWM_fanersai3b
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai3b
+				add_idea = GWM_fanersai4b
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案三
+				has_idea = GWM_fanersai3c
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai3c
+				add_idea = GWM_fanersai4c
+			}
+		}
+	}
+}
+country_event = {
+	id = germany.1009
+	title = germany.1009.t
+	desc = germany.1009.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1009.a
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案一
+				has_idea = GWM_fanersai4a
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai4a
+				add_idea = GWM_fanersai5a
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案二
+				has_idea = GWM_fanersai4b
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai4b
+				add_idea = GWM_fanersai5b
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案三
+				has_idea = GWM_fanersai4c
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai4c
+				add_idea = GWM_fanersai5c
+			}
+		}
+	}
+}
+country_event = {
+	id = germany.1010
+	title = germany.1010.t
+	desc = germany.1010.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1010.a
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案一
+				has_idea = GWM_fanersai5a
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai5a
+				add_idea = GWM_fanersai6a
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案二
+				has_idea = GWM_fanersai5b
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai5b
+				add_idea = GWM_fanersai6b
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = 道威斯偿还方案三
+				has_idea = GWM_fanersai5c
+			}
+			swap_ideas = {
+				remove_idea = GWM_fanersai5c
+				add_idea = GWM_fanersai6c
+			}
+		}
+	}
+}
+country_event = {
+	id = germany.1011
+	title = germany.1011.t
+	desc = germany.1011.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1011.a
+		if = {
+			limit = {
+				has_idea = GWM_hyperinflation
+			}
+			swap_ideas = {
+					remove_idea = GWM_hyperinflation
+					add_idea = GWM_hyperinflation_loseI
+			}
+		}
+	}
+}
+country_event = {
+	id = germany.1012
+	title = germany.1012.t
+	desc = germany.1012.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1012.a
+		if = {
+			limit = {
+				has_idea = GWM_hyperinflation_loseI
+			}
+			remove_ideas = GWM_hyperinflation_loseI
+		}
+	}
+}
+country_event = {
+	id = germany.1013
+	title = germany.1013.t
+	desc = germany.1013.d
+	picture = news_event_023
+	immediate = {
+		if = {
+			limit = {
+				not = {
+					has_global_flag = 大萧条开始
+				}
+			}
+			hidden_effect = {
+				country_event = { id = germany.1014 days = 300 }
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1013.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = germany.1014
+	title = germany.1014.t
+	desc = germany.1014.d
+	picture = news_event_023
+	immediate = {
+		if = {
+			limit = {
+				not = {
+					has_global_flag = 大萧条开始
+				}
+			}
+			hidden_effect = {
+				country_event = { id = germany.1015 days = 300 }
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1014.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = germany.1015
+	title = germany.1015.t
+	desc = germany.1015.d
+	picture = news_event_023
+	immediate = {
+		if = {
+			limit = {
+				not = {
+					has_global_flag = 大萧条开始
+				}
+			}
+			hidden_effect = {
+				country_event = { id = germany.1016 days = 300 }
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1015.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = germany.1016
+	title = germany.1016.t
+	desc = germany.1016.d
+	picture = news_event_023
+	immediate = {
+		if = {
+			limit = {
+				not = {
+					has_global_flag = 大萧条开始
+				}
+			}
+			hidden_effect = {
+				country_event = { id = germany.1017 days = 300 }
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1016.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = germany.1017
+	title = germany.1017.t
+	desc = germany.1017.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1017.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = germany.1018
+	title = germany.1018.t
+	desc = germany.1018.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1018.a
+	}
+	option = {
+		name = germany.1018.b
+		set_global_flag = 选择希特勒
+		country_event = {
+			id = germany.1019
+		}
+	}
+}
+country_event = {
+	id = germany.1019
+	title = germany.1019.t
+	desc = germany.1019.d
+	picture = news_event_023
+	immediate = {
+		if = {
+			limit = {
+				not = {
+					has_global_flag = 选择希特勒
+				}
+			}
+		hidden_effect = {
+			random_list = {
+				25 = {
+					GER = {
+						transfer_state = 51
+						transfer_state = 56
+						transfer_state = 57
+						transfer_state = 58
+						transfer_state = 59
+						transfer_state = 61
+						set_capital = 58
+						load_oob = "GWM_civilwar_1"
+						declare_war_on = {
+							target = GWM
+							type = annex_everything
+						}
+					}
+				}
+				25 = {
+					GER = {
+						transfer_state = 42
+						transfer_state = 50
+						transfer_state = 51
+						transfer_state = 52
+						transfer_state = 53
+						transfer_state = 54
+						set_capital = 52
+						load_oob = "GWM_civilwar_2"
+						declare_war_on = {
+							target = GWM
+							type = annex_everything
+						}
+					}
+				}
+				25 = {
+					GER = {
+						transfer_state = 58
+						transfer_state = 61
+						transfer_state = 62
+						transfer_state = 63
+						transfer_state = 66
+						transfer_state = 67
+						transfer_state = 68
+						set_capital = 58
+						load_oob = "GWM_civilwar_3"
+						declare_war_on = {
+							target = GWM
+							type = annex_everything
+						}
+					}
+				}
+				25 = {
+					GER = {
+						transfer_state = 50
+						transfer_state = 52
+						transfer_state = 53
+						transfer_state = 54
+						transfer_state = 60
+						transfer_state = 65
+						set_capital = 52
+						load_oob = "GWM_civilwar_4"
+						declare_war_on = {
+							target = GWM
+							type = annex_everything
+						}
+					}
+				}
+			}
+		}
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = germany.1019.a
+		hidden_effect = {
+			GER = {
+				transfer_state = 51
+				transfer_state = 56
+				transfer_state = 57
+				transfer_state = 58
+				transfer_state = 59
+				transfer_state = 61
+				set_capital = 58
+				load_oob = "GWM_civilwar_1"
+				declare_war_on = {
+					target = GWM
+					type = annex_everything
+				}
+				change_tag_from = GWM
+			}
+		}
+		news_event = {
+			id = germany_news.1
+		}
+		trigger = {
+			has_global_flag = 选择希特勒
+		}
+	}
+	option = {
+		name = germany.1019.b
+		hidden_effect = {
+			GER = {
+				transfer_state = 42
+				transfer_state = 50
+				transfer_state = 51
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+				set_capital = 52
+				load_oob = "GWM_civilwar_2"
+				declare_war_on = {
+					target = GWM
+					type = annex_everything
+				}
+				change_tag_from = GWM
+			}
+		}
+		news_event = {
+			id = germany_news.1
+		}
+		trigger = {
+			has_global_flag = 选择希特勒
+		}
+	}
+	option = {
+		name = germany.1019.c
+		hidden_effect = {
+			GER = {
+				transfer_state = 58
+				transfer_state = 61
+				transfer_state = 62
+				transfer_state = 63
+				transfer_state = 66
+				transfer_state = 67
+				transfer_state = 68
+				set_capital = 58
+				load_oob = "GWM_civilwar_1"
+				declare_war_on = {
+					target = GWM
+					type = annex_everything
+				}
+				change_tag_from = GWM
+			}
+		}
+		news_event = {
+			id = germany_news.1
+		}
+		trigger = {
+			has_global_flag = 选择希特勒
+		}
+	}
+	option = {
+		name = germany.1019.e
+		hidden_effect = {
+			GER = {
+				transfer_state = 50
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+				transfer_state = 60
+				transfer_state = 65
+				set_capital = 52
+				load_oob = "GWM_civilwar_2"
+				declare_war_on = {
+					target = GWM
+					type = annex_everything
+				}
+				change_tag_from = GWM
+			}
+		}
+		news_event = {
+			id = germany_news.1
+		}
+		trigger = {
+			has_global_flag = 选择希特勒
+		}
+	}
+	option = {
+		name = germany.1019.f
+		news_event = {
+			id = germany_news.1
+		}
+		trigger = {
+			not = {
+				has_global_flag = 选择希特勒
+			}
+		}
+	}
+}
+#G1925E
+country_event = {
+	id = germany.1020
+	title = germany.1020.t
+	desc = germany.1020.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1020.a
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "卡洛·杰尔斯"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Karl_Jarres.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+	option = {
+		name = germany.1020.b
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "奥托·布劳恩"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Otto_Braun.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+	option = {
+		name = germany.1020.c
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "威廉·马克思"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Wilhelm_Marx.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+	option = {
+		name = germany.1020.e
+		hidden_effect = {
+			country_event = {
+				id = germany.1021
+				days = 28
+			}
+		}
+	}
+}
+#G1925E
+country_event = {
+	id = germany.1021
+	title = germany.1021.t
+	desc = germany.1021.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.1021.a
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "保罗·冯·兴登堡"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Paul_von_Hindenburg.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+	option = {
+		name = germany.1021.b
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "威廉·马克思"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Wilhelm_Marx.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+}
+#G1932E
+country_event = {
+	id = germany.1022
+	title = germany.1022.t
+	desc = germany.1022.d
+	picture = news_event_023
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = GWM
+		date > 1932.3.13
+	}
+	
+	option = {
+		name = germany.1022.a
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "保罗·冯·兴登堡"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Paul_von_Hindenburg.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+	option = {
+		name = germany.1022.b
+		trigger = {
+			fascism > 0.2
+		}
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "阿道夫·希特勒"
+			desc = "POLITICS_ADOLF_HITLER_DESC"
+			picture = "Portrait_Germany_Adolf_Hitler.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+	option = {
+		name = germany.1022.c
+		trigger = {
+			communism > 0.2
+		}
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "恩斯特·台尔曼"
+			desc = "POLITICS_WILHELM_PIECK_DESC"
+			picture = "Portrait_Germany_Ernst_Th.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+	option = {
+		name = germany.1022.e
+		trigger = {
+			neutrality > 0.2
+		}
+		hidden_effect = {
+			retire_country_leader = yes
+		}
+		create_country_leader = {
+			name = "威廉二世"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Wilhelm_II.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+	}
+}
+#弗里德里希·艾伯特逝世
+country_event = {
+	id = germany.1023
+	title = germany.1023.t
+	desc = germany.1023.d
+	picture = news_event_ita_fdgltl_tiaoyue
+	fire_only_once = yes
+	trigger = {
+		tag = GWM
+		date > 1925.2.28
+	}
+	immediate = {
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "汉斯·路德"
+			desc = "POLITICS_KONRAD_ADENAUER_DESC"
+			picture = "Portrait_Germany_Hans_Luther.tga"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+		country_event = {
+			id = germany.1020
+			days = 30
+		}
+	}
+	option = {
+		name = germany.1023.a
+	}
+}

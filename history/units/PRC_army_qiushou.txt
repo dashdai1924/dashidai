@@ -1,0 +1,32 @@
+﻿units = {
+	division = {
+		name = "工农革命军第1军1师"
+		location = 11988
+		division_template = "工农革命军"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "工农革命军第1团"
+		location = 11988
+		division_template = "工农革命军团"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "工农革命军第2团"
+		location = 12495
+		division_template = "工农革命军团"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "工农革命军第3团"
+		location = 11988
+		division_template = "工农革命军团"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "工农革命军第4团"
+		location = 11988
+		division_template = "工农革命军团"
+		start_experience_factor = 0.3
+	}
+}

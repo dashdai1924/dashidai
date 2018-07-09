@@ -1,0 +1,87 @@
+
+state={
+	id=602
+	name="STATE_602"
+	resources={
+		tungsten=2.000
+	}
+
+	history={
+		owner = ZZD
+		add_core_of = WHI
+		add_core_of = YIN
+		add_core_of = YUN
+		add_core_of = GXC
+		add_core_of = FEN
+		add_core_of = XSM
+		add_core_of = SIK
+		add_core_of = CXC
+		add_core_of = SHX
+		add_core_of = WAN
+		add_core_of = WUH
+		add_core_of = ZZA
+		add_core_of = ZZB
+		add_core_of = ZZC
+		add_core_of = ZZD
+		add_core_of = ZZE
+		add_core_of = ZZF
+		add_core_of = ZZG
+		add_core_of = ZZH
+		add_core_of = ZZI
+		add_core_of = ZZJ
+		add_core_of = ZZK
+		add_core_of = ZZL
+		add_core_of = ZZM
+		add_core_of = ZZN
+		add_core_of = ZZO
+		add_core_of = ZZP
+		add_core_of = ZZQ
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		1927.8.1={
+			owner = CHI
+			add_core_of = YIN
+			add_core_of = YUN
+			add_core_of = GXC
+			add_core_of = FEN
+			add_core_of = XSM
+			add_core_of = SIK
+			add_core_of = CXC
+			add_core_of = SHX
+			add_core_of = WAN
+			add_core_of = WUH
+			add_core_of = ZZA
+			add_core_of = ZZB
+			add_core_of = ZZC
+			add_core_of = ZZD
+			add_core_of = ZZE
+			add_core_of = ZZF
+			add_core_of = ZZG
+			add_core_of = ZZH
+			add_core_of = ZZI
+			add_core_of = ZZJ
+			add_core_of = ZZK
+			add_core_of = ZZL
+			add_core_of = ZZM
+			add_core_of = ZZN
+			add_core_of = ZZO
+			add_core_of = ZZP
+			add_core_of = ZZQ
+			add_core_of = CHI
+			add_core_of = PRC
+		}
+
+	}
+
+	provinces={
+		4480 4896 7279 7665 10006 10335 12017 12053 12310 12483 
+	}
+	manpower=7073425
+	buildings_max_level_factor=1.000
+	state_category=town
+}

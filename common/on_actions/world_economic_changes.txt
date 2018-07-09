@@ -1,0 +1,35 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			get_GDP = yes#求PREV的GDP
+			unhappy_with_daily_changes = yes#刷新不满
+			rest_the_person_control = yes#刷新公民控制度
+			rest_the_tax_up_and_down = yes#税率下限上限刷新
+			set_first_change_record = yes#设定变化首位
+			military_maintenance_costs = yes#军事维护费计算
+			military_maintenance_costs_increase_inflation = yes#通货膨胀增长的军事维护费
+			get_the_military_maintenance_costs = yes#取得军事维护费
+			get_support_for_changes_in_maintenance = yes#战争支援变化维护
+			get_the_stability_change_tax_rate = yes#稳定度变化税收
+			tax_income = yes#税收收入
+			add_to_variable = { Money = Money_Day_Add }#加钱
+			subtract_from_variable = { Money = Military_Maintenance_Costs }#减钱
+			interest_calculation = yes#贷款花费计算
+			tail_change_record = yes#设定变化尾位
+			get_the_money_derivative_point_money = yes#计算变化
+			debt_loan = yes#负资金贷款
+		}
+	}
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { exists = yes }
+				initialize_economic_system = yes#初始化经济系统
+				relative_exchange_rate_calculation = yes#计算汇率的相对数值筛选和分别
+				relative_exchange_rate_parameter_division = yes#相对位置的汇率计算
+				get_GDP = yes#求PREV的GDP
+				make_development = yes#产生发展度
+			}
+		}
+	}
+}

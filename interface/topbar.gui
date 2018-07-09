@@ -1,0 +1,754 @@
+guiTypes = {
+	containerWindowType = {
+		name = "topbar"#土吧
+		position = { x=-4 y=-1 }	
+		size = { width=100%% height=100%% }
+		
+		buttonType = {
+			name = "reopen_ingame_lobby"
+			quadTextureSprite ="GFX_reopen_lobby"
+			position = { x= 108 y = -22 }
+			Orientation = "LOWER_LEFT"
+		}
+		
+		iconType = {
+			name ="background"
+			spriteType = "GFX_topbar_background"
+			position = { x= 8 y = 1 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name ="reopen_ingame_lobby_label"
+			position = { x= 130 y = -16 }
+			font = "hoi_16mbs"
+			text = "LOBBY"
+			format = centre
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+			Orientation = "LOWER_LEFT"
+			allwaystransparent = yes
+		}
+		
+#		iconType = {
+#			name ="topbar_date_overlay"
+#			spriteType = "GFX_topbar_date_overlay"
+#			position = { x= -357 y = 0 }
+#			Orientation = "UPPER_RIGHT"
+#		}		
+
+		containerWindowType = {#75 190 音乐槽
+			name = "toggle_music_commands_win"
+			position = { x= -40 y = 190}
+			show_position = { x= 43 y = 190 }
+			show_animation_type = decelerated
+			hide_animation_type = accelerated
+			animation_time = 450
+			Orientation = upper_left
+			clipping = no
+			size = { width=228 height=42 }
+	
+			background = {
+				name = "Background"		
+				quadTextureSprite ="GFX_playlist_bg"
+			}
+
+			buttonType = {
+				name = "music_pause_button"
+				quadTextureSprite ="GFX_music_pause_button"
+				position = { x= -195 y = 6 }
+				Orientation = "UPPER_RIGHT"
+			}	
+
+			buttonType = {
+				name = "music_next_button"
+				quadTextureSprite ="GFX_music_next_button"
+				position = { x= -165 y = 6 }
+				Orientation = "UPPER_RIGHT"
+				pdx_tooltip = "MUSICPLAYER_NEXT"
+			}
+
+			buttonType = {
+				name = "musicplayer_button"
+				quadTextureSprite ="GFX_musicplayer_button"
+				position = { x= -130 y = 6 }
+				Orientation = "UPPER_RIGHT"
+				pdx_tooltip = "MUSICPLAYER_OPEN_PLAYER"
+			}			
+				
+		}
+		#旗帜系列 80y 75x偏移 -45x -10y 偏移#轻微y偏移
+		buttonType = {
+			name = "player_flag"
+			quadTextureSprite ="GFX_shield_medium"
+			position = { x= 42 y = 92 }
+			Orientation = "UPPER_LEFT"
+			clicksound = click_close
+			oversound = ui_menu_over
+			shortcut = "q"
+		}
+		
+		iconType = {
+			name = "observer_flag_overlay"
+			spriteType = "GFX_observer_flag_overlay"
+			position = { x= 41 y = 85 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		#以下为最顶边 -82x偏移量 +5y偏移量
+		iconType ={
+			name ="pol_power_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 18 y = 10 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType ={
+			name ="pol_power_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 22 y = 8 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name ="pol_power"
+			position = { x= 38 y = 14§§ }
+			font = "hoi_18mbs"
+			text = "999"
+			format = center
+			maxWidth = 52
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		iconType ={
+			name ="manpower_value_bg"
+			spriteType = "GFX_generic_box_96"
+			position = { x = 237 y = 10 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType ={
+			name ="manpower_icon"
+			spriteType = "GFX_manpower_icon"
+			position = { x= 239 y = 8 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name ="manpower"
+			position = { x= 270 y = 14 }
+			font = "hoi_18mbs"
+			text = "9999"
+			format = center
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		iconType ={
+			name ="sability_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 91 y = 10 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="stability_icon"
+			spriteType = "GFX_stability_icon"
+			position = { x= 93 y = 10 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name ="stability"
+			position = { x= 99 y = 14 }
+			font = "hoi_18mbs"
+			text = "100%"
+			format = right
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+		}
+		
+		iconType ={
+			name ="war_support_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 164 y = 10 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="war_support_icon"
+			spriteType = "GFX_war_support_icon"
+			position = { x= 166 y = 11 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		instantTextBoxType = {
+			name ="war_support"
+			position = { x= 171 y = 14 }
+			font = "hoi_18mbs"
+			text = "100%"
+			format = right
+			maxWidth = 57
+			maxHeight = 24
+			fixedsize = yes
+		}
+		#陆军经验 #-290+38的偏移量#-32x偏移#-60x偏移#-70x偏移
+		iconType ={
+			name ="experience_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=221 y=43 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="experience_icon"
+			spriteType = "GFX_army_experience"
+			position = { x= 228 y=49 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name ="experience_value"
+			position = { x=243 y=47 }
+			font = "hoi_18mbs"
+			text = "999"
+			format = center
+			maxWidth = 45
+			maxHeight = 24
+			fixedsize = yes
+		}
+		#海军经验
+		iconType ={
+			name ="navy_experience_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=293 y=43 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="navy_experience_icon"
+			spriteType = "GFX_navy_experience"
+			position = { x= 300 y = 49 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name ="navy_experience_value"
+			position = { x= 314 y = 47 }
+			font = "hoi_18mbs"
+			text = "999"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}		
+		#空军经验
+		iconType ={
+			name ="air_experience_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=365 y=43 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="air_experience_icon"
+			spriteType = "GFX_air_experience"
+			position = { x= 372 y = 49 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name ="air_experience_value"
+			position = { x= 387 y = 47 }
+			font = "hoi_18mbs"
+			text = "999"
+			format = center
+			maxWidth = 46
+			maxHeight = 24
+			fixedsize = yes
+		}
+		#指挥力-30x+35y偏移-2y偏移
+		iconType ={
+			name ="command_power_value_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=189 y=76 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name ="command_power_icon"
+			spriteType = "GFX_command_power"
+			position = { x= 195 y = 78 }
+			Orientation = "UPPER_LEFT"
+		}		
+		
+		instantTextBoxType = {
+			name ="command_power_value"
+			position = { x= 218 y = 80 }
+			font = "hoi_18mbs"
+			text = "999"
+			format = center
+			maxWidth = 40
+			maxHeight = 24
+			fixedsize = yes
+		}
+		#工业数量
+		iconType ={#-168x+73y偏移
+			name ="industrial_capacity_bg" 
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=261 y = 76 } 
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="industrial_capacity_icon"
+			spriteType = "GFX_industrial_capacity_icon"
+			position = { x= 261 y = 74 } 
+			Orientation = "UPPER_LEFT"
+		}
+        
+		instantTextBoxType = {
+			name ="industrial_capacity"
+			position = { x= 274 y = 80 } 
+			font = "hoi_18mbs"
+			text = "12/12/12"
+			format = center
+			maxWidth = 66
+			maxHeight = 24
+			fixedsize = yes
+		}	
+		#运输船
+		iconType ={
+			name ="convoy_text_bg"
+			spriteType = "GFX_generic_box_small"
+			position = { x=336 y=10 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType ={
+			name ="convoys_icon"
+			spriteType = "GFX_topbar_convoys"
+			position = { x= 340 y = 14 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		instantTextBoxType = {
+			name ="convoys_count"
+			position = { x= 374 y = 14 }
+			font = "hoi_18mbs"
+			text = "0"
+			format = center
+			maxWidth = 44
+			maxHeight = 24
+#			fixedsize = yes
+		}
+		#核弹2-568x+74y偏移-2y
+		iconType ={
+			name ="nuke_text_bg"
+			spriteType = "GFX_generic_box_small"
+			position = { x=332 y=76 }
+			Orientation = "UPPER_LEFT"
+		}
+		#紧张度 83 -45x -10y 偏移
+		buttonType ={
+			name ="threat_button"
+			spriteType = "GFX_world_tension_icon_big_strip"
+			position = { x=134 y=86 }
+			Orientation = "UPPER_LEFT"
+			clicksound = click_default
+		}
+
+		iconType ={
+			name ="threat_icon_glow"
+			spriteType = "GFX_WT_anim_strip"
+			position = { x=123 y=71 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		buttonType ={
+			name ="threat_value_button"
+			spriteType = "GFX_world_tension_icon_big_strip"
+			position = { x=134 y=130 }
+			Orientation = "UPPER_LEFT"
+			clicksound = click_default
+			size = { x=50 y=20 }
+			quadTextureSprite ="GFX_tiled_window_transparent"
+		}
+		
+		instantTextBoxType = {
+			name ="threat_value"
+			position = { x=134 y=130 }
+			font = "hoi_18mbs"
+			text = "50%"
+			format = center
+			maxWidth = 55
+			maxHeight = 24
+			fixedsize = yes
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}	
+		
+#		iconType ={
+#			name ="nuke_text_bg"
+#			spriteType = "GFX_generic_w_box"
+#			position = { x=967 y=5 }
+#			Orientation = "UPPER_LEFT"
+#		}
+		#核武器数量-568x+74y偏移
+		iconType ={
+			name ="nuke_icon"
+			spriteType = "GFX_topbar_nuke"
+			position = { x=335 y=78 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.8
+		}
+		
+		instantTextBoxType = {
+			name ="nuke_count"
+			position = { x=355 y=80 }
+			font = "hoi_18mbs"
+			format = center
+			maxWidth = 64
+			maxHeight = 24
+			fixedsize = yes
+		}	
+		
+		
+		containerWindowType = {
+			name = "time_control_window"#时间控制器
+			position = { x=-44 y=40 }
+			size = { width=253 height=30 }
+			Orientation = UPPER_LEFT
+
+			buttonType = {
+				name = "pause_button_date"
+				quadTextureSprite ="GFX_date_pause_button_bg"
+				position = { x = -197 y = 0 }
+				Orientation = "UPPER_RIGHT"
+				shortcut = "SPACE" #Will be disabled in MP from code
+				clicksound = pause_button
+			}
+			
+			buttonType = {
+				name = "pause_button_date_paused"
+				quadTextureSprite ="GFX_date_pause_button"
+				position = { x = -197 y = 0 }
+				Orientation = "UPPER_RIGHT"
+				shortcut = "SPACE" #Will be disabled in MP from code
+				clicksound = pause_button
+			}
+			
+			buttonType = {
+				name = "button_speeddown"
+				quadTextureSprite ="GFX_zoom_out"
+				position = { x = 58 y = 1 }
+				shortcut = "KP_MINUS"
+				pdx_tooltip = "SPEED_DECREASE"
+				clicksound = time_down
+				oversound = ui_menu_over
+			}
+		
+			buttonType = {
+				name = "button_speedstep1"
+				quadTextureSprite ="GFX_speed_step"
+				position = { x=94 y =27 }
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "button_speedstep2"
+				quadTextureSprite ="GFX_speed_step"
+				position = { x=119 y =27 }
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "button_speedstep3"
+				quadTextureSprite ="GFX_speed_step"
+				position = { x=144 y =27 }
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "button_speedstep4"
+				quadTextureSprite ="GFX_speed_step"
+				position = { x=169 y =27 }
+				clicksound = click_default
+			}
+			
+			buttonType = {
+				name = "button_speedstep5"
+				quadTextureSprite ="GFX_speed_step"
+				position = { x=194 y =27 }
+				clicksound = click_default
+			}
+		
+			buttonType = {
+				name = "button_speedup"
+				quadTextureSprite ="GFX_zoom_in"
+				position = { x = 233 y =1 }
+				shortcut = "KP_PLUS"
+				pdx_tooltip = "SPEED_INCREASE"
+				clicksound = time_up
+				oversound = ui_menu_over
+			}
+			
+			instantTextBoxType = {
+				name = "DateText"
+				position = { x = -175 y = 4 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				text = "7:00 29, September 1939"
+				maxWidth = 150
+				maxHeight = 32
+				format = right
+				Orientation = "UPPER_RIGHT"	
+				allwaystransparent = yes
+			}
+		}
+		
+		#移植入框国家菜单窗口的按钮
+			buttonType = {
+				name = "menu_button"
+				position = { x = 12 y = 86 }
+				quadTextureSprite ="GFX_menu_button"
+				buttonText = ""
+				buttonFont = "Main_14_black"
+				clicksound = click_ok
+				oversound = ui_menu_over
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MAIN_MENU"
+			}
+			
+			buttonType = {
+				name = "help_button"
+				position = { x = 12 y = 124 }
+				quadTextureSprite ="GFX_help_button"
+				buttonText = ""
+				buttonFont = "Main_14_black"
+				clicksound = click_ok
+				oversound = ui_menu_over
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HELP_MENU"
+				web_link = ""
+			}
+
+			buttonType = {
+				name = "achievements_button"
+				position = { x = 12 y = 162 }
+				quadTextureSprite ="GFX_achievements_button"
+				buttonText = ""
+				buttonFont = "Main_14_black"
+				clicksound = click_ok
+				oversound = ui_menu_over
+				Orientation = "UPPER_LEFT"
+			}
+			
+			buttonType = {
+				name = "playlist_button"
+				position = { x = 7 y = 195 }
+				quadTextureSprite ="GFX_playlist_button"
+				buttonText = ""
+				buttonFont = "Main_14_black"
+				clicksound = click_ok
+				oversound = ui_menu_over
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MUSICPLAYER_TOGGLE_CONTROLLER"
+			}		
+			
+			buttonType = {
+				name = "dismissed_alerts_button"
+				position = { x = 12 y = 238 }
+				quadTextureSprite ="GFX_show_dismissed_alerts_icon"
+				buttonText = ""
+				buttonFont = "Main_14_black"
+				clicksound = click_ok
+				oversound = ui_menu_over
+				Orientation = "UPPER_LEFT"
+			}
+		#国家菜单窗口…………………………………………………………………………………………………………………………………………………………
+		containerWindowType = {
+			name = "country_menu_window"
+			position = { x=12 y=86 }
+			size = { width=100%% height=30 }
+			#决议
+			buttonType = {#y+114偏移
+				name = "decisionview_button"
+				quadTextureSprite ="GFX_topbar_decisionview_button"
+				position = { x= 0 y = 304 }
+				Orientation = "UPPER_LEFT"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+			#决议警报标志
+			iconType = {
+				name ="decision_view_alert_glow"
+				spriteType = "GFX_decisions_glow"	
+				position = { x= 0 y = 305 }
+				alwaystransparent = yes
+			}
+			#决议即将超时
+			instantTextBoxType = {
+				name ="decisionview_amount_timeout_items"
+				position = { x= 0 y = 306 }
+				font = "hoi_18mbs"
+				text = "999"
+				format = center
+				maxWidth = 20
+				maxHeight = 24
+				fixedsize = yes
+			}
+			#可决议数目
+			instantTextBoxType = {
+				name ="decisionview_amount_to_take_items"
+				position = { x= 34 y = 320 }
+				font = "hoi_18mbs"
+				text = "999"
+				format = center
+				maxWidth = 20
+				maxHeight = 24
+				fixedsize = yes
+			}
+			#科技
+			buttonType = {
+				name = "technology_button"
+				quadTextureSprite ="GFX_topbar_technology"
+#				position = { x= -104 y = 0 }
+				position = { x= 0 y = 342 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "w"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+			#外交
+			buttonType = {
+				name = "diplomacy_button"
+				quadTextureSprite ="GFX_topbar_diplomacy"
+				position = { x= 0 y = 380 }
+				Orientation = "UPPER_LEFT"
+				shortcut = "e"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+			#贸易
+			buttonType = {
+				name = "trade_button"
+				position = { x= 0 y = 418 }
+				quadTextureSprite ="GFX_topbar_trade_button"
+				Orientation = "UPPER_LEFT"
+				shortcut = "r"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}	
+			#建设
+			buttonType = {
+				name = "construction_button"
+				position = { x = 0 y = 456 }
+				quadTextureSprite ="GFX_construction_button"
+				Orientation = "UPPER_LEFT"
+				shortcut = "t"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+			#生产
+			buttonType = {
+				name = "production_button"
+				position = { x = 0 y = 496 }
+				quadTextureSprite ="GFX_topbar_production"
+				Orientation = "UPPER_LEFT"
+				shortcut = "y"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+			#招募与部署
+			buttonType = {
+				name = "deployment_button"
+				position = { x = 0 y = 532 }
+				quadTextureSprite ="GFX_deployment_button"
+				Orientation = "UPPER_LEFT"
+				shortcut = "u"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}		
+			#后勤
+			buttonType = {
+				name = "logistics_button"
+				position = { x = 0 y = 570 }
+				quadTextureSprite ="GFX_ledger_button"
+				Orientation = "UPPER_LEFT"
+				shortcut = "i"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+			#陆军（没错，蠢驴就是这么懒，左侧面板的调用钮在一框内）
+			buttonType = {
+				name = "army_button"
+				#position = { x = -275 y = -40 }
+				position = { x = 0 y = 190 }
+				quadTextureSprite ="GFX_armyoverview_button"
+				#Orientation = "UPPER_right"
+				Orientation = "UPPER_LEFT"
+				shortcut = "o"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+			#海军
+			buttonType = {
+				name = "navy_button"
+				#position = { x = -226 y = -40 }
+				position = { x = 0 y = 228 }
+				quadTextureSprite ="GFX_navyoverview_button"
+				#Orientation = "UPPER_right"
+				Orientation = "UPPER_LEFT"
+				shortcut = "p"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+			#空军
+			buttonType = {
+				name = "air_button"
+				#position = { x = -180 y = -40 }
+				position = { x = 0 y = 266 }
+				quadTextureSprite ="GFX_airoverview_button"
+				#Orientation = "UPPER_right"
+				Orientation = "UPPER_LEFT"
+				shortcut = "l"
+				clicksound = click_close
+				oversound = ui_menu_over
+			}
+		}
+		
+		#windowType = {
+		#	name = "pause_window"
+		#	backGround=""
+		#	position = { x=-203 y= 100 }
+		#	size = { x=406 y=70 }
+		#	dontRender = ""
+		#	horizontalBorder= ""
+		#	verticalBorder= ""
+		#	fullScreen = no
+		#	moveable = 0
+		#	Orientation = "CENTER_UP"
+		#	
+
+		#	
+		#	#Needs localisation change
+		#	instantTextBoxType = {
+		#		name = "pause_banner_text"
+		#		position = { x = 140 y = 9 }
+		#		textureFile = ""
+		#		font = "vic_22"
+		#		borderSize = {x = 4 y = 4}
+		#		text = "CORE_PAUSED"
+		#		maxWidth = 120
+		#		maxHeight = 27
+		#		format = center
+		#	}
+		#}
+	}
+}

@@ -1,0 +1,9 @@
+
+supply_area={
+	id=335
+	name="SUPPLYAREA_335"
+	value=7
+	states={
+		283 605 797 796 798 816 812 811 817 777 813 744 
+	}
+}

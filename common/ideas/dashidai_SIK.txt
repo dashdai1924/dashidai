@@ -1,0 +1,24 @@
+ideas = {
+	country = {
+		SIK_yuminzhengce = {
+			picture = FRA_fortification_focus
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 1.00
+				democratic_drift = 0.01
+				communism_drift = 0.09
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.10
+				army_org_Factor = 0.10
+				stability_factor = 0.10
+				consumer_goods_factor = -0.05
+				research_time_factor = 0.05
+			}
+		}
+	}
+}

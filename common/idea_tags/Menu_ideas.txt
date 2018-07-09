@@ -1,0 +1,9 @@
+idea_categories = {
+	outsideandtogeter = {
+		slot = Leader_Message_Text
+		slot = About_League_of_Nations
+		
+		cost = 0
+		removal_cost = -1
+	}
+}

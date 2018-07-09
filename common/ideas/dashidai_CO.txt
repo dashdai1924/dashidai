@@ -1,0 +1,104 @@
+ideas = {
+	country = {
+		#国民军的外交中立
+		ZZQ_waijiaozhongli = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				ai_join_ally_desire_factor = -120
+			}
+		}
+		#奉系过扩
+		FEN_attack_the_meddie_land = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+			}
+		}
+		#奉系玩完
+		FEN_attack_the_meddie_land_and_be_die = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_attack_factor = -10
+				army_defence_factor = -10
+				army_org = -20
+				planning_speed = -0.2
+			}
+		}
+		#老练的胜利者
+		SIK_oldwinner = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.15
+			}
+		}
+		#第二次北伐问题
+		CHI_Second_north_war_que = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.4
+			}
+		}
+		#哈密暴动
+		hami_s_crazy_worker = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.3
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+				local_resources_factor = -0.2
+			}
+		}
+		#恐怖政治
+		dimit_polictier = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.2
+			}
+		}
+		#129运动
+		komindang_129yundong = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.2
+			}
+		}
+		#AI共产党
+		ai_prc_come_here = {
+			picture = generic_navy_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_org = 50
+				army_attack_factor = 0.5
+				army_defence_factor = 0.5
+				army_speed_factor = 0.5
+			}
+		}
+	}
+}

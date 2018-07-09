@@ -1,0 +1,96 @@
+﻿capital = 330
+
+oob = "MON_1924"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	limited_conscription
+	CHI_tonghuopengzhang
+	CHI_chanyelan
+	CHI_danongyeguoziguyilai_wenti
+	CHI_luohoujundui_wenti
+}
+
+set_research_slots = 2
+
+set_stability = 0.50
+
+set_politics = {
+	parties = {
+		dictatorship = { 
+			popularity = 50
+		}
+		democratic = { 
+			popularity = 10
+		}
+		fascism = {
+			popularity = 0
+		}
+		communism = {
+			popularity = 30
+		}
+		neutrality = {
+			popularity = 10
+		}
+	}
+	ruling_party = dictatorship
+	last_election = "1924.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+1926.7.9 = {
+set_politics = {
+	parties = {
+		democratic = { 
+			popularity = 0
+			banned = yes
+		}
+
+		fascism = {
+			popularity = 0
+			banned = yes
+		}
+		
+		communism = {
+			popularity = 60
+			#banned = no #default is no
+		}
+		
+		neutrality = { 
+			popularity = 20
+		}
+		dictatorship = { 
+			popularity = 20
+		}
+	}
+	ruling_party = communism
+	last_election = "1924.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+}
+create_country_leader = {
+	name = "第八世哲布尊丹巴活佛"
+	desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "gfx/leaders/MON/dibashizebujundanba.dds"
+	expire = "9999.1.1"
+	ideology = religion
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Anandyn Amar"
+	desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_communism.dds"
+	expire = "9999.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}

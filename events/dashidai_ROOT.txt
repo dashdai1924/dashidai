@@ -1,0 +1,187 @@
+﻿add_namespace = gworld
+country_event = {
+	id = gworld.1
+	title = gworld.1.t
+	desc = gworld.1.d
+	picture = news_event_009
+	is_triggered_only = yes
+	
+	option = {
+		name = gworld.1.a
+		hidden_effect = {
+			add_political_power = -50
+		}
+	}
+}
+news_event = {
+	id = gworld.2
+	title = gworld.2.t
+	desc = gworld.2.d
+	picture = news_event_023
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = gworld.2.a
+		if = {
+			limit = {
+				or = {
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+				not = {
+					tag = USA
+				}
+			}
+			add_ideas = WEST_Great_Depression
+		}
+	}
+}
+country_event = {
+	id = gworld.3
+	title = gworld.3.t
+	desc = gworld.3.d
+	picture = news_event_023
+	
+	fire_only_once = yes
+	
+	immediate = {
+		set_global_flag = 大萧条即将开始
+	}
+	
+	trigger = {
+		or = {
+			tag = GER
+			tag = GWM
+		}
+		date > 1929.6.1
+	}
+
+	option = {
+		name = gworld.3.a
+	}
+}
+country_event = {
+	id = gworld.4
+	title = gworld.4.t
+	desc = gworld.4.d
+	picture = news_event_023
+	
+	fire_only_once = yes
+	
+	trigger = {
+		not = {
+			has_global_flag = 大萧条结束
+		}
+		has_global_flag = 大萧条开始
+		has_idea = WEST_Great_Depression
+		date > 1930.1.1
+	}
+	immediate = {
+		every_owned_state = {
+			limit = {
+				industrial_complex > 2
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+	option = {
+		name = gworld.4.a
+	}
+}
+country_event = {
+	id = gworld.6
+	title = gworld.6.t
+	desc = gworld.6.d
+	picture = news_event_023
+	
+	fire_only_once = yes
+	
+	trigger = {
+		not = {
+			has_global_flag = 大萧条结束
+		}
+		has_global_flag = 大萧条开始
+		has_idea = WEST_Great_Depression
+		date > 1931.1.1
+	}
+	immediate = {
+		every_owned_state = {
+			limit = {
+				industrial_complex > 2
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+	option = {
+		name = gworld.6.a
+	}
+}
+country_event = {
+	id = gworld.7
+	title = gworld.7.t
+	desc = gworld.7.d
+	picture = news_event_023
+	
+	fire_only_once = yes
+	
+	trigger = {
+		not = {
+			has_global_flag = 大萧条结束
+		}
+		has_global_flag = 大萧条开始
+		has_idea = WEST_Great_Depression
+		date > 1932.1.1
+	}
+	immediate = {
+		every_owned_state = {
+			limit = {
+				industrial_complex > 2
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+	}
+	option = {
+		name = gworld.7.a
+	}
+}
+news_event = {
+	id = gworld.5
+	title = gworld.5.t
+	desc = gworld.5.d
+	picture = news_event_023
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1933.1.1
+	}
+	
+	option = {
+		name = gworld.5.a
+		remove_ideas = WEST_Great_Depression
+	}
+}
+country_event = {
+	id = gworld.8
+	title = gworld.8.t
+	desc = gworld.8.d
+	picture = news_event_023
+	
+	fire_only_once = yes
+	
+	option = {
+		name = gworld.8.a
+	}
+}

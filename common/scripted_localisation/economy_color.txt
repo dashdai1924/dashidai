@@ -1,0 +1,532 @@
+defined_text = {
+	name = Get_Tax_Number_Now
+	text = {
+		trigger = {
+			check_variable = { Tax_Number_Now < 25 }
+			check_variable = { Tax_Number_Now > 0 }
+		}
+		localization_key = Tax_Number_Now_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Tax_Number_Now < 50 }
+			check_variable = { Tax_Number_Now > 25 }
+		}
+		localization_key = Tax_Number_Now_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Tax_Number_Now < 75 }
+			check_variable = { Tax_Number_Now > 50 }
+		}
+		localization_key = Tax_Number_Now_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { Tax_Number_Now < 100 }
+			check_variable = { Tax_Number_Now > 75 }
+		}
+		localization_key = Tax_Number_Now_desc_4
+	}
+	text = {
+		localization_key = Tax_Number_Now_desc_0
+	}
+}
+defined_text = {
+	name = Get_Money_Day_Add
+	text = {
+		trigger = {
+			check_variable = { Money_Day_Add > 0 }
+		}
+		localization_key = Money_Day_Add_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Money_Day_Add = 0 }
+		}
+		localization_key = Money_Day_Add_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Money_Day_Add < 0 }
+		}
+		localization_key = Money_Day_Add_desc_3
+	}
+	text = {
+		localization_key = Tax_Number_Now_desc_0
+	}
+}
+defined_text = {
+	name = Get_Interventionism
+	text = {
+		trigger = {
+			check_variable = { Interventionism > 0 }
+			check_variable = { Interventionism < 33.33 }
+		}
+		localization_key = Interventionism_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Interventionism > 33.33 }
+			check_variable = { Interventionism < 66.66 }
+		}
+		localization_key = Interventionism_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Interventionism > 66.66 }
+			check_variable = { Interventionism < 100 }
+		}
+		localization_key = Interventionism_desc_3
+	}
+	text = {
+		localization_key = Interventionism_desc_0
+	}
+}
+defined_text = {
+	name = Get_Person_Control
+	text = {
+		trigger = {
+			check_variable = { Person_Control > 0 }
+			check_variable = { Person_Control < 33.33 }
+		}
+		localization_key = Person_Control_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Person_Control > 33.33 }
+			check_variable = { Person_Control < 66.66 }
+		}
+		localization_key = Person_Control_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Person_Control > 66.66 }
+			check_variable = { Person_Control < 100 }
+		}
+		localization_key = Person_Control_desc_3
+	}
+	text = {
+		localization_key = Person_Control_desc_0
+	}
+}
+defined_text = {
+	name = Get_Militarism
+	text = {
+		trigger = {
+			check_variable = { Militarism > 0 }
+			check_variable = { Militarism < 33.33 }
+		}
+		localization_key = Militarism_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Militarism > 33.33 }
+			check_variable = { Militarism < 66.66 }
+		}
+		localization_key = Militarism_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Militarism > 66.66 }
+			check_variable = { Militarism < 100 }
+		}
+		localization_key = Militarism_desc_3
+	}
+	text = {
+		localization_key = Militarism_desc_0
+	}
+}
+defined_text = {
+	name = Get_Inflation_Rate
+	text = {
+		trigger = {
+			check_variable = { Inflation_Rate > 0 }
+			check_variable = { Inflation_Rate < 33.33 }
+		}
+		localization_key = Inflation_Rate_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Inflation_Rate > 33.33 }
+			check_variable = { Inflation_Rate < 66.66 }
+		}
+		localization_key = Inflation_Rate_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Inflation_Rate > 66.66 }
+			check_variable = { Inflation_Rate < 100 }
+		}
+		localization_key = Inflation_Rate_desc_3
+	}
+	text = {
+		localization_key = Inflation_Rate_desc_0
+	}
+}
+defined_text = {
+	name = Get_Manpower_Gain_Focus
+	text = {
+		trigger = {
+			check_variable = { Manpower_Gain_Focus > 0 }
+			check_variable = { Manpower_Gain_Focus < 500 }
+		}
+		localization_key = Manpower_Gain_Focus_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Manpower_Gain_Focus > 500 }
+			check_variable = { Manpower_Gain_Focus < 1000 }
+		}
+		localization_key = Manpower_Gain_Focus_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Manpower_Gain_Focus > 1000 }
+			check_variable = { Manpower_Gain_Focus < 2000 }
+		}
+		localization_key = Manpower_Gain_Focus_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { Manpower_Gain_Focus > 2000 }
+		}
+		localization_key = Manpower_Gain_Focus_desc_4
+	}
+	text = {
+		localization_key = Manpower_Gain_Focus_desc_0
+	}
+}
+defined_text = {
+	name = Get_Current_Relative_Money_Position
+	text = {
+		trigger = {
+			check_variable = { Current_Relative_Money_Position = 1 }
+		}
+		localization_key = Current_Relative_Money_Position_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Current_Relative_Money_Position = 2 }
+		}
+		localization_key = Current_Relative_Money_Position_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Current_Relative_Money_Position = 3 }
+		}
+		localization_key = Current_Relative_Money_Position_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { Current_Relative_Money_Position = 4 }
+		}
+		localization_key = Current_Relative_Money_Position_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { Current_Relative_Money_Position = 5 }
+		}
+		localization_key = Current_Relative_Money_Position_desc_5
+	}
+	text = {
+		trigger = {
+			check_variable = { Current_Relative_Money_Position = 6 }
+		}
+		localization_key = Current_Relative_Money_Position_desc_6
+	}
+	text = {
+		trigger = {
+			check_variable = { Current_Relative_Money_Position = 7 }
+		}
+		localization_key = Current_Relative_Money_Position_desc_7
+	}
+	text = {
+		localization_key = Current_Relative_Money_Position_desc_0
+	}
+}
+defined_text = {
+	name = Get_Manpower_Gain_Focus
+	text = {
+		trigger = {
+			check_variable = { Manpower_Gain_Focus > 0 }
+			check_variable = { Manpower_Gain_Focus < 500 }
+		}
+		localization_key = Manpower_Gain_Focus_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { Manpower_Gain_Focus > 500 }
+			check_variable = { Manpower_Gain_Focus < 1000 }
+		}
+		localization_key = Manpower_Gain_Focus_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { Manpower_Gain_Focus > 1000 }
+			check_variable = { Manpower_Gain_Focus < 2000 }
+		}
+		localization_key = Manpower_Gain_Focus_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { Manpower_Gain_Focus > 2000 }
+		}
+		localization_key = Manpower_Gain_Focus_desc_4
+	}
+	text = {
+		localization_key = Manpower_Gain_Focus_desc_0
+	}
+}
+defined_text = {
+	name = Get_USD_exchange_rate
+	text = {
+		trigger = {
+			check_variable = { USD_exchange_rate > 10 }
+		}
+		localization_key = USD_exchange_rate_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { USD_exchange_rate > 100 }
+		}
+		localization_key = USD_exchange_rate_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { USD_exchange_rate > 1000 }
+		}
+		localization_key = USD_exchange_rate_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { USD_exchange_rate < 1 }
+		}
+		localization_key = USD_exchange_rate_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { USD_exchange_rate < 0.1 }
+		}
+		localization_key = USD_exchange_rate_desc_5
+	}
+	text = {
+		localization_key = USD_exchange_rate_desc_0
+	}
+}
+defined_text = {
+	name = Get_GBP_exchange_rate
+	text = {
+		trigger = {
+			check_variable = { GBP_exchange_rate > 10 }
+		}
+		localization_key = GBP_exchange_rate_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { GBP_exchange_rate > 100 }
+		}
+		localization_key = GBP_exchange_rate_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { GBP_exchange_rate > 1000 }
+		}
+		localization_key = GBP_exchange_rate_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { GBP_exchange_rate < 1 }
+		}
+		localization_key = GBP_exchange_rate_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { GBP_exchange_rate < 0.1 }
+		}
+		localization_key = GBP_exchange_rate_desc_5
+	}
+	text = {
+		localization_key = GBP_exchange_rate_desc_0
+	}
+}
+defined_text = {
+	name = Get_RUB_exchange_rate
+	text = {
+		trigger = {
+			check_variable = { RUB_exchange_rate > 10 }
+		}
+		localization_key = RUB_exchange_rate_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RUB_exchange_rate > 100 }
+		}
+		localization_key = RUB_exchange_rate_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RUB_exchange_rate > 1000 }
+		}
+		localization_key = RUB_exchange_rate_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RUB_exchange_rate < 1 }
+		}
+		localization_key = RUB_exchange_rate_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RUB_exchange_rate < 0.1 }
+		}
+		localization_key = RUB_exchange_rate_desc_5
+	}
+	text = {
+		localization_key = RUB_exchange_rate_desc_0
+	}
+}
+defined_text = {
+	name = Get_DEM_exchange_rate
+	text = {
+		trigger = {
+			check_variable = { DEM_exchange_rate > 10 }
+		}
+		localization_key = DEM_exchange_rate_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { DEM_exchange_rate > 100 }
+		}
+		localization_key = DEM_exchange_rate_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { DEM_exchange_rate > 1000 }
+		}
+		localization_key = DEM_exchange_rate_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { DEM_exchange_rate < 1 }
+		}
+		localization_key = DEM_exchange_rate_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { DEM_exchange_rate < 0.1 }
+		}
+		localization_key = DEM_exchange_rate_desc_5
+	}
+	text = {
+		localization_key = DEM_exchange_rate_desc_0
+	}
+}
+defined_text = {
+	name = Get_FRF_exchange_rate
+	text = {
+		trigger = {
+			check_variable = { FRF_exchange_rate > 10 }
+		}
+		localization_key = FRF_exchange_rate_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { FRF_exchange_rate > 100 }
+		}
+		localization_key = FRF_exchange_rate_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { FRF_exchange_rate > 1000 }
+		}
+		localization_key = FRF_exchange_rate_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { FRF_exchange_rate < 1 }
+		}
+		localization_key = FRF_exchange_rate_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { FRF_exchange_rate < 0.1 }
+		}
+		localization_key = FRF_exchange_rate_desc_5
+	}
+	text = {
+		localization_key = FRF_exchange_rate_desc_0
+	}
+}
+defined_text = {
+	name = Get_JPY_exchange_rate
+	text = {
+		trigger = {
+			check_variable = { JPY_exchange_rate > 10 }
+		}
+		localization_key = JPY_exchange_rate_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { JPY_exchange_rate > 100 }
+		}
+		localization_key = JPY_exchange_rate_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { JPY_exchange_rate > 1000 }
+		}
+		localization_key = JPY_exchange_rate_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { JPY_exchange_rate < 1 }
+		}
+		localization_key = JPY_exchange_rate_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { JPY_exchange_rate < 0.1 }
+		}
+		localization_key = JPY_exchange_rate_desc_5
+	}
+	text = {
+		localization_key = JPY_exchange_rate_desc_0
+	}
+}
+defined_text = {
+	name = Get_LIR_exchange_rate
+	text = {
+		trigger = {
+			check_variable = { LIR_exchange_rate > 10 }
+		}
+		localization_key = LIR_exchange_rate_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable = { LIR_exchange_rate > 100 }
+		}
+		localization_key = LIR_exchange_rate_desc_2
+	}
+	text = {
+		trigger = {
+			check_variable = { LIR_exchange_rate > 1000 }
+		}
+		localization_key = LIR_exchange_rate_desc_3
+	}
+	text = {
+		trigger = {
+			check_variable = { LIR_exchange_rate < 1 }
+		}
+		localization_key = LIR_exchange_rate_desc_4
+	}
+	text = {
+		trigger = {
+			check_variable = { LIR_exchange_rate < 0.1 }
+		}
+		localization_key = LIR_exchange_rate_desc_5
+	}
+	text = {
+		localization_key = LIR_exchange_rate_desc_0
+	}
+}

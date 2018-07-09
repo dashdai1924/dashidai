@@ -1,0 +1,440 @@
+ideas = {
+	country = {
+		#失业
+		GWM_lost_work = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.01
+				conscription_factor = 0.1
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.1
+				monthly_population = -0.1
+			}
+		}
+		#街头冲突
+		GWM_nazi_inside2 = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				fascism_drift = 0.04
+				communism_drift = 0.02
+				stability_factor = -0.1
+			}
+		}
+		#大萧条
+		WEST_Great_Depression = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.4
+				political_power_factor = -0.2
+				consumer_goods_factor = 0.5
+				stability_factor = -0.1
+				industrial_capacity_factory = -0.5
+				research_time_factor = 0.4
+				production_speed_buildings_factor = -0.5
+				local_resources_factor = -0.5
+				trade_opinion_factor = -0.5
+				monthly_population = -0.1
+				justify_war_goal_time = 1
+				conscription = -0.1
+			}
+		}
+		#洛迦诺条约
+		GWM_Locarno_Treaties = {
+			picture = generic_wall_line
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = 0.25
+				monthly_population = 0.05
+				trade_opinion_factor = 0.1
+				max_planning = -0.05
+			}
+		}
+		#减少官僚障碍
+		GWM_lowtheguanliaobuild = {
+			picture = generic_democratic_drift_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.2
+				political_power_factor = -0.1
+			}
+		}
+		#加强财政控制
+		GWM_caizhengCountar = {
+			picture = generic_intel_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = -0.03
+			}
+		}
+		#黄金20年代
+		World_golden_tw_year_time = {
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05
+				democratic_drift = 0.01
+				drift_defence_factor = 0.4
+				research_time_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_bunker_factor = 0.1
+			}
+		}
+		#凡尔赛条约
+		GWM_fanersai = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.5
+				political_power_factor = -0.1
+			}
+		}
+		#恶性通货膨胀
+		GWM_hyperinflation = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				consumer_goods_factor = 0.1
+			}
+		}
+		#恶性通货膨胀削弱
+		GWM_hyperinflation_loseI = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+		#希特勒
+		GWM_nazi_inside = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				fascism_drift = 0.01
+			}
+		}
+		#德意志帝国的遗产
+		GWM_desth_emiper_giveus = {
+			picture = generic_democratic_drift_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.1
+				neutrality_drift = -0.1
+			}
+		}
+		#减弱的凡尔赛条约AI
+		GWM_fanersai1a = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.048
+				conscription_factor = -0.25
+				political_power_factor = -0.09
+			}
+		}
+		#减弱的凡尔赛条约AII
+		GWM_fanersai2a = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.046
+				conscription_factor = -0.25
+				political_power_factor = -0.08
+			}
+		}
+		#减弱的凡尔赛条约AIII
+		GWM_fanersai3a = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.044
+				conscription_factor = -0.25
+				political_power_factor = -0.07
+			}
+		}
+		#减弱的凡尔赛条约AIIII
+		GWM_fanersai4a = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.042
+				conscription_factor = -0.25
+				political_power_factor = -0.06
+			}
+		}
+		#减弱的凡尔赛条约AIIIII
+		GWM_fanersai5a = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.04
+				conscription_factor = -0.25
+				political_power_factor = -0.05
+			}
+		}
+		#减弱的凡尔赛条约AIIIIII
+		GWM_fanersai6a = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.038
+				conscription_factor = -0.25
+				political_power_factor = -0.04
+			}
+		}
+		#减弱的凡尔赛条约BI
+		GWM_fanersai1b = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.045
+				conscription_factor = -0.25
+				political_power_factor = -0.08
+			}
+		}
+		#减弱的凡尔赛条约BII
+		GWM_fanersai2b = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.044
+				conscription_factor = -0.25
+				political_power_factor = -0.075
+			}
+		}
+		#减弱的凡尔赛条约BIII
+		GWM_fanersai3b = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.043
+				conscription_factor = -0.25
+				political_power_factor = -0.07
+			}
+		}
+		#减弱的凡尔赛条约BIIII
+		GWM_fanersai4b = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.042
+				conscription_factor = -0.25
+				political_power_factor = -0.065
+			}
+		}
+		#减弱的凡尔赛条约BIIIII
+		GWM_fanersai5b = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.041
+				conscription_factor = -0.25
+				political_power_factor = -0.06
+			}
+		}
+		#减弱的凡尔赛条约BIIIIII
+		GWM_fanersai6b = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.04
+				conscription_factor = -0.25
+				political_power_factor = -0.055
+			}
+		}
+		#减弱的凡尔赛条约CI
+		GWM_fanersai1c = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.043
+				conscription_factor = -0.25
+				political_power_factor = -0.07
+			}
+		}
+		#减弱的凡尔赛条约CII
+		GWM_fanersai2c = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.043
+				conscription_factor = -0.25
+				political_power_factor = -0.07
+			}
+		}
+		#减弱的凡尔赛条约CIII
+		GWM_fanersai3c = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.042
+				conscription_factor = -0.25
+				political_power_factor = -0.069
+			}
+		}
+		#减弱的凡尔赛条约CIIII
+		GWM_fanersai4c = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.042
+				conscription_factor = -0.25
+				political_power_factor = -0.069
+			}
+		}
+		#减弱的凡尔赛条约CIIIII
+		GWM_fanersai5c = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.041
+				conscription_factor = -0.25
+				political_power_factor = -0.068
+			}
+		}
+		#减弱的凡尔赛条约CIIIIII
+		GWM_fanersai6c = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.041
+				conscription_factor = -0.25
+				political_power_factor = -0.068
+			}
+		}
+		#杨格计划 - 凡尔赛条约
+		GWM_fanersai_young = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.04
+				conscription_factor = -0.20
+				political_power_factor = -0.075
+			}
+		}
+	}
+}

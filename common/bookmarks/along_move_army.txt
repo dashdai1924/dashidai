@@ -1,0 +1,34 @@
+bookmarks = {
+	bookmark = {
+		name = "MOVE_ARMY_NAME"
+		desc = "MOVE_ARMY_DESC"
+		date = 1934.10.1.01
+		picture = "GFX_select_date_1934"
+		default_country = "GWM"
+		default = yes
+		
+		"GWM"={
+			history = "GWM_MOVE_ARMY_DESC"
+			ideology = democratic
+			ideas = {
+				WEST_Great_Depression
+				GWM_Locarno_Treaties
+				GWM_lost_work
+			}
+			focuses = {
+				GWM_begin_execution
+				GWM_locarno_treaties
+				GWM_industry_research
+			}
+		}
+		
+		"---"={
+			history = "OTHER_MOVE_ARMY_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

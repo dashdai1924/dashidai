@@ -1,0 +1,146 @@
+﻿capital = 64
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	basic_heavy_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	CAS1 = 1
+	naval_bomber1 = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	synth_oil_experiments = 1
+	transport = 1
+}
+
+set_research_slots = 4
+set_convoys = 50
+set_stability = 0.7
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 10
+		}
+
+		fascism = {
+			popularity = 75
+		}
+		
+		communism = {
+			popularity = 10
+			banned = yes
+		}
+
+		neutrality = {
+			popularity = 5
+		}
+	}
+	
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+
+}
+
+
+add_ideas = {
+	V2S_central_focus_political
+	Beifa_renkou_1
+	Beifa_zuidigongzi_4
+	Beifa_zuidagongshi_5
+	Beifa_anquanguizhang_3
+	Beifa_shiyebuzhu_3
+	Beifa_tonggong_2
+	Beifa_tuixiujin_3
+	Beifa_weishengbaojian_4
+	Beifa_huanjingfa_1
+	Beifa_yishubutie_2
+	Beifa_shoujiaoyuquan_5
+	Beifa_zhengdang_5
+	Beifa_zhengbingzhi_2
+	Beifa_yiminzhengce_2
+	Beifa_gonghui_4
+	Beifa_shaoshuzuqun_2
+	Beifa_xuanjuquan_6
+	Beifa_shangyiyuan_2
+	Beifa_nulizhi_2
+	Beifa_gongzhongjihui_2
+	Beifa_chubanquan_3
+	Beifa_toupiaozhidu_3
+}
+
+create_country_leader = {
+	name = "阿道夫·希特勒"
+	desc = "POLITICS_ADOLF_HITLER_DESC"
+	picture = "Portrait_Germany_Adolf_Hitler.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		dictator
+	}
+}
+
+create_country_leader = {
+	name = "康拉德·阿登纳"
+	desc = "POLITICS_KONRAD_ADENAUER_DESC"
+	picture = "Portrait_Germany_Konrad_Adenauer.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+
+create_country_leader = {
+	name = "威廉二世"
+	desc = "POLITICS_KONRAD_ADENAUER_DESC"
+	picture = "Portrait_Germany_Wilhelm_II.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "威廉·皮克"
+	desc = "POLITICS_WILHELM_PIECK_DESC"
+	picture = "Portrait_Germany_Wilhelm_Pieck.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		stalins_puppet
+		exiled
+	}
+}
+
+add_namespace = {
+	name = "ger_unit_leader"
+	type = unit_leader
+}

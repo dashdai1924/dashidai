@@ -1,0 +1,7 @@
+resources = {
+	development = {
+		icon_frame = 7
+		cic = 0.001
+		convoys = 0
+	}
+}

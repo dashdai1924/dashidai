@@ -1,0 +1,18 @@
+state={
+	id=832
+	name="STATE_832"
+	provinces={
+		959 3852 6922 11878 
+	}
+	history={
+		owner = JAP
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = KOR
+
+	}
+	manpower=677420
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+}

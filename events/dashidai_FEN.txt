@@ -1,0 +1,50 @@
+﻿#########################
+## beifa Mod Events ##
+#########################
+
+add_namespace = beifa
+
+# 与民国的交易
+country_event = {
+	id = beifa.13
+	title = beifa.13.t
+	desc = beifa.13.d
+	picture = GFX_CHI_leader_qianzi
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	
+	option = {
+		name = beifa.13.a
+		ai_chance = {
+			factor = 80
+		}
+		CHI = { transfer_state = 608 }
+	}
+}
+#入共产国际
+country_event = {
+	id = beifa.14
+	title = beifa.14.t
+	desc = beifa.14.d
+	picture = GFX_CHI_leader_son
+	 
+
+	is_triggered_only = yes
+		
+	option = {
+		name = beifa.14.a
+		SOV = { add_to_faction = FEN }
+		SOV = {
+			add_ai_strategy = {
+				type = alliance
+				id = "FEN"
+				value = 200
+			}
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = FEN.104 }
+		}
+	}
+}

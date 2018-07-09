@@ -1,0 +1,6091 @@
+﻿add_namespace = lon_us
+#国际联盟初始化
+news_event = {
+	id = lon_us.1
+	title = lon_us.1.t
+	desc = lon_us.1.d
+	picture = news_event_01
+	fire_only_once = yes
+	major = yes
+	hidden = yes
+	trigger = {  }
+	immediate = {
+		hidden_effect = {
+			#西欧
+			set_global_flag = 英国在国际联盟
+			set_global_flag = 法国在国际联盟
+			set_global_flag = 爱尔兰在国际联盟
+			set_global_flag = 比利时在国际联盟
+			set_global_flag = 卢森堡在国际联盟
+			set_global_flag = 荷兰在国际联盟
+			#中欧
+			set_global_flag = 瑞士在国际联盟
+			set_global_flag = 奥地利在国际联盟
+			set_global_flag = 意大利在国际联盟
+			#伊比利亚
+			set_global_flag = 西班牙在国际联盟
+			set_global_flag = 葡萄牙在国际联盟
+			#东欧
+			set_global_flag = 匈牙利在国际联盟
+			set_global_flag = 南斯拉夫在国际联盟
+			set_global_flag = 阿尔巴尼亚在国际联盟
+			set_global_flag = 希腊在国际联盟
+			set_global_flag = 保加利亚在国际联盟
+			set_global_flag = 罗马尼亚在国际联盟
+			set_global_flag = 捷克斯洛伐克在国际联盟
+			set_global_flag = 波兰在国际联盟
+			set_global_flag = 立陶宛在国际联盟
+			set_global_flag = 拉脱维亚在国际联盟
+			set_global_flag = 爱沙尼亚在国际联盟
+			#北欧
+			set_global_flag = 丹麦在国际联盟
+			set_global_flag = 瑞典在国际联盟
+			set_global_flag = 挪威在国际联盟
+			set_global_flag = 芬兰在国际联盟
+			#非洲
+			set_global_flag = 埃塞俄比亚在国际联盟
+			set_global_flag = 南非在国际联盟
+			set_global_flag = 利比里亚在国际联盟
+			#南美
+			set_global_flag = 巴西在国际联盟
+			set_global_flag = 乌拉圭在国际联盟
+			set_global_flag = 巴拉圭在国际联盟
+			set_global_flag = 智利在国际联盟
+			set_global_flag = 秘鲁在国际联盟
+			set_global_flag = 委内瑞拉在国际联盟
+			set_global_flag = 玻利维亚在国际联盟
+			set_global_flag = 哥伦比亚在国际联盟
+			#中美洲
+			set_global_flag = 巴拿马在国际联盟
+			set_global_flag = 哥斯达黎加在国际联盟
+			set_global_flag = 尼加拉瓜在国际联盟
+			set_global_flag = 洪都拉斯在国际联盟
+			set_global_flag = 萨尔瓦多在国际联盟
+			set_global_flag = 危地马拉在国际联盟
+			#加勒比海
+			set_global_flag = 古巴在国际联盟
+			set_global_flag = 海地在国际联盟
+			set_global_flag = 多米尼加在国际联盟
+			#北美洲
+			set_global_flag = 加拿大在国际联盟
+			#大洋洲
+			set_global_flag = 澳大利亚在国际联盟
+			set_global_flag = 新西兰在国际联盟
+			#东南亚
+			set_global_flag = 东印度在国际联盟
+			set_global_flag = 马来亚在国际联盟
+			set_global_flag = 暹罗在国际联盟
+			#南亚
+			set_global_flag = 印度在国际联盟
+			#中亚
+			set_global_flag = 伊朗在国际联盟
+			#西亚
+			set_global_flag = 伊拉克在国际联盟
+			set_global_flag = 阿曼在国际联盟
+			set_global_flag = 也门在国际联盟
+			#东亚
+			set_global_flag = 直系在国际联盟
+			set_global_flag = 日本在国际联盟
+			news_event = {
+				id = lon_us.2
+			}
+		}
+	}
+	option = {
+		name = lon_us.1.a
+	}
+}
+#国际联盟民族精神刷新
+news_event = {
+	id = lon_us.2
+	title = lon_us.2.t
+	desc = lon_us.2.d
+	picture = news_event_01
+	major = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = special_in_the_lon
+				}
+				remove_ideas = special_in_the_lon
+			}
+			if = {
+				limit = {
+					has_global_flag = 魏玛德国在国际联盟
+				}
+				GWM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 德国在国际联盟
+				}
+				GER = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 英国在国际联盟
+				}
+				ENG = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 苏联在国际联盟
+				}
+				SOV = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 瑞典在国际联盟
+				}
+				SWE = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 法国在国际联盟
+				}
+				FRA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 卢森堡在国际联盟
+				}
+				LUX = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 比利时在国际联盟
+				}
+				BEL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 荷兰在国际联盟
+				}
+				HOL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 捷克斯洛伐克在国际联盟
+				}
+				CZE = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 波兰在国际联盟
+				}
+				POL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 奥地利在国际联盟
+				}
+				AUS = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 立陶宛在国际联盟
+				}
+				LIT = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 爱沙尼亚在国际联盟
+				}
+				EST = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 拉脱维亚在国际联盟
+				}
+				LAT = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 西班牙在国际联盟
+				}
+				SPR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 意大利在国际联盟
+				}
+				ITA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 罗马尼亚在国际联盟
+				}
+				ROM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 南斯拉夫在国际联盟
+				}
+				YUG = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 塞尔维亚在国际联盟
+				}
+				SER = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 瑞士在国际联盟
+				}
+				SWI = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 土耳其在国际联盟
+				}
+				TUR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 希腊在国际联盟
+				}
+				GRE = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 阿尔巴尼亚在国际联盟
+				}
+				ALB = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 挪威在国际联盟
+				}
+				NOR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 丹麦在国际联盟
+				}
+				DEN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 保加利亚在国际联盟
+				}
+				BUL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 葡萄牙在国际联盟
+				}
+				POR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 芬兰在国际联盟
+				}
+				FIN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 爱尔兰在国际联盟
+				}
+				IRE = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 匈牙利在国际联盟
+				}
+				HUN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 阿富汗在国际联盟
+				}
+				AFG = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 阿根廷在国际联盟
+				}
+				ARG = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 澳大利亚在国际联盟
+				}
+				AST = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 不丹在国际联盟
+				}
+				BHU = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 玻利维亚在国际联盟
+				}
+				BOL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 巴西在国际联盟
+				}
+				BRA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 加拿大在国际联盟
+				}
+				CAN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 中华民国在国际联盟
+				}
+				CHI = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 智利在国际联盟
+				}
+				CHL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 哥伦比亚在国际联盟
+				}
+				COL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 哥斯达黎加在国际联盟
+				}
+				COS = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 厄瓜多尔在国际联盟
+				}
+				ECU = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 萨尔瓦多在国际联盟
+				}
+				ELS = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 埃塞俄比亚在国际联盟
+				}
+				ETH = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 危地马拉在国际联盟
+				}
+				GUA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 洪都拉斯在国际联盟
+				}
+				HON = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 伊拉克在国际联盟
+				}
+				IRQ = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 日本在国际联盟
+				}
+				JAP = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 韩国在国际联盟
+				}
+				KOR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 利比里亚在国际联盟
+				}
+				LIB = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 墨西哥在国际联盟
+				}
+				MEX = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 蒙古国在国际联盟
+				}
+				MEN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 尼泊尔在国际联盟
+				}
+				NEP = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 尼加拉瓜在国际联盟
+				}
+				NIC = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 新西兰在国际联盟
+				}
+				NZL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 巴拿马在国际联盟
+				}
+				PAN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 伊朗在国际联盟
+				}
+				PER = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 菲律宾在国际联盟
+				}
+				PHI = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 秘鲁在国际联盟
+				}
+				PRU = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 南非在国际联盟
+				}
+				SAF = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 沙特阿拉伯在国际联盟
+				}
+				SAU = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 暹罗在国际联盟
+				}
+				SIA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 新疆在国际联盟
+				}
+				SIK = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 西藏在国际联盟
+				}
+				TIB = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 乌拉圭在国际联盟
+				}
+				URG = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 委内瑞拉在国际联盟
+				}
+				VEN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 滇系在国际联盟
+				}
+				YUN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 美国在国际联盟
+				}
+				USA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 蒙古在国际联盟
+				}
+				MON = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 唐努图瓦在国际联盟
+				}
+				TAN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 巴拉圭在国际联盟
+				}
+				PAR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 古巴在国际联盟
+				}
+				CUB = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 多米尼加在国际联盟
+				}
+				DOM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 海地在国际联盟
+				}
+				HAI = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 也门在国际联盟
+				}
+				YEM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 阿曼在国际联盟
+				}
+				OMA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 斯洛伐克在国际联盟
+				}
+				SLO = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 印度在国际联盟
+				}
+				RAJ = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 克罗地亚在国际联盟
+				}
+				CRO = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 桂系在国际联盟
+				}
+				GXC = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 中华人民共和国在国际联盟
+				}
+				PRC = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 晋系在国际联盟
+				}
+				SHX = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 西北三马在国际联盟
+				}
+				XSM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 冰岛在国际联盟
+				}
+				ICE = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 黎巴嫩在国际联盟
+				}
+				LEB = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 约旦在国际联盟
+				}
+				JOR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 叙利亚在国际联盟
+				}
+				SYR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 埃及在国际联盟
+				}
+				EGY = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 利比亚在国际联盟
+				}
+				LBA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 西德在国际联盟
+				}
+				WGR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 东德在国际联盟
+				}
+				DDR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 巴勒斯坦在国际联盟
+				}
+				PAL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 以色列在国际联盟
+				}
+				ISR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 东印度在国际联盟
+				}
+				INS = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 马来亚在国际联盟
+				}
+				MAL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 乌克兰在国际联盟
+				}
+				UKR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 白俄罗斯在国际联盟
+				}
+				BLR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 肯尼亚在国际联盟
+				}
+				KEN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 津巴布韦在国际联盟
+				}
+				ZIM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 博茨瓦纳在国际联盟
+				}
+				BOT = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 巴基斯坦在国际联盟
+				}
+				PAK = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 安哥拉在国际联盟
+				}
+				ANG = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 亚美尼亚在国际联盟
+				}
+				ARM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 阿塞拜疆在国际联盟
+				}
+				AZR = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 哈萨克在国际联盟
+				}
+				KAZ = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 格鲁吉亚在国际联盟
+				}
+				GEO = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 黑山在国际联盟
+				}
+				MNT = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 老挝在国际联盟
+				}
+				LAO = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 柬埔寨在国际联盟
+				}
+				CAM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 越南在国际联盟
+				}
+				VIN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 满洲在国际联盟
+				}
+				MAN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 直系在国际联盟
+				}
+				WHI = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 黔系在国际联盟
+				}
+				YIN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 奉系在国际联盟
+				}
+				FEN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 川系在国际联盟
+				}
+				CXC = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 皖系在国际联盟
+				}
+				WAN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 武汉在国际联盟
+				}
+				WUH = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 青海在国际联盟
+				}
+				ZZA = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 甘肃在国际联盟
+				}
+				ZZB = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 川边在国际联盟
+				}
+				ZZC = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 湖南在国际联盟
+				}
+				ZZD = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 福建在国际联盟
+				}
+				ZZE = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 广东在国际联盟
+				}
+				ZZF = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 海南在国际联盟
+				}
+				ZZG = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 陕西在国际联盟
+				}
+				ZZH = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 西安在国际联盟
+				}
+				ZZI = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 镇崇军在国际联盟
+				}
+				ZZJ = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 粤系在国际联盟
+				}
+				ZZK = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 江西在国际联盟
+				}
+				ZZL = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 安徽在国际联盟
+				}
+				ZZM = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 江苏在国际联盟
+				}
+				ZZN = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 山东在国际联盟
+				}
+				ZZO = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 河南在国际联盟
+				}
+				ZZP = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = 国民军在国际联盟
+				}
+				ZZQ = {
+					if = {
+						limit = {
+							not = {
+								has_idea = special_in_the_lon
+							}
+						}
+						add_ideas = special_in_the_lon
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = lon_us.2.a
+	}
+}
+#加入国际联盟
+country_event = {
+	id = lon_us.3
+	title = lon_us.3.t
+	desc = lon_us.3.d
+	picture = news_event_01
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = GWM
+					not = {
+						has_global_flag = 魏玛德国在国际联盟
+					}
+				}
+				set_global_flag = 魏玛德国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GER
+					not = {
+						has_global_flag = 德国在国际联盟
+					}
+				}
+				set_global_flag = 德国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ENG
+					not = {
+						has_global_flag = 英国在国际联盟
+					}
+				}
+				set_global_flag = 英国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SOV
+					not = {
+						has_global_flag = 苏联在国际联盟
+					}
+				}
+				set_global_flag = 苏联在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SWE
+					not = {
+						has_global_flag = 瑞典在国际联盟
+					}
+				}
+				set_global_flag = 瑞典在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FRA
+					not = {
+						has_global_flag = 法国在国际联盟
+					}
+				}
+				set_global_flag = 法国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LUX
+					not = {
+						has_global_flag = 卢森堡在国际联盟
+					}
+				}
+				set_global_flag = 卢森堡在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BEL
+					not = {
+						has_global_flag = 比利时在国际联盟
+					}
+				}
+				set_global_flag = 比利时在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = HOL
+					not = {
+						has_global_flag = 荷兰在国际联盟
+					}
+				}
+				set_global_flag = 荷兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CZE
+					not = {
+						has_global_flag = 捷克斯洛伐克在国际联盟
+					}
+				}
+				set_global_flag = 捷克斯洛伐克在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = POL
+					not = {
+						has_global_flag = 波兰在国际联盟
+					}
+				}
+				set_global_flag = 波兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = AUS
+					not = {
+						has_global_flag = 奥地利在国际联盟
+					}
+				}
+				set_global_flag = 奥地利在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LIT
+					not = {
+						has_global_flag = 立陶宛在国际联盟
+					}
+				}
+				set_global_flag = 立陶宛在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = EST
+					not = {
+						has_global_flag = 爱沙尼亚在国际联盟
+					}
+				}
+				set_global_flag = 爱沙尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LAT
+					not = {
+						has_global_flag = 拉脱维亚在国际联盟
+					}
+				}
+				set_global_flag = 拉脱维亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+					not = {
+						has_global_flag = 西班牙在国际联盟
+					}
+				}
+				set_global_flag = 西班牙在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ITA
+					not = {
+						has_global_flag = 意大利在国际联盟
+					}
+				}
+				set_global_flag = 意大利在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ROM
+					not = {
+						has_global_flag = 罗马尼亚在国际联盟
+					}
+				}
+				set_global_flag = 罗马尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YUG
+					not = {
+						has_global_flag = 南斯拉夫在国际联盟
+					}
+				}
+				set_global_flag = 南斯拉夫在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SER
+					not = {
+						has_global_flag = 塞尔维亚在国际联盟
+					}
+				}
+				set_global_flag = 塞尔维亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SWI
+					not = {
+						has_global_flag = 瑞士在国际联盟
+					}
+				}
+				set_global_flag = 瑞士在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = TUR
+					not = {
+						has_global_flag = 土耳其在国际联盟
+					}
+				}
+				set_global_flag = 土耳其在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GRE
+					not = {
+						has_global_flag = 希腊在国际联盟
+					}
+				}
+				set_global_flag = 希腊在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ALB
+					not = {
+						has_global_flag = 阿尔巴尼亚在国际联盟
+					}
+				}
+				set_global_flag = 阿尔巴尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = NOR
+					not = {
+						has_global_flag = 挪威在国际联盟
+					}
+				}
+				set_global_flag = 挪威在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = DEN
+					not = {
+						has_global_flag = 丹麦在国际联盟
+					}
+				}
+				set_global_flag = 丹麦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BUL
+					not = {
+						has_global_flag = 保加利亚在国际联盟
+					}
+				}
+				set_global_flag = 保加利亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = POR
+					not = {
+						has_global_flag = 葡萄牙在国际联盟
+					}
+				}
+				set_global_flag = 葡萄牙在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FIN
+					not = {
+						has_global_flag = 芬兰在国际联盟
+					}
+				}
+				set_global_flag = 芬兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = IRE
+					not = {
+						has_global_flag = 爱尔兰在国际联盟
+					}
+				}
+				set_global_flag = 爱尔兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = HUN
+					not = {
+						has_global_flag = 匈牙利在国际联盟
+					}
+				}
+				set_global_flag = 匈牙利在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = AFG
+					not = {
+						has_global_flag = 阿富汗在国际联盟
+					}
+				}
+				set_global_flag = 阿富汗在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ARG
+					not = {
+						has_global_flag = 阿根廷在国际联盟
+					}
+				}
+				set_global_flag = 阿根廷在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = AST
+					not = {
+						has_global_flag = 澳大利亚在国际联盟
+					}
+				}
+				set_global_flag = 澳大利亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BHU
+					not = {
+						has_global_flag = 不丹在国际联盟
+					}
+				}
+				set_global_flag = 不丹在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BOL
+					not = {
+						has_global_flag = 玻利维亚在国际联盟
+					}
+				}
+				set_global_flag = 玻利维亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BRA
+					not = {
+						has_global_flag = 巴西在国际联盟
+					}
+				}
+				set_global_flag = 巴西在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CAN
+					not = {
+						has_global_flag = 加拿大在国际联盟
+					}
+				}
+				set_global_flag = 加拿大在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CHI
+					not = {
+						has_global_flag = 中华民国在国际联盟
+					}
+				}
+				set_global_flag = 中华民国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CHL
+					not = {
+						has_global_flag = 智利在国际联盟
+					}
+				}
+				set_global_flag = 智利在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = COL
+					not = {
+						has_global_flag = 哥伦比亚在国际联盟
+					}
+				}
+				set_global_flag = 哥伦比亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = COS
+					not = {
+						has_global_flag = 哥斯达黎加在国际联盟
+					}
+				}
+				set_global_flag = 哥斯达黎加在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ECU
+					not = {
+						has_global_flag = 厄瓜多尔在国际联盟
+					}
+				}
+				set_global_flag = 厄瓜多尔在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ELS
+					not = {
+						has_global_flag = 萨尔瓦多在国际联盟
+					}
+				}
+				set_global_flag = 萨尔瓦多在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ETH
+					not = {
+						has_global_flag = 埃塞俄比亚在国际联盟
+					}
+				}
+				set_global_flag = 埃塞俄比亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GUA
+					not = {
+						has_global_flag = 危地马拉在国际联盟
+					}
+				}
+				set_global_flag = 危地马拉在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = HON
+					not = {
+						has_global_flag = 洪都拉斯在国际联盟
+					}
+				}
+				set_global_flag = 洪都拉斯在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = IRQ
+					not = {
+						has_global_flag = 伊拉克在国际联盟
+					}
+				}
+				set_global_flag = 伊拉克在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = JAP
+					not = {
+						has_global_flag = 日本在国际联盟
+					}
+				}
+				set_global_flag = 日本在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = KOR
+					not = {
+						has_global_flag = 韩国在国际联盟
+					}
+				}
+				set_global_flag = 韩国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LIB
+					not = {
+						has_global_flag = 利比里亚在国际联盟
+					}
+				}
+				set_global_flag = 利比里亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MEX
+					not = {
+						has_global_flag = 墨西哥在国际联盟
+					}
+				}
+				set_global_flag = 墨西哥在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MEN
+					not = {
+						has_global_flag = 蒙古国在国际联盟
+					}
+				}
+				set_global_flag = 蒙古国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = NEP
+					not = {
+						has_global_flag = 尼泊尔在国际联盟
+					}
+				}
+				set_global_flag = 尼泊尔在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = NIC
+					not = {
+						has_global_flag = 尼加拉瓜在国际联盟
+					}
+				}
+				set_global_flag = 尼加拉瓜在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = NZL
+					not = {
+						has_global_flag = 新西兰在国际联盟
+					}
+				}
+				set_global_flag = 新西兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PAN
+					not = {
+						has_global_flag = 巴拿马在国际联盟
+					}
+				}
+				set_global_flag = 巴拿马在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PER
+					not = {
+						has_global_flag = 伊朗在国际联盟
+					}
+				}
+				set_global_flag = 伊朗在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PHI
+					not = {
+						has_global_flag = 菲律宾在国际联盟
+					}
+				}
+				set_global_flag = 菲律宾在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PRU
+					not = {
+						has_global_flag = 秘鲁在国际联盟
+					}
+				}
+				set_global_flag = 秘鲁在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SAF
+					not = {
+						has_global_flag = 南非在国际联盟
+					}
+				}
+				set_global_flag = 南非在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SAU
+					not = {
+						has_global_flag = 沙特阿拉伯在国际联盟
+					}
+				}
+				set_global_flag = 沙特阿拉伯在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SIA
+					not = {
+						has_global_flag = 暹罗在国际联盟
+					}
+				}
+				set_global_flag = 暹罗在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SIK
+					not = {
+						has_global_flag = 新疆在国际联盟
+					}
+				}
+				set_global_flag = 新疆在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = TIB
+					not = {
+						has_global_flag = 西藏在国际联盟
+					}
+				}
+				set_global_flag = 西藏在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = URG
+					not = {
+						has_global_flag = 乌拉圭在国际联盟
+					}
+				}
+				set_global_flag = 乌拉圭在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = VEN
+					not = {
+						has_global_flag = 委内瑞拉在国际联盟
+					}
+				}
+				set_global_flag = 委内瑞拉在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YUN
+					not = {
+						has_global_flag = 滇系在国际联盟
+					}
+				}
+				set_global_flag = 滇系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = USA
+					not = {
+						has_global_flag = 美国在国际联盟
+					}
+				}
+				set_global_flag = 美国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MON
+					not = {
+						has_global_flag = 蒙古在国际联盟
+					}
+				}
+				set_global_flag = 蒙古在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = TAN
+					not = {
+						has_global_flag = 唐努图瓦在国际联盟
+					}
+				}
+				set_global_flag = 唐努图瓦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PAR
+					not = {
+						has_global_flag = 巴拉圭在国际联盟
+					}
+				}
+				set_global_flag = 巴拉圭在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CUB
+					not = {
+						has_global_flag = 古巴在国际联盟
+					}
+				}
+				set_global_flag = 古巴在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = DOM
+					not = {
+						has_global_flag = 多米尼加在国际联盟
+					}
+				}
+				set_global_flag = 多米尼加在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = HAI
+					not = {
+						has_global_flag = 海地在国际联盟
+					}
+				}
+				set_global_flag = 海地在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YEM
+					not = {
+						has_global_flag = 也门在国际联盟
+					}
+				}
+				set_global_flag = 也门在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = OMA
+					not = {
+						has_global_flag = 阿曼在国际联盟
+					}
+				}
+				set_global_flag = 阿曼在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SLO
+					not = {
+						has_global_flag = 斯洛伐克在国际联盟
+					}
+				}
+				set_global_flag = 斯洛伐克在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = RAJ
+					not = {
+						has_global_flag = 印度在国际联盟
+					}
+				}
+				set_global_flag = 印度在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CRO
+					not = {
+						has_global_flag = 克罗地亚在国际联盟
+					}
+				}
+				set_global_flag = 克罗地亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GXC
+					not = {
+						has_global_flag = 桂系在国际联盟
+					}
+				}
+				set_global_flag = 桂系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PRC
+					not = {
+						has_global_flag = 中华人民共和国在国际联盟
+					}
+				}
+				set_global_flag = 中华人民共和国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SHX
+					not = {
+						has_global_flag = 晋系在国际联盟
+					}
+				}
+				set_global_flag = 晋系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = XSM
+					not = {
+						has_global_flag = 西北三马在国际联盟
+					}
+				}
+				set_global_flag = 西北三马在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ICE
+					not = {
+						has_global_flag = 冰岛在国际联盟
+					}
+				}
+				set_global_flag = 冰岛在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = EST
+					not = {
+						has_global_flag = 爱沙尼亚在国际联盟
+					}
+				}
+				set_global_flag = 爱沙尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LEB
+					not = {
+						has_global_flag = 黎巴嫩在国际联盟
+					}
+				}
+				set_global_flag = 黎巴嫩在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = JOR
+					not = {
+						has_global_flag = 约旦在国际联盟
+					}
+				}
+				set_global_flag = 约旦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SYR
+					not = {
+						has_global_flag = 叙利亚在国际联盟
+					}
+				}
+				set_global_flag = 叙利亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = EGY
+					not = {
+						has_global_flag = 埃及在国际联盟
+					}
+				}
+				set_global_flag = 埃及在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LBA
+					not = {
+						has_global_flag = 利比亚在国际联盟
+					}
+				}
+				set_global_flag = 利比亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WGR
+					not = {
+						has_global_flag = 西德在国际联盟
+					}
+				}
+				set_global_flag = 西德在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = DDR
+					not = {
+						has_global_flag = 东德在国际联盟
+					}
+				}
+				set_global_flag = 东德在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PAL
+					not = {
+						has_global_flag = 巴勒斯坦在国际联盟
+					}
+				}
+				set_global_flag = 巴勒斯坦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ISR
+					not = {
+						has_global_flag = 以色列在国际联盟
+					}
+				}
+				set_global_flag = 以色列在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = INS
+					not = {
+						has_global_flag = 东印度在国际联盟
+					}
+				}
+				set_global_flag = 东印度在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MAL
+					not = {
+						has_global_flag = 马来亚在国际联盟
+					}
+				}
+				set_global_flag = 马来亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = UKR
+					not = {
+						has_global_flag = 乌克兰在国际联盟
+					}
+				}
+				set_global_flag = 乌克兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BLR
+					not = {
+						has_global_flag = 白俄罗斯在国际联盟
+					}
+				}
+				set_global_flag = 白俄罗斯在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = KEN
+					not = {
+						has_global_flag = 肯尼亚在国际联盟
+					}
+				}
+				set_global_flag = 肯尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZIM
+					not = {
+						has_global_flag = 津巴布韦在国际联盟
+					}
+				}
+				set_global_flag = 津巴布韦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BOT
+					not = {
+						has_global_flag = 博茨瓦纳在国际联盟
+					}
+				}
+				set_global_flag = 博茨瓦纳在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PAK
+					not = {
+						has_global_flag = 巴基斯坦在国际联盟
+					}
+				}
+				set_global_flag = 巴基斯坦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ANG
+					not = {
+						has_global_flag = 安哥拉在国际联盟
+					}
+				}
+				set_global_flag = 安哥拉在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ARM
+					not = {
+						has_global_flag = 亚美尼亚在国际联盟
+					}
+				}
+				set_global_flag = 亚美尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = AZR
+					not = {
+						has_global_flag = 阿塞拜疆在国际联盟
+					}
+				}
+				set_global_flag = 阿塞拜疆在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = KAZ
+					not = {
+						has_global_flag = 哈萨克在国际联盟
+					}
+				}
+				set_global_flag = 哈萨克在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GEO
+					not = {
+						has_global_flag = 格鲁吉亚在国际联盟
+					}
+				}
+				set_global_flag = 格鲁吉亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MNT
+					not = {
+						has_global_flag = 黑山在国际联盟
+					}
+				}
+				set_global_flag = 黑山在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LAO
+					not = {
+						has_global_flag = 老挝在国际联盟
+					}
+				}
+				set_global_flag = 老挝在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CAM
+					not = {
+						has_global_flag = 柬埔寨在国际联盟
+					}
+				}
+				set_global_flag = 柬埔寨在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = VIN
+					not = {
+						has_global_flag = 越南在国际联盟
+					}
+				}
+				set_global_flag = 越南在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MAN
+					not = {
+						has_global_flag = 满洲在国际联盟
+					}
+				}
+				set_global_flag = 满洲在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WHI
+					not = {
+						has_global_flag = 直系在国际联盟
+					}
+				}
+				set_global_flag = 直系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YIN
+					not = {
+						has_global_flag = 黔系在国际联盟
+					}
+				}
+				set_global_flag = 黔系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FEN
+					not = {
+						has_global_flag = 奉系在国际联盟
+					}
+				}
+				set_global_flag = 奉系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CXC
+					not = {
+						has_global_flag = 川系在国际联盟
+					}
+				}
+				set_global_flag = 川系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WAN
+					not = {
+						has_global_flag = 皖系在国际联盟
+					}
+				}
+				set_global_flag = 皖系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WUH
+					not = {
+						has_global_flag = 武汉在国际联盟
+					}
+				}
+				set_global_flag = 武汉在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZA
+					not = {
+						has_global_flag = 青海在国际联盟
+					}
+				}
+				set_global_flag = 青海在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZB
+					not = {
+						has_global_flag = 甘肃在国际联盟
+					}
+				}
+				set_global_flag = 甘肃在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZC
+					not = {
+						has_global_flag = 川边在国际联盟
+					}
+				}
+				set_global_flag = 川边在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZD
+					not = {
+						has_global_flag = 湖南在国际联盟
+					}
+				}
+				set_global_flag = 湖南在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZE
+					not = {
+						has_global_flag = 福建在国际联盟
+					}
+				}
+				set_global_flag = 福建在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZF
+					not = {
+						has_global_flag = 广东在国际联盟
+					}
+				}
+				set_global_flag = 广东在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZG
+					not = {
+						has_global_flag = 海南在国际联盟
+					}
+				}
+				set_global_flag = 海南在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZH
+					not = {
+						has_global_flag = 陕西在国际联盟
+					}
+				}
+				set_global_flag = 陕西在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZI
+					not = {
+						has_global_flag = 西安在国际联盟
+					}
+				}
+				set_global_flag = 西安在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZJ
+					not = {
+						has_global_flag = 镇崇军在国际联盟
+					}
+				}
+				set_global_flag = 镇崇军在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZK
+					not = {
+						has_global_flag = 粤系在国际联盟
+					}
+				}
+				set_global_flag = 粤系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZL
+					not = {
+						has_global_flag = 江西在国际联盟
+					}
+				}
+				set_global_flag = 江西在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZM
+					not = {
+						has_global_flag = 安徽在国际联盟
+					}
+				}
+				set_global_flag = 安徽在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZN
+					not = {
+						has_global_flag = 江苏在国际联盟
+					}
+				}
+				set_global_flag = 江苏在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZO
+					not = {
+						has_global_flag = 山东在国际联盟
+					}
+				}
+				set_global_flag = 山东在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZP
+					not = {
+						has_global_flag = 河南在国际联盟
+					}
+				}
+				set_global_flag = 河南在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZQ
+					not = {
+						has_global_flag = 国民军在国际联盟
+					}
+				}
+				set_global_flag = 国民军在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.4
+					}
+				}
+			}
+			country_event = {
+				days = 0
+				id = lon_us.2
+			}
+		}
+	}
+	option = {
+		name = lon_us.3.a
+	}
+}
+#已经加入国际联盟
+country_event = {
+	id = lon_us.4
+	title = lon_us.4.t
+	desc = lon_us.4.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = lon_us.4.a
+	}
+}
+#退出国际联盟
+country_event = {
+	id = lon_us.5
+	title = lon_us.5.t
+	desc = lon_us.5.d
+	picture = news_event_01
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = GWM
+					has_global_flag = 魏玛德国在国际联盟
+				}
+				clr_global_flag = 魏玛德国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GER
+					has_global_flag = 德国在国际联盟
+				}
+				clr_global_flag = 德国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ENG
+					has_global_flag = 英国在国际联盟
+				}
+				clr_global_flag = 英国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SOV
+					has_global_flag = 苏联在国际联盟
+				}
+				clr_global_flag = 苏联在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SWE
+					has_global_flag = 瑞典在国际联盟
+				}
+				clr_global_flag = 瑞典在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FRA
+					has_global_flag = 法国在国际联盟
+				}
+				clr_global_flag = 法国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LUX
+					has_global_flag = 卢森堡在国际联盟
+				}
+				clr_global_flag = 卢森堡在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BEL
+					has_global_flag = 比利时在国际联盟
+				}
+				clr_global_flag = 比利时在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = HOL
+					has_global_flag = 荷兰在国际联盟
+				}
+				clr_global_flag = 荷兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CZE
+					has_global_flag = 捷克斯洛伐克在国际联盟
+				}
+				clr_global_flag = 捷克斯洛伐克在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = POL
+					has_global_flag = 波兰在国际联盟
+				}
+				clr_global_flag = 波兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = AUS
+					has_global_flag = 奥地利在国际联盟
+				}
+				clr_global_flag = 奥地利在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LIT
+					has_global_flag = 立陶宛在国际联盟
+				}
+				clr_global_flag = 立陶宛在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = EST
+					has_global_flag = 爱沙尼亚在国际联盟
+				}
+				clr_global_flag = 爱沙尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LAT
+					has_global_flag = 拉脱维亚在国际联盟
+				}
+				clr_global_flag = 拉脱维亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SPR
+					has_global_flag = 西班牙在国际联盟
+				}
+				clr_global_flag = 西班牙在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ITA
+					has_global_flag = 意大利在国际联盟
+				}
+				clr_global_flag = 意大利在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ROM
+					has_global_flag = 罗马尼亚在国际联盟
+				}
+				clr_global_flag = 罗马尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YUG
+					has_global_flag = 南斯拉夫在国际联盟
+				}
+				clr_global_flag = 南斯拉夫在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SER
+					has_global_flag = 塞尔维亚在国际联盟
+				}
+				clr_global_flag = 塞尔维亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SWI
+					has_global_flag = 瑞士在国际联盟
+				}
+				clr_global_flag = 瑞士在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = TUR
+					has_global_flag = 土耳其在国际联盟
+				}
+				clr_global_flag = 土耳其在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GRE
+					has_global_flag = 希腊在国际联盟
+				}
+				clr_global_flag = 希腊在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ALB
+					has_global_flag = 阿尔巴尼亚在国际联盟
+				}
+				clr_global_flag = 阿尔巴尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = NOR
+					has_global_flag = 挪威在国际联盟
+				}
+				clr_global_flag = 挪威在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = DEN
+					has_global_flag = 丹麦在国际联盟
+				}
+				clr_global_flag = 丹麦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BUL
+					has_global_flag = 保加利亚在国际联盟
+				}
+				clr_global_flag = 保加利亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = POR
+					has_global_flag = 葡萄牙在国际联盟
+				}
+				clr_global_flag = 葡萄牙在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FIN
+					has_global_flag = 芬兰在国际联盟
+				}
+				clr_global_flag = 芬兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = IRE
+					has_global_flag = 爱尔兰在国际联盟
+				}
+				clr_global_flag = 爱尔兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = HUN
+					has_global_flag = 匈牙利在国际联盟
+				}
+				clr_global_flag = 匈牙利在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = AFG
+					has_global_flag = 阿富汗在国际联盟
+				}
+				clr_global_flag = 阿富汗在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ARG
+					has_global_flag = 阿根廷在国际联盟
+				}
+				clr_global_flag = 阿根廷在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = AST
+					has_global_flag = 澳大利亚在国际联盟
+				}
+				clr_global_flag = 澳大利亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BHU
+					has_global_flag = 不丹在国际联盟
+				}
+				clr_global_flag = 不丹在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BOL
+					has_global_flag = 玻利维亚在国际联盟
+				}
+				clr_global_flag = 玻利维亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BRA
+					has_global_flag = 巴西在国际联盟
+				}
+				clr_global_flag = 巴西在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CAN
+					has_global_flag = 加拿大在国际联盟
+				}
+				clr_global_flag = 加拿大在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CHI
+					has_global_flag = 中华民国在国际联盟
+				}
+				clr_global_flag = 中华民国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CHL
+					has_global_flag = 智利在国际联盟
+				}
+				clr_global_flag = 智利在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = COL
+					has_global_flag = 哥伦比亚在国际联盟
+				}
+				clr_global_flag = 哥伦比亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = COS
+					has_global_flag = 哥斯达黎加在国际联盟
+				}
+				clr_global_flag = 哥斯达黎加在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ECU
+					has_global_flag = 厄瓜多尔在国际联盟
+				}
+				clr_global_flag = 厄瓜多尔在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ELS
+					has_global_flag = 萨尔瓦多在国际联盟
+				}
+				clr_global_flag = 萨尔瓦多在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ETH
+					has_global_flag = 埃塞俄比亚在国际联盟
+				}
+				clr_global_flag = 埃塞俄比亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GUA
+					has_global_flag = 危地马拉在国际联盟
+				}
+				clr_global_flag = 危地马拉在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = HON
+					has_global_flag = 洪都拉斯在国际联盟
+				}
+				clr_global_flag = 洪都拉斯在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = IRQ
+					has_global_flag = 伊拉克在国际联盟
+				}
+				clr_global_flag = 伊拉克在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = JAP
+					has_global_flag = 日本在国际联盟
+				}
+				clr_global_flag = 日本在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = KOR
+					has_global_flag = 韩国在国际联盟
+				}
+				clr_global_flag = 韩国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LIB
+					has_global_flag = 利比里亚在国际联盟
+				}
+				clr_global_flag = 利比里亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MEX
+					has_global_flag = 墨西哥在国际联盟
+				}
+				clr_global_flag = 墨西哥在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MEN
+					has_global_flag = 蒙古国在国际联盟
+				}
+				clr_global_flag = 蒙古国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = NEP
+					has_global_flag = 尼泊尔在国际联盟
+				}
+				clr_global_flag = 尼泊尔在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = NIC
+					has_global_flag = 尼加拉瓜在国际联盟
+				}
+				clr_global_flag = 尼加拉瓜在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = NZL
+					has_global_flag = 新西兰在国际联盟
+				}
+				clr_global_flag = 新西兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PAN
+					has_global_flag = 巴拿马在国际联盟
+				}
+				clr_global_flag = 巴拿马在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PER
+					has_global_flag = 伊朗在国际联盟
+				}
+				clr_global_flag = 伊朗在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PHI
+					has_global_flag = 菲律宾在国际联盟
+				}
+				clr_global_flag = 菲律宾在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PRU
+					has_global_flag = 秘鲁在国际联盟
+				}
+				clr_global_flag = 秘鲁在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SAF
+					has_global_flag = 南非在国际联盟
+				}
+				clr_global_flag = 南非在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SAU
+					has_global_flag = 沙特阿拉伯在国际联盟
+				}
+				clr_global_flag = 沙特阿拉伯在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SIA
+					has_global_flag = 暹罗在国际联盟
+				}
+				clr_global_flag = 暹罗在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SIK
+					has_global_flag = 新疆在国际联盟
+				}
+				clr_global_flag = 新疆在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = TIB
+					has_global_flag = 西藏在国际联盟
+				}
+				clr_global_flag = 西藏在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = URG
+					has_global_flag = 乌拉圭在国际联盟
+				}
+				clr_global_flag = 乌拉圭在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = VEN
+					has_global_flag = 委内瑞拉在国际联盟
+				}
+				clr_global_flag = 委内瑞拉在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YUN
+					has_global_flag = 滇系在国际联盟
+				}
+				clr_global_flag = 滇系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = USA
+					has_global_flag = 美国在国际联盟
+				}
+				clr_global_flag = 美国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MON
+					has_global_flag = 蒙古在国际联盟
+				}
+				clr_global_flag = 蒙古在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = TAN
+					has_global_flag = 唐努图瓦在国际联盟
+				}
+				clr_global_flag = 唐努图瓦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PAR
+					has_global_flag = 巴拉圭在国际联盟
+				}
+				clr_global_flag = 巴拉圭在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CUB
+					has_global_flag = 古巴在国际联盟
+				}
+				clr_global_flag = 古巴在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = DOM
+					has_global_flag = 多米尼加在国际联盟
+				}
+				clr_global_flag = 多米尼加在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = HAI
+					has_global_flag = 海地在国际联盟
+				}
+				clr_global_flag = 海地在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YEM
+					has_global_flag = 也门在国际联盟
+				}
+				clr_global_flag = 也门在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = OMA
+					has_global_flag = 阿曼在国际联盟
+				}
+				clr_global_flag = 阿曼在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SLO
+					has_global_flag = 斯洛伐克在国际联盟
+				}
+				clr_global_flag = 斯洛伐克在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = RAJ
+					has_global_flag = 印度在国际联盟
+				}
+				clr_global_flag = 印度在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CRO
+					has_global_flag = 克罗地亚在国际联盟
+				}
+				clr_global_flag = 克罗地亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GXC
+					has_global_flag = 桂系在国际联盟
+				}
+				clr_global_flag = 桂系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PRC
+					has_global_flag = 中华人民共和国在国际联盟
+				}
+				clr_global_flag = 中华人民共和国在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SHX
+					has_global_flag = 晋系在国际联盟
+				}
+				clr_global_flag = 晋系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = XSM
+					has_global_flag = 西北三马在国际联盟
+				}
+				clr_global_flag = 西北三马在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ICE
+					has_global_flag = 冰岛在国际联盟
+				}
+				clr_global_flag = 冰岛在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = EST
+					has_global_flag = 爱沙尼亚在国际联盟
+				}
+				clr_global_flag = 爱沙尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LEB
+					has_global_flag = 黎巴嫩在国际联盟
+				}
+				clr_global_flag = 黎巴嫩在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = JOR
+					has_global_flag = 约旦在国际联盟
+				}
+				clr_global_flag = 约旦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = SYR
+					has_global_flag = 叙利亚在国际联盟
+				}
+				clr_global_flag = 叙利亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = EGY
+					has_global_flag = 埃及在国际联盟
+				}
+				clr_global_flag = 埃及在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LBA
+					has_global_flag = 利比亚在国际联盟
+				}
+				clr_global_flag = 利比亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WGR
+					has_global_flag = 西德在国际联盟
+				}
+				clr_global_flag = 西德在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = DDR
+					has_global_flag = 东德在国际联盟
+				}
+				clr_global_flag = 东德在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PAL
+					has_global_flag = 巴勒斯坦在国际联盟
+				}
+				clr_global_flag = 巴勒斯坦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ISR
+					has_global_flag = 以色列在国际联盟
+				}
+				clr_global_flag = 以色列在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = INS
+					has_global_flag = 东印度在国际联盟
+				}
+				clr_global_flag = 东印度在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MAL
+					has_global_flag = 马来亚在国际联盟
+				}
+				clr_global_flag = 马来亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = UKR
+					has_global_flag = 乌克兰在国际联盟
+				}
+				clr_global_flag = 乌克兰在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BLR
+					has_global_flag = 白俄罗斯在国际联盟
+				}
+				clr_global_flag = 白俄罗斯在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = KEN
+					has_global_flag = 肯尼亚在国际联盟
+				}
+				clr_global_flag = 肯尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZIM
+					has_global_flag = 津巴布韦在国际联盟
+				}
+				clr_global_flag = 津巴布韦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = BOT
+					has_global_flag = 博茨瓦纳在国际联盟
+				}
+				clr_global_flag = 博茨瓦纳在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = PAK
+					has_global_flag = 巴基斯坦在国际联盟
+				}
+				clr_global_flag = 巴基斯坦在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ANG
+					has_global_flag = 安哥拉在国际联盟
+				}
+				clr_global_flag = 安哥拉在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ARM
+					has_global_flag = 亚美尼亚在国际联盟
+				}
+				clr_global_flag = 亚美尼亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = AZR
+					has_global_flag = 阿塞拜疆在国际联盟
+				}
+				clr_global_flag = 阿塞拜疆在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = KAZ
+					has_global_flag = 哈萨克在国际联盟
+				}
+				clr_global_flag = 哈萨克在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GEO
+					has_global_flag = 格鲁吉亚在国际联盟
+				}
+				clr_global_flag = 格鲁吉亚在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MNT
+					has_global_flag = 黑山在国际联盟
+				}
+				clr_global_flag = 黑山在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = LAO
+					has_global_flag = 老挝在国际联盟
+				}
+				clr_global_flag = 老挝在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CAM
+					has_global_flag = 柬埔寨在国际联盟
+				}
+				clr_global_flag = 柬埔寨在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = VIN
+					has_global_flag = 越南在国际联盟
+				}
+				clr_global_flag = 越南在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = MAN
+					has_global_flag = 满洲在国际联盟
+				}
+				clr_global_flag = 满洲在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WHI
+					has_global_flag = 直系在国际联盟
+				}
+				clr_global_flag = 直系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = YIN
+					has_global_flag = 黔系在国际联盟
+				}
+				clr_global_flag = 黔系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = FEN
+					has_global_flag = 奉系在国际联盟
+				}
+				clr_global_flag = 奉系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = CXC
+					has_global_flag = 川系在国际联盟
+				}
+				clr_global_flag = 川系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WAN
+					has_global_flag = 皖系在国际联盟
+				}
+				clr_global_flag = 皖系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WUH
+					has_global_flag = 武汉在国际联盟
+				}
+				clr_global_flag = 武汉在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZA
+					has_global_flag = 青海在国际联盟
+				}
+				clr_global_flag = 青海在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZB
+					has_global_flag = 甘肃在国际联盟
+				}
+				clr_global_flag = 甘肃在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZC
+					has_global_flag = 川边在国际联盟
+				}
+				clr_global_flag = 川边在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZD
+					has_global_flag = 湖南在国际联盟
+				}
+				clr_global_flag = 湖南在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZE
+					has_global_flag = 福建在国际联盟
+				}
+				clr_global_flag = 福建在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZF
+					has_global_flag = 广东在国际联盟
+				}
+				clr_global_flag = 广东在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZG
+					has_global_flag = 海南在国际联盟
+				}
+				clr_global_flag = 海南在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZH
+					has_global_flag = 陕西在国际联盟
+				}
+				clr_global_flag = 陕西在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZI
+					has_global_flag = 西安在国际联盟
+				}
+				clr_global_flag = 西安在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZJ
+					has_global_flag = 镇崇军在国际联盟
+				}
+				clr_global_flag = 镇崇军在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZK
+					has_global_flag = 粤系在国际联盟
+				}
+				clr_global_flag = 粤系在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZL
+					has_global_flag = 江西在国际联盟
+				}
+				clr_global_flag = 江西在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZM
+					has_global_flag = 安徽在国际联盟
+				}
+				clr_global_flag = 安徽在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZN
+					has_global_flag = 江苏在国际联盟
+				}
+				clr_global_flag = 江苏在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZO
+					has_global_flag = 山东在国际联盟
+				}
+				clr_global_flag = 山东在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZP
+					has_global_flag = 河南在国际联盟
+				}
+				clr_global_flag = 河南在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = ZZQ
+					has_global_flag = 国民军在国际联盟
+				}
+				clr_global_flag = 国民军在国际联盟
+				else = {
+					country_event = {
+						days = 0
+						id = lon_us.6
+					}
+				}
+			}
+			country_event = {
+				days = 0
+				id = lon_us.2
+			}
+			remove_ideas = special_in_the_lon
+		}
+	}
+	option = {
+		name = lon_us.5.a
+	}
+}
+#已经退出国际联盟
+country_event = {
+	id = lon_us.6
+	title = lon_us.6.t
+	desc = lon_us.6.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = lon_us.6.a
+	}
+}
+#国际联盟：制裁投票
+country_event = {
+	id = lon_us.7
+	title = lon_us.7.t
+	desc = lon_us.7.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = lon_us.7.a
+		hidden_effect = {
+			modify_global_flag = {
+				flag = piaoshu_number
+				value = 1
+			}
+		}
+	}
+	option = {
+		name = lon_us.7.b
+		hidden_effect = {
+			modify_global_flag = {
+				flag = piaoshu_number
+				value = -1
+			}
+		}
+	}
+}
+#国际联盟：制裁强度选择
+country_event = {
+	id = lon_us.8
+	title = lon_us.8.t
+	desc = lon_us.8.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = lon_us.8.a
+		hidden_effect = {
+			set_global_flag = high_lon_zc
+		}
+	}
+	option = {
+		name = lon_us.8.b
+		hidden_effect = {
+			set_global_flag = medned_lon_zc
+		}
+	}
+	option = {
+		name = lon_us.8.c
+		hidden_effect = {
+			set_global_flag = low_lon_zc
+		}
+	}
+}
+#国际联盟：制裁国家选择：页码1
+country_event = {
+	id = lon_us.9
+	title = lon_us.9.t
+	desc = lon_us.9.d
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = lon_us.9.1
+		hidden_effect = {
+			set_global_flag = zc_GER
+		}
+	}
+	option = {
+		name = lon_us.9.2
+		hidden_effect = {
+			set_global_flag = zc_ENG
+		}
+	}
+	option = {
+		name = lon_us.9.3
+		hidden_effect = {
+			set_global_flag = zc_SOV
+		}
+	}
+}

@@ -1,0 +1,105 @@
+#影响军阀
+PRC_war_in_junfa = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		not = { has_global_flag = PRC_FLAG_lost_fuck_the_weijiao }
+		has_completed_focus = PRC_fight_with_junfa
+	}
+}
+#渗透地区
+PRC_shentou_in_junfa = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		not = { has_global_flag = PRC_FLAG_lost_fuck_the_weijiao }
+		has_completed_focus = PRC_fight_behind_off
+	}
+}
+#根据地学校
+PRC_genjudischool = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		not = { has_global_flag = PRC_FLAG_lost_fuck_the_weijiao }
+		has_completed_focus = PRC_toulaida
+		check_variable = {
+			var = PRC_NOW_BUILDED_BUILDING
+			value = 10 #根据地总体最大数量上限
+			compare = less_than_or_equals
+		}
+	}
+}
+#战略转移
+PRC_changzheng_road = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		not = { has_global_flag = PRC_FLAG_lost_fuck_the_weijiao }
+	}
+}
+#组建根据地
+PRC_build_new_revolution_genjudi = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		not = { has_global_flag = PRC_FLAG_lost_fuck_the_weijiao }
+		has_completed_focus = PRC_build_revolution
+	}
+}
+#政变之路
+PRC_zhengbianroad = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		has_completed_focus = PRC_keepwairleat
+	}
+}
+#敌后游击
+PRC_dihouyouji = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		has_completed_focus = PRC_fight_emney_behind
+	}
+}
+#成立国家
+Build_china_confieat = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+}
+#长征之路
+long_move_road = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = PRC
+	}
+	visible = {
+		has_global_flag = PRC_FLAG_lost_fuck_the_weijiao
+	}
+}

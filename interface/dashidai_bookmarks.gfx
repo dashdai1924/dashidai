@@ -1,0 +1,42 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_select_date_1924"
+		texturefile = "dashidaipicture/bookmarks/select_date_1924.dds"
+	}
+	SpriteType = {
+		name = "GFX_select_date_1926"
+		texturefile = "dashidaipicture/bookmarks/select_date_1926.dds"
+	}
+	SpriteType = {
+		name = "GFX_select_date_1927"
+		texturefile = "dashidaipicture/bookmarks/select_date_1927.dds"
+	}
+	SpriteType = {
+		name = "GFX_select_date_1931"
+		texturefile = "dashidaipicture/bookmarks/select_date_1931.dds"
+	}
+	SpriteType = {
+		name = "GFX_select_date_1934"
+		texturefile = "dashidaipicture/bookmarks/select_date_1934.dds"
+	}
+	SpriteType = {
+		name = "GFX_dashidai_select_date_1936"
+		texturefile = "dashidaipicture/bookmarks/select_date_1936.dds"
+	}
+	SpriteType = {
+		name = "GFX_dashidai_select_date_1939"
+		texturefile = "dashidaipicture/bookmarks/select_date_1939.dds"
+	}
+	SpriteType = {
+		name = "GFX_select_date_1949"
+		texturefile = "dashidaipicture/bookmarks/select_date_1949.dds"
+	}
+	SpriteType = {
+		name = "GFX_select_date_1975"
+		texturefile = "dashidaipicture/bookmarks/select_date_1975.dds"
+	}
+	SpriteType = {
+		name = "GFX_select_date_2000"
+		texturefile = "dashidaipicture/bookmarks/select_date_2000.dds"
+	}
+}

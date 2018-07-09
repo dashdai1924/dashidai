@@ -1,0 +1,44 @@
+ideologies = {
+	dictatorship = {
+		types = {
+			bureaucratic = {
+			}
+			separatism = {
+			}
+			military = {
+			}
+			religion = {
+			}
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_DICTATORSHIP_1"
+			"FACTION_NAME_DICTATORSHIP_2"
+			"FACTION_NAME_DICTATORSHIP_3"
+			"FACTION_NAME_DICTATORSHIP_4"
+			"FACTION_NAME_DICTATORSHIP_5"
+		}
+		color = { 200 200 200 }
+		war_impact_on_world_tension = 0.05
+		faction_impact_on_world_tension = 0.2
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_send_volunteers = no
+		}
+		modifiers = {
+			generate_wargoal_tension = 0.1
+			join_faction_tension = 0.8
+			lend_lease_tension = 0.1
+			send_volunteers_tension = 0.1
+			drift_defence_factor = -0.2
+		}
+		faction_modifiers = {
+			drift_defence_factor = 0.4
+			foreign_subversive_activites = 0.2
+			subversive_activites_upkeep = 0.2
+		}
+		can_be_boosted = no
+		can_collaborate = yes
+		ai_neutral = yes
+	}
+}

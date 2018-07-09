@@ -1,0 +1,48 @@
+guiTypes = {
+	#随机事件窗口
+	containerWindowType = {
+		name = "RP_random_event"
+		position = { x=70 y=150 }
+		size = { width=128 height=32 }
+		iconType = {
+			name = "RP_random_event_bg"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+		iconType = {
+			name = "RP_random_event_picture"
+			quadTextureSprite ="GFX_Common_Button_State"
+			position = { x= 0 y = 0 }
+		}
+		instantTextBoxType = {
+			name ="RP_random_event_title"
+			position = { x= 68 y = 20 }
+			font = "hoi_36header"
+			text = "RP_random_event_title_text"
+			format = center
+			maxWidth = 60
+			maxHeight = 24
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name ="RP_random_event_desc"
+			position = { x= 68 y = 100 }
+			font = "hoi_18mbs"
+			text = "RP_random_event_desc_text"
+			format = left
+			maxWidth = 60
+			maxHeight = 24
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name ="RP_random_event_button_1_d"
+			position = { x= 68 y = 100 }
+			font = "hoi_18mbs"
+			text = "RP_random_event_button_1_text"
+			format = left
+			maxWidth = 60
+			maxHeight = 24
+			fixedsize = yes
+		}
+	}
+}

@@ -1,0 +1,453 @@
+﻿add_namespace = random_death
+#孙中山寿命
+country_event = {
+	id = random_death.1
+	title = random_death.1.t
+	desc = random_death.1.d
+	picture = news_event_01
+	fire_only_once = yes
+	trigger = {
+		has_start_date < 1925.3.13
+		tag = CHI
+		date > 1925.3.12
+		not = {
+			has_country_flag = 孙中山已死
+			has_country_flag = 孙中山逝世一已过
+		}
+	}
+	immediate = {
+		random_list = {
+			50 = {
+				CHI = {
+					set_country_flag = 孙中山已死
+					kill_country_leader = yes
+					create_country_leader = {
+						name = "汪精卫"
+						desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+						picture = "gfx/leaders/CHI/portrait_chi_wang_jingwei.dds"
+						expire = "1965.1.1"
+						ideology = bureaucratic
+						traits = {  }
+					}
+					news_event = {
+						id = chi.113
+					}
+				}
+			}
+			50 = {
+				CHI = {
+					add_political_power = 50
+				}
+			}
+		}
+		set_country_flag = 孙中山逝世一已过
+	}
+	option = {
+		trigger = {
+			has_country_flag = 孙中山已死
+		}
+		name = random_death.1.a
+	}
+	option = {
+		trigger = {
+			not = {
+				has_country_flag = 孙中山已死
+			}
+		}
+		name = random_death.1.b
+	}
+}
+#孙中山寿命2
+country_event = {
+	id = random_death.2
+	title = random_death.2.t
+	desc = random_death.2.d
+	picture = news_event_01
+	fire_only_once = yes
+	trigger = {
+		has_start_date < 1925.3.13
+		tag = CHI
+		date > 1926.1.1
+		not = {
+			has_country_flag = 孙中山已死
+			has_country_flag = 孙中山逝世二已过
+		}
+	}
+	immediate = {
+		random_list = {
+			60 = {
+				CHI = {
+					set_country_flag = 孙中山已死
+					kill_country_leader = yes
+					create_country_leader = {
+						name = "汪精卫"
+						desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+						picture = "gfx/leaders/CHI/portrait_chi_wang_jingwei.dds"
+						expire = "1965.1.1"
+						ideology = bureaucratic
+						traits = {  }
+					}
+					news_event = {
+						id = chi.113
+					}
+				}
+			}
+			40 = {
+				CHI = {
+					add_political_power = 60
+				}
+			}
+		}
+		set_country_flag = 孙中山逝世二已过
+	}
+	option = {
+		trigger = {
+			has_country_flag = 孙中山已死
+		}
+		name = random_death.2.a
+	}
+	option = {
+		trigger = {
+			not = {
+				has_country_flag = 孙中山已死
+			}
+		}
+		name = random_death.2.b
+	}
+}
+#孙中山寿命3
+country_event = {
+	id = random_death.3
+	title = random_death.3.t
+	desc = random_death.3.d
+	picture = news_event_01
+	fire_only_once = yes
+	trigger = {
+		has_start_date < 1925.3.13
+		tag = CHI
+		date > 1927.1.1
+		not = {
+			has_country_flag = 孙中山已死
+			has_country_flag = 孙中山逝世三已过
+		}
+	}
+	immediate = {
+		random_list = {
+			70 = {
+				CHI = {
+					set_country_flag = 孙中山已死
+					kill_country_leader = yes
+					create_country_leader = {
+						name = "汪精卫"
+						desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+						picture = "gfx/leaders/CHI/portrait_chi_wang_jingwei.dds"
+						expire = "1965.1.1"
+						ideology = bureaucratic
+						traits = {  }
+					}
+					news_event = {
+						id = chi.113
+					}
+				}
+			}
+			30 = {
+				CHI = {
+					add_political_power = 70
+				}
+			}
+		}
+		set_country_flag = 孙中山逝世三已过
+	}
+	option = {
+		trigger = {
+			has_country_flag = 孙中山已死
+		}
+		name = random_death.3.a
+	}
+	option = {
+		trigger = {
+			not = {
+				has_country_flag = 孙中山已死
+			}
+		}
+		name = random_death.3.b
+	}
+}
+#孙中山寿命4
+country_event = {
+	id = random_death.4
+	title = random_death.4.t
+	desc = random_death.4.d
+	picture = news_event_01
+	fire_only_once = yes
+	trigger = {
+		has_start_date < 1925.3.13
+		tag = CHI
+		date > 1928.1.1
+		not = {
+			has_country_flag = 孙中山已死
+			has_country_flag = 孙中山逝世四已过
+		}
+	}
+	immediate = {
+		random_list = {
+			80 = {
+				CHI = {
+					set_country_flag = 孙中山已死
+					kill_country_leader = yes
+					create_country_leader = {
+						name = "汪精卫"
+						desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+						picture = "gfx/leaders/CHI/portrait_chi_wang_jingwei.dds"
+						expire = "1965.1.1"
+						ideology = bureaucratic
+						traits = {  }
+					}
+					news_event = {
+						id = chi.113
+					}
+				}
+			}
+			20 = {
+				CHI = {
+					add_political_power = 80
+				}
+			}
+		}
+		set_country_flag = 孙中山逝世四已过
+	}
+	option = {
+		trigger = {
+			has_country_flag = 孙中山已死
+		}
+		name = random_death.4.a
+	}
+	option = {
+		trigger = {
+			not = {
+				has_country_flag = 孙中山已死
+			}
+		}
+		name = random_death.4.b
+	}
+}
+#孙中山寿命5
+country_event = {
+	id = random_death.5
+	title = random_death.5.t
+	desc = random_death.5.d
+	picture = news_event_01
+	fire_only_once = yes
+	trigger = {
+		has_start_date < 1925.3.13
+		tag = CHI
+		date > 1929.1.1
+		not = {
+			has_country_flag = 孙中山已死
+			has_country_flag = 孙中山逝世五已过
+		}
+	}
+	immediate = {
+		random_list = {
+			90 = {
+				CHI = {
+					set_country_flag = 孙中山已死
+					kill_country_leader = yes
+					create_country_leader = {
+						name = "汪精卫"
+						desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+						picture = "gfx/leaders/CHI/portrait_chi_wang_jingwei.dds"
+						expire = "1965.1.1"
+						ideology = bureaucratic
+						traits = {  }
+					}
+					news_event = {
+						id = chi.113
+					}
+				}
+			}
+			10 = {
+				CHI = {
+					add_political_power = 90
+				}
+			}
+		}
+		set_country_flag = 孙中山逝世五已过
+	}
+	option = {
+		trigger = {
+			has_country_flag = 孙中山已死
+		}
+		name = random_death.5.a
+	}
+	option = {
+		trigger = {
+			not = {
+				has_country_flag = 孙中山已死
+			}
+		}
+		name = random_death.5.b
+	}
+}
+#孙中山寿命6
+country_event = {
+	id = random_death.6
+	title = random_death.6.t
+	desc = random_death.6.d
+	picture = news_event_01
+	fire_only_once = yes
+	trigger = {
+		has_start_date < 1925.3.13
+		tag = CHI
+		date > 1930.1.1
+		not = {
+			has_country_flag = 孙中山已死
+			has_country_flag = 孙中山逝世六已过
+		}
+	}
+	immediate = {
+		CHI = {
+			set_country_flag = 孙中山已死
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "汪精卫"
+				desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
+				picture = "gfx/leaders/CHI/portrait_chi_wang_jingwei.dds"
+				expire = "1965.1.1"
+				ideology = bureaucratic
+				traits = {  }
+			}
+			news_event = {
+				id = chi.113
+			}
+		}
+		set_country_flag = 孙中山逝世六已过
+	}
+	option = {
+		name = random_death.6.a
+	}
+}
+#孙中山寿命查看
+country_event = {
+	id = random_death.7
+	title = random_death.7.t
+	desc = {
+		text = random_death.7a.d
+		trigger = {
+			has_start_date < 1925.3.13
+			has_country_flag = 孙中山逝世一已过
+			not = {
+				has_country_flag = 孙中山已死
+				has_country_flag = 孙中山逝世二已过
+				has_country_flag = 孙中山逝世三已过
+				has_country_flag = 孙中山逝世四已过
+				has_country_flag = 孙中山逝世五已过
+				has_country_flag = 孙中山逝世六已过
+			}
+		}
+	}
+	desc = {
+		text = random_death.7b.d
+		trigger = {
+			has_start_date < 1925.3.13
+			has_country_flag = 孙中山逝世一已过
+			has_country_flag = 孙中山逝世二已过
+			not = {
+				has_country_flag = 孙中山已死
+				has_country_flag = 孙中山逝世三已过
+				has_country_flag = 孙中山逝世四已过
+				has_country_flag = 孙中山逝世五已过
+				has_country_flag = 孙中山逝世六已过
+			}
+		}
+	}
+	desc = {
+		text = random_death.7c.d
+		trigger = {
+			has_start_date < 1925.3.13
+			has_country_flag = 孙中山逝世一已过
+			has_country_flag = 孙中山逝世二已过
+			has_country_flag = 孙中山逝世三已过
+			not = {
+				has_country_flag = 孙中山已死
+				has_country_flag = 孙中山逝世四已过
+				has_country_flag = 孙中山逝世五已过
+				has_country_flag = 孙中山逝世六已过
+			}
+		}
+	}
+	desc = {
+		text = random_death.7d.d
+		trigger = {
+			has_start_date < 1925.3.13
+			has_country_flag = 孙中山逝世一已过
+			has_country_flag = 孙中山逝世二已过
+			has_country_flag = 孙中山逝世三已过
+			has_country_flag = 孙中山逝世四已过
+			not = {
+				has_country_flag = 孙中山已死
+				has_country_flag = 孙中山逝世五已过
+				has_country_flag = 孙中山逝世六已过
+			}
+		}
+	}
+	desc = {
+		text = random_death.7e.d
+		trigger = {
+			has_start_date < 1925.3.13
+			has_country_flag = 孙中山逝世一已过
+			has_country_flag = 孙中山逝世二已过
+			has_country_flag = 孙中山逝世三已过
+			has_country_flag = 孙中山逝世四已过
+			has_country_flag = 孙中山逝世五已过
+			not = {
+				has_country_flag = 孙中山已死
+				has_country_flag = 孙中山逝世六已过
+			}
+		}
+	}
+	desc = {
+		text = random_death.7f.d
+		trigger = {
+			has_start_date < 1925.3.13
+			has_country_flag = 孙中山逝世一已过
+			has_country_flag = 孙中山逝世二已过
+			has_country_flag = 孙中山逝世三已过
+			has_country_flag = 孙中山逝世四已过
+			has_country_flag = 孙中山逝世五已过
+			has_country_flag = 孙中山逝世六已过
+			not = {
+				has_country_flag = 孙中山已死
+			}
+		}
+	}
+	desc = {
+		text = random_death.7g.d
+		trigger = {
+			or = {
+				has_start_date > 1925.3.13
+				has_country_flag = 孙中山已死
+			}
+		}
+	}
+	picture = news_event_01
+	is_triggered_only = yes
+	option = {
+		name = random_death.71.a
+		trigger = {
+			has_start_date < 1925.3.13
+			not = {
+				has_country_flag = 孙中山已死
+			}
+		}
+	}
+	option = {
+		name = random_death.72.a
+		trigger = {
+			or = {
+				has_country_flag = 孙中山已死
+				has_start_date > 1925.3.13
+			}
+		}
+	}
+}

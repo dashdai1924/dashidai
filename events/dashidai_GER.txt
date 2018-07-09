@@ -1,0 +1,37 @@
+﻿add_namespace = germany_news
+#德国内战爆发
+news_event = {
+	id = germany_news.1
+	title = germany_news.1.t
+	desc = germany_news.1.d
+	picture = news_event_ita_fdgltl_tiaoyue
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = germany_news.1.a
+		
+		trigger = {
+			tag = GER
+		}
+	}
+	option = {
+		name = germany_news.1.b
+		
+		trigger = {
+			tag = GWM
+		}
+	}
+	option = {
+		name = germany_news.1.c
+
+		trigger = {
+			not = {
+				tag = GER
+				tag = GWM
+			}
+		}
+	}
+}
