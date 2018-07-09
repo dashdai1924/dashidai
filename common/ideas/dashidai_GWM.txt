@@ -1,5 +1,16 @@
 ideas = {
 	country = {
+		#来自德国的民主影响
+		GWM_democratic_influence_from_germany = {
+			picture = FRA_army_of_aggression_focus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.05
+			}
+		}
 		#失业
 		GWM_lost_work = {
 			picture = FRA_army_of_aggression_focus

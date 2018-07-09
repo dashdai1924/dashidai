@@ -593,29 +593,15 @@ get_GDP = {
 #资源计算
 make_development = {
 	every_state = {
-		set_variable = { development_var = state_population }
-		divide_variable = { development_var = 10000 }
-		divide_variable = { development_var = 1000 }
-		round_variable = development_var
-		set_variable = { development = development_var }
-		add_resource = {
-			type = development
-			amount = development
-		}
-		add_resource = {
-			type = development
-			amount = 10
-		}
+		set_variable = { development = state_population }
+		divide_variable = { development = 10000 }
+		divide_variable = { development = 1000 }
+		round_variable = development
 		add_to_variable = { GDP = 10 }
-		clear_variable = development_var
 	}
 	every_state = {
 		limit = {
 			is_coastal = yes
-		}
-		add_resource = {
-			type = development
-			amount = 30
 		}
 		add_to_variable = { development = 30 }
 	}
@@ -623,19 +609,11 @@ make_development = {
 		limit = {
 			is_in_home_area = yes
 		}
-		add_resource = {
-			type = development
-			amount = 10
-		}
 		add_to_variable = { development = 10 }
 	}
 	every_state = {
 		limit = {
 			is_capital = yes
-		}
-		add_resource = {
-			type = development
-			amount = 30
 		}
 		add_to_variable = { development = 30 }
 	}

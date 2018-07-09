@@ -1,0 +1,15 @@
+GWM_defending_the_ideology_of_neighboring_countries = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = GWM
+	}
+	visible = {
+		or = {
+			has_war_with = GER
+			any_neighbor_country = {
+				has_government = fascism
+			}
+		}
+	}
+}

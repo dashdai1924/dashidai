@@ -1,0 +1,64 @@
+GWM_defending_the_ideology_of_neighboring_countries = {
+	defending_the_ideology_of_neighboring_countries = {
+		icon = infiltrate_state
+		days_re_enable = 70
+		cost = 50
+		days_remove = 365
+		visible = {
+			not = { has_war_with = GER }
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				random_neighbor_country = {
+					or = {
+						fascism > 0.2
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				random_neighbor_country = {
+					or = {
+						fascism > 0.4
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				random_neighbor_country = {
+					or = {
+						fascism > 0.6
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				random_neighbor_country = {
+					or = {
+						fascism > 0.8
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				random_neighbor_country = {
+					has_government = fascism
+				}
+			}
+		}
+		complete_effect = {
+			every_neighbor_country = {
+				limit = { has_government = fascism }
+				add_timed_idea = {
+					idea = GWM_democratic_influence_from_germany
+					days = 365
+				}
+			}
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+	}
+}

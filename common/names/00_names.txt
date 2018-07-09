@@ -38,6 +38,22 @@ GER = {
 		}
 	callsigns = { "Bubi" "Assi" "The Black Devil" "The Blond Knight Of Germany" "Dolfo" "Fighter of Libau" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red knight" "Reeste" }
 }
+GWM = {
+	male = {
+		names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich 
+			Theodor Hans Anton Joachim Max Emil Peter Fritz Otto Adolf Tobias Staffan Marco Karl
+		}
+	}
+	female = {
+		names = { Jessica Emma Hanna Sofia Marie }
+	}
+	surnames = { 
+		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
+		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
+		Beisswenger Duttmann Wilbs Berglen Behrmann 
+		}
+	callsigns = { "Bubi" "Assi" "The Black Devil" "The Blond Knight Of Germany" "Dolfo" "Fighter of Libau" "Petit Rouge" "Pritzl" "The Red Baron" "The Red Battle-flyer" "The Red knight" "Reeste" }
+}
 
 
 ENG = {
@@ -1851,7 +1867,7 @@ SHX = {
 	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
 	callsigns = { }
 }
-WAN = {
+WUH = {
 	male = {
 		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
 	}
@@ -1859,5 +1875,345 @@ WAN = {
 		names = { }
 	}
 	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZA = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZB = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZC = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZD = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZE = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZF = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZG = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZH = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZI = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZJ = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZK = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZL = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZM = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZN = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZO = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZP = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZQ = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZR = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZS = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZT = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZU = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZV = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZW = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZX = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZY = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZZ = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZ0 = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZ1 = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZ2 = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZ3 = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZ4 = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+ZZ5 = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+AMR = {
+	male = {
+		names = {  赵 钱 孙 李 周 吴 郑 王 冯 陈 楮 卫 蒋 沈 韩 杨 朱 秦 尤 许 何 吕 施 张 孔 曹 严 华 金 魏 陶 姜 鲁 韦 昌 马 苗 凤 花 方 毛 }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { 雪海 一行 湛山 尚志 千国 铁 梅 翔 兴 康 安 云 武 琳 虹 明 东 平 勤 英 正 }
+	callsigns = { }
+}
+SKI = {
+	male = {
+		names = { Bhimsen Amar Ranjur Bhakti Jang Renaudip Shamsher "Bir Shamsher" "Deva Shamsher" "Chandra Shamsher" "Bhim Shamsher"  }
+	}
+	female = {
+		names = { }
+	}
+	surnames = { Thapa "Singh Thapa" Singh Rana "Bahadur Rana"  }
 	callsigns = { }
 }

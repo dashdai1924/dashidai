@@ -1,0 +1,35 @@
+ai_historical_focus_list_GWM = {
+	ai_national_focuses = {
+		GWM_modern_public_assistance_programme
+		GWM_war_indemnit_issue
+		GWM_dawes_plan
+		GWM_begin_execution
+		GWM_rentenmark
+		GWM_golden_twenties
+		GWM_strict_fiscal_control
+		GWM_reduce_bureaucratic_obstacles
+		GWM_new_objectivity
+		GWM_reconstruction_of_industry
+		GWM_reduce_coal_dependence
+		GWM_political_development
+		GWM_diplomatic_efforts
+		GWM_locarno_treaties
+		GWM_french_belgian_arbitration_convention
+		GWM_poland_czechoslovak_arbitration_convention
+		GWM_berlin_treaty
+		GWM_permanent_member_of_the_league_of_nations
+		GWM_reconstruction_of_the_steel_industry_i
+		GWM_reconstruction_of_the_steel_industry_ii
+		GWM_reconstruction_of_the_steel_industry_iii
+		GWM_expand_ruhr_industry_i
+		GWM_expand_ruhr_industry_ii
+		GWM_expand_ruhr_industry_iii
+		GWM_infrastructure_development_i
+		GWM_infrastructure_development_ii
+		GWM_infrastructure_development_iii
+		GWM_expand_ruhr_industry_iv
+		GWM_expand_ruhr_industry_v
+		GWM_industry_research
+		GWM_young_plan
+	}
+}

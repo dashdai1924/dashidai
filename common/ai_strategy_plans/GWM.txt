@@ -1,0 +1,145 @@
+WeimarRepublic_historical = {
+	name = "WeimarRepublic historical plan"
+	desc = "Essentially historical behaviour for WeimarRepublic"
+	enable = {
+		tag = GWM
+		is_historical_focus_on = yes
+	}
+	abort = {
+		OR = {
+			has_war_with = GER
+			any_neighbor_country = {
+				has_government = fascism
+			}
+			SOV = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ENG = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			USA = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+	}
+	ai_national_focuses = {
+		GWM_modern_public_assistance_programme
+		GWM_war_indemnit_issue
+		GWM_dawes_plan
+		GWM_begin_execution
+		GWM_rentenmark
+		GWM_golden_twenties
+		GWM_strict_fiscal_control
+		GWM_reduce_bureaucratic_obstacles
+		GWM_new_objectivity
+		GWM_reconstruction_of_industry
+		GWM_reduce_coal_dependence
+		GWM_political_development
+		GWM_diplomatic_efforts
+		GWM_locarno_treaties
+		GWM_french_belgian_arbitration_convention
+		GWM_poland_czechoslovak_arbitration_convention
+		GWM_berlin_treaty
+		GWM_permanent_member_of_the_league_of_nations
+		GWM_reconstruction_of_the_steel_industry_i
+		GWM_reconstruction_of_the_steel_industry_ii
+		GWM_reconstruction_of_the_steel_industry_iii
+		GWM_expand_ruhr_industry_i
+		GWM_expand_ruhr_industry_ii
+		GWM_expand_ruhr_industry_iii
+		GWM_infrastructure_development_i
+		GWM_infrastructure_development_ii
+		GWM_infrastructure_development_iii
+		GWM_expand_ruhr_industry_iv
+		GWM_expand_ruhr_industry_v
+		GWM_industry_research
+		GWM_young_plan
+	}
+	research = {
+		infantry_weapons = 15.0
+		infantry_tech = 8.0
+		artillery = 8.0
+		industry = 20.0
+		electronics = 20.0
+		support_tech = 6.5
+	}
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+WeimarRepublic_fight_with_fascism = {
+	name = "WeimarRepublic fight with fascism plan"
+	desc = "Fight with fascism plan for WeimarRepublic"
+	enable = {
+		tag = GWM
+		or = {
+			has_war_with = GER
+			any_neighbor_country = {
+				has_government = fascism
+			}
+		}
+	}
+	abort = {
+		GER = {
+			NOT = {
+				democratic < 0.5
+			}
+		}
+	}
+	ai_national_focuses = {
+		GWM_modern_public_assistance_programme
+		GWM_war_indemnit_issue
+		GWM_dawes_plan
+		GWM_begin_execution
+		GWM_rentenmark
+		GWM_golden_twenties
+		GWM_strict_fiscal_control
+		GWM_reduce_bureaucratic_obstacles
+		GWM_new_objectivity
+		GWM_reconstruction_of_industry
+		GWM_reduce_coal_dependence
+		GWM_political_development
+		GWM_diplomatic_efforts
+		GWM_locarno_treaties
+		GWM_french_belgian_arbitration_convention
+		GWM_poland_czechoslovak_arbitration_convention
+		GWM_berlin_treaty
+		GWM_permanent_member_of_the_league_of_nations
+		GWM_reconstruction_of_the_steel_industry_i
+		GWM_reconstruction_of_the_steel_industry_ii
+		GWM_reconstruction_of_the_steel_industry_iii
+		GWM_expand_ruhr_industry_i
+		GWM_expand_ruhr_industry_ii
+		GWM_expand_ruhr_industry_iii
+		GWM_infrastructure_development_i
+		GWM_infrastructure_development_ii
+		GWM_infrastructure_development_iii
+		GWM_expand_ruhr_industry_iv
+		GWM_expand_ruhr_industry_v
+		GWM_industry_research
+		GWM_young_plan
+	}
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 25.0
+		artillery = 12.0
+		industry = 8.0
+		electronics = 8.0
+		support_tech = 8.5
+	}
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

@@ -1,7 +1,6 @@
 scripted_gui = {
-	state_player_context_window = {
-		context_type = player_context
-		window_name = "load_player_context_window"
+	state_buy_and_sell_system_window = {
+		window_name = "load_buy_and_sell_system_window"
 		visible = {
 			or = {
 				check_variable = { Load_Buy_And_Sell_Visible = 1 }
@@ -9,16 +8,15 @@ scripted_gui = {
 			}
 		}
 		effects = {
-			load_player_context_close_button_click = {
+			load_buy_and_sell_system_close_button_click = {
 				set_variable = { Load_Buy_And_Sell_Visible = 0 }
 			}
 		}
 	}
-	state_about_player_context_button = {
-		context_type = player_context
-		window_name = "menu_about_player_context"
+	state_about_buy_and_sell_system_button = {
+		window_name = "menu_about_buy_and_sell_system"
 		effects = {
-			menu_about_player_context_bg_click = {
+			menu_about_buy_and_sell_system_bg_click = {
 				if = {
 					limit = {
 						check_variable = { Load_Buy_And_Sell_Visible < 1 }
@@ -31,15 +29,12 @@ scripted_gui = {
 		}
 	}
 	money_mes_box_text_start_box = {
-		context_type = start_money_mes_box
 		window_name = "money_mes_box"
 	}
 	unhappy_mes_box_text_start_box = {
-		context_type = start_money_mes_box
 		window_name = "unhappy_mes_box"
 	}
 	state_development_text_start_button = {
-		context_type = start_state_development
 		window_name = "menu_about_state_development"
 		effects = {
 			menu_about_state_development_bg_click = {
@@ -55,7 +50,6 @@ scripted_gui = {
 		}
 	}
 	state_load_state_development_window = {
-		context_type = start_state_development
 		window_name = "load_state_development"
 		visible = {
 			or = {
@@ -145,7 +139,6 @@ scripted_gui = {
 		}
 	}
 	state_load_state_development_window_small = {
-		context_type = start_state_development
 		window_name = "load_state_development_small"
 		visible = {
 			check_variable = { Load_State_Development_Visible = 2 }
@@ -161,7 +154,6 @@ scripted_gui = {
 		}
 	}
 	country_power_system_box = {
-		context_type = start_country_power_system
 		window_name = "menu_about_country_power_system"
 		effects = {
 			menu_about_country_power_system_bg_click = {
@@ -177,7 +169,6 @@ scripted_gui = {
 		}
 	}
 	country_power_system_window_box = {
-		context_type = start_country_power_system
 		window_name = "load_country_power_system_window"
 		visible = {
 			check_variable = { Load_Country_Power_System_Visible = 1 }
