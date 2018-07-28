@@ -128,7 +128,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.05
 				conscription_factor = -0.5
 				political_power_factor = -0.1
@@ -167,6 +167,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				fascism_drift = 0.01
+				stability_factor = -0.1
 			}
 		}
 		#德意志帝国的遗产
@@ -189,7 +190,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.048
 				conscription_factor = -0.25
 				political_power_factor = -0.09
@@ -203,7 +204,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.046
 				conscription_factor = -0.25
 				political_power_factor = -0.08
@@ -217,7 +218,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.044
 				conscription_factor = -0.25
 				political_power_factor = -0.07
@@ -231,7 +232,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.042
 				conscription_factor = -0.25
 				political_power_factor = -0.06
@@ -245,7 +246,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.04
 				conscription_factor = -0.25
 				political_power_factor = -0.05
@@ -259,7 +260,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.038
 				conscription_factor = -0.25
 				political_power_factor = -0.04
@@ -273,7 +274,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.045
 				conscription_factor = -0.25
 				political_power_factor = -0.08
@@ -287,7 +288,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.044
 				conscription_factor = -0.25
 				political_power_factor = -0.075
@@ -301,7 +302,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.043
 				conscription_factor = -0.25
 				political_power_factor = -0.07
@@ -315,7 +316,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.042
 				conscription_factor = -0.25
 				political_power_factor = -0.065
@@ -329,7 +330,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.041
 				conscription_factor = -0.25
 				political_power_factor = -0.06
@@ -343,7 +344,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.04
 				conscription_factor = -0.25
 				political_power_factor = -0.055
@@ -357,7 +358,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.043
 				conscription_factor = -0.25
 				political_power_factor = -0.07
@@ -371,7 +372,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.043
 				conscription_factor = -0.25
 				political_power_factor = -0.07
@@ -385,7 +386,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.042
 				conscription_factor = -0.25
 				political_power_factor = -0.069
@@ -399,7 +400,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.042
 				conscription_factor = -0.25
 				political_power_factor = -0.069
@@ -413,7 +414,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.041
 				conscription_factor = -0.25
 				political_power_factor = -0.068
@@ -427,7 +428,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.041
 				conscription_factor = -0.25
 				political_power_factor = -0.068
@@ -441,7 +442,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				stability_factor = 0.1
+				war_support_factor = -0.1
 				consumer_goods_factor = 0.04
 				conscription_factor = -0.20
 				political_power_factor = -0.075

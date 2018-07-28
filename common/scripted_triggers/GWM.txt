@@ -1,0 +1,81 @@
+GWM_has_dawes_plan = {
+	if = {
+		limit = { has_country_flag = dawes_plan_1 }
+		if = {
+			limit = { has_idea = GWM_fanersai }
+			has_idea = GWM_fanersai
+		}else_if = {
+			limit = { has_idea = GWM_fanersai1a }
+			has_idea = GWM_fanersai1a
+		}else_if = {
+			limit = { has_idea = GWM_fanersai2a }
+			has_idea = GWM_fanersai2a
+		}else_if = {
+			limit = { has_idea = GWM_fanersai3a }
+			has_idea = GWM_fanersai3a
+		}else_if = {
+			limit = { has_idea = GWM_fanersai4a }
+			has_idea = GWM_fanersai4a
+		}else_if = {
+			limit = { has_idea = GWM_fanersai5a }
+			has_idea = GWM_fanersai5a
+		}else_if = {
+			limit = { has_idea = GWM_fanersai6a }
+			has_idea = GWM_fanersai6a
+		}else = {
+			has_idea = GWM_fanersai
+		}
+	}else_if = {
+		limit = { has_country_flag = dawes_plan_2 }
+		if = {
+			limit = { has_idea = GWM_fanersai }
+			has_idea = GWM_fanersai
+		}else_if = {
+			limit = { has_idea = GWM_fanersai1b }
+			has_idea = GWM_fanersai1b
+		}else_if = {
+			limit = { has_idea = GWM_fanersai2b }
+			has_idea = GWM_fanersai2b
+		}else_if = {
+			limit = { has_idea = GWM_fanersai3b }
+			has_idea = GWM_fanersai3b
+		}else_if = {
+			limit = { has_idea = GWM_fanersai4b }
+			has_idea = GWM_fanersai4b
+		}else_if = {
+			limit = { has_idea = GWM_fanersai5b }
+			has_idea = GWM_fanersai5b
+		}else_if = {
+			limit = { has_idea = GWM_fanersai6b }
+			has_idea = GWM_fanersai6b
+		}else = {
+			has_idea = GWM_fanersai
+		}
+	}else_if = {
+		limit = { has_country_flag = dawes_plan_3 }
+		if = {
+			limit = { has_idea = GWM_fanersai }
+			has_idea = GWM_fanersai
+		}else_if = {
+			limit = { has_idea = GWM_fanersai1c }
+			has_idea = GWM_fanersai1c
+		}else_if = {
+			limit = { has_idea = GWM_fanersai2c }
+			has_idea = GWM_fanersai2c
+		}else_if = {
+			limit = { has_idea = GWM_fanersai3c }
+			has_idea = GWM_fanersai3c
+		}else_if = {
+			limit = { has_idea = GWM_fanersai4c }
+			has_idea = GWM_fanersai4c
+		}else_if = {
+			limit = { has_idea = GWM_fanersai5c }
+			has_idea = GWM_fanersai5c
+		}else_if = {
+			limit = { has_idea = GWM_fanersai6c }
+			has_idea = GWM_fanersai6c
+		}else = {
+			has_idea = GWM_fanersai
+		}
+	}
+}

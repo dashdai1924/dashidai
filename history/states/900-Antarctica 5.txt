@@ -1,0 +1,9 @@
+state={
+	id=900
+	name="STATE_900"
+	provinces={
+		13233 13234 13235 
+	}
+	manpower=0
+	state_category=white_desert
+}

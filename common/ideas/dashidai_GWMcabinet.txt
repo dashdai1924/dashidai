@@ -1,0 +1,83 @@
+ideas = {
+	political_advisor = {
+		wilhelm_marx = {
+			picture = GWM_wilhelm_marx
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { silent_workhorse }
+		}
+		alfred_hugenberg = {
+			picture = GWM_alfred_hugenberg
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { fascist_demagogue }
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		hans_luther = {
+			picture = GWM_hans_luther
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { financial_expert }
+		}
+		gustav_stresemann = {
+			picture = GWM_gustav_stresemann
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { smooth_talking_charmer }
+		}
+		walter_simons = {
+			picture = GWM_walter_simons
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { captain_of_industry }
+		}
+		heinrich_bruning = {
+			picture = GWM_heinrich_bruning
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { democratic_reformer }
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		kurt_von_schleicher = {
+			picture = GWM_kurt_von_schleicher
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { armaments_organizer }
+		}
+		philipp_scheidemann = {
+			picture = GWM_philipp_scheidemann
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { popular_figurehead }
+		}
+		paul_von_hindenburg = {
+			picture = GWM_paul_von_hindenburg
+			allowed = {
+				original_tag = GWM
+			}
+			traits = { ideological_crusader }
+		}
+	}
+}

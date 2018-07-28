@@ -1,0 +1,150 @@
+defined_text = {
+	name = communism_influence_add_defined
+	text = {
+		trigger = {
+			has_government = communism
+		}
+		localization_key = communism_influence_add_good
+	}
+	text = {
+		trigger = {
+			not = { has_government = communism }
+		}
+		localization_key = communism_influence_add_bad
+	}
+}
+defined_text = {
+	name = democratic_influence_add_defined
+	text = {
+		trigger = {
+			has_government = democratic
+		}
+		localization_key = democratic_influence_add_good
+	}
+	text = {
+		trigger = {
+			not = { has_government = democratic }
+		}
+		localization_key = democratic_influence_add_bad
+	}
+}
+defined_text = {
+	name = fascism_influence_add_defined
+	text = {
+		trigger = {
+			has_government = fascism
+		}
+		localization_key = fascism_influence_add_good
+	}
+	text = {
+		trigger = {
+			not = { has_government = fascism }
+		}
+		localization_key = fascism_influence_add_bad
+	}
+}
+defined_text = {
+	name = neutrality_influence_add_defined
+	text = {
+		trigger = {
+			has_government = neutrality
+		}
+		localization_key = neutrality_influence_add_good
+	}
+	text = {
+		trigger = {
+			not = { has_government = neutrality }
+		}
+		localization_key = neutrality_influence_add_bad
+	}
+}
+defined_text = {
+	name = dictatorship_influence_add_defined
+	text = {
+		trigger = {
+			has_government = dictatorship
+		}
+		localization_key = dictatorship_influence_add_good
+	}
+	text = {
+		trigger = {
+			not = { has_government = dictatorship }
+		}
+		localization_key = dictatorship_influence_add_bad
+	}
+}
+defined_text = {
+	name = communism_influence_less_defined
+	text = {
+		trigger = {
+			has_government = communism
+		}
+		localization_key = communism_influence_less_bad
+	}
+	text = {
+		trigger = {
+			not = { has_government = communism }
+		}
+		localization_key = communism_influence_less_good
+	}
+}
+defined_text = {
+	name = democratic_influence_less_defined
+	text = {
+		trigger = {
+			has_government = democratic
+		}
+		localization_key = democratic_influence_less_bad
+	}
+	text = {
+		trigger = {
+			not = { has_government = democratic }
+		}
+		localization_key = democratic_influence_less_good
+	}
+}
+defined_text = {
+	name = fascism_influence_less_defined
+	text = {
+		trigger = {
+			has_government = fascism
+		}
+		localization_key = fascism_influence_less_bad
+	}
+	text = {
+		trigger = {
+			not = { has_government = fascism }
+		}
+		localization_key = fascism_influence_less_good
+	}
+}
+defined_text = {
+	name = neutrality_influence_less_defined
+	text = {
+		trigger = {
+			has_government = neutrality
+		}
+		localization_key = neutrality_influence_less_bad
+	}
+	text = {
+		trigger = {
+			not = { has_government = neutrality }
+		}
+		localization_key = neutrality_influence_less_good
+	}
+}
+defined_text = {
+	name = dictatorship_influence_less_defined
+	text = {
+		trigger = {
+			has_government = dictatorship
+		}
+		localization_key = dictatorship_influence_less_bad
+	}
+	text = {
+		trigger = {
+			not = { has_government = dictatorship }
+		}
+		localization_key = dictatorship_influence_less_good
+	}
+}

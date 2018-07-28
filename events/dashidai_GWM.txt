@@ -63,25 +63,21 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = 道威斯偿还方案一
 		}
-		add_political_power = -100
+		add_political_power = -50
 	}
 	option = {
 		name = germany.1003.b
 		hidden_effect = {
 			set_country_flag = 道威斯偿还方案二
 		}
-		add_political_power = -200
+		add_political_power = -75
 	}
 	option = {
 		name = germany.1003.c
 		hidden_effect = {
 			set_country_flag = 道威斯偿还方案三
 		}
-		add_opinion_modifier = {
-			target = FRA
-			modifier = protest_action
-		}
-		add_political_power = -300
+		add_political_power = -100
 	}
 }
 #法国从鲁尔撤军
@@ -95,13 +91,8 @@ country_event = {
 
 	option = {
 		name = germany.1004.a
+		activate_mission = GWM_dawes_plan
 		hidden_effect = {
-			country_event = { days = 280 id = germany.1005 }
-			country_event = { days = 560 id = germany.1006 }
-			country_event = { days = 840 id = germany.1007 }
-			country_event = { days = 1120 id = germany.1008 }
-			country_event = { days = 1400 id = germany.1009 }
-			country_event = { days = 1680 id = germany.1010 }
 			ENG = {
 				remove_opinion_modifier = {
 					target = GER
@@ -123,259 +114,7 @@ country_event = {
 		}
 	}
 }
-#GERMAMd1
-country_event = {
-	id = germany.1005
-	title = germany.1005.t
-	desc = germany.1005.d
-	picture = news_event_023
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.1005.a
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案一
-				has_idea = GWM_fanersai
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai
-				add_idea = GWM_fanersai1a
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案二
-				has_idea = GWM_fanersai
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai
-				add_idea = GWM_fanersai1b
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案三
-				has_idea = GWM_fanersai
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai
-				add_idea = GWM_fanersai1c
-			}
-		}
-	}
-}
-country_event = {
-	id = germany.1006
-	title = germany.1006.t
-	desc = germany.1006.d
-	picture = news_event_023
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.1006.a
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案一
-				has_idea = GWM_fanersai1a
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai1a
-				add_idea = GWM_fanersai2a
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案二
-				has_idea = GWM_fanersai1b
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai1b
-				add_idea = GWM_fanersai2b
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案三
-				has_idea = GWM_fanersai1c
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai1c
-				add_idea = GWM_fanersai2c
-			}
-		}
-	}
-}
-country_event = {
-	id = germany.1007
-	title = germany.1007.t
-	desc = germany.1007.d
-	picture = news_event_023
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.1007.a
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案一
-				has_idea = GWM_fanersai2a
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai2a
-				add_idea = GWM_fanersai3a
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案二
-				has_idea = GWM_fanersai2b
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai2b
-				add_idea = GWM_fanersai3b
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案三
-				has_idea = GWM_fanersai2c
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai2c
-				add_idea = GWM_fanersai3c
-			}
-		}
-	}
-}
-country_event = {
-	id = germany.1008
-	title = germany.1008.t
-	desc = germany.1008.d
-	picture = news_event_023
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.1008.a
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案一
-				has_idea = GWM_fanersai3a
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai3a
-				add_idea = GWM_fanersai4a
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案二
-				has_idea = GWM_fanersai3b
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai3b
-				add_idea = GWM_fanersai4b
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案三
-				has_idea = GWM_fanersai3c
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai3c
-				add_idea = GWM_fanersai4c
-			}
-		}
-	}
-}
-country_event = {
-	id = germany.1009
-	title = germany.1009.t
-	desc = germany.1009.d
-	picture = news_event_023
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.1009.a
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案一
-				has_idea = GWM_fanersai4a
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai4a
-				add_idea = GWM_fanersai5a
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案二
-				has_idea = GWM_fanersai4b
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai4b
-				add_idea = GWM_fanersai5b
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案三
-				has_idea = GWM_fanersai4c
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai4c
-				add_idea = GWM_fanersai5c
-			}
-		}
-	}
-}
-country_event = {
-	id = germany.1010
-	title = germany.1010.t
-	desc = germany.1010.d
-	picture = news_event_023
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.1010.a
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案一
-				has_idea = GWM_fanersai5a
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai5a
-				add_idea = GWM_fanersai6a
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案二
-				has_idea = GWM_fanersai5b
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai5b
-				add_idea = GWM_fanersai6b
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = 道威斯偿还方案三
-				has_idea = GWM_fanersai5c
-			}
-			swap_ideas = {
-				remove_idea = GWM_fanersai5c
-				add_idea = GWM_fanersai6c
-			}
-		}
-	}
-}
+#1005-1010的间隙
 country_event = {
 	id = germany.1011
 	title = germany.1011.t
@@ -866,6 +605,10 @@ country_event = {
 		date > 1932.3.13
 	}
 	
+	immediate = {
+		set_country_flag = FLAG_G1923Eed
+	}
+	
 	option = {
 		name = germany.1022.a
 		hidden_effect = {
@@ -965,5 +708,27 @@ country_event = {
 	}
 	option = {
 		name = germany.1023.a
+	}
+}
+#人民的抗议
+country_event = {
+	id = germany.1024
+	title = germany.1024.t
+	desc = germany.1024.d
+	picture = news_event_ita_fdgltl_tiaoyue
+	is_triggered_only = yes
+	option = {
+		name = germany.1024.a
+		custom_effect_tooltip = democratic_influence_add
+		add_to_variable = { Democratic_Influence = 1 }
+	}
+	option = {
+		name = germany.1024.b
+		add_political_power = -100
+	}
+	option = {
+		name = germany.1024.c
+		add_timed_idea = { idea = strikes_1 days = 70 }
+		add_stability = -0.05
 	}
 }

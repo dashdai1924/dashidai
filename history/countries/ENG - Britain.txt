@@ -55,7 +55,7 @@ set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 47
+			popularity = 87
 		}
 
 		fascism = {
@@ -67,11 +67,11 @@ set_politics = {
 		}
 		
 		neutrality = {
-			popularity = 50
+			popularity = 10
 		}
 	}
 	
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1935.11.14"
 	election_frequency = 48
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
@@ -110,9 +110,15 @@ if = {
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.2
 	}
+	set_autonomy = {
+		target = EAN
+		autonomous_state = autonomy_annexation_puppet
+		freedom_level = 0.0
+	}
 	else = {
 		puppet = MAL
 		puppet = RAJ
+		puppet = EAN
 	}
 }
 
@@ -126,7 +132,8 @@ add_to_faction = MAL
 add_to_faction = SAF
 give_military_access = RAJ
 add_to_faction = RAJ		# Must be after puppet
-add_to_faction = EHK
+add_to_faction = EAN
+give_military_access = EAN
 
 
 #give_guarantee = CZE
@@ -145,11 +152,11 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "内维尔·张伯伦"
+	name = "斯坦利·鲍德温"
 	desc = "POLITICS_NEVILLE_CHAMBERLAIN_DESC"
-	picture = "Portrait_Britain_Neville_Chamberlain.dds"
+	picture = "leader_unknown.dds"
 	expire = "1965.1.1"
-	ideology = liberalism
+	ideology = conservatism
 	traits = {
 		
 	}
