@@ -2,7 +2,6 @@ idea_categories = {
 	V2S_politics_and_reform_1 = {
 		slot = V2S_central_focus
 		slot = ShengyuZhengCe
-		slot = ChengLiJueYi
 		slot = ZuiDiGongZi
 		slot = ZuiDaGongShi
 		slot = AnQuanGuiZhang

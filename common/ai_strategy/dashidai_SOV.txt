@@ -1,0 +1,16 @@
+SOV_output_to_germany = {
+	enable = {
+		original_tag = SOV
+		country_exists = GWM
+		GWM = { not = { communism > 0.6 } }
+	}
+	abort = {
+		not = { country_exists = GWM }
+		GWM = { communism > 0.6 }
+	}
+	ai_strategy = {
+		type = support
+		id = "GWM"
+		value = 200
+	}
+}

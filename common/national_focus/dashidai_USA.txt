@@ -1,10 +1,14 @@
 focus_tree = {
-	id = dashidai_usa
+	id = dashidai_USA
 	country = {
 		factor = 0
 		modifier = {
 			add = 11
 			tag = USA
+		}
+		modifier = {
+			add = 11
+			original_tag = USA
 		}
 	}
 	default = no

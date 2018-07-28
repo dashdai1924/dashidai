@@ -1,0 +1,9 @@
+categories =  {
+	white_desert = {
+		color = { 255 255 255 }
+		movement_cost = -30
+		attrition = 0.6
+		ai_terrain_importance_factor = 0.5
+		sound_type = desert
+	}
+}

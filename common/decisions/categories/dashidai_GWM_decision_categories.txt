@@ -1,4 +1,4 @@
-GWM_defending_the_ideology_of_neighboring_countries = {
+GWM_defending_the_ideology_of_neighboring_countries_group = {
 	icon = infiltration
 	picture = GFX_decision_cat_picture_chi_infiltration
 	allowed = {
@@ -11,5 +11,12 @@ GWM_defending_the_ideology_of_neighboring_countries = {
 				has_government = fascism
 			}
 		}
+	}
+}
+GWM_dawes_plan_group = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		tag = GWM
 	}
 }
