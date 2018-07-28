@@ -1,5 +1,5 @@
 focus_tree = {
-	id = dashidai_GWM
+	id = WeimarGermany
 	country = {
 		factor = 0
 		modifier = {
@@ -12,7 +12,7 @@ focus_tree = {
 		id = GWM_modern_public_assistance_programme
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10.00
-		x = 2
+		x = 1
 		y = 0
 			ai_will_do = {
 					factor = 10
@@ -1095,6 +1095,115 @@ focus_tree = {
 
 	}
 	focus = {
+		id = GWM_expand_ruhr_industry_v
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_expand_ruhr_industry_iv
+		}
+		x = 9
+		y = 5
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_38
+							hidden_effect = {
+									58 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 1
+													instant_build = yes
+												}
+										}
+									61 = {
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+													type = industrial_complex
+													level = 1
+													instant_build = yes
+												}
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = GWM_industry_research
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = GWM_expand_ruhr_industry_v
+		}
+		x = 9
+		y = 6
+			ai_will_do = {
+					factor = 7
+				}
+			completion_reward = {
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_expand_ruhr_industry_v
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_18
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_expand_ruhr_industry_v
+										}
+									or = {
+											has_completed_focus = GWM_begin_execution
+											has_completed_focus = GWM_reconstruction_of_industry
+										}
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_39
+							hidden_effect = {
+									add_research_slot = 1
+								}
+						}
+					if = {
+							limit = {
+									not = {
+											has_completed_focus = GWM_begin_execution
+										}
+									has_completed_focus = GWM_expand_ruhr_industry_v
+								}
+							custom_effect_tooltip = GWM_focus_desc_text_40
+							hidden_effect = {
+									add_research_slot = 1
+									country_event = {
+											id = germany.1018
+											days = 30
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
 		id = GWM_infrastructure_development_i
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10.00
@@ -1275,67 +1384,75 @@ focus_tree = {
 							hidden_effect = {
 									50 = {
 											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = infrastructure
-													level = 1
-													instant_build = yes
-												}
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
 										}
 									52 = {
 											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = infrastructure
-													level = 1
-													instant_build = yes
-												}
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
 										}
 									53 = {
 											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = infrastructure
-													level = 1
-													instant_build = yes
-												}
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
 										}
 									54 = {
 											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = infrastructure
-													level = 1
-													instant_build = yes
-												}
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
 										}
 									60 = {
 											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = infrastructure
-													level = 1
-													instant_build = yes
-												}
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
 										}
 									64 = {
 											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = infrastructure
-													level = 1
-													instant_build = yes
-												}
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
 										}
 									65 = {
 											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = infrastructure
-													level = 1
-													instant_build = yes
-												}
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
 										}
 									66 = {
 											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = infrastructure
-													level = 1
-													instant_build = yes
-												}
+										
+									add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
 										}
 								}
 						}
@@ -1420,691 +1537,6 @@ focus_tree = {
 													level = 1
 													instant_build = yes
 												}
-										}
-								}
-						}
-				}
-
-	}
-	focus = {
-		id = GWM_let_democracy_work
-		icon = GFX_goal_continuous_boost_freedom
-		cost = 10.00
-		x = 20
-		y = 0
-		continue_if_invalid = yes
-		available = {
-			has_global_flag = 大萧条开始
-		}
-		completion_reward = {
-			add_political_power = 150
-			custom_effect_tooltip = communism_influence_add
-			add_to_variable = { Communism_Influence = 1 }
-			custom_effect_tooltip = democratic_influence_less
-			subtract_from_variable = { Democratic_Influence = 1 }
-			custom_effect_tooltip = fascism_influence_add
-			add_to_variable = { Fascism_Influence = 1 }
-			custom_effect_tooltip = neutrality_influence_add
-			add_to_variable = { Neutrality_Influence = 1 }
-			custom_effect_tooltip = dictatorship_influence_add
-			add_to_variable = { Dictatorship_Influence = 1 }
-			hidden_effect = { WORLD_refresh_ideological_influence = yes }
-		}
-	}
-	focus = {
-		id = GWM_german_military
-		icon = GFX_focus_generic_combined_arms
-		cost = 10.00
-		x = 28
-		y = 0
-		completion_reward = {
-			army_experience = 5
-			air_experience = 5
-			navy_experience = 5
-		}
-	}
-	focus = {
-		id = GWM_diplomatic
-		icon = GFX_focus_generic_support_the_left_right
-		cost = 10.00
-		x = 35
-		y = 0
-		available = {
-			has_completed_focus = GWM_the_end
-		}
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = GWM_nazi
-		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10.00
-		x = 0
-		y = 0
-
-	}
-	focus = {
-		id = GWM_vive_la_france
-		icon = GFX_focus_chi_reach_out_to_france
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_let_democracy_work
-		}
-		x = 17
-		y = 1
-		completion_reward = {
-			51 = {
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = GWM_young_no_longer
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_let_democracy_work
-		}
-		mutually_exclusive = {
-			focus = GWM_the_people_are_the_masters_of_the_country
-		}
-		x = 19
-		y = 1
-		completion_reward = {
-			random_list = {
-				50 = {
-				country_event = { id = germany.1024 }
-				}
-				50 = {
-					
-				}
-			}
-		}
-	}
-	focus = {
-		id = GWM_the_people_are_the_masters_of_the_country
-		icon = GFX_goal_continuous_restrict_freedom
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_let_democracy_work
-		}
-		mutually_exclusive = {
-			focus = GWM_young_no_longer
-		}
-		x = 21
-		y = 1
-
-	}
-	focus = {
-		id = GWM_revolutionary_embers
-		icon = GFX_goal_tfv_burn_the_royal_portraits
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_young_no_longer
-			focus = GWM_the_people_are_the_masters_of_the_country
-		}
-		x = 17
-		y = 2
-
-	}
-	focus = {
-		id = GWM_great_strike
-		icon = GFX_focus_YUG_pan_slavic_congress
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_revolutionary_embers
-		}
-		mutually_exclusive = {
-			focus = GWM_parliamentary_struggle
-		}
-		x = 15
-		y = 3
-
-	}
-	focus = {
-		id = GWM_parliamentary_struggle
-		icon = GFX_focus_generic_soviet_politics
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_revolutionary_embers
-		}
-		mutually_exclusive = {
-			focus = GWM_great_strike
-		}
-		x = 17
-		y = 3
-
-	}
-	focus = {
-		id = GWM_from_the_communist_international
-		icon = GFX_focus_generic_polish_deal
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_parliamentary_struggle
-			focus = GWM_great_strike
-		}
-		x = 16
-		y = 4
-
-	}
-	focus = {
-		id = GWM_spreading_progressive_thinking
-		icon = GFX_focus_prc_agrarian_socialism
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_parliamentary_struggle
-			focus = GWM_great_strike
-		}
-		x = 18
-		y = 4
-
-	}
-	focus = {
-		id = GWM_the_king_of_our_people
-		icon = GFX_focus_ger_return_of_the_kaiser
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_young_no_longer
-			focus = GWM_the_people_are_the_masters_of_the_country
-		}
-		x = 19
-		y = 2
-
-	}
-	focus = {
-		id = GWM_maybe_servility
-		icon = GFX_goal_generic_alliance
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_the_king_of_our_people
-		}
-		x = 19
-		y = 3
-
-	}
-	focus = {
-		id = GWM_national_socialism
-		icon = GFX_goal_fascism_four
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_the_people_are_the_masters_of_the_country
-			focus = GWM_young_no_longer
-		}
-		x = 21
-		y = 2
-
-	}
-	focus = {
-		id = GWM_the_power_of_the_royalist_party
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_the_king_of_our_people
-			focus = GWM_national_socialism
-		}
-		x = 21
-		y = 3
-
-	}
-	focus = {
-		id = GWM_social_democracy
-		icon = GFX_goal_support_democracy
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_the_people_are_the_masters_of_the_country
-			focus = GWM_young_no_longer
-		}
-		x = 23
-		y = 2
-
-	}
-	focus = {
-		id = GWM_reichstag_dissolved
-		icon = GFX_focus_generic_the_giant_wakes
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_national_socialism
-			focus = GWM_social_democracy
-		}
-		x = 23
-		y = 3
-
-	}
-	focus = {
-		id = GWM_resort_to_force
-		icon = GFX_focus_ger_oppose_hitler
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_maybe_servility
-			focus = GWM_the_power_of_the_royalist_party
-			focus = GWM_reichstag_dissolved
-			focus = GWM_great_strike
-		}
-		x = 20
-		y = 4
-
-	}
-	focus = {
-		id = GWM_heal_the_world
-		icon = GFX_focus_generic_strike_at_democracy2
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_reichstag_dissolved
-			focus = GWM_the_power_of_the_royalist_party
-			focus = GWM_maybe_servility
-			focus = GWM_parliamentary_struggle
-		}
-		x = 22
-		y = 4
-
-	}
-	focus = {
-		id = GWM_unemployment
-		icon = GFX_focus_generic_military_academy
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_social_democracy
-		}
-		x = 25
-		y = 3
-
-	}
-	focus = {
-		id = GWM_guard_conservative
-		icon = GFX_focus_ger_assassinate_mussolini
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_unemployment
-		}
-		x = 24
-		y = 4
-
-	}
-	focus = {
-		id = GWM_behold
-		icon = GFX_focus_CZE_german_puppet
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_resort_to_force
-			focus = GWM_heal_the_world
-			focus = GWM_guard_conservative
-		}
-		x = 21
-		y = 5
-
-	}
-	focus = {
-		id = GWM_focus_democratic
-		icon = GFX_focus_RAJ_indian_gentlemen_offcers
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_guard_conservative
-			focus = GWM_heal_the_world
-			focus = GWM_resort_to_force
-		}
-		x = 23
-		y = 5
-
-	}
-	focus = {
-		id = GWM_arms_impor_and_export_trade_i
-		icon = GFX_focus_focus_generic_industry_1
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_german_military
-		}
-		x = 27
-		y = 1
-
-	}
-	focus = {
-		id = GWM_arms_impor_and_export_trade_ii
-		icon = GFX_focus_generic_industry_2
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_arms_impor_and_export_trade_i
-		}
-		x = 27
-		y = 2
-
-	}
-	focus = {
-		id = GWM_arms_impor_and_export_trade_iii
-		icon = GFX_focus_generic_industry_3
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_arms_impor_and_export_trade_ii
-		}
-		x = 27
-		y = 3
-
-	}
-	focus = {
-		id = GWM_arms_impor_and_export_trade_iv
-		icon = GFX_focus_generic_tank_production
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_arms_impor_and_export_trade_iii
-		}
-		x = 27
-		y = 4
-
-	}
-	focus = {
-		id = GWM_secret_development_of_armaments
-		icon = GFX_focus_NZL_bob_semple_tank
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_german_military
-		}
-		x = 29
-		y = 1
-
-	}
-	focus = {
-		id = GWM_security_exercise
-		icon = GFX_goal_continuous_research
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_secret_development_of_armaments
-		}
-		x = 29
-		y = 2
-
-	}
-	focus = {
-		id = GWM_mefo
-		icon = GFX_focus_prc_infiltration
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_diplomatic
-		}
-		x = 31
-		y = 1
-
-	}
-	focus = {
-		id = GWM_revolt_against_versailles
-		icon = GFX_focus_renounce_the_treaty_of_trianon
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_diplomatic
-		}
-		mutually_exclusive = {
-			focus = GWM_obey_versailles
-		}
-		x = 33
-		y = 1
-
-	}
-	focus = {
-		id = GWM_stormtroopers
-		icon = GFX_focus_generic_license_production
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_secret_development_of_armaments
-		}
-		prerequisite = {
-			focus = GWM_revolt_against_versailles
-		}
-		x = 31
-		y = 2
-
-	}
-	focus = {
-		id = GWM_weakening_and_expanding_restrictions
-		icon = GFX_focus_ger_reichskommisariats
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_security_exercise
-		}
-		prerequisite = {
-			focus = GWM_stormtroopers
-		}
-		x = 30
-		y = 3
-
-	}
-	focus = {
-		id = GWM_stop_reimbursement
-		icon = GFX_focus_rom_parties_end
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_revolt_against_versailles
-		}
-		x = 33
-		y = 2
-
-	}
-	focus = {
-		id = GWM_obey_versailles
-		icon = GFX_focus_generic_little_entente
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_diplomatic
-		}
-		mutually_exclusive = {
-			focus = GWM_revolt_against_versailles
-		}
-		x = 35
-		y = 1
-
-	}
-	focus = {
-		id = GWM_better_compensation_plan
-		icon = GFX_focus_jap_strike_south
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_obey_versailles
-		}
-		x = 35
-		y = 2
-
-	}
-	focus = {
-		id = GWM_central_european_union
-		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_better_compensation_plan
-			focus = GWM_stop_reimbursement
-		}
-		mutually_exclusive = {
-			focus = GWM_alliance_with_the_united_kingdom
-		}
-		x = 33
-		y = 3
-
-	}
-	focus = {
-		id = GWM_alliance_with_the_united_kingdom
-		icon = GFX_goal_tfv_saf_support_german_coup
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_better_compensation_plan
-		}
-		mutually_exclusive = {
-			focus = GWM_central_european_union
-		}
-		x = 35
-		y = 3
-
-	}
-	focus = {
-		id = GWM_ideological_influence
-		icon = GFX_goal_continuous_suppression
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_diplomatic
-		}
-		x = 37
-		y = 1
-
-	}
-	focus = {
-		id = GWM_austria
-		icon = GFX_goal_generic_occupy_start_war
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_ideological_influence
-		}
-		x = 37
-		y = 2
-
-	}
-	focus = {
-		id = GWM_immigration_circulation
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_better_compensation_plan
-		}
-		x = 37
-		y = 3
-
-	}
-	focus = {
-		id = GWM_switzerland
-		icon = GFX_goal_generic_occupy_start_war
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_ideological_influence
-		}
-		x = 39
-		y = 2
-
-	}
-	focus = {
-		id = GWM_the_end
-		icon = GFX_goal_generic_neutrality_focus
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_focus_democratic
-			focus = GWM_behold
-		}
-		x = 22
-		y = 6
-
-	}
-	focus = {
-		id = GWM_lowland
-		icon = GFX_goal_generic_occupy_start_war
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_ideological_influence
-		}
-		x = 41
-		y = 2
-
-	}
-	focus = {
-		id = GWM_expand_ruhr_industry_v
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_expand_ruhr_industry_iv
-		}
-		x = 9
-		y = 5
-			ai_will_do = {
-					factor = 7
-				}
-			completion_reward = {
-					if = {
-							limit = {
-									not = {
-											has_completed_focus = GWM_begin_execution
-											has_completed_focus = GWM_reconstruction_of_industry
-										}
-								}
-							custom_effect_tooltip = GWM_focus_desc_text_18
-						}
-					if = {
-							limit = {
-									or = {
-											has_completed_focus = GWM_begin_execution
-											has_completed_focus = GWM_reconstruction_of_industry
-										}
-								}
-							custom_effect_tooltip = GWM_focus_desc_text_38
-							hidden_effect = {
-									58 = {
-											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = industrial_complex
-													level = 1
-													instant_build = yes
-												}
-										}
-									61 = {
-											add_extra_state_shared_building_slots = 1
-											add_building_construction = {
-													type = industrial_complex
-													level = 1
-													instant_build = yes
-												}
-										}
-								}
-						}
-				}
-
-	}
-	focus = {
-		id = GWM_industry_research
-		icon = GFX_focus_research
-		cost = 10.00
-		prerequisite = {
-			focus = GWM_expand_ruhr_industry_v
-		}
-		x = 9
-		y = 6
-			ai_will_do = {
-					factor = 7
-				}
-			completion_reward = {
-					if = {
-							limit = {
-									not = {
-											has_completed_focus = GWM_expand_ruhr_industry_v
-											has_completed_focus = GWM_begin_execution
-											has_completed_focus = GWM_reconstruction_of_industry
-										}
-								}
-							custom_effect_tooltip = GWM_focus_desc_text_18
-						}
-					if = {
-							limit = {
-									not = {
-											has_completed_focus = GWM_expand_ruhr_industry_v
-										}
-									or = {
-											has_completed_focus = GWM_begin_execution
-											has_completed_focus = GWM_reconstruction_of_industry
-										}
-								}
-							custom_effect_tooltip = GWM_focus_desc_text_39
-							hidden_effect = {
-									add_research_slot = 1
-								}
-						}
-					if = {
-							limit = {
-									not = {
-											has_completed_focus = GWM_begin_execution
-										}
-									has_completed_focus = GWM_expand_ruhr_industry_v
-								}
-							custom_effect_tooltip = GWM_focus_desc_text_40
-							hidden_effect = {
-									add_research_slot = 1
-									country_event = {
-											id = germany.1018
-											days = 30
 										}
 								}
 						}

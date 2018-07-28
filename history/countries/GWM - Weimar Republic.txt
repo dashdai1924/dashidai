@@ -185,11 +185,43 @@ create_field_marshal = {
 }
 
 create_field_marshal = {
-	name = "京特·冯·克鲁格"
+	name = "云特·冯·克卢格"
 	picture = "Portrait_Germany_Gunther_von_Kluge.dds"
 	traits = {  offensive_doctrine }
 	skill = 3
 	id = 2
+}
+
+create_corps_commander = {
+	name = "弗里德里希·保卢斯"
+	picture = "Portrait_Germany_Friedrich_Paulus.dds"
+	traits = {  }
+	skill = 1
+	id = 3
+}
+
+create_corps_commander = {
+	name = "欧文·隆美尔"
+	picture = "Portrait_Germany_Erwin_Rommel.dds"
+	traits = { trickster panzer_leader }
+	skill = 4
+	id = 4
+}
+
+create_corps_commander = {
+	name = "埃里希·冯·曼施泰因"
+	picture = "Portrait_Germany_Erich_von_Manstein.dds"
+	traits = { trickster panzer_leader fortress_buster }
+	skill = 4
+	id = 5
+}
+
+create_corps_commander = {
+	name = "海因茨·古德里安"
+	picture = "Portrait_Germany_Heinz_Guderian.dds"
+	traits = { trickster  panzer_leader }
+	skill = 4
+	id = 6
 }
 
 create_corps_commander = {
@@ -198,6 +230,15 @@ create_corps_commander = {
 	traits = {  }
 	skill = 1
 	id = 7
+}
+
+create_corps_commander = {
+	name = "艾瓦尔德·冯·克莱斯特"
+	desc = ""
+	picture = "Portrait_Germany_Ewald_von_Kleist.dds"
+	traits = {  }
+	skill = 1
+	id = 8
 }
 
 create_corps_commander = {

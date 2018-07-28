@@ -69,348 +69,637 @@ ideas = {
 	ShengyuZhengCe = {
 		law = yes
 		Beifa_renkou_1 = {
-			level = 4
 			picture = dashidai_v2_make_life_1
 			modifier = {
-				MONTHLY_POPULATION = 0.01
-				conversion_cost_mil_to_civ_factor = -0.15
-				trade_opinion_factor = 0.05
+				consumer_goods_factor = 0.01
 			}
-			removal_cost = -1
+			removal_cost = 0
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
 			}
 			ai_will_do = {
-				base = 1
+				factor = 1
 			}
 		}
 		Beifa_renkou_2 = {
-			level = 8
 			picture = dashidai_v2_make_life_2
 			modifier = {
 				MONTHLY_POPULATION = -0.8
 				consumer_goods_factor = -0.15
 				stability_factor = -0.3
 			}
-			cost = 100
-			removal_cost = -1
+			cost = 300
+			removal_cost = 0
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
-					has_manpower < 100000
 				}
-				or = {
-					and = {
-						has_government = democratic
-						surrender_progress > 0.4
-						has_defensive_war = yes
-					}
-					and = {
-						has_government = communism
-						or = {
-							and = {
-								has_defensive_war = yes
-								has_civil_war = no
-								communism > 0.75
-							}
-							surrender_progress > 0.6
-						}
-					}
-					and = {
-						has_government = fascism
-						or = {
-							and = {
-								has_war = yes
-								has_civil_war = no
-								fascism > 0.6
-							}
-							and = {
-								has_war = yes
-								surrender_progress > 0.4
-							}
-						}
-					}
-				}
-				has_war_support > 0.6
 			}
 			ai_will_do = {
-				base = 0
-				modifier = {
-					add = 1
-					has_war_support > 0.8
-				}
-				modifier = {
-					add = 10
-					has_manpower > 500000
-				}
-				modifier = {
-					factor = 2
-					surrender_progress > 0.2
-				}
+				factor = 0
 			}
 		}
 		Beifa_renkou_3 = {
-			level = 7
 			picture = dashidai_v2_make_life_3
 			modifier = {
 				MONTHLY_POPULATION = -0.7
 				consumer_goods_factor = -0.1
 				stability_factor = -0.2
 			}
-			cost = 100
-			removal_cost = -1
+			cost = 175
+			removal_cost = 0
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
-					has_manpower < 100000
 				}
-				or = {
-					and = {
-						has_government = democratic
-						surrender_progress > 0.3
-						has_defensive_war = yes
-					}
-					and = {
-						has_government = communism
-						or = {
-							and = {
-								has_defensive_war = yes
-								has_civil_war = no
-								communism > 0.6
-							}
-							and = {
-								has_war = yes
-								surrender_progress > 0.2
-							}
-						}
-					}
-					and = {
-						has_government = fascism
-						or = {
-							and = {
-								has_war = yes
-								has_civil_war = no
-								fascism > 0.5
-							}
-							and = {
-								has_war = yes
-								surrender_progress > 0.2
-							}
-						}
-					}
-				}
-				has_war_support > 0.6
 			}
 			ai_will_do = {
 				factor = 0
-				modifier = {
-					add = 1
-					has_war_support > 0.7
-				}
-				modifier = {
-					add = 5
-					has_manpower > 400000
-				}
-				modifier = {
-					factor = 2
-					surrender_progress > 0.2
-				}
 			}
 		}
 		Beifa_renkou_4 = {
-			level = 6
 			picture = dashidai_v2_make_life_4
 			modifier = {
-				MONTHLY_POPULATION = -0.4
+				MONTHLY_POPULATION = -0.5
 				consumer_goods_factor = -0.05
 				stability_factor = -0.1
 			}
-			cost = 50
-			removal_cost = -1
+			cost = 150
+			removal_cost = 0
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
-					has_manpower < 100000
 				}
-				or = {
-					and = {
-						has_government = democratic
-						has_defensive_war = yes
-					}
-					and = {
-						has_government = communism
-						or = {
-							and = {
-								has_defensive_war = yes
-								has_civil_war = no
-								communism > 0.5
-							}
-							has_war = yes
-						}
-					}
-					and = {
-						has_government = fascism
-						has_war = yes
-						has_civil_war = no
-						fascism > 0.4
-					}
-				}
-				has_war_support > 0.5
 			}
 			ai_will_do = {
 				factor = 0
-				modifier = {
-					add = 1
-					has_war_support > 0.6
-				}
-				modifier = {
-					add = 1
-					has_manpower > 300000
-				}
-				modifier = {
-					factor = 2
-					surrender_progress > 0.1
-				}
 			}
 		}
 		Beifa_renkou_5 = {
-			level = 6
 			picture = dashidai_v2_make_life_5
 			modifier = {
-				MONTHLY_POPULATION = -0.2
+				MONTHLY_POPULATION = -0.25
 				consumer_goods_factor = -0.025
 				stability_factor = -0.05
 			}
-			cost = 50
-			removal_cost = -1
+			cost = 125
+			removal_cost = 0
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
-					has_manpower < 100000
 				}
-				or = {
-					and = {
-						has_government = democratic
-						has_stability > 0.6
-					}
-					and = {
-						has_government = communism
-						has_civil_war = no
-						has_stability > 0.3
-					}
-					and = {
-						has_government = fascism
-						has_civil_war = no
-						has_stability > 0.3
-					}
-				}
-				has_war_support > 0.5
 			}
 			ai_will_do = {
 				factor = 0
-				modifier = {
-					add = 1
-					has_war_support > 0.5
-				}
-				modifier = {
-					factor = 2
-					has_manpower > 200000
-				}
 			}
 		}
 		Beifa_renkou_6 = {
-			level = 3
 			picture = dashidai_v2_make_life_6
 			modifier = {
-				MONTHLY_POPULATION = 0.2
+				MONTHLY_POPULATION = 0.25
 				consumer_goods_factor = 0.025
 				stability_factor = -0.05
 			}
-			cost = 50
+			cost = 100
 			removal_cost = 0
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				or = {
-					has_manpower < 1000000
-					not = { has_government = democratic }
-				}
-				has_stability > 0.2
 			}
 			ai_will_do = {
-				base = 1
-				modifier = {
-					factor = 2
-					has_manpower < 5000000
-				}
-				modifier = {
-					factor = 2
-					has_war = yes
-				}
+				factor = 0
 			}
 		}
 		Beifa_renkou_7 = {
-			level = 2
 			picture = dashidai_v2_make_life_7
 			modifier = {
-				MONTHLY_POPULATION = 0.4
+				MONTHLY_POPULATION = 0.50
 				consumer_goods_factor = 0.05
 				stability_factor = -0.10
 			}
-			cost = 50
+			cost = 125
 			removal_cost = 0
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				has_manpower < 500000
-				has_stability > 0.25
 			}
 			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 3
-					has_manpower < 1000000
-				}
+				factor = 0
 			}
 		}
 		Beifa_renkou_8 = {
-			level = 1
 			picture = dashidai_v2_make_life_8
 			modifier = {
-				MONTHLY_POPULATION = 0.6
+				MONTHLY_POPULATION = 0.75
 				consumer_goods_factor = 0.075
 				stability_factor = -0.15
 			}
-			cost = 50
+			cost = 150
 			removal_cost = 0
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				has_manpower < 200000
-				has_stability > 0.3
 			}
 			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 4
-					has_manpower < 500000
-				}
+				factor = 0
 			}
 		}
 		Beifa_renkou_9 = {
 			picture = anti_soviet_pact
 			cost = 0
-			removal_cost = -1
+			removal_cost = -20
+			removal_cost = -20
 			available = {
 				has_idea = CHI_gaozizhidu_wenti
 			}
 			ai_will_do = {
 				factor = 0
+			}
+		}
+	}
+	#建国
+	ChengLiJueYi = {
+		Beifa_chengli_1 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立广州国民政府
+				}
+				tag = CHI
+				owns_state = 591
+				owns_state = 760
+				owns_state = 759
+				owns_state = 592
+				owns_state = 757
+				owns_state = 758
+				owns_state = 593
+				owns_state = 855
+				owns_state = 783
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				news_event = {
+					id = chi.111
+				}
+				set_cosmetic_tag = CHJ
+				set_country_flag = 已经成立广州国民政府
+			}
+		}
+		Beifa_chengli_2 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立南京国民政府
+				}
+				tag = CHI
+				has_completed_focus = CHI_ninghan_confluence
+				owns_state = 613
+				has_country_flag = 已经成立广州国民政府
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				set_cosmetic_tag = CHK
+				set_country_flag = 已经成立南京国民政府
+				set_capital = 613
+			}
+		}
+		Beifa_chengli_3 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立重庆国民政府
+				}
+				tag = CHI
+				has_war = yes
+				not = {
+					controls_state = 613
+				}
+				has_country_flag = 已经成立南京国民政府
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				set_cosmetic_tag = CHZ
+				set_country_flag = 已经成立重庆国民政府
+				set_capital = 605
+			}
+		}
+		Beifa_chengli_4 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立中华苏维埃共和国
+				}
+				tag = PRC
+				owns_state = 768
+				has_completed_focus = PRC_jinggangshan_club
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				set_cosmetic_tag = PRD
+				set_country_flag = 已经成立中华苏维埃共和国
+				set_capital = 768
+				country_event = {
+					id = beifa.154
+				}
+			}
+		}
+		Beifa_chengli_5 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立大西北联盟
+				}
+				has_country_flag = 邀请张学良
+				tag = PRC
+				owns_state = 752
+				owns_state = 765
+				owns_state = 622
+				owns_state = 761
+				owns_state = 615
+				owns_state = 616
+				owns_state = 283
+				owns_state = 604
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				set_cosmetic_tag = PRE
+				set_country_flag = 已经成立大西北联盟
+			}
+		}
+		Beifa_chengli_6 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立中华人民共和国
+					has_country_flag = 已经成立中华民国
+				}
+				has_government = communism
+				owns_state = 608
+				owns_state = 715
+				owns_state = 613
+				owns_state = 605
+				owns_state = 756
+				owns_state = 620
+				owns_state = 622
+				owns_state = 612
+				owns_state = 753
+				owns_state = 750
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				add_research_slot = 1
+				set_stability = 0.1
+				add_political_power = 300
+				set_cosmetic_tag = PRF
+				set_country_flag = 已经成立中华人民共和国
+			}
+		}
+		Beifa_chengli_7 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立中华民国
+					has_country_flag = 已经成立中华人民共和国
+				}
+				owns_state = 608
+				owns_state = 715
+				owns_state = 613
+				owns_state = 605
+				owns_state = 756
+				owns_state = 620
+				owns_state = 622
+				owns_state = 612
+				owns_state = 753
+				owns_state = 750
+				owns_state = 592
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				add_research_slot = 1
+				set_stability = 0.1
+				add_political_power = 300
+				set_cosmetic_tag = CHH
+				set_country_flag = 已经成立中华民国
+			}
+		}
+		Beifa_chengli_8 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立蒙古帝国
+				}
+				tag = MON
+				owns_state = 621
+				owns_state = 612
+				owns_state = 889
+				owns_state = 329
+				owns_state = 566
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				add_research_slot = 1
+				set_stability = 0.1
+				add_political_power = 300
+				set_cosmetic_tag = MOK
+				set_country_flag = 已经成立蒙古帝国
+			}
+		}
+		Beifa_chengli_9 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立大清帝国
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				add_research_slot = 1
+				set_stability = 0.1
+				add_political_power = 300
+				set_cosmetic_tag = QNK
+				set_country_flag = 已经成立大清帝国
+			}
+		}
+		Beifa_chengli_10 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立中华民国（台湾）
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			on_add = {
+				set_capital = 854
+				add_research_slot = 1
+				set_stability = 0.1
+				add_political_power = 300
+				set_cosmetic_tag = CTW
+				set_country_flag = 已经成立中华民国（台湾）
+			}
+		}
+		Beifa_chengli_11 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立满洲国
+				}
+				controls_state = 887
+				tag = JAP
+			}
+			on_add = {
+				set_country_flag = 已经成立满洲国
+				MAN = {
+					transfer_state = 753
+					add_state_core = 753
+					transfer_state = 889
+					add_state_core = 889
+					transfer_state = 879
+					add_state_core = 879
+					transfer_state = 754
+					add_state_core = 754
+					transfer_state = 880
+					add_state_core = 880
+					transfer_state = 714
+					add_state_core = 714
+					transfer_state = 885
+					add_state_core = 885
+					transfer_state = 878
+					add_state_core = 878
+					transfer_state = 877
+					add_state_core = 877
+					transfer_state = 717
+					add_state_core = 717
+					transfer_state = 888
+					add_state_core = 888
+					transfer_state = 887
+					add_state_core = 887
+					transfer_state = 874
+					add_state_core = 874
+					transfer_state = 886
+					add_state_core = 886
+					transfer_state = 715
+					add_state_core = 715
+					transfer_state = 875
+					add_state_core = 875
+					transfer_state = 876
+					add_state_core = 876
+					transfer_state = 328
+					add_state_core = 328
+					transfer_state = 884
+					add_state_core = 884
+					transfer_state = 882
+					add_state_core = 882
+					transfer_state = 883
+					add_state_core = 883
+					transfer_state = 881
+					add_state_core = 881
+					transfer_state = 716
+					add_state_core = 716
+					transfer_state = 750
+					add_state_core = 750
+				}
+				news_event = {
+					id = beifa.143
+				}
+				puppet = MAN
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_12 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立满洲帝国
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_13 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立冀东防共自治委员会
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_14 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立冀东防共自治政府
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_15 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立中华民国临时政府
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_16 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立华北政务委员会
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_17 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立蒙古军政府
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_18 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立蒙古联合自治政府
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_19 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立中华民国维新政府
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		Beifa_chengli_20 = {
+			picture = generic_pp_unity_bonus
+			cost = 70
+			removal_cost = 0
+			cancel_if_invalid = no
+			available = {
+				not = {
+					has_country_flag = 已经成立南京国民政府（汪精卫）
+				}
+				has_country_flag = 已完成设计
+			}
+			ai_will_do = {
+				factor = 1
 			}
 		}
 	}
@@ -420,7 +709,7 @@ ideas = {
 			picture = great_depression
 			modifier = {
 				stability_factor = -0.025
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.0125
 				conscription_factor = -0.0125
 				industrial_capacity_factory = -0.025
 				research_time_factor = 0.025
@@ -435,21 +724,20 @@ ideas = {
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
+					has_government = communism
+					has_government = fascism
 				}
-				has_government = neutrality
-				communism < 0.3
-				democratic < 0.3
-				fascism < 0.3
+				or = {
+					has_civil_war = yes
+					has_defensive_war = yes
+				}
 				is_historical_focus_on = no
-				threat > 0.8
+				threat > 0.95
 				num_of_factories < 20
+				is_ai = no
 			}
 			ai_will_do = {
 				factor = 0
-				modifier = {
-					add = 1
-					is_historical_focus_on = no
-				}
 			}
 		}
 		Beifa_zuidigongzi_2 = {
@@ -471,23 +759,20 @@ ideas = {
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
+					has_government = communism
+					has_government = fascism
 				}
-				has_government = neutrality
-				threat > 0.5
+				threat > 0.9
 				num_of_factories < 20
 			}
 			ai_will_do = {
 				factor = 0
-				modifier = {
-					add = 1
-					is_historical_focus_on = no
-				}
 			}
 		}
 		Beifa_zuidigongzi_3 = {
 			picture = generic_production_bonus
 			modifier = {
-				political_power_factor = 0.01
+				consumer_goods_factor = 0.0125
 			}
 			available = {
 				not = {
@@ -539,6 +824,7 @@ ideas = {
 		Beifa_zuidigongzi_6 = {
 			picture = anti_soviet_pact
 			cost = 0
+			removal_cost = -20
 			available = {
 				has_idea = CHI_gaozizhidu_wenti
 			}
@@ -1158,13 +1444,11 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.01
 				research_time_factor = -0.01
-				civilian_factory_use = 5
 			}
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				industrial_complex > 15
 			}
 			ai_will_do = {
 				factor = 1
@@ -1175,13 +1459,11 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.02
 				research_time_factor = -0.02
-				civilian_factory_use = 15
 			}
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				industrial_complex > 30
 			}
 			ai_will_do = {
 				factor = 1
@@ -1192,13 +1474,11 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.03
 				research_time_factor = -0.03
-				civilian_factory_use = 25
 			}
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				industrial_complex > 40
 			}
 			ai_will_do = {
 				factor = 1
@@ -1209,13 +1489,11 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.04
 				research_time_factor = -0.04
-				civilian_factory_use = 40
 			}
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				industrial_complex > 60
 			}
 			ai_will_do = {
 				factor = 1
@@ -1252,7 +1530,7 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-				factor = 3
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_3 = {
@@ -1266,7 +1544,7 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-				factor = 4
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_4 = {
@@ -1275,7 +1553,6 @@ ideas = {
 				consumer_goods_factor = 0.01
 				research_time_factor = -0.05
 				MONTHLY_POPULATION = -0.01
-				civilian_factory_use = 15
 			}
 			cost = 50
 			available = {
@@ -1285,7 +1562,7 @@ ideas = {
 				num_of_factories > 50
 			}
 			ai_will_do = {
-				factor = 5
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_5 = {
@@ -1294,7 +1571,6 @@ ideas = {
 				consumer_goods_factor = 0.02
 				research_time_factor = -0.06
 				MONTHLY_POPULATION = -0.03
-				civilian_factory_use = 30
 			}
 			cost = 100
 			available = {
@@ -1304,7 +1580,7 @@ ideas = {
 				num_of_factories > 70
 			}
 			ai_will_do = {
-				factor = 10
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_6 = {
@@ -1313,7 +1589,6 @@ ideas = {
 				consumer_goods_factor = 0.05
 				research_time_factor = -0.1
 				MONTHLY_POPULATION = -0.05
-				civilian_factory_use = 45
 			}
 			cost = 150
 			available = {
@@ -1323,7 +1598,7 @@ ideas = {
 				num_of_factories > 200
 			}
 			ai_will_do = {
-				factor = 20
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_7 = {
@@ -1332,7 +1607,6 @@ ideas = {
 				consumer_goods_factor = 0.15
 				research_time_factor = -0.15
 				MONTHLY_POPULATION = -0.07
-				civilian_factory_use = 60
 			}
 			available = {
 				not = {
@@ -1341,7 +1615,7 @@ ideas = {
 				num_of_factories > 250
 			}
 			ai_will_do = {
-				factor = 40
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_8 = {
@@ -1350,7 +1624,6 @@ ideas = {
 				consumer_goods_factor = 0.25
 				research_time_factor = -0.2
 				MONTHLY_POPULATION = -0.1
-				civilian_factory_use = 120
 			}
 			cost = 250
 			available = {
@@ -1360,7 +1633,7 @@ ideas = {
 				num_of_factories > 300
 			}
 			ai_will_do = {
-				factor = 60
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_9 = {
@@ -1369,7 +1642,6 @@ ideas = {
 				consumer_goods_factor = 0.4
 				research_time_factor = -0.4
 				MONTHLY_POPULATION = -0.2
-				civilian_factory_use = 220
 			}
 			cost = 300
 			available = {
@@ -1379,7 +1651,7 @@ ideas = {
 				num_of_factories > 600
 			}
 			ai_will_do = {
-				factor = 80
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_10 = {
@@ -1388,7 +1660,6 @@ ideas = {
 				consumer_goods_factor = 0.5
 				research_time_factor = -0.7
 				MONTHLY_POPULATION = -0.4
-				civilian_factory_use = 542
 			}
 			cost = 700
 			available = {
@@ -1398,7 +1669,7 @@ ideas = {
 				num_of_factories > 1000
 			}
 			ai_will_do = {
-				factor = 100
+				factor = 1
 			}
 		}
 		Beifa_shoujiaoyuquan_11 = {
@@ -1429,10 +1700,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 3
-					has_government = fascism
-				}
 			}
 		}
 		Beifa_zhengdang_2 = {
@@ -1492,7 +1759,7 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-				factor = 2
+				factor = 1
 			}
 		}
 		Beifa_zhengdang_6 = {
@@ -1515,8 +1782,7 @@ ideas = {
 				conscription_factor = 0.01
 				supply_consumption_factor = 0.01
 				MONTHLY_POPULATION = -0.1
-				war_support_factor = 0.08
-				mobilization_speed = 0.15
+				conscription = 0.02
 			}
 			available = {
 				not = {
@@ -1531,8 +1797,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			modifier = {
 				MONTHLY_POPULATION = -0.05
-				war_support_factor = 0.05
-				mobilization_speed = 0.1
+				conscription = 0.015
 			}
 			available = {
 				not = {
@@ -1547,7 +1812,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			modifier = {
 				MONTHLY_POPULATION = -0.025
-				mobilization_speed = 0.05
+				conscription = 0.01
 			}
 			available = {
 				not = {
@@ -1562,8 +1827,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			modifier = {
 				MONTHLY_POPULATION = -0.0125
-				stability_factor = 0.01
-				mobilization_speed = 0.04
+				conscription = 0.005
 			}
 			available = {
 				not = {
@@ -1577,9 +1841,7 @@ ideas = {
 		Beifa_zhengbingzhi_5 = {
 			picture = generic_infantry_bonus
 			modifier = {
-				conscription_factor = -0.01
-				stability_factor = 0.02
-				mobilization_speed = 0.01
+				stability_factor = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -1591,58 +1853,25 @@ ideas = {
 		Beifa_yiminzhengce_1 = {
 			picture = FRA_fortification_focus
 			modifier = {
-				consumer_goods_factor = 0.05
-				MONTHLY_POPULATION = -0.2
-				research_time_factor = 0.1
-				production_speed_buildings_factor = -0.1
-				industrial_capacity_factory = -0.1
-				drift_defence_factor = 0.3
-				stability_factor = 0.1
-				war_support_factor = 0.1
-				trade_opinion_factor = -0.4
-				army_core_defence_factor = 0.05
-				army_core_attack_factor = 0.05
+				consumer_goods_factor = -0.05
+				MONTHLY_POPULATION = -0.1
+				drift_defence_factor = 0.1
 			}
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
-					has_government = democratic
-				}
-				has_war_support > 0.6
-				has_capitulated = no
-				or = {
-					any_claim = yes
-					has_war = yes
-					surrender_progress > 0.2
 				}
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					add = 2
-					has_government = neutrality
-				}
-				modifier = {
-					add = -5
-					is_major = yes
-					has_government = neutrality
-				}
-				modifier = {
-					factor = 2
-					has_war_support > 0.6
-				}
-				modifier = {
-					factor = 2
-					surrender_progress > 0.2
-				}
 			}
 		}
 		Beifa_yiminzhengce_2 = {
 			picture = generic_wall_line
 			modifier = {
-				stability_factor = 0.01
-				industrial_capacity_factory = 0.05
-				production_speed_buildings_factor = 0.05
+				stability_factor = -0.01
+				MONTHLY_POPULATION = 0.1
+				drift_defence_factor = -0.1
 			}
 			available = {
 				not = {
@@ -1650,48 +1879,28 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-				factor = 7.5
-				modifier = {
-					factor = 1.5
-					has_war = yes
-				}
+				factor = 1
 			}
 		}
 		Beifa_yiminzhengce_3 = {
 			picture = generic_air_bonus
 			modifier = {
-				trade_opinion_factor = 0.05
-				stability_factor = -0.01
-				consumer_goods_factor = 0.02
-				MONTHLY_POPULATION = 0.2
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+				MONTHLY_POPULATION = 0.5
 				drift_defence_factor = -0.1
 			}
 			ai_will_do = {
-				factor = 5
-				modifier = {
-					factor = 2
-					has_war = no
-					or = {
-						has_government = democratic
-						has_government = communism
-					}
-				}
-				modifier = {
-					factor = 1.5
-					has_manpower < 500000
-				}
+				factor = 1
 			}
 		}
 		Beifa_yiminzhengce_4 = {
 			picture = generic_disjointed_gov
 			modifier = {
-				industrial_capacity_factory = 0.05
-				research_time_factor = -0.05
-				trade_opinion_factor = 0.05
-				stability_factor = -0.02
-				consumer_goods_factor = 0.05
-				MONTHLY_POPULATION = 0.4
-				drift_defence_factor = -0.1
+				stability_factor = -0.07
+				consumer_goods_factor = 0.07
+				MONTHLY_POPULATION = 0.7
+				drift_defence_factor = -0.3
 			}
 			available = {
 				not = {
@@ -1699,15 +1908,7 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-				factor = 5
-				modifier = {
-					factor = 2
-					has_war = no
-				}
-				modifier = {
-					factor = 1.5
-					has_manpower < 200000
-				}
+				factor = 1
 			}
 		}
 	}
@@ -1720,14 +1921,12 @@ ideas = {
 				consumer_goods_factor = -0.03
 				industrial_capacity_factory = -0.05
 				research_time_factor = 0.02
+				production_speed_buildings_factor = -0.10
+				local_resources_factor = -0.05
 			}
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
-				}
-				or = {
-					not = { has_government = communism }
-					industrial_complex < 15
 				}
 			}
 			ai_will_do = {
@@ -1739,9 +1938,6 @@ ideas = {
 			modifier = {
 				stability_factor = -0.01
 				consumer_goods_factor = -0.01
-				drift_defence_factor = -0.05
-				industrial_capacity_factory = 0.05
-				political_power_factor = 0.02
 			}
 			available = {
 				not = {
@@ -1750,40 +1946,27 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 4
-					has_government = communism
-				}
 			}
 		}
 		Beifa_gonghui_3 = {
 			picture = generic_communism_drift_bonus
 			modifier = {
-				stability_factor = -0.01
-				consumer_goods_factor = -0.01
+				stability_factor = 0.01
 				drift_defence_factor = 0.05
-				industrial_capacity_factory = -0.05
-				political_power_factor = 0.02
 			}
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
-					has_government = communism
 				}
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 4
-					has_government = democratic
-				}
 			}
 		}
 		Beifa_gonghui_4 = {
 			picture = FRA_national_mobilization_focus
 			modifier = {
-				industrial_capacity_factory = 0.05
-				production_speed_buildings_factor = 0.05
+				stability_factor = 0.02
 				consumer_goods_factor = 0.01
 				drift_defence_factor = -0.02
 			}
@@ -1794,24 +1977,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 5
-					or = {
-						and = {
-							has_government = democratic
-							all_owned_state = {
-								capital_scope = {
-									is_coastal = yes
-									is_on_continent = europe
-								}
-							}
-						}
-						and = {
-							has_government = communism
-							is_major = yes
-						}
-					}
-				}
 			}
 		}
 		Beifa_gonghui_5 = {
@@ -1822,7 +1987,7 @@ ideas = {
 				has_idea = CHI_gaozizhidu_wenti
 			}
 			ai_will_do = {
-				factor = 0
+				factor = 1
 			}
 		}
 	}
@@ -1831,79 +1996,24 @@ ideas = {
 		Beifa_shaoshuzuqun_1 = {
 			picture = generic_fascism_drift_bonus
 			modifier = {
-				stability_factor = 0.05
+				stability_factor = -0.05
+				consumer_goods_factor = -0.05
 				conscription_factor = -0.05
 				MONTHLY_POPULATION = -0.1
-				justify_war_goal_time = -0.2
-				trade_opinion_factor = -0.2
-				research_time_factor = 0.02
-				mobilization_speed = -0.05
-				improve_relations_maintain_cost_factor = 0.1
 			}
 			available = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				or = {
-					not = {
-						has_government = communism
-					}
-					industrial_complex < 15
-				}
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 2
-					is_major = yes
-					all_owned_state = {
-						capital_scope = {
-							is_on_continent = north_america
-						}
-					}
-					has_war = no
-					communism < 0.1
-					date < 1949.1.1
-					has_stability > 0.2
-					not = { has_government = communism }
-				}
-				modifier = {
-					factor = 20
-					or = {
-						and = {
-							is_major = yes
-							all_owned_state = {
-								capital_scope = {
-									is_on_continent = north_america
-								}
-							}
-							has_war = no
-							threat < 0.5
-							communism < 0.1
-							date < 1970.1.1
-							has_stability > 0.2
-							not = { has_government = communism }
-						}
-						all_owned_state = {
-							capital_scope = {
-								is_on_continent = africa
-							}
-						}
-						has_government = fascism
-					}
-				}
-				modifier = {
-					factor = 2
-					has_government = neutrality
-					has_stability < 0.5
-				}
 			}
 		}
 		Beifa_shaoshuzuqun_2 = {
 			picture = FRA_matignon_agreements
 			modifier = {
-				mobilization_speed = 0.01
-				improve_relations_maintain_cost_factor = 0.05
+				consumer_goods_factor = 0.01
 			}
 			available = {
 				not = {
@@ -1912,32 +2022,15 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 1.5
-					has_government = neutrality
-				}
-				modifier = {
-					factor = 3
-					or = {
-						and = {
-							has_government = democratic
-							has_war = no
-						}
-						has_government = communism
-					}
-				}
 			}
 		}
 		Beifa_shaoshuzuqun_3 = {
 			picture = FRA_fortification_focus
 			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.025
 				conscription_factor = 0.025
 				MONTHLY_POPULATION = 0.05
-				mobilization_speed = 0.01
-				improve_relations_maintain_cost_factor = -0.05
-				send_volunteer_size = 2
-				enemy_justify_war_goal_time = 0.1
-				justify_war_goal_time = -0.05
 			}
 			available = {
 				not = {
@@ -1946,24 +2039,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 20
-					has_government = democratic
-					tag = GER
-				}
-				modifier = {
-					factor = 5
-					has_government = communism
-				}
-				modifier = {
-					factor = 2
-					has_government = communism
-					num_of_factories > 20
-				}
-				modifier = {
-					factor = 2
-					is_major = yes
-				}
 			}
 		}
 		Beifa_shaoshuzuqun_4 = {
@@ -1984,20 +2059,10 @@ ideas = {
 		Beifa_xuanjuquan_1 = {
 			picture = FRA_scw_intervention_nationalists_focus
 			modifier = {
-				political_power_gain = 0.1
+				stability_factor = -0.01
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 4
-					or = {
-						has_government = fascism
-						has_government = communism
-					}
-				}
-			}
-			available = {
-				not = { has_government = democratic }
 			}
 		}
 		Beifa_xuanjuquan_2 = {
@@ -2010,11 +2075,7 @@ ideas = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				or = {
-					has_government = democratic
-					has_government = neutrality
-					has_government = fascism
-				}
+				has_government = democratic
 			}
 			ai_will_do = {
 				factor = 1
@@ -2030,22 +2091,10 @@ ideas = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				or = {
-					has_government = democratic
-					has_government = neutrality
-					has_government = fascism
-				}
+				has_government = democratic
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 2
-					has_government = neutrality
-				}
-				modifier = {
-					factor = 2
-					has_government = fascism
-				}
 			}
 		}
 		Beifa_xuanjuquan_4 = {
@@ -2058,22 +2107,10 @@ ideas = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				or = {
-					has_government = democratic
-					has_government = neutrality
-					has_government = fascism
-				}
+				has_government = democratic
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 2
-					has_government = neutrality
-				}
-				modifier = {
-					factor = 2
-					has_government = fascism
-				}
 			}
 		}
 		Beifa_xuanjuquan_5 = {
@@ -2086,17 +2123,10 @@ ideas = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				or = {
-					has_government = democratic
-					has_government = neutrality
-				}
+				has_government = democratic
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 2
-					has_government = neutrality
-				}
 			}
 		}
 		Beifa_xuanjuquan_6 = {
@@ -2109,17 +2139,10 @@ ideas = {
 				not = {
 					has_idea = CHI_gaozizhidu_wenti
 				}
-				or = {
-					has_government = democratic
-					has_government = neutrality
-				}
+				has_government = democratic
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 3
-					has_government = democratic
-				}
 			}
 		}
 	}
@@ -2144,70 +2167,55 @@ ideas = {
 				political_power_factor = -0.2
 			}
 			cost = 500
+			removal_cost = 0
 			available = {
 				not = { has_idea = CHI_gaozizhidu_wenti }
 				or = {
-					and = {
-						or = {
-							not = {
-								tag = ENG
-								tag = IRE
-								tag = DEN
-								tag = BEL
-								tag = HOL
-								tag = LUX
-								tag = FRA
-								tag = POR
-								tag = ITA
-								tag = SWI
-								tag = AUS
-								tag = GER
-								tag = CZE
-								tag = POL
-								tag = NOR
-								tag = FIN
-								tag = EST
-								tag = LAT
-								tag = LIT
-								tag = HUN
-								tag = ROM
-								tag = YUG
-								tag = BUL
-								tag = ALB
-								tag = GRE
-								tag = SOV
-							}
-							ENG = { is_major = no }
-							USA = { is_major = no }
-						}
-						or = {
-							has_war_with = ENG
-							has_war_with = USA
-							has_war_with = GER
-							has_war_with = SOV
-							has_war_with = FRA
-							has_war_with = SPR
-							has_civil_war = yes
-						}
-					}
-					all_owned_state = {
-						capital_scope = {
-							is_on_continent = africa
-						}
-					}
+				not = {
+					tag = ENG
+					tag = IRE
+					tag = DEN
+					tag = BEL
+					tag = HOL
+					tag = LUX
+					tag = FRA
+					tag = POR
+					tag = ITA
+					tag = SWI
+					tag = AUS
+					tag = GER
+					tag = CZE
+					tag = POL
+					tag = NOR
+					tag = FIN
+					tag = EST
+					tag = LAT
+					tag = LIT
+					tag = HUN
+					tag = ROM
+					tag = YUG
+					tag = BUL
+					tag = ALB
+					tag = GRE
+					tag = SOV
 				}
+				ENG = { is_major = no }
+				USA = { is_major = no }
+				}
+				or = {
+					has_war_with = ENG
+					has_war_with = USA
+					has_war_with = GER
+					has_war_with = SOV
+					has_war_with = FRA
+					has_war_with = SPR
+					has_civil_war = yes
+				}
+				is_historical_focus_on = no
+				threat > 50
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 5
-					democratic > 0.2
-					neutrality > 0.5
-				}
-				modifier = {
-					factor = 2
-					industrial_complex < 2
-				}
 			}
 			on_add = {
 				country_event = {
@@ -2219,6 +2227,7 @@ ideas = {
 		Beifa_nulizhi_2 = {
 			picture = generic_morale_bonus
 			cost = 0
+			removal_cost = 0
 			ai_will_do = {
 				factor = 1
 			}
@@ -2317,11 +2326,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 3
-					has_government = fascism
-					fascism < 0.5
-				}
 			}
 		}
 		Beifa_chubanquan_2 = {
@@ -2331,15 +2335,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 2
-					has_government = fascism
-				}
-				modifier = {
-					factor = 3
-					has_government = communism
-					communism > 0.5
-				}
 			}
 		}
 		Beifa_chubanquan_3 = {
@@ -2350,7 +2345,7 @@ ideas = {
 				research_time_factor = -0.01
 			}
 			ai_will_do = {
-				factor = 2
+				factor = 1
 			}
 		}
 	}
@@ -2363,7 +2358,6 @@ ideas = {
 			}
 			available = {
 				not = { has_manpower < 1000 }
-				has_government = democratic
 			}
 			ai_will_do = {
 				factor = 1
@@ -2376,7 +2370,6 @@ ideas = {
 			}
 			available = {
 				not = { has_manpower < 1000 }
-				has_government = democratic
 			}
 			ai_will_do = {
 				factor = 1
@@ -2390,23 +2383,15 @@ ideas = {
 			}
 			available = {
 				not = { has_manpower < 1000 }
-				has_government = democratic
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 5
-					democratic < 0.7
-				}
 			}
 		}
 		Beifa_toupiaozhidu_4 = {
 			picture = generic_morale_bonus
 			available = {
-				or = {
-					has_manpower < 1000
-					not = { has_government = democratic }
-				}
+				has_manpower < 1000
 			}
 			ai_will_do = {
 				factor = 1

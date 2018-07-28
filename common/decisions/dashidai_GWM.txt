@@ -1,5 +1,5 @@
-GWM_defending_the_ideology_of_neighboring_countries_group = {
-	GWM_defending_the_ideology_of_neighboring_countries = {
+GWM_defending_the_ideology_of_neighboring_countries = {
+	defending_the_ideology_of_neighboring_countries = {
 		icon = infiltrate_state
 		days_re_enable = 70
 		cost = 50
@@ -11,7 +11,7 @@ GWM_defending_the_ideology_of_neighboring_countries_group = {
 			base = 1
 			modifier = {
 				factor = 2
-				any_neighbor_country = {
+				random_neighbor_country = {
 					or = {
 						fascism > 0.2
 					}
@@ -19,7 +19,7 @@ GWM_defending_the_ideology_of_neighboring_countries_group = {
 			}
 			modifier = {
 				factor = 2
-				any_neighbor_country = {
+				random_neighbor_country = {
 					or = {
 						fascism > 0.4
 					}
@@ -27,7 +27,7 @@ GWM_defending_the_ideology_of_neighboring_countries_group = {
 			}
 			modifier = {
 				factor = 2
-				any_neighbor_country = {
+				random_neighbor_country = {
 					or = {
 						fascism > 0.6
 					}
@@ -35,7 +35,7 @@ GWM_defending_the_ideology_of_neighboring_countries_group = {
 			}
 			modifier = {
 				factor = 2
-				any_neighbor_country = {
+				random_neighbor_country = {
 					or = {
 						fascism > 0.8
 					}
@@ -43,7 +43,7 @@ GWM_defending_the_ideology_of_neighboring_countries_group = {
 			}
 			modifier = {
 				factor = 2
-				any_neighbor_country = {
+				random_neighbor_country = {
 					has_government = fascism
 				}
 			}
@@ -59,63 +59,6 @@ GWM_defending_the_ideology_of_neighboring_countries_group = {
 		}
 		modifier = {
 			political_power_gain = -0.1
-		}
-	}
-}
-GWM_dawes_plan_group = {
-	GWM_dawes_plan = {
-		allowed = { always = no }
-
-		icon = ger_mefo_bills
-
-		available = {
-			has_government = democratic
-			has_political_power > 0
-		}
-		
-		cost = GWM_dawes_plan_counter?10
-		
-		selectable_mission = yes
-		days_mission_timeout = 280
-		is_good = no
-		fire_only_once = yes
-		
-		cancel_trigger = {
-			hidden_trigger = {
-				NOT = { GWM_has_dawes_plan = yes }
-			}
-		}
-		days_remove = GWM_extend_dawes_plan_days?0
-		remove_effect = {
-			GWM_dawes_plan_level_down = yes
-			if = {
-				limit = {
-					check_variable = { var = GWM_dawes_plan_counter value = 15 compare = less_than }
-				}
-				set_variable = { var = GWM_dawes_plan_counter value = 10 }
-			}
-			add_to_variable = { var = GWM_dawes_plan_counter value = 10 }
-
-			hidden_effect = {
-				activate_mission = GWM_dawes_plan
-			}
-		}
-		complete_effect = {
-			effect_tooltip = {
-				GWM_dawes_plan_level_down = yes
-			}
-			hidden_effect = {
-				set_variable = { GWM_extend_dawes_plan_days = days_mission_timeout@GWM_dawes_plan }
-			}
-		}
-		timeout_effect = {
-			GWM_dawes_plan_level_down = yes
-			hidden_effect = {
-				activate_mission = GWM_dawes_plan
-			}
-		}
-		ai_will_do = {
-			factor = 200
 		}
 	}
 }

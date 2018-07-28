@@ -1,9 +1,0 @@
-state={
-	id=898
-	name="STATE_898"
-	provinces={
-		13227 13228 13229 
-	}
-	manpower=0
-	state_category=white_desert
-}

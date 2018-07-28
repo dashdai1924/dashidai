@@ -94,23 +94,6 @@ country_event = {
 		name = gworld.4.a
 	}
 }
-news_event = {
-	id = gworld.5
-	title = gworld.5.t
-	desc = gworld.5.d
-	picture = news_event_023
-	
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1933.1.1
-	}
-	
-	option = {
-		name = gworld.5.a
-		remove_ideas = WEST_Great_Depression
-	}
-}
 country_event = {
 	id = gworld.6
 	title = gworld.6.t
@@ -173,85 +156,32 @@ country_event = {
 		name = gworld.7.a
 	}
 }
-#白里安-凯洛格非战公约
+news_event = {
+	id = gworld.5
+	title = gworld.5.t
+	desc = gworld.5.d
+	picture = news_event_023
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1933.1.1
+	}
+	
+	option = {
+		name = gworld.5.a
+		remove_ideas = WEST_Great_Depression
+	}
+}
 country_event = {
 	id = gworld.8
 	title = gworld.8.t
 	desc = gworld.8.d
-	picture = news_event_ita_fdgltl_tiaoyue
+	picture = news_event_023
+	
 	fire_only_once = yes
-	trigger = {
-		country_exists = FRA
-		country_exists = USA
-		FRA = { not = { has_government = fascism } has_war = no }
-		USA = { not = { has_government = fascism } has_war = no }
-		or = {
-			not = { has_government = fascism }
-			strength_ratio = { tag = ROOT ratio < 0 }
-			strength_ratio = { tag = ROOT ratio = 0 }
-		}
-		has_war = no
-		or = {
-			and = {
-				is_puppet = yes
-				OVERLORD = { is_major = yes }
-			}
-			is_major = yes
-			any_neighbor_country = {
-				is_major = yes
-			}
-			capital_scope = { is_on_continent = europe }
-			tag = AST
-			tag = BEL
-			tag = CAN
-			tag = CZE
-			tag = FRA
-			tag = GWM
-			tag = RAJ
-			tag = IRE
-			tag = ITA
-			tag = JAP
-			tag = NZL
-			tag = POL
-			tag = SAF
-			tag = ENG
-			tag = USA
-		}
-		date > 1928.8.27
-	}
+	
 	option = {
 		name = gworld.8.a
-		set_variable = { Kellogg-Briand_Pact = 1 }
-		ai_chance = {
-			base = 1
-		}
-	}
-	option = {
-		name = gworld.8.b
-		set_variable = { Kellogg-Briand_Pact = 0 }
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0.09
-				or = {
-					tag = AST
-					tag = BEL
-					tag = CAN
-					tag = CZE
-					tag = FRA
-					tag = GWM
-					tag = RAJ
-					tag = IRE
-					tag = ITA
-					tag = JAP
-					tag = NZL
-					tag = POL
-					tag = SAF
-					tag = ENG
-					tag = USA
-				}
-				is_historical_focus_on = yes
-			}
-		}
 	}
 }

@@ -1,41 +1,4 @@
 spriteTypes = {
-	#魏玛内阁
-	SpriteType = {
-		name = "GFX_idea_GWM_wilhelm_marx"
-		texturefile = "dashidaipicture/ideas/idea_wilhelm_marx.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_GWM_alfred_hugenberg"
-		texturefile = "dashidaipicture/ideas/idea_alfred_hugenberg.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_GWM_hans_luther"
-		texturefile = "dashidaipicture/ideas/idea_hans_luther.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_GWM_gustav_stresemann"
-		texturefile = "dashidaipicture/ideas/idea_gustav_stresemann.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_GWM_walter_simons"
-		texturefile = "dashidaipicture/ideas/idea_walter_simons.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_GWM_heinrich_bruning"
-		texturefile = "dashidaipicture/ideas/idea_heinrich_bruning.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_GWM_kurt_von_schleicher"
-		texturefile = "dashidaipicture/ideas/idea_kurt_von_schleicher.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_GWM_philipp_scheidemann"
-		texturefile = "dashidaipicture/ideas/idea_philipp_scheidemann.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_GWM_paul_von_hindenburg"
-		texturefile = "dashidaipicture/ideas/idea_paul_von_hindenburg.dds"
-	}
 	#中共内阁陈独秀
 	SpriteType = {
 		name = "GFX_idea_dashidai_political_advisor_chen_duxiu"

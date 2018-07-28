@@ -1,6 +1,0 @@
-established_country = {
-	icon = generic_independence
-	visible = {
-		always = yes
-	}
-}
