@@ -1,0 +1,24 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			WORLD_GD_refresh_great_depression = yes
+		}
+	}
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { exists = yes }
+				add_ideas = {
+					GD_Internal_Contradiction_None
+					GD_Business_Vitality_None
+					GD_Planning_Ability_None
+					GD_Unemployment_Rate_None
+					GD_Anti_War_Sentiment_None
+					GD_Reduced_Imports_And_Exports_None
+					GD_Stock_Market_Crisis_None
+				}
+				WORLD_GD_refresh_great_depression = yes
+			}
+		}
+	}
+}

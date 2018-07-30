@@ -1,0 +1,450 @@
+WORLD_GD_refresh_great_depression={
+	round_variable=Internal_Contradiction_Level
+	round_variable=Business_Vitality_Level
+	round_variable=Planning_Ability_Level
+	round_variable=Unemployment_Rate_Level
+	round_variable=Anti_War_Sentiment_Level
+	round_variable=Reduced_Imports_And_Exports_Level
+	round_variable=Stock_Market_Crisis_Level
+	if={limit={check_variable={Internal_Contradiction_Level<0}}set_variable={Internal_Contradiction_Level=0}}else_if={limit={check_variable={Internal_Contradiction_Level>5}}set_variable={Internal_Contradiction_Level=10}}
+	if={limit={check_variable={Business_Vitality_Level<0}}set_variable={Business_Vitality_Level=0}}else_if={limit={check_variable={Business_Vitality_Level>5}}set_variable={Business_Vitality_Level=10}}
+	if={limit={check_variable={Planning_Ability_Level<0}}set_variable={Planning_Ability_Level=0}}else_if={limit={check_variable={Planning_Ability_Level>5}}set_variable={Planning_Ability_Level=10}}
+	if={limit={check_variable={Unemployment_Rate_Level<0}}set_variable={Unemployment_Rate_Level=0}}else_if={limit={check_variable={Unemployment_Rate_Level>5}}set_variable={Unemployment_Rate_Level=10}}
+	if={limit={check_variable={Anti_War_Sentiment_Level<0}}set_variable={Anti_War_Sentiment_Level=0}}else_if={limit={check_variable={Anti_War_Sentiment_Level>5}}set_variable={Anti_War_Sentiment_Level=10}}
+	if={limit={check_variable={Reduced_Imports_And_Exports_Level<0}}set_variable={Reduced_Imports_And_Exports_Level=0}}else_if={limit={check_variable={Reduced_Imports_And_Exports_Level>5}}set_variable={Reduced_Imports_And_Exports_Level=10}}
+	if={limit={check_variable={Stock_Market_Crisis_Level<0}}set_variable={Stock_Market_Crisis_Level=0}}else_if={limit={check_variable={Stock_Market_Crisis_Level>5}}set_variable={Stock_Market_Crisis_Level=10}}
+	#内部矛盾组
+	if={
+		limit={check_variable={Internal_Contradiction_Level=0}}
+		if={limit={not={has_idea=GD_Internal_Contradiction_None}}
+			if={limit={has_idea=GD_Internal_Contradiction_Lowest}swap_ideas={remove_idea=GD_Internal_Contradiction_Lowest add_idea=GD_Internal_Contradiction_None}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lower}swap_ideas={remove_idea=GD_Internal_Contradiction_Lower add_idea=GD_Internal_Contradiction_None}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Medium}swap_ideas={remove_idea=GD_Internal_Contradiction_Medium add_idea=GD_Internal_Contradiction_None}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Higher}swap_ideas={remove_idea=GD_Internal_Contradiction_Higher add_idea=GD_Internal_Contradiction_None}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Highest}swap_ideas={remove_idea=GD_Internal_Contradiction_Highest add_idea=GD_Internal_Contradiction_None}}
+			else={add_ideas=GD_Internal_Contradiction_None}
+		}
+	}else_if={
+		limit={check_variable={Internal_Contradiction_Level=1}}
+		if={limit={not={has_idea=GD_Internal_Contradiction_Lowest}}
+			if={limit={has_idea=GD_Internal_Contradiction_None}swap_ideas={remove_idea=GD_Internal_Contradiction_None add_idea=GD_Internal_Contradiction_Lowest}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lower}swap_ideas={remove_idea=GD_Internal_Contradiction_Lower add_idea=GD_Internal_Contradiction_Lowest}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Medium}swap_ideas={remove_idea=GD_Internal_Contradiction_Medium add_idea=GD_Internal_Contradiction_Lowest}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Higher}swap_ideas={remove_idea=GD_Internal_Contradiction_Higher add_idea=GD_Internal_Contradiction_Lowest}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Highest}swap_ideas={remove_idea=GD_Internal_Contradiction_Highest add_idea=GD_Internal_Contradiction_Lowest}}
+			else={add_ideas=GD_Internal_Contradiction_Lowest}
+		}
+	}else_if={
+		limit={check_variable={Internal_Contradiction_Level=2}}
+		if={limit={not={has_idea=GD_Internal_Contradiction_Lower}}
+			if={limit={has_idea=GD_Internal_Contradiction_None}swap_ideas={remove_idea=GD_Internal_Contradiction_None add_idea=GD_Internal_Contradiction_Lower}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lowest}swap_ideas={remove_idea=GD_Internal_Contradiction_Lowest add_idea=GD_Internal_Contradiction_Lower}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Medium}swap_ideas={remove_idea=GD_Internal_Contradiction_Medium add_idea=GD_Internal_Contradiction_Lower}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Higher}swap_ideas={remove_idea=GD_Internal_Contradiction_Higher add_idea=GD_Internal_Contradiction_Lower}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Highest}swap_ideas={remove_idea=GD_Internal_Contradiction_Highest add_idea=GD_Internal_Contradiction_Lower}}
+			else={add_ideas=GD_Internal_Contradiction_Lower}
+		}
+	}else_if={
+		limit={check_variable={Internal_Contradiction_Level=3}}
+		if={limit={not={has_idea=GD_Internal_Contradiction_Medium}}
+			if={limit={has_idea=GD_Internal_Contradiction_None}swap_ideas={remove_idea=GD_Internal_Contradiction_None add_idea=GD_Internal_Contradiction_Medium}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lowest}swap_ideas={remove_idea=GD_Internal_Contradiction_Lowest add_idea=GD_Internal_Contradiction_Medium}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lower}swap_ideas={remove_idea=GD_Internal_Contradiction_Lower add_idea=GD_Internal_Contradiction_Medium}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Higher}swap_ideas={remove_idea=GD_Internal_Contradiction_Higher add_idea=GD_Internal_Contradiction_Medium}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Highest}swap_ideas={remove_idea=GD_Internal_Contradiction_Highest add_idea=GD_Internal_Contradiction_Medium}}
+			else={add_ideas=GD_Internal_Contradiction_Medium}
+		}
+	}else_if={
+		limit={check_variable={Internal_Contradiction_Level=4}}
+		if={limit={not={has_idea=GD_Internal_Contradiction_Higher}}
+			if={limit={has_idea=GD_Internal_Contradiction_None}swap_ideas={remove_idea=GD_Internal_Contradiction_None add_idea=GD_Internal_Contradiction_Higher}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lowest}swap_ideas={remove_idea=GD_Internal_Contradiction_Lowest add_idea=GD_Internal_Contradiction_Higher}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lower}swap_ideas={remove_idea=GD_Internal_Contradiction_Lower add_idea=GD_Internal_Contradiction_Higher}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Medium}swap_ideas={remove_idea=GD_Internal_Contradiction_Medium add_idea=GD_Internal_Contradiction_Higher}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Highest}swap_ideas={remove_idea=GD_Internal_Contradiction_Highest add_idea=GD_Internal_Contradiction_Higher}}
+			else={add_ideas=GD_Internal_Contradiction_Higher}
+		}
+	}else_if={
+		limit={check_variable={Internal_Contradiction_Level=5}}
+		if={limit={not={has_idea=GD_Internal_Contradiction_Highest}}
+			if={limit={has_idea=GD_Internal_Contradiction_None}swap_ideas={remove_idea=GD_Internal_Contradiction_None add_idea=GD_Internal_Contradiction_Highest}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lowest}swap_ideas={remove_idea=GD_Internal_Contradiction_Lowest add_idea=GD_Internal_Contradiction_Highest}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Lower}swap_ideas={remove_idea=GD_Internal_Contradiction_Lower add_idea=GD_Internal_Contradiction_Highest}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Medium}swap_ideas={remove_idea=GD_Internal_Contradiction_Medium add_idea=GD_Internal_Contradiction_Highest}}
+			else_if={limit={has_idea=GD_Internal_Contradiction_Higher}swap_ideas={remove_idea=GD_Internal_Contradiction_Higher add_idea=GD_Internal_Contradiction_Highest}}
+			else={add_ideas=GD_Internal_Contradiction_Highest}
+		}
+	}
+	#企业活力组
+	if={
+		limit={check_variable={Business_Vitality_Level=0}}
+		if={limit={not={has_idea=GD_Business_Vitality_None}}
+			if={limit={has_idea=GD_Business_Vitality_Lowest}swap_ideas={remove_idea=GD_Business_Vitality_Lowest add_idea=GD_Business_Vitality_None}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lower}swap_ideas={remove_idea=GD_Business_Vitality_Lower add_idea=GD_Business_Vitality_None}}
+			else_if={limit={has_idea=GD_Business_Vitality_Medium}swap_ideas={remove_idea=GD_Business_Vitality_Medium add_idea=GD_Business_Vitality_None}}
+			else_if={limit={has_idea=GD_Business_Vitality_Higher}swap_ideas={remove_idea=GD_Business_Vitality_Higher add_idea=GD_Business_Vitality_None}}
+			else_if={limit={has_idea=GD_Business_Vitality_Highest}swap_ideas={remove_idea=GD_Business_Vitality_Highest add_idea=GD_Business_Vitality_None}}
+			else={add_ideas=GD_Business_Vitality_None}
+		}
+	}else_if={
+		limit={check_variable={Business_Vitality_Level=1}}
+		if={limit={not={has_idea=GD_Business_Vitality_Lowest}}
+			if={limit={has_idea=GD_Business_Vitality_None}swap_ideas={remove_idea=GD_Business_Vitality_None add_idea=GD_Business_Vitality_Lowest}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lower}swap_ideas={remove_idea=GD_Business_Vitality_Lower add_idea=GD_Business_Vitality_Lowest}}
+			else_if={limit={has_idea=GD_Business_Vitality_Medium}swap_ideas={remove_idea=GD_Business_Vitality_Medium add_idea=GD_Business_Vitality_Lowest}}
+			else_if={limit={has_idea=GD_Business_Vitality_Higher}swap_ideas={remove_idea=GD_Business_Vitality_Higher add_idea=GD_Business_Vitality_Lowest}}
+			else_if={limit={has_idea=GD_Business_Vitality_Highest}swap_ideas={remove_idea=GD_Business_Vitality_Highest add_idea=GD_Business_Vitality_Lowest}}
+			else={add_ideas=GD_Business_Vitality_Lowest}
+		}
+	}else_if={
+		limit={check_variable={Business_Vitality_Level=2}}
+		if={limit={not={has_idea=GD_Business_Vitality_Lower}}
+			if={limit={has_idea=GD_Business_Vitality_None}swap_ideas={remove_idea=GD_Business_Vitality_None add_idea=GD_Business_Vitality_Lower}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lowest}swap_ideas={remove_idea=GD_Business_Vitality_Lowest add_idea=GD_Business_Vitality_Lower}}
+			else_if={limit={has_idea=GD_Business_Vitality_Medium}swap_ideas={remove_idea=GD_Business_Vitality_Medium add_idea=GD_Business_Vitality_Lower}}
+			else_if={limit={has_idea=GD_Business_Vitality_Higher}swap_ideas={remove_idea=GD_Business_Vitality_Higher add_idea=GD_Business_Vitality_Lower}}
+			else_if={limit={has_idea=GD_Business_Vitality_Highest}swap_ideas={remove_idea=GD_Business_Vitality_Highest add_idea=GD_Business_Vitality_Lower}}
+			else={add_ideas=GD_Business_Vitality_Lower}
+		}
+	}else_if={
+		limit={check_variable={Business_Vitality_Level=3}}
+		if={limit={not={has_idea=GD_Business_Vitality_Medium}}
+			if={limit={has_idea=GD_Business_Vitality_None}swap_ideas={remove_idea=GD_Business_Vitality_None add_idea=GD_Business_Vitality_Medium}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lowest}swap_ideas={remove_idea=GD_Business_Vitality_Lowest add_idea=GD_Business_Vitality_Medium}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lower}swap_ideas={remove_idea=GD_Business_Vitality_Lower add_idea=GD_Business_Vitality_Medium}}
+			else_if={limit={has_idea=GD_Business_Vitality_Higher}swap_ideas={remove_idea=GD_Business_Vitality_Higher add_idea=GD_Business_Vitality_Medium}}
+			else_if={limit={has_idea=GD_Business_Vitality_Highest}swap_ideas={remove_idea=GD_Business_Vitality_Highest add_idea=GD_Business_Vitality_Medium}}
+			else={add_ideas=GD_Business_Vitality_Medium}
+		}
+	}else_if={
+		limit={check_variable={Business_Vitality_Level=4}}
+		if={limit={not={has_idea=GD_Business_Vitality_Higher}}
+			if={limit={has_idea=GD_Business_Vitality_None}swap_ideas={remove_idea=GD_Business_Vitality_None add_idea=GD_Business_Vitality_Higher}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lowest}swap_ideas={remove_idea=GD_Business_Vitality_Lowest add_idea=GD_Business_Vitality_Higher}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lower}swap_ideas={remove_idea=GD_Business_Vitality_Lower add_idea=GD_Business_Vitality_Higher}}
+			else_if={limit={has_idea=GD_Business_Vitality_Medium}swap_ideas={remove_idea=GD_Business_Vitality_Medium add_idea=GD_Business_Vitality_Higher}}
+			else_if={limit={has_idea=GD_Business_Vitality_Highest}swap_ideas={remove_idea=GD_Business_Vitality_Highest add_idea=GD_Business_Vitality_Higher}}
+			else={add_ideas=GD_Business_Vitality_Higher}
+		}
+	}else_if={
+		limit={check_variable={Business_Vitality_Level=5}}
+		if={limit={not={has_idea=GD_Business_Vitality_Highest}}
+			if={limit={has_idea=GD_Business_Vitality_None}swap_ideas={remove_idea=GD_Business_Vitality_None add_idea=GD_Business_Vitality_Highest}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lowest}swap_ideas={remove_idea=GD_Business_Vitality_Lowest add_idea=GD_Business_Vitality_Highest}}
+			else_if={limit={has_idea=GD_Business_Vitality_Lower}swap_ideas={remove_idea=GD_Business_Vitality_Lower add_idea=GD_Business_Vitality_Highest}}
+			else_if={limit={has_idea=GD_Business_Vitality_Medium}swap_ideas={remove_idea=GD_Business_Vitality_Medium add_idea=GD_Business_Vitality_Highest}}
+			else_if={limit={has_idea=GD_Business_Vitality_Higher}swap_ideas={remove_idea=GD_Business_Vitality_Higher add_idea=GD_Business_Vitality_Highest}}
+			else={add_ideas=GD_Business_Vitality_Highest}
+		}
+	}
+	#规划能力组
+	if={
+		limit={check_variable={Planning_Ability_Level=0}}
+		if={limit={not={has_idea=GD_Planning_Ability_None}}
+			if={limit={has_idea=GD_Planning_Ability_Lowest}swap_ideas={remove_idea=GD_Planning_Ability_Lowest add_idea=GD_Planning_Ability_None}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lower}swap_ideas={remove_idea=GD_Planning_Ability_Lower add_idea=GD_Planning_Ability_None}}
+			else_if={limit={has_idea=GD_Planning_Ability_Medium}swap_ideas={remove_idea=GD_Planning_Ability_Medium add_idea=GD_Planning_Ability_None}}
+			else_if={limit={has_idea=GD_Planning_Ability_Higher}swap_ideas={remove_idea=GD_Planning_Ability_Higher add_idea=GD_Planning_Ability_None}}
+			else_if={limit={has_idea=GD_Planning_Ability_Highest}swap_ideas={remove_idea=GD_Planning_Ability_Highest add_idea=GD_Planning_Ability_None}}
+			else={add_ideas=GD_Planning_Ability_None}
+		}
+	}else_if={
+		limit={check_variable={Planning_Ability_Level=1}}
+		if={limit={not={has_idea=GD_Planning_Ability_Lowest}}
+			if={limit={has_idea=GD_Planning_Ability_None}swap_ideas={remove_idea=GD_Planning_Ability_None add_idea=GD_Planning_Ability_Lowest}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lower}swap_ideas={remove_idea=GD_Planning_Ability_Lower add_idea=GD_Planning_Ability_Lowest}}
+			else_if={limit={has_idea=GD_Planning_Ability_Medium}swap_ideas={remove_idea=GD_Planning_Ability_Medium add_idea=GD_Planning_Ability_Lowest}}
+			else_if={limit={has_idea=GD_Planning_Ability_Higher}swap_ideas={remove_idea=GD_Planning_Ability_Higher add_idea=GD_Planning_Ability_Lowest}}
+			else_if={limit={has_idea=GD_Planning_Ability_Highest}swap_ideas={remove_idea=GD_Planning_Ability_Highest add_idea=GD_Planning_Ability_Lowest}}
+			else={add_ideas=GD_Planning_Ability_Lowest}
+		}
+	}else_if={
+		limit={check_variable={Planning_Ability_Level=2}}
+		if={limit={not={has_idea=GD_Planning_Ability_Lower}}
+			if={limit={has_idea=GD_Planning_Ability_None}swap_ideas={remove_idea=GD_Planning_Ability_None add_idea=GD_Planning_Ability_Lower}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lowest}swap_ideas={remove_idea=GD_Planning_Ability_Lowest add_idea=GD_Planning_Ability_Lower}}
+			else_if={limit={has_idea=GD_Planning_Ability_Medium}swap_ideas={remove_idea=GD_Planning_Ability_Medium add_idea=GD_Planning_Ability_Lower}}
+			else_if={limit={has_idea=GD_Planning_Ability_Higher}swap_ideas={remove_idea=GD_Planning_Ability_Higher add_idea=GD_Planning_Ability_Lower}}
+			else_if={limit={has_idea=GD_Planning_Ability_Highest}swap_ideas={remove_idea=GD_Planning_Ability_Highest add_idea=GD_Planning_Ability_Lower}}
+			else={add_ideas=GD_Planning_Ability_Lower}
+		}
+	}else_if={
+		limit={check_variable={Planning_Ability_Level=3}}
+		if={limit={not={has_idea=GD_Planning_Ability_Medium}}
+			if={limit={has_idea=GD_Planning_Ability_None}swap_ideas={remove_idea=GD_Planning_Ability_None add_idea=GD_Planning_Ability_Medium}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lowest}swap_ideas={remove_idea=GD_Planning_Ability_Lowest add_idea=GD_Planning_Ability_Medium}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lower}swap_ideas={remove_idea=GD_Planning_Ability_Lower add_idea=GD_Planning_Ability_Medium}}
+			else_if={limit={has_idea=GD_Planning_Ability_Higher}swap_ideas={remove_idea=GD_Planning_Ability_Higher add_idea=GD_Planning_Ability_Medium}}
+			else_if={limit={has_idea=GD_Planning_Ability_Highest}swap_ideas={remove_idea=GD_Planning_Ability_Highest add_idea=GD_Planning_Ability_Medium}}
+			else={add_ideas=GD_Planning_Ability_Medium}
+		}
+	}else_if={
+		limit={check_variable={Planning_Ability_Level=4}}
+		if={limit={not={has_idea=GD_Planning_Ability_Higher}}
+			if={limit={has_idea=GD_Planning_Ability_None}swap_ideas={remove_idea=GD_Planning_Ability_None add_idea=GD_Planning_Ability_Higher}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lowest}swap_ideas={remove_idea=GD_Planning_Ability_Lowest add_idea=GD_Planning_Ability_Higher}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lower}swap_ideas={remove_idea=GD_Planning_Ability_Lower add_idea=GD_Planning_Ability_Higher}}
+			else_if={limit={has_idea=GD_Planning_Ability_Medium}swap_ideas={remove_idea=GD_Planning_Ability_Medium add_idea=GD_Planning_Ability_Higher}}
+			else_if={limit={has_idea=GD_Planning_Ability_Highest}swap_ideas={remove_idea=GD_Planning_Ability_Highest add_idea=GD_Planning_Ability_Higher}}
+			else={add_ideas=GD_Planning_Ability_Higher}
+		}
+	}else_if={
+		limit={check_variable={Planning_Ability_Level=5}}
+		if={limit={not={has_idea=GD_Planning_Ability_Highest}}
+			if={limit={has_idea=GD_Planning_Ability_None}swap_ideas={remove_idea=GD_Planning_Ability_None add_idea=GD_Planning_Ability_Highest}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lowest}swap_ideas={remove_idea=GD_Planning_Ability_Lowest add_idea=GD_Planning_Ability_Highest}}
+			else_if={limit={has_idea=GD_Planning_Ability_Lower}swap_ideas={remove_idea=GD_Planning_Ability_Lower add_idea=GD_Planning_Ability_Highest}}
+			else_if={limit={has_idea=GD_Planning_Ability_Medium}swap_ideas={remove_idea=GD_Planning_Ability_Medium add_idea=GD_Planning_Ability_Highest}}
+			else_if={limit={has_idea=GD_Planning_Ability_Higher}swap_ideas={remove_idea=GD_Planning_Ability_Higher add_idea=GD_Planning_Ability_Highest}}
+			else={add_ideas=GD_Planning_Ability_Highest}
+		}
+	}
+	#失业率组
+	if={
+		limit={check_variable={Unemployment_Rate_Level=0}}
+		if={limit={not={has_idea=GD_Unemployment_Rate_None}}
+			if={limit={has_idea=GD_Unemployment_Rate_Lowest}swap_ideas={remove_idea=GD_Unemployment_Rate_Lowest add_idea=GD_Unemployment_Rate_None}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lower}swap_ideas={remove_idea=GD_Unemployment_Rate_Lower add_idea=GD_Unemployment_Rate_None}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Medium}swap_ideas={remove_idea=GD_Unemployment_Rate_Medium add_idea=GD_Unemployment_Rate_None}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Higher}swap_ideas={remove_idea=GD_Unemployment_Rate_Higher add_idea=GD_Unemployment_Rate_None}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Highest}swap_ideas={remove_idea=GD_Unemployment_Rate_Highest add_idea=GD_Unemployment_Rate_None}}
+			else={add_ideas=GD_Unemployment_Rate_None}
+		}
+	}else_if={
+		limit={check_variable={Unemployment_Rate_Level=1}}
+		if={limit={not={has_idea=GD_Unemployment_Rate_Lowest}}
+			if={limit={has_idea=GD_Unemployment_Rate_None}swap_ideas={remove_idea=GD_Unemployment_Rate_None add_idea=GD_Unemployment_Rate_Lowest}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lower}swap_ideas={remove_idea=GD_Unemployment_Rate_Lower add_idea=GD_Unemployment_Rate_Lowest}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Medium}swap_ideas={remove_idea=GD_Unemployment_Rate_Medium add_idea=GD_Unemployment_Rate_Lowest}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Higher}swap_ideas={remove_idea=GD_Unemployment_Rate_Higher add_idea=GD_Unemployment_Rate_Lowest}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Highest}swap_ideas={remove_idea=GD_Unemployment_Rate_Highest add_idea=GD_Unemployment_Rate_Lowest}}
+			else={add_ideas=GD_Unemployment_Rate_Lowest}
+		}
+	}else_if={
+		limit={check_variable={Unemployment_Rate_Level=2}}
+		if={limit={not={has_idea=GD_Unemployment_Rate_Lower}}
+			if={limit={has_idea=GD_Unemployment_Rate_None}swap_ideas={remove_idea=GD_Unemployment_Rate_None add_idea=GD_Unemployment_Rate_Lower}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lowest}swap_ideas={remove_idea=GD_Unemployment_Rate_Lowest add_idea=GD_Unemployment_Rate_Lower}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Medium}swap_ideas={remove_idea=GD_Unemployment_Rate_Medium add_idea=GD_Unemployment_Rate_Lower}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Higher}swap_ideas={remove_idea=GD_Unemployment_Rate_Higher add_idea=GD_Unemployment_Rate_Lower}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Highest}swap_ideas={remove_idea=GD_Unemployment_Rate_Highest add_idea=GD_Unemployment_Rate_Lower}}
+			else={add_ideas=GD_Unemployment_Rate_Lower}
+		}
+	}else_if={
+		limit={check_variable={Unemployment_Rate_Level=3}}
+		if={limit={not={has_idea=GD_Unemployment_Rate_Medium}}
+			if={limit={has_idea=GD_Unemployment_Rate_None}swap_ideas={remove_idea=GD_Unemployment_Rate_None add_idea=GD_Unemployment_Rate_Medium}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lowest}swap_ideas={remove_idea=GD_Unemployment_Rate_Lowest add_idea=GD_Unemployment_Rate_Medium}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lower}swap_ideas={remove_idea=GD_Unemployment_Rate_Lower add_idea=GD_Unemployment_Rate_Medium}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Higher}swap_ideas={remove_idea=GD_Unemployment_Rate_Higher add_idea=GD_Unemployment_Rate_Medium}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Highest}swap_ideas={remove_idea=GD_Unemployment_Rate_Highest add_idea=GD_Unemployment_Rate_Medium}}
+			else={add_ideas=GD_Unemployment_Rate_Medium}
+		}
+	}else_if={
+		limit={check_variable={Unemployment_Rate_Level=4}}
+		if={limit={not={has_idea=GD_Unemployment_Rate_Higher}}
+			if={limit={has_idea=GD_Unemployment_Rate_None}swap_ideas={remove_idea=GD_Unemployment_Rate_None add_idea=GD_Unemployment_Rate_Higher}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lowest}swap_ideas={remove_idea=GD_Unemployment_Rate_Lowest add_idea=GD_Unemployment_Rate_Higher}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lower}swap_ideas={remove_idea=GD_Unemployment_Rate_Lower add_idea=GD_Unemployment_Rate_Higher}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Medium}swap_ideas={remove_idea=GD_Unemployment_Rate_Medium add_idea=GD_Unemployment_Rate_Higher}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Highest}swap_ideas={remove_idea=GD_Unemployment_Rate_Highest add_idea=GD_Unemployment_Rate_Higher}}
+			else={add_ideas=GD_Unemployment_Rate_Higher}
+		}
+	}else_if={
+		limit={check_variable={Unemployment_Rate_Level=5}}
+		if={limit={not={has_idea=GD_Unemployment_Rate_Highest}}
+			if={limit={has_idea=GD_Unemployment_Rate_None}swap_ideas={remove_idea=GD_Unemployment_Rate_None add_idea=GD_Unemployment_Rate_Highest}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lowest}swap_ideas={remove_idea=GD_Unemployment_Rate_Lowest add_idea=GD_Unemployment_Rate_Highest}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Lower}swap_ideas={remove_idea=GD_Unemployment_Rate_Lower add_idea=GD_Unemployment_Rate_Highest}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Medium}swap_ideas={remove_idea=GD_Unemployment_Rate_Medium add_idea=GD_Unemployment_Rate_Highest}}
+			else_if={limit={has_idea=GD_Unemployment_Rate_Higher}swap_ideas={remove_idea=GD_Unemployment_Rate_Higher add_idea=GD_Unemployment_Rate_Highest}}
+			else={add_ideas=GD_Unemployment_Rate_Highest}
+		}
+	}
+	#反战情绪组
+	if={
+		limit={check_variable={Anti_War_Sentiment_Level=0}}
+		if={limit={not={has_idea=GD_Anti_War_Sentiment_None}}
+			if={limit={has_idea=GD_Anti_War_Sentiment_Lowest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lowest add_idea=GD_Anti_War_Sentiment_None}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lower}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lower add_idea=GD_Anti_War_Sentiment_None}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Medium}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Medium add_idea=GD_Anti_War_Sentiment_None}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Higher}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Higher add_idea=GD_Anti_War_Sentiment_None}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Highest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Highest add_idea=GD_Anti_War_Sentiment_None}}
+			else={add_ideas=GD_Anti_War_Sentiment_None}
+		}
+	}else_if={
+		limit={check_variable={Anti_War_Sentiment_Level=1}}
+		if={limit={not={has_idea=GD_Anti_War_Sentiment_Lowest}}
+			if={limit={has_idea=GD_Anti_War_Sentiment_None}swap_ideas={remove_idea=GD_Anti_War_Sentiment_None add_idea=GD_Anti_War_Sentiment_Lowest}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lower}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lower add_idea=GD_Anti_War_Sentiment_Lowest}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Medium}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Medium add_idea=GD_Anti_War_Sentiment_Lowest}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Higher}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Higher add_idea=GD_Anti_War_Sentiment_Lowest}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Highest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Highest add_idea=GD_Anti_War_Sentiment_Lowest}}
+			else={add_ideas=GD_Anti_War_Sentiment_Lowest}
+		}
+	}else_if={
+		limit={check_variable={Anti_War_Sentiment_Level=2}}
+		if={limit={not={has_idea=GD_Anti_War_Sentiment_Lower}}
+			if={limit={has_idea=GD_Anti_War_Sentiment_None}swap_ideas={remove_idea=GD_Anti_War_Sentiment_None add_idea=GD_Anti_War_Sentiment_Lower}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lowest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lowest add_idea=GD_Anti_War_Sentiment_Lower}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Medium}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Medium add_idea=GD_Anti_War_Sentiment_Lower}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Higher}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Higher add_idea=GD_Anti_War_Sentiment_Lower}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Highest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Highest add_idea=GD_Anti_War_Sentiment_Lower}}
+			else={add_ideas=GD_Anti_War_Sentiment_Lower}
+		}
+	}else_if={
+		limit={check_variable={Anti_War_Sentiment_Level=3}}
+		if={limit={not={has_idea=GD_Anti_War_Sentiment_Medium}}
+			if={limit={has_idea=GD_Anti_War_Sentiment_None}swap_ideas={remove_idea=GD_Anti_War_Sentiment_None add_idea=GD_Anti_War_Sentiment_Medium}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lowest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lowest add_idea=GD_Anti_War_Sentiment_Medium}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lower}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lower add_idea=GD_Anti_War_Sentiment_Medium}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Higher}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Higher add_idea=GD_Anti_War_Sentiment_Medium}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Highest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Highest add_idea=GD_Anti_War_Sentiment_Medium}}
+			else={add_ideas=GD_Anti_War_Sentiment_Medium}
+		}
+	}else_if={
+		limit={check_variable={Anti_War_Sentiment_Level=4}}
+		if={limit={not={has_idea=GD_Anti_War_Sentiment_Higher}}
+			if={limit={has_idea=GD_Anti_War_Sentiment_None}swap_ideas={remove_idea=GD_Anti_War_Sentiment_None add_idea=GD_Anti_War_Sentiment_Higher}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lowest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lowest add_idea=GD_Anti_War_Sentiment_Higher}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lower}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lower add_idea=GD_Anti_War_Sentiment_Higher}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Medium}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Medium add_idea=GD_Anti_War_Sentiment_Higher}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Highest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Highest add_idea=GD_Anti_War_Sentiment_Higher}}
+			else={add_ideas=GD_Anti_War_Sentiment_Higher}
+		}
+	}else_if={
+		limit={check_variable={Anti_War_Sentiment_Level=5}}
+		if={limit={not={has_idea=GD_Anti_War_Sentiment_Highest}}
+			if={limit={has_idea=GD_Anti_War_Sentiment_None}swap_ideas={remove_idea=GD_Anti_War_Sentiment_None add_idea=GD_Anti_War_Sentiment_Highest}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lowest}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lowest add_idea=GD_Anti_War_Sentiment_Highest}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Lower}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Lower add_idea=GD_Anti_War_Sentiment_Highest}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Medium}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Medium add_idea=GD_Anti_War_Sentiment_Highest}}
+			else_if={limit={has_idea=GD_Anti_War_Sentiment_Higher}swap_ideas={remove_idea=GD_Anti_War_Sentiment_Higher add_idea=GD_Anti_War_Sentiment_Highest}}
+			else={add_ideas=GD_Anti_War_Sentiment_Highest}
+		}
+	}
+	#进出口减少组
+	if={
+		limit={check_variable={Reduced_Imports_And_Exports_Level=0}}
+		if={limit={not={has_idea=GD_Reduced_Imports_And_Exports_None}}
+			if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lowest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lowest add_idea=GD_Reduced_Imports_And_Exports_None}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lower}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lower add_idea=GD_Reduced_Imports_And_Exports_None}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Medium}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Medium add_idea=GD_Reduced_Imports_And_Exports_None}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Higher}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Higher add_idea=GD_Reduced_Imports_And_Exports_None}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Highest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Highest add_idea=GD_Reduced_Imports_And_Exports_None}}
+			else={add_ideas=GD_Reduced_Imports_And_Exports_None}
+		}
+	}else_if={
+		limit={check_variable={Reduced_Imports_And_Exports_Level=1}}
+		if={limit={not={has_idea=GD_Reduced_Imports_And_Exports_Lowest}}
+			if={limit={has_idea=GD_Reduced_Imports_And_Exports_None}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_None add_idea=GD_Reduced_Imports_And_Exports_Lowest}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lower}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lower add_idea=GD_Reduced_Imports_And_Exports_Lowest}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Medium}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Medium add_idea=GD_Reduced_Imports_And_Exports_Lowest}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Higher}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Higher add_idea=GD_Reduced_Imports_And_Exports_Lowest}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Highest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Highest add_idea=GD_Reduced_Imports_And_Exports_Lowest}}
+			else={add_ideas=GD_Reduced_Imports_And_Exports_Lowest}
+		}
+	}else_if={
+		limit={check_variable={Reduced_Imports_And_Exports_Level=2}}
+		if={limit={not={has_idea=GD_Reduced_Imports_And_Exports_Lower}}
+			if={limit={has_idea=GD_Reduced_Imports_And_Exports_None}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_None add_idea=GD_Reduced_Imports_And_Exports_Lower}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lowest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lowest add_idea=GD_Reduced_Imports_And_Exports_Lower}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Medium}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Medium add_idea=GD_Reduced_Imports_And_Exports_Lower}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Higher}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Higher add_idea=GD_Reduced_Imports_And_Exports_Lower}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Highest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Highest add_idea=GD_Reduced_Imports_And_Exports_Lower}}
+			else={add_ideas=GD_Reduced_Imports_And_Exports_Lower}
+		}
+	}else_if={
+		limit={check_variable={Reduced_Imports_And_Exports_Level=3}}
+		if={limit={not={has_idea=GD_Reduced_Imports_And_Exports_Medium}}
+			if={limit={has_idea=GD_Reduced_Imports_And_Exports_None}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_None add_idea=GD_Reduced_Imports_And_Exports_Medium}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lowest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lowest add_idea=GD_Reduced_Imports_And_Exports_Medium}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lower}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lower add_idea=GD_Reduced_Imports_And_Exports_Medium}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Higher}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Higher add_idea=GD_Reduced_Imports_And_Exports_Medium}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Highest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Highest add_idea=GD_Reduced_Imports_And_Exports_Medium}}
+			else={add_ideas=GD_Reduced_Imports_And_Exports_Medium}
+		}
+	}else_if={
+		limit={check_variable={Reduced_Imports_And_Exports_Level=4}}
+		if={limit={not={has_idea=GD_Reduced_Imports_And_Exports_Higher}}
+			if={limit={has_idea=GD_Reduced_Imports_And_Exports_None}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_None add_idea=GD_Reduced_Imports_And_Exports_Higher}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lowest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lowest add_idea=GD_Reduced_Imports_And_Exports_Higher}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lower}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lower add_idea=GD_Reduced_Imports_And_Exports_Higher}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Medium}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Medium add_idea=GD_Reduced_Imports_And_Exports_Higher}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Highest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Highest add_idea=GD_Reduced_Imports_And_Exports_Higher}}
+			else={add_ideas=GD_Reduced_Imports_And_Exports_Higher}
+		}
+	}else_if={
+		limit={check_variable={Reduced_Imports_And_Exports_Level=5}}
+		if={limit={not={has_idea=GD_Reduced_Imports_And_Exports_Highest}}
+			if={limit={has_idea=GD_Reduced_Imports_And_Exports_None}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_None add_idea=GD_Reduced_Imports_And_Exports_Highest}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lowest}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lowest add_idea=GD_Reduced_Imports_And_Exports_Highest}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Lower}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Lower add_idea=GD_Reduced_Imports_And_Exports_Highest}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Medium}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Medium add_idea=GD_Reduced_Imports_And_Exports_Highest}}
+			else_if={limit={has_idea=GD_Reduced_Imports_And_Exports_Higher}swap_ideas={remove_idea=GD_Reduced_Imports_And_Exports_Higher add_idea=GD_Reduced_Imports_And_Exports_Highest}}
+			else={add_ideas=GD_Reduced_Imports_And_Exports_Highest}
+		}
+	}
+	#股市危机组
+	if={
+		limit={check_variable={Stock_Market_Crisis_Level=0}}
+		if={limit={not={has_idea=GD_Stock_Market_Crisis_None}}
+			if={limit={has_idea=GD_Stock_Market_Crisis_Lowest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lowest add_idea=GD_Stock_Market_Crisis_None}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lower}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lower add_idea=GD_Stock_Market_Crisis_None}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Medium}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Medium add_idea=GD_Stock_Market_Crisis_None}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Higher}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Higher add_idea=GD_Stock_Market_Crisis_None}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Highest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Highest add_idea=GD_Stock_Market_Crisis_None}}
+			else={add_ideas=GD_Stock_Market_Crisis_None}
+		}
+	}else_if={
+		limit={check_variable={Stock_Market_Crisis_Level=1}}
+		if={limit={not={has_idea=GD_Stock_Market_Crisis_Lowest}}
+			if={limit={has_idea=GD_Stock_Market_Crisis_None}swap_ideas={remove_idea=GD_Stock_Market_Crisis_None add_idea=GD_Stock_Market_Crisis_Lowest}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lower}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lower add_idea=GD_Stock_Market_Crisis_Lowest}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Medium}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Medium add_idea=GD_Stock_Market_Crisis_Lowest}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Higher}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Higher add_idea=GD_Stock_Market_Crisis_Lowest}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Highest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Highest add_idea=GD_Stock_Market_Crisis_Lowest}}
+			else={add_ideas=GD_Stock_Market_Crisis_Lowest}
+		}
+	}else_if={
+		limit={check_variable={Stock_Market_Crisis_Level=2}}
+		if={limit={not={has_idea=GD_Stock_Market_Crisis_Lower}}
+			if={limit={has_idea=GD_Stock_Market_Crisis_None}swap_ideas={remove_idea=GD_Stock_Market_Crisis_None add_idea=GD_Stock_Market_Crisis_Lower}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lowest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lowest add_idea=GD_Stock_Market_Crisis_Lower}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Medium}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Medium add_idea=GD_Stock_Market_Crisis_Lower}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Higher}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Higher add_idea=GD_Stock_Market_Crisis_Lower}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Highest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Highest add_idea=GD_Stock_Market_Crisis_Lower}}
+			else={add_ideas=GD_Stock_Market_Crisis_Lower}
+		}
+	}else_if={
+		limit={check_variable={Stock_Market_Crisis_Level=3}}
+		if={limit={not={has_idea=GD_Stock_Market_Crisis_Medium}}
+			if={limit={has_idea=GD_Stock_Market_Crisis_None}swap_ideas={remove_idea=GD_Stock_Market_Crisis_None add_idea=GD_Stock_Market_Crisis_Medium}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lowest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lowest add_idea=GD_Stock_Market_Crisis_Medium}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lower}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lower add_idea=GD_Stock_Market_Crisis_Medium}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Higher}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Higher add_idea=GD_Stock_Market_Crisis_Medium}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Highest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Highest add_idea=GD_Stock_Market_Crisis_Medium}}
+			else={add_ideas=GD_Stock_Market_Crisis_Medium}
+		}
+	}else_if={
+		limit={check_variable={Stock_Market_Crisis_Level=4}}
+		if={limit={not={has_idea=GD_Stock_Market_Crisis_Higher}}
+			if={limit={has_idea=GD_Stock_Market_Crisis_None}swap_ideas={remove_idea=GD_Stock_Market_Crisis_None add_idea=GD_Stock_Market_Crisis_Higher}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lowest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lowest add_idea=GD_Stock_Market_Crisis_Higher}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lower}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lower add_idea=GD_Stock_Market_Crisis_Higher}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Medium}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Medium add_idea=GD_Stock_Market_Crisis_Higher}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Highest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Highest add_idea=GD_Stock_Market_Crisis_Higher}}
+			else={add_ideas=GD_Stock_Market_Crisis_Higher}
+		}
+	}else_if={
+		limit={check_variable={Stock_Market_Crisis_Level=5}}
+		if={limit={not={has_idea=GD_Stock_Market_Crisis_Highest}}
+			if={limit={has_idea=GD_Stock_Market_Crisis_None}swap_ideas={remove_idea=GD_Stock_Market_Crisis_None add_idea=GD_Stock_Market_Crisis_Highest}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lowest}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lowest add_idea=GD_Stock_Market_Crisis_Highest}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Lower}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Lower add_idea=GD_Stock_Market_Crisis_Highest}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Medium}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Medium add_idea=GD_Stock_Market_Crisis_Highest}}
+			else_if={limit={has_idea=GD_Stock_Market_Crisis_Higher}swap_ideas={remove_idea=GD_Stock_Market_Crisis_Higher add_idea=GD_Stock_Market_Crisis_Highest}}
+			else={add_ideas=GD_Stock_Market_Crisis_Highest}
+		}
+	}
+}

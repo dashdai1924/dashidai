@@ -1,0 +1,59 @@
+ALL_national_disaster = {
+	current_situation_decomposition = {#现状分解
+		
+	}
+	relieve_inflation = {#缓解通货膨胀
+		
+	}
+	stimulating_companies = {#刺激企业
+		
+	}
+	reduc_worker_conditions = {#降低工人条件
+		
+	}
+	improve_worker_conditions = {#改善工人条件
+		
+	}
+	currency_devaluation = {#货币贬值
+		
+	}
+	currency_appreciation = {#货币升值
+		
+	}
+	increase_tariffs = {#增加关税
+		
+	}
+	reduce_tariffs = {#降低关税
+		
+	}
+	strengthen_law_and_order = {#加强治安
+		
+	}
+	strengthening_authority = {#推崇威权
+		
+	}
+	reduce_authority = {#反击威权
+		
+	}
+	increase_tax_rate = {#增加税收
+		
+	}
+	lower_tax_rate = {#降低税收
+		
+	}
+	intensify_internal_contradictions = {#激化内部矛盾
+		
+	}
+	transfer_internal_contradictions = {#转移内部矛盾
+		
+	}
+	relieve_internal_contradictions = {#缓解内部矛盾
+		
+	}
+	increase_factory_subsidies = {#增加工厂补助
+		
+	}
+	reduce_factory_subsidies = {#降低工厂补助
+		
+	}
+}

@@ -39,28 +39,6 @@ ideas = {
 				stability_factor = -0.1
 			}
 		}
-		#大萧条
-		WEST_Great_Depression = {
-			picture = great_depression
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
-			modifier = {
-				conscription_factor = -0.4
-				political_power_factor = -0.2
-				consumer_goods_factor = 0.5
-				stability_factor = -0.1
-				industrial_capacity_factory = -0.5
-				research_time_factor = 0.4
-				production_speed_buildings_factor = -0.5
-				local_resources_factor = -0.5
-				trade_opinion_factor = -0.5
-				monthly_population = -0.1
-				justify_war_goal_time = 1
-				conscription = -0.1
-			}
-		}
 		#洛迦诺条约
 		GWM_Locarno_Treaties = {
 			picture = generic_wall_line

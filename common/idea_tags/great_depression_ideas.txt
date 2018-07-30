@@ -1,0 +1,19 @@
+idea_categories = {
+	Great_Depression_Ideas_Tags = {
+		slot = GD_Internal_Contradiction
+		slot = GD_Business_Vitality
+		slot = GD_Planning_Ability
+		slot = GD_Unemployment_Rate
+		slot = GD_Anti_War_Sentiment
+		slot = GD_Reduced_Imports_And_Exports
+		slot = GD_Stock_Market_Crisis
+		allowed = {
+			always = yes
+		}
+		allowed_civil_wa r= {
+			always = yes
+		}
+		cost = -1
+		removal_cost = -1
+	}
+}

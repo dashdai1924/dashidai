@@ -20,3 +20,10 @@ GWM_dawes_plan_group = {
 		tag = GWM
 	}
 }
+ALL_national_disaster = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		always = yes
+	}
+}
